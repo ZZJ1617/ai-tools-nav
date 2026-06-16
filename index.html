@@ -90,8 +90,9 @@ header .count {
 .card-cat {
   display:inline-block; padding:4px 14px; border-radius:9999px;
   font-size:13px; font-weight:600; color:var(--badge-text); background:var(--badge-bg);
-  margin-bottom:14px; align-self:flex-start; letter-spacing:0.1px;
+  margin-bottom:10px; align-self:flex-start; letter-spacing:0.1px;
 }
+.card-stars { font-size:14px; color:#f5a623; margin-bottom:12px; }
 .card-desc { font-size:15px; color:var(--text2); line-height:1.7; margin-bottom:18px; flex:1; }
 .card-link {
   display:inline-block; padding:8px 20px; border-radius:6px;
@@ -163,39 +164,39 @@ function toggleTheme() {
 })();
 
 const TOOLS = [
-  {n:"Kling 3.0/可灵",c:"视频生成",d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",p:"6月10日"},
-  {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K"},
-  {n:"Seedance 2.0",c:"视频生成",d:"字节多模态视频模型，12路参考输入，1080p 🇨🇳",u:"https://seed.bytedance.com/zh/seedance2_0"},
-  {n:"Seedance 3.0",c:"视频生成",d:"字节下一代视频模型，1小时长视频+多语情感配音 🇨🇳",u:"https://seed.bytedance.com/",p:"6月12日"},
-  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架 🇨🇳",u:"https://github.com/jd-opensource/joyai-echo",p:"6月14日"},
-  {n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人，10秒出片",u:"https://www.scenario.com/blog/meet-p-video-avatar",p:"6月15日"},
-  {n:"Midjourney",c:"图像/视频生成",d:"V8.1速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",p:"6月10日"},
-  {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器 🇨🇳",u:"https://zimage.design/zh/",p:"6月10日"},
-  {n:"Raphael AI",c:"图像生成",d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",p:"6月12日"},
-  {n:"Imagen 4 Ultra",c:"图像生成",d:"Google真实感最强图像API",p:"6月12日"},
-  {n:"Ideogram 4.0",c:"图像生成",d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",p:"6月12日"},
-  {n:"Reve 2.0",c:"图像生成",d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",p:"6月15日"},
-  {n:"Figma",c:"设计工具",d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",p:"6月10日"},
-  {n:"Pixso",c:"设计工具",d:"国内设计协作平台，AI智能设计 🇨🇳",u:"https://pixso.cn",p:"6月10日"},
-  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",u:"https://felo.ai",p:"6月11日"},
-  {n:"Genspark AI Design",c:"设计工具",d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",p:"6月11日"},
-  {n:"Open Design 0.9.0",c:"设计工具",d:"Claude Design开源替代，155个Skill系统",u:"https://open-design.ai/zh/",p:"6月13日"},
-  {n:"Lovart",c:"设计工具",d:"全球首个多模态AI设计Agent公测",u:"https://www.lovart.ai/zh",p:"6月14日"},
-  {n:"腾讯Ardot",c:"设计工具",d:"腾讯AI设计智能体公测，一句话生成可编辑UI 🇨🇳",u:"https://ardot.tencent.com/",p:"6月16日"},
-  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器 🇨🇳",u:"https://mew.design/zh",p:"6月16日"},
-  {n:"Meshy 3D Agent",c:"3D创作",d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",p:"6月13日"},
-  {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",p:"6月11日"},
-  {n:"Subvideo.ai",c:"字幕配音",d:"AI配音+字幕一体化，Whisper精准转录，40+语言 🇨🇳",u:"https://subvideo.ai/zh/",p:"6月16日"},
-  {n:"Vibbit",c:"短视频创作",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",p:"6月12日"},
-  {n:"LumenX Studio",c:"短视频创作",d:"阿里开源AI短漫剧全链路自动化平台 🇨🇳",u:"https://github.com/alibaba/LumenX",p:"6月14日"},
-  {n:"OiiOii 2.0",c:"短视频创作",d:"国产AI视频创作Agent，智能画布+拉片复刻 🇨🇳",u:"https://oiioii.ai",p:"6月15日"},
-  {n:"腾讯Miora",c:"创意智能体",d:"腾讯全场景创意智能体工作室 🇨🇳",u:"https://miora.design/",p:"6月13日"},
-  {n:"ElevenCreative Flows Agent",c:"创意工作流",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",p:"6月12日"},
-  {n:"Felo Video",c:"文档转视频",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",p:"6月12日"},
-  {n:"Colossyan Cora",c:"企业AI视频",d:"企业培训视频Agent，PDF/PPT变视频",u:"https://www.colossyan.com",p:"6月12日"},
-  {n:"Utopai PAI 2.0",c:"叙事视频",d:"AI叙事视频平台，ARR $11M",u:"https://pai.utopaistudios.com",p:"6月12日"},
-  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",p:"6月10日"},
-  {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",p:"6月11日"}
+  {n:"Kling 3.0/可灵",c:"视频生成",d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",r:4},
+  {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3},
+  {n:"Seedance 2.0",c:"视频生成",d:"字节多模态视频模型，12路参考输入，1080p 🇨🇳",u:"https://seed.bytedance.com/zh/seedance2_0",r:3},
+  {n:"Seedance 3.0",c:"视频生成",d:"字节下一代视频模型，1小时长视频+多语情感配音 🇨🇳",u:"https://seed.bytedance.com/",r:3},
+  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架 🇨🇳",u:"https://github.com/jd-opensource/joyai-echo",r:2},
+  {n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人，10秒出片",u:"https://www.scenario.com/blog/meet-p-video-avatar",r:2},
+  {n:"Midjourney",c:"图像/视频生成",d:"V8.1速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5},
+  {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器 🇨🇳",u:"https://zimage.design/zh/",r:3},
+  {n:"Raphael AI",c:"图像生成",d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",r:3},
+  {n:"Imagen 4 Ultra",c:"图像生成",d:"Google真实感最强图像API",u:"https://deepmind.google/technologies/imagen/",r:3},
+  {n:"Ideogram 4.0",c:"图像生成",d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",r:4},
+  {n:"Reve 2.0",c:"图像生成",d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",r:4},
+  {n:"Figma",c:"设计工具",d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",r:4},
+  {n:"Pixso",c:"设计工具",d:"国内设计协作平台，AI智能设计 🇨🇳",u:"https://pixso.cn",r:3},
+  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",u:"https://felo.ai",r:2},
+  {n:"Genspark AI Design",c:"设计工具",d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",r:3},
+  {n:"Open Design 0.9.0",c:"设计工具",d:"Claude Design开源替代，155个Skill系统",u:"https://open-design.ai/zh/",r:2},
+  {n:"Lovart",c:"设计工具",d:"全球首个多模态AI设计Agent公测",u:"https://www.lovart.ai/zh",r:3},
+  {n:"腾讯Ardot",c:"设计工具",d:"腾讯AI设计智能体公测，一句话生成可编辑UI 🇨🇳",u:"https://ardot.tencent.com/",r:3},
+  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器 🇨🇳",u:"https://mew.design/zh",r:2},
+  {n:"Meshy 3D Agent",c:"3D创作",d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",r:3},
+  {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4},
+  {n:"Subvideo.ai",c:"字幕配音",d:"AI配音+字幕一体化，Whisper精准转录，40+语言 🇨🇳",u:"https://subvideo.ai/zh/",r:2},
+  {n:"Vibbit",c:"短视频创作",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2},
+  {n:"LumenX Studio",c:"短视频创作",d:"阿里开源AI短漫剧全链路自动化平台 🇨🇳",u:"https://github.com/alibaba/LumenX",r:2},
+  {n:"OiiOii 2.0",c:"短视频创作",d:"国产AI视频创作Agent，智能画布+拉片复刻 🇨🇳",u:"https://oiioii.ai",r:3},
+  {n:"腾讯Miora",c:"创意智能体",d:"腾讯全场景创意智能体工作室 🇨🇳",u:"https://miora.design/",r:3},
+  {n:"ElevenCreative Flows Agent",c:"创意工作流",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3},
+  {n:"Felo Video",c:"文档转视频",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2},
+  {n:"Colossyan Cora",c:"企业AI视频",d:"企业培训视频Agent，PDF/PPT变视频",u:"https://www.colossyan.com",r:2},
+  {n:"Utopai PAI 2.0",c:"叙事视频",d:"AI叙事视频平台，ARR $11M",u:"https://pai.utopaistudios.com",r:2},
+  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",r:4},
+  {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4}
 ];
 
 const allCats = [...new Set(TOOLS.map(t=>t.c))];
@@ -209,7 +210,8 @@ function render(fc,q){
   TOOLS.forEach(t=>{
     if((!fc||t.c===fc)&&(!q||t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q))){
       const l=t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 访问官网</a>`:`<span class="card-link disabled">暂无链接</span>`;
-      s++;grid.innerHTML+=`<div class="card"><div class="card-name">${t.n}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
+      const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
+      s++;grid.innerHTML+=`<div class="card"><div class="card-name">${t.n}</div><div class="card-stars">${stars}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
   });count.textContent=s;
 }
 render(null,'');
