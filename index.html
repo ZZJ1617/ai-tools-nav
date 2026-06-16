@@ -235,6 +235,9 @@ const TOOLS = [
   {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4}
 ];
 
+// Sort by rating descending (same rating → alphabetical)
+TOOLS.sort((a,b)=>(b.r||0)-(a.r||0)||a.n.localeCompare(b.n));
+
 const allCats = [...new Set(TOOLS.map(t=>t.c))];
 const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount');
 count.textContent = TOOLS.length;
