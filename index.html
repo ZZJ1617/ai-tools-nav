@@ -92,7 +92,18 @@ header .count {
   font-size:13px; font-weight:600; color:var(--badge-text); background:var(--badge-bg);
   margin-bottom:14px; align-self:flex-start; letter-spacing:0.1px;
 }
-.card-desc { font-size:15px; color:var(--text2); line-height:1.7; flex:1; }
+.card-desc { font-size:15px; color:var(--text2); line-height:1.7; margin-bottom:18px; flex:1; }
+.card-link {
+  display:inline-block; padding:8px 20px; border-radius:6px;
+  font-size:14px; font-weight:600; text-align:center;
+  background:var(--link-bg); border:1px solid var(--link-border); color:var(--brand);
+  text-decoration:none; transition:all 0.15s; align-self:flex-start;
+}
+.card-link:hover { background:var(--link-hover-bg); border-color:var(--link-hover-bg); color:var(--link-hover-text); }
+.card-link.disabled {
+  background:var(--disabled-bg); border:1px solid var(--disabled-border);
+  color:var(--disabled-text); pointer-events:none; cursor:not-allowed;
+}
 .hidden { display:none !important; }
 
 footer { text-align:center; padding:64px 0 56px; background:var(--bg-alt); margin-top:80px; }
@@ -197,7 +208,8 @@ function render(fc,q){
   q=q.toLowerCase();let s=0;grid.innerHTML='';
   TOOLS.forEach(t=>{
     if((!fc||t.c===fc)&&(!q||t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q))){
-      s++;grid.innerHTML+=`<div class="card"><div class="card-name">${t.n}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div></div>`}
+      const l=t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 访问官网</a>`:`<span class="card-link disabled">暂无链接</span>`;
+      s++;grid.innerHTML+=`<div class="card"><div class="card-name">${t.n}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
   });count.textContent=s;
 }
 render(null,'');
