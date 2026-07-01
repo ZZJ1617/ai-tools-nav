@@ -258,7 +258,7 @@ const TOOLS = [
   {n:"Felo Video",c:"文档转视频",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2,re:"文档转视频"},
   {n:"Colossyan Cora",c:"企业AI视频",d:"企业培训视频Agent · 💰 14天试用后$27/月",u:"https://www.colossyan.com",r:2,re:"企业培训视频",v:1},
   {n:"Utopai PAI 2.0",c:"叙事视频",d:"AI叙事视频平台 · 💰 仅限订阅，无免费层",u:"https://pai.utopaistudios.com",r:2,re:"付费叙事视频",v:1},
-  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费"},
+  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/comfyanonymous/ComfyUI"},
   {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1},
   {n:"Adobe CC 6月更新",c:"设计工具",d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto 🇨🇳",u:"https://www.adobe.com/cn/creativecloud.html",r:3,re:"全线AI升级"},
   {n:"Omnify AI",c:"创意智能体",d:"清华团队多Agent创作平台，剧本→分镜→配音全链路 🇨🇳",u:"https://omnifyai.cn/",r:3,re:"全链路Agent"},
@@ -313,7 +313,7 @@ function render(fc,q,free){
   TOOLS.forEach(t=>{
     if(free && !t.f)return;
     if((!fc||t.c===fc)&&(!q||t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q))){
-      const l=t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 访问官网</a>`:`<span class="card-link disabled">暂无链接</span>`;
+      const l=(t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 官网</a>`:'')+(t.u&&t.g?' ':'')+(t.g?`<a href="${t.g}" target="_blank" rel="noopener" class="card-link">📦 开源</a>`:'')||'<span class="card-link disabled">暂无链接</span>';
       const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
       s++;grid.innerHTML+=`<div class="card">${t.v?'<span class="card-vpn">🪜</span>':''}<div class="card-name">${t.n}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
   });count.textContent=s;
