@@ -85,7 +85,7 @@ header .count {
 .card { position:relative; }
 .card-vpn { position:absolute; top:8px; right:8px; font-size:13px; background:#ff6b6b22; color:#ff6b6b; padding:2px 6px; border-radius:6px; font-weight:600; }
 .card-quota { font-size:12px; color:#2ecc71; font-weight:600; margin:2px 0 4px; }
-.card-icon { width:26px; height:26px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#fff; margin-left:auto; flex-shrink:0; }
+.card-icon, .card-icon-fallback { width:32px; height:32px; border-radius:8px; display:inline-flex; align-items:center; justify-content:center; font-size:16px; font-weight:700; color:#fff; margin-left:auto; flex-shrink:0; object-fit:contain; }
 
 .filters-wrap { margin-bottom:40px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .filters-wrap::-webkit-scrollbar { height:0; }
@@ -318,7 +318,7 @@ function render(fc,q,free){
       const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
       const dm=(t.u&&t.u.startsWith('http')?new URL(t.u).hostname:t.g?new URL(t.g).hostname:'');
       const c=['#07c160','#ff6b6b','#4ecdc4','#45b7d1','#f39c12','#9b59b6','#e74c3c','#1abc9c','#3498db','#e67e22','#2ecc71','#e91e63'][t.n.length%12];
-      const ic=dm?`<span class="card-icon" style="background:${c}">${t.n[0]}</span>`:'';
+      const ic=dm?`<img class="card-icon" src="https://${dm}/favicon.ico" onerror="this.style.display='none';this.nextSibling.style.display='inline-flex'" loading="lazy"><span class="card-icon-fallback" style="background:${c};display:none">${t.n[0]}</span>`:`<span class="card-icon-fallback" style="background:${c}">${t.n[0]}</span>`;
       s++;grid.innerHTML+=`<div class="card">${t.v?'<span class="card-vpn">🪜</span>':''}<div class="card-name">${t.n}${ic}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
   });count.textContent=s;
 }
