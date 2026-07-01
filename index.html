@@ -85,6 +85,7 @@ header .count {
 .card { position:relative; }
 .card-vpn { position:absolute; top:8px; right:8px; font-size:13px; background:#ff6b6b22; color:#ff6b6b; padding:2px 6px; border-radius:6px; font-weight:600; }
 .card-quota { font-size:12px; color:#2ecc71; font-weight:600; margin:2px 0 4px; }
+.card-icon { width:18px; height:18px; border-radius:4px; vertical-align:middle; margin-right:6px; }
 
 .filters-wrap { margin-bottom:40px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .filters-wrap::-webkit-scrollbar { height:0; }
@@ -231,7 +232,7 @@ const TOOLS = [
   {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3,re:"Google力作",f:1,v:1,q:"每月100积分"},
   {n:"Seedance 2.0",c:"视频生成",d:"字节多模态视频模型，12路参考输入，1080p 🇨🇳",u:"https://seed.bytedance.com/zh/seedance2_0",r:3,re:"字节多模态",f:1,q:"每天10次即梦AI"},
   {n:"Seedance 3.0",c:"视频生成",d:"字节下一代视频模型，1小时长视频+多语情感配音 🇨🇳",u:"https://seed.bytedance.com/",r:3,re:"长视频突破"},
-  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架 🇨🇳",u:"https://github.com/jd-opensource/joyai-echo",r:2,re:"开源可尝试",f:1,q:"开源免费"},
+  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架 🇨🇳",u:"",r:2,re:"开源可尝试",f:1,q:"开源免费",g:"https://github.com/jd-opensource/joyai-echo"},
   {n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人，10秒出片",u:"https://www.scenario.com/blog/meet-p-video-avatar",r:2,re:"数字人尝鲜"},
   {n:"Midjourney",c:"图像生成",d:"V8.1速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5,re:"行业标杆",v:1},
   {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器 🇨🇳",u:"https://zimage.design/zh/",r:3,re:"开源图像模型",f:1,q:"开源免费"},
@@ -251,7 +252,7 @@ const TOOLS = [
   {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4,re:"视频编辑革新",v:1},
   {n:"Subvideo.ai",c:"字幕配音",d:"AI配音+字幕一体化，Whisper精准转录，40+语言 🇨🇳",u:"https://subvideo.ai/zh/",r:2,re:"字幕配音便捷"},
   {n:"Vibbit",c:"短视频创作",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2,re:"短视频Agent",v:1},
-  {n:"LumenX Studio",c:"短视频创作",d:"阿里开源AI短漫剧全链路自动化平台 🇨🇳",u:"https://github.com/alibaba/LumenX",r:2,re:"开源短漫剧",f:1,q:"开源免费"},
+  {n:"LumenX Studio",c:"短视频创作",d:"阿里开源AI短漫剧全链路自动化平台 🇨🇳",u:"",r:2,re:"开源短漫剧",f:1,q:"开源免费",g:"https://github.com/alibaba/LumenX"},
   {n:"OiiOii 2.0",c:"短视频创作",d:"国产AI视频创作Agent，智能画布+拉片复刻 🇨🇳",u:"https://oiioii.ai",r:3,re:"智能画布创作"},
   {n:"腾讯Miora",c:"创意智能体",d:"腾讯全场景创意智能体工作室 · 🔒 需邀请码排期 🇨🇳",u:"",r:2,re:"创意智能体"},
   {n:"ElevenCreative Flows Agent",c:"创意工作流",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1},
@@ -267,15 +268,15 @@ const TOOLS = [
   {n:"MiniMax Hub",c:"视频生成",d:"一站式多模态AI视频平台，图像+视频+配音+音乐+剪辑五合一 🇨🇳",u:"https://www.minimax.io/",r:4,re:"一站式多模态",f:1,q:"免费"},
   {n:"iMideo",c:"视频生成",d:"50+AI视频工具一站式平台，集成Veo3/Seedance/Kling等8+模型 💰 $12.90/月起",u:"https://www.imideo.net/",r:3,re:"多模型集成",v:1},
   {n:"Google Vids",c:"视频生成",d:"免费AI虚拟主播，写脚本即生成播报视频，Veo3.1每月10次免费",u:"https://workspace.google.com/products/vids/",r:3,re:"免费虚拟主播",f:1,v:1,q:"每月10次Veo3.1"},
-  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格 🇨🇳",u:"https://github.com/ycbing/sketch-to-art",r:2,re:"开源草图转画",f:1,q:"开源免费"},
+  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格 🇨🇳",u:"",r:2,re:"开源草图转画",f:1,q:"开源免费",g:"https://github.com/ycbing/sketch-to-art"},
   {n:"天工 Skywork 3.1",c:"设计工具",d:"昆仑万维AI设计+Agent平台，无限画布+百Agent并行，可导出Figma 🇨🇳",u:"https://www.tiangong.cn/",r:3,re:"无限画布设计"},
   {n:"Suno AI V4",c:"音频生成",d:"全球头部AI音乐平台年度最大更新，4分钟完整歌曲，12轨人声分轨",u:"https://suno.com/",r:4,re:"AI音乐标杆",f:1,v:1,q:"每天10首免费"},
   {n:"Adobe Firefly Creative Skills",c:"设计工具",d:"Agent全面升级：一句话生成品牌VI+产品视频，进驻PS/PR/AI/ID",u:"https://www.adobe.com/cn/",r:4,re:"创意Agent升级"},
   {n:"HappyOyster 1.0",c:"3D创作",d:"阿里云交互式3D世界模型，一句话生成可探索演化的三维世界 🇨🇳",u:"https://happyoyster.cn/",r:3,re:"3D世界模型",f:1,q:"限时免费体验"},
-  {n:"Khala",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲 🇨🇳",u:"https://github.com/Khala-Music-AI/Khala",r:2,re:"开源歌曲生成",f:1,q:"开源免费"},
+  {n:"Khala",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲 🇨🇳",u:"",r:2,re:"开源歌曲生成",f:1,q:"开源免费",g:"https://github.com/Khala-Music-AI/Khala"},
   {n:"Magi-1",c:"视频生成",d:"全球首个自回归视频生成模型100%开源，清华Sand.AI团队，无限长度",u:"https://sand.ai/",r:4,re:"开源视频革命",f:1,q:"开源免费"},
-  {n:"Pixelle-Video",c:"短视频创作",d:"阿里AIDC开源AI全自动短视频引擎，23K星，一句话出片 🇨🇳",u:"https://github.com/AIDC-AI/Pixelle-Video",r:3,re:"开源短视频引擎",f:1,q:"开源免费"},
-  {n:"Jellyfish 🎬",c:"短视频创作",d:"开源AI短剧工厂，剧本→分镜→成片全流程，全局种子根治人物漂移，4.5K⭐ 🇨🇳",u:"https://github.com/Forget-C/Jellyfish",r:4,re:"开源短剧工厂",f:1,q:"开源免费"},
+  {n:"Pixelle-Video",c:"短视频创作",d:"阿里AIDC开源AI全自动短视频引擎，23K星，一句话出片 🇨🇳",u:"",r:3,re:"开源短视频引擎",f:1,q:"开源免费",g:"https://github.com/AIDC-AI/Pixelle-Video"},
+  {n:"Jellyfish 🎬",c:"短视频创作",d:"开源AI短剧工厂，剧本→分镜→成片全流程，全局种子根治人物漂移，4.5K⭐ 🇨🇳",u:"",r:4,re:"开源短剧工厂",f:1,q:"开源免费",g:"https://github.com/Forget-C/Jellyfish"},
   {n:"Motion.so",c:"视频生成",d:"前沿动态设计Agent，一句话触发品牌调研到成片全链路",u:"https://motion.so/",r:4,re:"动态设计Agent",v:1},
   {n:"Palmier Pro",c:"视频编辑",d:"开源macOS视频编辑器，Claude/Codex直连时间线，多AI模型内置",u:"https://www.palmier.io/",r:4,re:"开源视频编辑器",f:1,v:1,q:"开源免费"},
   {n:"万兴剧厂",c:"视频生成",d:"万兴科技AI影视平台，3D导演台拖拽式空间创作 🇨🇳",u:"https://reelmate.cn/",r:3,re:"3D空间创作"},
@@ -292,7 +293,7 @@ const TOOLS = [
   {n:"iClone Personal",c:"3D创作",d:"Reallusion专业3D动画软件永久免费版，AI Studio实现3D→AI生成",u:"https://www.reallusion.com/iclone/",r:3,re:"永久免费3D动画",f:1,q:"永久免费"},
   {n:"蝶变3.0",c:"视频编辑",d:"4K花园AI短剧画质提升工具，后置修复替代前置抽卡，7月1日公测 🇨🇳",u:"https://www.4kgarden.com/",r:2,re:"短剧画质提升"},
   {n:"TikTok Symphony Agent",c:"短视频创作",d:"TikTok AI广告创意Agent，输入链接自动完成调研→脚本→素材→配音全流程",u:"https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite",r:3,re:"广告Agent全自动"},
-  {n:"OpenMontage",c:"视频生成",d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，28K+ Stars",u:"https://github.com/calesthio/OpenMontage",r:4,re:"开源视频工厂",f:1,q:"开源免费"},
+  {n:"OpenMontage",c:"视频生成",d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，28K+ Stars",u:"",r:4,re:"开源视频工厂",f:1,q:"开源免费",g:"https://github.com/calesthio/OpenMontage"},
   {n:"Canva Grow 2.0",c:"设计工具",d:"Canva端到端AI营销引擎，广告创作+发布+优化全流程一体化",u:"https://www.canva.com/",r:3,re:"全链路营销",v:1},
   {n:"TTSMaker",c:"音频生成",d:"完全免费可商用TTS工具，50+语言600+声音，🔥无限量声音不扣配额 🇨🇳",u:"https://www.ttsmaker.cn/",r:4,re:"免费可商用配音",f:1,q:"每周2万字符"},
   {n:"Vidu Q3",c:"视频生成",d:"清华生数科技多镜头叙事视频生成，智慧剪辑16秒出片，国内直连 🇨🇳",u:"https://www.vidu.com/zh/",r:3,re:"多镜头叙事",f:1,q:"错峰无限/免费积分"}
@@ -315,7 +316,9 @@ function render(fc,q,free){
     if((!fc||t.c===fc)&&(!q||t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q))){
       const l=(t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 官网</a>`:'')+(t.u&&t.g?' ':'')+(t.g?`<a href="${t.g}" target="_blank" rel="noopener" class="card-link">📦 开源</a>`:'')||'<span class="card-link disabled">暂无链接</span>';
       const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
-      s++;grid.innerHTML+=`<div class="card">${t.v?'<span class="card-vpn">🪜</span>':''}<div class="card-name">${t.n}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
+      const dm=(t.u&&t.u.startsWith('http')?new URL(t.u).hostname:t.g?new URL(t.g).hostname:'');
+      const ic=dm?`<img class="card-icon" src="https://www.google.com/s2/favicons?domain=${dm}&sz=32" alt="" loading="lazy">`:'';
+      s++;grid.innerHTML+=`<div class="card">${t.v?'<span class="card-vpn">🪜</span>':''}<div class="card-name">${ic}${t.n}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
   });count.textContent=s;
 }
 render(null,'',0);
