@@ -12,148 +12,197 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zzj1617.github.io/ai-tools-nav/">
 <link rel="canonical" href="https://zzj1617.github.io/ai-tools-nav/">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root {
-  --bg: #ffffff; --bg-alt: #f6f5f4; --surface: #ffffff;
-  --text: rgba(0,0,0,0.9); --text2: #615d59; --text3: #a39e98; --text4: #c4bfb8;
-  --brand: #0075de; --brand-hover: #005bab;
-  --border: rgba(0,0,0,0.1); --border-hover: rgba(0,0,0,0.2);
-  --shadow: 0 4px 18px rgba(0,0,0,0.04),0 2px 7.85px rgba(0,0,0,0.027),0 0.8px 2.93px rgba(0,0,0,0.02);
-  --badge-bg: #f2f9ff; --badge-text: #097fe8;
-  --link-bg: #f2f9ff; --link-border: rgba(0,117,222,0.2); --link-hover-bg: #0075de; --link-hover-text: #fff;
-  --disabled-bg: #f0efee; --disabled-text: #a39e98; --disabled-border: rgba(0,0,0,0.05);
-  --toggle-bg: #f0efee; --toggle-icon: '🌙';
+  --bg:#ffffff;--bg-alt:#f6f5f4;--surface:#ffffff;
+  --text:rgba(0,0,0,0.9);--text2:#615d59;--text3:#a39e98;--text4:#c4bfb8;
+  --brand:#0075de;--brand-hover:#005bab;
+  --border:rgba(0,0,0,0.1);--border-hover:rgba(0,0,0,0.2);
+  --shadow:0 4px 18px rgba(0,0,0,0.04),0 2px 7.85px rgba(0,0,0,0.027),0 0.8px 2.93px rgba(0,0,0,0.02);
+  --badge-bg:#f2f9ff;--badge-text:#097fe8;
+  --link-bg:#f2f9ff;--link-border:rgba(0,117,222,0.2);--link-hover-bg:#0075de;--link-hover-text:#fff;
+  --disabled-bg:#f0efee;--disabled-text:#a39e98;--disabled-border:rgba(0,0,0,0.05);
+  --toggle-bg:#f0efee;
+  --success:#2ecc71;--warn:#f5a623;--danger:#ff6b6b;
+  --tag-easy-bg:#e8f5e9;--tag-easy-text:#2e7d32;
+  --tag-mid-bg:#fff3e0;--tag-mid-text:#ef6c00;
+  --tag-hard-bg:#ffebee;--tag-hard-text:#c62828;
+  --tag-hot-bg:#fff8e1;--tag-hot-text:#f57f17;
 }
 [data-theme="dark"] {
-  --bg: #08090a; --bg-alt: #0f1011; --surface: #191a1b;
-  --text: #f7f8f8; --text2: #d0d6e0; --text3: #8a8f98; --text4: #62666d;
-  --brand: #5e6ad2; --brand-hover: #7170ff;
-  --border: rgba(255,255,255,0.1); --border-hover: rgba(255,255,255,0.2);
-  --shadow: none;
-  --badge-bg: rgba(94,106,210,0.15); --badge-text: #7170ff;
-  --link-bg: rgba(94,106,210,0.15); --link-border: rgba(94,106,210,0.3); --link-hover-bg: #5e6ad2; --link-hover-text: #fff;
-  --disabled-bg: rgba(255,255,255,0.03); --disabled-text: #62666d; --disabled-border: rgba(255,255,255,0.05);
-  --toggle-bg: #23252a; --toggle-icon: '☀️';
+  --bg:#08090a;--bg-alt:#0f1011;--surface:#191a1b;
+  --text:#f7f8f8;--text2:#d0d6e0;--text3:#8a8f98;--text4:#62666d;
+  --brand:#5e6ad2;--brand-hover:#7170ff;
+  --border:rgba(255,255,255,0.1);--border-hover:rgba(255,255,255,0.2);
+  --shadow:none;
+  --badge-bg:rgba(94,106,210,0.15);--badge-text:#7170ff;
+  --link-bg:rgba(94,106,210,0.15);--link-border:rgba(94,106,210,0.3);--link-hover-bg:#5e6ad2;--link-hover-text:#fff;
+  --disabled-bg:rgba(255,255,255,0.03);--disabled-text:#62666d;--disabled-border:rgba(255,255,255,0.05);
+  --toggle-bg:#23252a;
+  --tag-easy-bg:rgba(46,125,50,0.15);--tag-easy-text:#66bb6a;
+  --tag-mid-bg:rgba(239,108,0,0.15);--tag-mid-text:#ffa726;
+  --tag-hard-bg:rgba(198,40,40,0.15);--tag-hard-text:#ef5350;
+  --tag-hot-bg:rgba(245,127,23,0.15);--tag-hot-text:#ffca28;
 }
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: 'Inter', -apple-system, system-ui, sans-serif;
-  background: var(--bg); color: var(--text2); line-height:1.6; transition:background 0.3s;
-}
-.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text2);line-height:1.6;transition:background .35s ease,color .35s ease}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--brand);color:#fff;padding:8px 16px;z-index:10000;text-decoration:none;font-weight:600;border-radius:0 0 8px 0;transition:top .2s}
+.skip-link:focus{top:0}
 
-/* Theme Toggle */
-.theme-bar { display:flex; justify-content:flex-end; padding:16px 24px; }
-.theme-btn {
-  padding:6px 16px; border-radius:9999px; font-size:14px; font-weight:500;
-  background:var(--toggle-bg); border:1px solid var(--border); color:var(--text2);
-  cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:6px;
-  font-family:inherit;
-}
-.theme-btn:hover { border-color:var(--brand); }
+.theme-bar{display:flex;justify-content:flex-end;padding:16px 24px}
+.theme-btn{padding:6px 16px;border-radius:9999px;font-size:14px;font-weight:500;background:var(--toggle-bg);border:1px solid var(--border);color:var(--text2);cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;font-family:inherit}
+.theme-btn:hover{border-color:var(--brand);transform:translateY(-1px)}
+.theme-btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
 
-header { padding:48px 0 40px; text-align:center; }
-header h1 {
-  font-size:40px; font-weight:700; color:var(--text);
-  letter-spacing:-1.2px; line-height:1.2; margin-bottom:12px;
-}
-header p { font-size:18px; color:var(--text3); }
-header .count {
-  display:inline-block; margin-top:14px; padding:6px 20px;
-  background:var(--badge-bg); border-radius:9999px;
-  font-size:14px; font-weight:600; color:var(--badge-text);
-}
+header{padding:40px 0 32px;text-align:center;animation:fadeInUp .7s ease both}
+header h1{font-size:40px;font-weight:700;color:var(--text);letter-spacing:-1.2px;line-height:1.2;margin-bottom:12px}
+header p{font-size:18px;color:var(--text3)}
+header .count{display:inline-block;margin-top:14px;padding:6px 20px;background:var(--badge-bg);border-radius:9999px;font-size:14px;font-weight:600;color:var(--badge-text)}
 
-.search-wrap { margin-bottom:20px; }
-.search-wrap input {
-  width:100%; padding:14px 20px; font-size:16px; color:var(--text);
-  background:var(--surface); border:1px solid var(--border); border-radius:12px;
-  font-family:inherit; outline:none; transition:border-color 0.2s; box-shadow:var(--shadow);
-}
-.search-wrap input:focus { border-color:var(--brand); }
-.search-wrap input::placeholder { color:var(--text4); }
-.search-wrap .free-btn {
-  display:inline-block; margin-left:10px; padding:10px 20px;
-  border:2px solid var(--border); border-radius:10px;
-  background:var(--surface); color:var(--text2);
-  font-size:14px; font-weight:600; cursor:pointer;
-  transition:all .2s; vertical-align:top;
-}
-.search-wrap .free-btn:hover { border-color:var(--text3); }
-.search-wrap .free-btn.active { background:#2ecc71; color:#fff; border-color:#2ecc71; }
-.card { position:relative; }
-.card-vpn { position:absolute; top:8px; right:8px; font-size:13px; background:#ff6b6b22; color:#ff6b6b; padding:2px 6px; border-radius:6px; font-weight:600; }
-.card-quota { font-size:12px; color:#2ecc71; font-weight:600; margin:2px 0 4px; }
-.card-icon, .card-icon-fallback { width:48px; height:48px; border-radius:12px; display:inline-flex; align-items:center; justify-content:center; font-size:22px; font-weight:700; color:#fff; margin-left:auto; flex-shrink:0; object-fit:contain; }
+/* 新手引导 */
+.guide-bar{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:0 0 28px;padding:0 24px}
+.guide-link{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:9999px;font-size:13px;font-weight:500;background:var(--surface);border:1px solid var(--border);color:var(--text2);text-decoration:none;transition:all .15s}
+.guide-link:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px)}
 
-.filters-wrap { margin-bottom:40px; overflow-x:auto; -webkit-overflow-scrolling:touch; }
-.filters-wrap::-webkit-scrollbar { height:0; }
-.filters { display:flex; gap:8px; white-space:nowrap; min-width:max-content; }
-.filter-pill {
-  padding:6px 18px; border-radius:9999px; font-size:14px; font-weight:500;
-  color:var(--text2); background:transparent; border:1px solid var(--border);
-  cursor:pointer; transition:all 0.15s; user-select:none; flex-shrink:0;
-}
-.filter-pill:hover { border-color:var(--text3); }
-.filter-pill.active { color:#fff; background:var(--brand); border-color:var(--brand); }
+.search-wrap{margin-bottom:20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search-wrap input{flex:1;min-width:240px;padding:14px 20px;font-size:16px;color:var(--text);background:var(--surface);border:1px solid var(--border);border-radius:12px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s;box-shadow:var(--shadow)}
+.search-wrap input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(0,117,222,.12)}
+[data-theme="dark"] .search-wrap input:focus{box-shadow:0 0 0 3px rgba(94,106,210,.2)}
+.search-wrap input::placeholder{color:var(--text4)}
+.search-wrap .free-btn{padding:12px 20px;border:2px solid var(--border);border-radius:10px;background:var(--surface);color:var(--text2);font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.search-wrap .free-btn:hover{border-color:var(--text3);transform:translateY(-1px)}
+.search-wrap .free-btn.active{background:var(--success);color:#fff;border-color:var(--success)}
 
-.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
-@media (max-width:900px) { .grid { grid-template-columns:repeat(2,1fr); } }
-@media (max-width:600px) { .grid { grid-template-columns:1fr; } header h1 { font-size:28px; letter-spacing:-0.6px; } }
-.card {
-  background:var(--surface); border:1px solid var(--border); border-radius:12px;
-  padding:28px; box-shadow:var(--shadow); transition:all 0.2s; display:flex; flex-direction:column;
-}
-.card:hover { border-color:var(--border-hover); transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.08); }
-[data-theme="dark"] .card:hover { box-shadow:0 0 0 1px rgba(94,106,210,0.2); }
-.card-name { font-size:20px; font-weight:700; color:var(--text); margin-bottom:8px; letter-spacing:-0.2px; display:flex; align-items:center; width:100%; }
-.card-cat {
-  display:inline-block; padding:4px 14px; border-radius:9999px;
-  font-size:13px; font-weight:600; color:var(--badge-text); background:var(--badge-bg);
-  margin-bottom:10px; align-self:flex-start; letter-spacing:0.1px;
-}
-.card-stars { font-size:14px; color:#f5a623; margin-bottom:12px; }
-.card-desc { font-size:15px; color:var(--text2); line-height:1.7; margin-bottom:18px; flex:1; }
-.card-link {
-  display:inline-block; padding:8px 20px; border-radius:6px;
-  font-size:14px; font-weight:600; text-align:center;
-  background:var(--link-bg); border:1px solid var(--link-border); color:var(--brand);
-  text-decoration:none; transition:all 0.15s; align-self:flex-start;
-}
-.card-link:hover { background:var(--link-hover-bg); border-color:var(--link-hover-bg); color:var(--link-hover-text); }
-.card-link.disabled {
-  background:var(--disabled-bg); border:1px solid var(--disabled-border);
-  color:var(--disabled-text); pointer-events:none; cursor:not-allowed;
-}
-.hidden { display:none !important; }
+.sort-bar{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:16px;font-size:14px;color:var(--text3)}
+.sort-bar select{padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surface);color:var(--text2);font-size:14px;cursor:pointer;outline:none}
+.sort-bar select:focus{border-color:var(--brand)}
 
-/* Hotspot */
-.hotspot { margin-bottom:36px; }
-.hotspot-header { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
-.hotspot-dot { width:8px; height:8px; background:#f56c6c; border-radius:50%; animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
-.hotspot-title { font-size:18px; font-weight:600; color:var(--text); }
-.hotspot-date { font-size:13px; color:var(--text4); }
-.hotspot-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
-@media (max-width:900px) { .hotspot-grid { grid-template-columns:repeat(2,1fr); } }
-@media (max-width:600px) { .hotspot-grid { grid-template-columns:1fr; } }
-.hotspot-card {
-  background:var(--badge-bg); border:1px solid var(--border); border-radius:10px;
-  padding:14px 18px; font-size:14px; color:var(--text2); line-height:1.6;
-}
-.hotspot-card strong { color:var(--brand); }
+/* 场景筛选 */
+.scene-bar{margin-bottom:16px}
+.scene-title{font-size:14px;font-weight:600;color:var(--text3);margin-bottom:10px}
+.scene-wrap{display:flex;gap:8px;flex-wrap:wrap}
+.scene-pill{padding:8px 16px;border-radius:10px;font-size:13px;font-weight:600;background:var(--surface);border:1px solid var(--border);color:var(--text2);cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:6px}
+.scene-pill:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px)}
+.scene-pill.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.scene-pill .scene-icon{font-size:15px}
 
-footer { text-align:center; padding:64px 0 56px; background:var(--bg-alt); margin-top:80px; }
-footer h2 { font-size:22px; font-weight:600; color:var(--text); margin-bottom:10px; }
-footer p { font-size:15px; color:var(--text3); max-width:420px; margin:0 auto; }
-footer .qrcode-hint { margin-top:18px; padding:12px 28px; background:var(--surface); border-radius:12px; display:inline-block; border:1px solid var(--border); box-shadow:var(--shadow); }
-footer .qrcode-hint span { color:var(--brand); font-weight:700; }
+.filters-wrap{margin-bottom:32px;position:relative}
+.filters-wrap::after{content:'';position:absolute;top:0;right:0;width:40px;height:100%;background:linear-gradient(to right,transparent,var(--bg));pointer-events:none;opacity:0;transition:opacity .3s}
+.filters-wrap.can-scroll::after{opacity:1}
+.filters-wrap::-webkit-scrollbar{height:0}
+.filters{display:flex;gap:8px;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px}
+.filter-pill{padding:6px 14px;border-radius:9999px;font-size:14px;font-weight:500;color:var(--text2);background:transparent;border:1px solid var(--border);cursor:pointer;transition:all .15s;user-select:none;flex-shrink:0;display:inline-flex;align-items:center;gap:6px}
+.filter-pill:hover{border-color:var(--text3);transform:translateY(-1px)}
+.filter-pill.active{color:#fff;background:var(--brand);border-color:var(--brand)}
+.filter-pill .pill-count{font-size:11px;font-weight:600;padding:1px 7px;border-radius:9999px;background:rgba(0,0,0,.06);color:var(--text3);transition:all .15s}
+.filter-pill.active .pill-count{background:rgba(255,255,255,.25);color:#fff}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}header h1{font-size:28px;letter-spacing:-.6px}}
+
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);transition:all .25s ease;display:flex;flex-direction:column;animation:fadeInUp .5s ease both;position:relative}
+.card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+[data-theme="dark"] .card:hover{box-shadow:0 0 0 1px rgba(94,106,210,.25),0 12px 40px rgba(0,0,0,.3)}
+
+.card-badge-wrap{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center}
+.card-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;letter-spacing:.2px;text-transform:uppercase}
+.badge-new{background:var(--tag-hot-bg);color:var(--tag-hot-text)}
+.badge-diff-easy{background:var(--tag-easy-bg);color:var(--tag-easy-text)}
+.badge-diff-mid{background:var(--tag-mid-bg);color:var(--tag-mid-text)}
+.badge-diff-hard{background:var(--tag-hard-bg);color:var(--tag-hard-text)}
+.badge-zh{background:rgba(0,117,222,.08);color:var(--badge-text)}
+.badge-hot{background:var(--tag-hot-bg);color:var(--tag-hot-text)}
+
+.card-name{font-size:19px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.2px;display:flex;align-items:center;width:100%}
+.card-cat{display:inline-block;padding:4px 14px;border-radius:9999px;font-size:13px;font-weight:600;color:var(--badge-text);background:var(--badge-bg);margin-bottom:8px;align-self:flex-start;letter-spacing:.1px}
+.card-stars{font-size:14px;color:#f5a623;margin-bottom:10px}
+.card-desc{font-size:14.5px;color:var(--text2);line-height:1.7;margin-bottom:14px;flex:1}
+.card-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.card-meta-tag{font-size:12px;color:var(--text3);background:var(--bg-alt);padding:3px 10px;border-radius:6px;font-weight:500}
+.card-actions{display:flex;gap:8px;flex-wrap:wrap}
+.card-link{display:inline-block;padding:8px 20px;border-radius:6px;font-size:14px;font-weight:600;text-align:center;background:var(--link-bg);border:1px solid var(--link-border);color:var(--brand);text-decoration:none;transition:all .15s}
+.card-link:hover{background:var(--link-hover-bg);border-color:var(--link-hover-bg);color:var(--link-hover-text)}
+.card-link.disabled{background:var(--disabled-bg);border:1px solid var(--disabled-border);color:var(--disabled-text);pointer-events:none;cursor:not-allowed}
+.card-vpn{position:absolute;top:8px;right:8px;font-size:13px;background:#ff6b6b22;color:#ff6b6b;padding:2px 6px;border-radius:6px;font-weight:600}
+.card-quota{font-size:12px;color:var(--success);font-weight:600;margin:2px 0 4px}
+.card-icon,.card-icon-fallback{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;margin-left:auto;flex-shrink:0;object-fit:contain}
+
+.empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text3)}
+.empty-state-icon{font-size:48px;margin-bottom:12px;opacity:.6}
+.empty-state h3{font-size:20px;color:var(--text2);margin-bottom:8px}
+.empty-state p{font-size:15px;max-width:400px;margin:0 auto}
+
+.hotspot{margin-bottom:36px;animation:fadeInUp .6s ease .1s both}
+.hotspot-header{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.hotspot-dot{width:8px;height:8px;background:#f56c6c;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hotspot-title{font-size:18px;font-weight:600;color:var(--text)}
+.hotspot-date{font-size:13px;color:var(--text4)}
+.hotspot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.hotspot-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hotspot-grid{grid-template-columns:1fr}}
+.hotspot-card{background:var(--badge-bg);border:1px solid var(--border);border-radius:10px;padding:14px 18px;font-size:14px;color:var(--text2);line-height:1.6;transition:transform .2s,box-shadow .2s}
+.hotspot-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.hotspot-card strong{color:var(--brand)}
+.hotspot-card .hotspot-tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:9999px;background:rgba(0,117,222,.1);color:var(--badge-text);margin-top:8px;margin-right:4px}
+
+/* 折叠面板 */
+.collapse-section{margin-bottom:24px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
+.collapse-header{width:100%;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;background:transparent;border:none;color:var(--text);font-size:16px;font-weight:600;cursor:pointer;transition:background .15s;font-family:inherit}
+.collapse-header:hover{background:var(--bg-alt)}
+.collapse-header .chevron{transition:transform .25s;font-size:14px;color:var(--text3)}
+.collapse-header.open .chevron{transform:rotate(180deg)}
+.collapse-body{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 20px}
+.collapse-body.open{max-height:2000px;padding:0 20px 20px}
+
+/* 归档卡片 */
+.archive-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.archive-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.archive-grid{grid-template-columns:1fr}}
+.archive-card{padding:14px 16px;border-radius:10px;background:var(--bg-alt);border:1px solid var(--border);font-size:14px;color:var(--text3)}
+.archive-card .archive-name{font-weight:600;color:var(--text2);margin-bottom:4px}
+.archive-card .archive-reason{font-size:12px;margin-top:4px}
+
+/* 更新日志 */
+.changelog-list{list-style:none}
+.changelog-list li{padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--text2);display:flex;gap:12px;align-items:flex-start}
+.changelog-list li:last-child{border-bottom:none}
+.changelog-date{font-size:12px;font-weight:600;color:var(--text3);white-space:nowrap;min-width:70px}
+.changelog-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:9999px;margin-right:6px}
+.badge-add{background:var(--tag-easy-bg);color:var(--tag-easy-text)}
+.badge-update{background:var(--badge-bg);color:var(--badge-text)}
+.badge-fix{background:var(--tag-mid-bg);color:var(--tag-mid-text)}
+
+.back-to-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--surface);border:1px solid var(--border);color:var(--text2);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:all .3s ease;z-index:999}
+.back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.back-to-top:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-2px)}
+
+footer{text-align:center;padding:64px 0 56px;background:var(--bg-alt);margin-top:60px}
+footer h2{font-size:22px;font-weight:600;color:var(--text);margin-bottom:10px}
+footer p{font-size:15px;color:var(--text3);max-width:420px;margin:0 auto}
+footer .qrcode-hint{margin-top:18px;padding:12px 28px;background:var(--surface);border-radius:12px;display:inline-block;border:1px solid var(--border);box-shadow:var(--shadow)}
+footer .qrcode-hint span{color:var(--brand);font-weight:700}
+
+.hidden{display:none !important}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">跳转到主要内容</a>
+
 <div class="theme-bar container">
-  <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙 暗色模式</button>
+  <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" aria-label="切换明暗主题">🌙 暗色模式</button>
 </div>
 
 <header class="container">
@@ -162,215 +211,386 @@ footer .qrcode-hint span { color:var(--brand); font-weight:700; }
   <div class="count">📰 已收录 <span id="toolCount">0</span> 个工具，持续更新</div>
 </header>
 
-<div class="container">
-  <!-- 🔴 今日AI工具热点 -->
-  <div class="hotspot" id="hotspot"></div>
-
-  <div class="search-wrap">
-    <input type="text" id="search" placeholder="搜索工具名或关键词…" autocomplete="off">
-    <button id="freeBtn" class="free-btn">🆓 仅看免费</button>
-  </div>
-  <div class="filters-wrap"><div class="filters" id="filters"></div></div>
-  <div class="grid" id="grid"></div>
+<!-- 新手引导 -->
+<div class="guide-bar container">
+  <a class="guide-link" href="https://mp.weixin.qq.com" target="_blank" rel="noopener">📘 AI视频生成入门指南</a>
+  <a class="guide-link" href="https://mp.weixin.qq.com" target="_blank" rel="noopener">🎬 零门槛制作AI短剧</a>
+  <a class="guide-link" href="https://mp.weixin.qq.com" target="_blank" rel="noopener">🎨 免费AI设计工具对比</a>
+  <a class="guide-link" href="https://mp.weixin.qq.com" target="_blank" rel="noopener">🎵 AI音乐/配音工具合集</a>
 </div>
+
+<main id="main-content" class="container">
+  <!-- 热点 -->
+  <section class="hotspot" id="hotspot" aria-label="今日AI工具热点"></section>
+
+  <section aria-label="工具搜索与筛选">
+    <div class="search-wrap">
+      <input type="text" id="search" placeholder="搜索工具名或关键词…" autocomplete="off" aria-label="搜索工具">
+      <button id="freeBtn" class="free-btn" aria-pressed="false" aria-label="仅显示免费工具">🆓 仅看免费</button>
+    </div>
+
+    <div class="sort-bar">
+      <label for="sortSelect">排序：</label>
+      <select id="sortSelect" aria-label="排序方式">
+        <option value="rating-desc">评分从高到低</option>
+        <option value="rating-asc">评分从低到高</option>
+        <option value="name-asc">名称 A-Z</option>
+        <option value="name-desc">名称 Z-A</option>
+        <option value="hot-desc">热度优先</option>
+      </select>
+    </div>
+
+    <!-- 场景筛选 -->
+    <div class="scene-bar" id="sceneBar">
+      <div class="scene-title">🎯 按场景找工具</div>
+      <div class="scene-wrap" id="sceneWrap"></div>
+    </div>
+
+    <nav class="filters-wrap" id="filtersWrap" aria-label="工具分类筛选">
+      <div class="filters" id="filters"></div>
+    </nav>
+  </section>
+
+  <section aria-label="工具列表">
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- 历史归档 -->
+  <section class="collapse-section" style="margin-top:48px">
+    <button class="collapse-header" id="archiveHeader" onclick="toggleCollapse('archive')" aria-expanded="false">
+      <span>📦 历史归档（已停服工具）</span>
+      <span class="chevron">▼</span>
+    </button>
+    <div class="collapse-body" id="archiveBody">
+      <div class="archive-grid" id="archiveGrid"></div>
+    </div>
+  </section>
+
+  <!-- 更新日志 -->
+  <section class="collapse-section" style="margin-top:16px">
+    <button class="collapse-header" id="changelogHeader" onclick="toggleCollapse('changelog')" aria-expanded="false">
+      <span>📝 更新日志</span>
+      <span class="chevron">▼</span>
+    </button>
+    <div class="collapse-body" id="changelogBody">
+      <ul class="changelog-list" id="changelogList"></ul>
+    </div>
+  </section>
+</main>
 
 <footer>
   <h2>关注「赛博上片指南」公众号</h2>
   <p>每天早上获取最新AI创作工具推荐，以上工具均来自每日日报精选</p>
   <div class="qrcode-hint">🔍 微信搜索 <span>赛博上片指南</span> 关注</div>
-  <p style="margin-top:18px; font-size:14px; color:var(--text3);">
-    回复 <span style="color:var(--brand); font-weight:700;">「工具」</span> 获取完整AI创作工具导航页
-  </p>
+  <p style="margin-top:18px;font-size:14px;color:var(--text3)">回复 <span style="color:var(--brand);font-weight:700">「工具」</span> 获取完整AI创作工具导航页</p>
 </footer>
 
+<button id="backToTop" class="back-to-top" aria-label="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
 <script>
-// Theme toggle
-function toggleTheme() {
-  const html = document.documentElement;
-  const btn = document.getElementById('themeBtn');
-  if (html.dataset.theme === 'dark') {
-    html.dataset.theme = 'light';
-    btn.innerHTML = '🌙 暗色模式';
-    localStorage.setItem('theme', 'light');
-  } else {
-    html.dataset.theme = 'dark';
-    btn.innerHTML = '☀️ 浅色模式';
-    localStorage.setItem('theme', 'dark');
-  }
+// ===== Theme =====
+function toggleTheme(){
+  const html=document.documentElement,btn=document.getElementById('themeBtn');
+  if(html.dataset.theme==='dark'){html.dataset.theme='light';btn.innerHTML='🌙 暗色模式';localStorage.setItem('theme','light')}
+  else{html.dataset.theme='dark';btn.innerHTML='☀️ 浅色模式';localStorage.setItem('theme','dark')}
 }
-// Load saved theme
-(function() {
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
-    document.documentElement.dataset.theme = 'dark';
-    document.getElementById('themeBtn').innerHTML = '☀️ 浅色模式';
-  }
+(function initTheme(){
+  const saved=localStorage.getItem('theme');
+  const prefersDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if(saved==='dark'||(!saved&&prefersDark)){document.documentElement.dataset.theme='dark';document.getElementById('themeBtn').innerHTML='☀️ 浅色模式'}
 })();
 
-const HOTSPOT = {
-  date:"7月30日 09:33更新",
+// ===== 热点（结构化） =====
+const HOTSPOT={
+  date:"7月30日 20:00更新",
   items:[
-    {"t":"🔖", "h":"FLUX 3开源", "d":"Black Forest Labs发布FLUX 3多模态基础模型，首个同时训练图像/视频/音频的单架构模型，后续计划开源权重"},
-    {"t":"⚡", "h":"Magi-1开源", "d":"清华Sand AI开源全球首个自回归视频生成模型，240亿参数，无限长度生成，Apache 2.0协议"},
-    {"t":"🔔", "h":"SSI获Nvidia 50亿美元", "d":"Ilya Sutskever的Safe Superintelligence获Nvidia 50亿美元投资，12个月算力提升10倍"},
-    {"t":"🎬", "h":"Seko 2.0短剧", "d":"商汤Seko短剧Agent实测：一句话生成百集AI短剧，角色百集不崩脸，免费积分体验"},
-    {"t":"🤖", "h":"CatPaw上线", "d":"美团发布全场景AI Agent平台CatPaw，已覆盖9万员工、搭建超3万个Agent"},
-    {"t":"🎵", "h":"Lyria 3.5", "d":"Google发布音乐生成模型Lyria 3.5，Flow Music可直接创作完整歌曲，人声质量大幅提升"},
-    {"t":"🍳", "h":"海尔CR3", "d":"海尔联合橡鹿机器人发布全球首款家用全自主AI烹饪机器人CR3，全程无人值守智能烹饪"},
-    {"t":"🚀", "h":"Tokenless", "d":"YC S26发布智能模型路由API，并行竞跑多模型自动选优淘汰慢模型，推理费用减半"}]
+    {t:"🔖",h:"FLUX 3开源",d:"Black Forest Labs发布FLUX 3多模态基础模型，首个同时训练图像/视频/音频的单架构模型",params:"后续计划开源权重",scene:"多模态 · 图像 · 视频",link:"https://blackforestlabs.ai"},
+    {t:"⚡",h:"Magi-1开源",d:"清华Sand AI开源全球首个自回归视频生成模型，240亿参数，无限长度生成",params:"Apache 2.0",scene:"视频生成 · 开源",link:"https://sand.ai"},
+    {t:"🔔",h:"SSI获Nvidia 50亿美元",d:"Ilya Sutskever的Safe Superintelligence获Nvidia 50亿美元投资",params:"12个月算力提升10倍",scene:"融资 · 安全AI"},
+    {t:"🎬",h:"Seko 2.0短剧",d:"商汤Seko短剧Agent实测：一句话生成百集AI短剧，角色百集不崩脸",params:"新人350积分+每日送50",scene:"AI短剧 · 视频",link:"https://seko.sensetime.com/explore"},
+    {t:"🤖",h:"CatPaw上线",d:"美团发布全场景AI Agent平台CatPaw，已覆盖9万员工",params:"超3万个Agent",scene:"Agent · 工作流",link:"https://catpaw.meituan.com"}
+  ]
 };
 function renderHotspot(){
-  if(!HOTSPOT.items.length) return;
+  if(!HOTSPOT.items.length)return;
   const h=document.getElementById('hotspot');
-  const cards=HOTSPOT.items.map(i=>`<div class="hotspot-card"><strong>${i.t} ${i.h}</strong> — ${i.d}</div>`).join('');
+  const cards=HOTSPOT.items.map(i=>{
+    const tags=`<span class="hotspot-tag">${i.params}</span><span class="hotspot-tag">${i.scene}</span>`;
+    const link=i.link?`<div style="margin-top:10px"><a href="${i.link}" target="_blank" rel="noopener" style="font-size:13px;font-weight:600;color:var(--brand);text-decoration:none">🔗 立即试用 →</a></div>`:'';
+    return `<article class="hotspot-card"><strong>${i.t} ${i.h}</strong> — ${i.d}${tags}${link}</article>`;
+  }).join('');
   h.innerHTML=`<div class="hotspot-header"><div class="hotspot-dot"></div><span class="hotspot-title">🔴 今日AI工具热点</span><span class="hotspot-date">${HOTSPOT.date}</span></div><div class="hotspot-grid">${cards}</div>`;
 }
 renderHotspot();
 
-const TOOLS = [
-  {n:"Kling 3.0/可灵",c:"视频生成",d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",r:4,re:"视频生成领先",f:1,q:"每天6次720p"},
-  {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3,re:"Google力作",f:1,v:1,q:"每月100积分"},
-  {n:"Seedance 3.0",c:"视频生成",d:"字节下一代视频模型，1小时长视频+多语情感配音 🇨🇳",u:"https://seed.bytedance.com/",r:3,re:"长视频突破"},
-  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架 🇨🇳",u:"",r:2,re:"开源可尝试",f:1,q:"开源免费",g:"https://github.com/jd-opensource/joyai-echo"},
-  {n:"P-Video-Avatar",c:"视频生成",d:"⚠️ 已下线 - Pruna AI单张照片生成动态数字人",u:"",r:2,re:"已停服"},
-  {n:"Midjourney",c:"图像生成",d:"V8.1速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5,re:"行业标杆",v:1},
-  {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器 🇨🇳",u:"https://zimage.design/zh/",r:3,re:"开源图像模型",f:1,q:"开源免费",g:"https://github.com/Tongyi-MAI/Z-Image"},
-  {n:"Raphael AI",c:"图像生成",d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",r:3,re:"无限免费生成",f:1,v:1,q:"无限免费"},
-  {n:"Imagen 4 Ultra",c:"图像生成",d:"Google真实感最强图像API",u:"https://deepmind.google/technologies/imagen/",r:3,re:"Google真实感强",v:1},
-  {n:"Ideogram 4.0",c:"图像生成",d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",r:4,re:"文字渲染领先",f:1,v:1,q:"每周10积分",g:"https://github.com/ideogram-oss/ideogram4"},
-  {n:"Reve 2.0",c:"图像生成",d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",r:4,re:"精准控制强",v:1},
-  {n:"Figma",c:"设计工具",d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",r:4,re:"设计协作标杆",v:1},
-  {n:"Pixso",c:"设计工具",d:"国内设计协作平台，AI智能设计 🇨🇳",u:"https://pixso.cn",r:3,re:"国内设计协作",f:1,q:"免费"},
-  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",u:"https://felo.ai",r:2,re:"快速出稿生成"},
-  {n:"Genspark AI Design",c:"设计工具",d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",r:3,re:"免费积分多",f:1,v:1,q:"每天100积分"},
-  {n:"Lovart",c:"设计工具",d:"多模态AI设计Agent · 🔒 需邀请码，80万人排队",u:"",r:2,re:"排队中待用"},
-  {n:"腾讯Ardot",c:"设计工具",d:"腾讯AI设计智能体公测，一句话生成可编辑UI 🇨🇳",u:"https://ardot.tencent.com/",r:3,re:"腾讯AI设计"},
-  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器 🇨🇳",u:"https://mew.design/zh",r:2,re:"免费设计生成",f:1,q:"免费"},
-  {n:"Meshy 3D Agent",c:"3D创作",d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",r:3,re:"3D Agent首创",v:1},
-  {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4,re:"视频编辑革新",v:1},
-  {n:"Subvideo.ai",c:"字幕配音",d:"⚠️ 已下线 - AI配音+字幕一体化工具",u:"",r:2,re:"已停服"},
-  {n:"Vibbit",c:"短视频创作",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2,re:"短视频Agent",v:1},
-  {n:"LumenX Studio",c:"AI短剧",d:"阿里开源AI短漫剧全链路自动化平台 🇨🇳",u:"",r:2,re:"开源短漫剧",f:1,q:"开源免费",g:"https://github.com/alibaba/LumenX"},
-  {n:"OiiOii 2.0",c:"短视频创作",d:"国产AI视频创作Agent，智能画布+拉片复刻 🇨🇳",u:"https://oiioii.ai",r:3,re:"智能画布创作"},
-  {n:"腾讯Miora",c:"创意智能体",d:"腾讯全场景创意智能体工作室 · 🔒 需邀请码排期 🇨🇳",u:"",r:2,re:"创意智能体"},
-  {n:"ElevenCreative Flows Agent",c:"创意工作流",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1},
-  {n:"Felo Video",c:"文档转视频",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2,re:"文档转视频"},
-  {n:"Colossyan Cora",c:"企业AI视频",d:"企业培训视频Agent · 💰 14天试用后$27/月",u:"https://www.colossyan.com",r:2,re:"企业培训视频",v:1},
-  {n:"Utopai PAI 2.0",c:"叙事视频",d:"AI叙事视频平台 · 💰 仅限订阅，无免费层",u:"https://pai.utopaistudios.com",r:2,re:"付费叙事视频",v:1},
-  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/comfyanonymous/ComfyUI"},
-  {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1},
-  {n:"Adobe CC 6月更新",c:"设计工具",d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto 🇨🇳",u:"https://www.adobe.com/cn/creativecloud.html",r:3,re:"全线AI升级"},
-  {n:"Omnify AI",c:"创意智能体",d:"清华团队多Agent创作平台，剧本→分镜→配音全链路 🇨🇳",u:"https://omnifyai.cn/",r:3,re:"全链路Agent"},
-  {n:"Arrow 1.0",c:"图像生成",d:"全球首款SVG原生AI模型，矢量图无限缩放+逐层编辑",u:"https://app.quiver.ai/explore",r:3,re:"SVG原生AI",v:1},
-  {n:"Meta Edits",c:"视频编辑",d:"Meta视频编辑App桌面版+AI创作助手上线",u:"https://creators.instagram.com/edits",r:3,re:"Meta视频编辑",v:1},
-  {n:"MiniMax Hub",c:"视频生成",d:"一站式多模态AI视频平台，图像+视频+配音+音乐+剪辑五合一 🇨🇳",u:"https://www.minimax.io/",r:4,re:"一站式多模态",f:1,q:"免费"},
-  {n:"iMideo",c:"视频生成",d:"⚠️ 已下线 - 50+AI视频工具一站式平台",u:"",r:3,re:"已停服"},
-  {n:"Google Vids",c:"视频生成",d:"免费AI虚拟主播，写脚本即生成播报视频，Veo3.1每月10次免费",u:"https://workspace.google.com/products/vids/",r:3,re:"免费虚拟主播",f:1,v:1,q:"每月10次Veo3.1"},
-  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格 🇨🇳",u:"",r:2,re:"开源草图转画",f:1,q:"开源免费",g:"https://github.com/ycbing/sketch-to-art"},
-  {n:"天工 Skywork 3.1",c:"设计工具",d:"昆仑万维AI设计+Agent平台，无限画布+百Agent并行，可导出Figma 🇨🇳",u:"https://www.tiangong.cn/",r:3,re:"无限画布设计"},
-  {n:"Suno AI V4",c:"音频生成",d:"全球头部AI音乐平台年度最大更新，4分钟完整歌曲，12轨人声分轨",u:"https://suno.com/",r:4,re:"AI音乐标杆",f:1,v:1,q:"每天10首免费"},
-  {n:"Adobe Firefly Creative Skills",c:"设计工具",d:"Agent全面升级：一句话生成品牌VI+产品视频，进驻PS/PR/AI/ID",u:"https://www.adobe.com/cn/",r:4,re:"创意Agent升级"},
-  {n:"HappyOyster 1.0",c:"3D创作",d:"阿里云交互式3D世界模型，一句话生成可探索演化的三维世界 🇨🇳",u:"https://happyoyster.cn/",r:3,re:"3D世界模型",f:1,q:"限时免费体验"},
-  {n:"Khala",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲 🇨🇳",u:"",r:2,re:"开源歌曲生成",f:1,q:"开源免费",g:"https://github.com/Khala-Music-AI/Khala"},
-  {n:"Magi-1",c:"视频生成",d:"全球首个自回归视频生成模型100%开源，清华Sand.AI团队，无限长度",u:"https://sand.ai/",r:4,re:"开源视频革命",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1"},
-  {n:"Pixelle-Video",c:"短视频创作",d:"阿里开源AI全自动短视频引擎，26K⭐🚀，输入主题→AI写文案→生成配图/视频→语音解说→BGM→一键合成全流程",u:"https://aidc-ai.github.io/Pixelle-Video/zh",r:4,re:"全自动短视频引擎",f:1,q:"开源免费",g:"https://github.com/ATH-MaaS/Pixelle-Video"},
-  {n:"Jellyfish 🎬",c:"AI短剧",d:"开源AI短剧工厂，剧本→分镜→成片全流程，全局种子根治人物漂移，4.5K⭐ 🇨🇳",u:"",r:4,re:"开源短剧工厂",f:1,q:"开源免费",g:"https://github.com/Forget-C/Jellyfish"},
-  {n:"Motion.so",c:"视频生成",d:"前沿动态设计Agent，一句话触发品牌调研到成片全链路",u:"https://motion.so/",r:4,re:"动态设计Agent",v:1},
-  {n:"Palmier Pro",c:"视频编辑",d:"开源macOS视频编辑器，Claude/Codex直连时间线，多AI模型内置",u:"https://www.palmier.io/",r:4,re:"开源视频编辑器",f:1,v:1,q:"开源免费",g:"https://github.com/palmier-io/palmier-pro"},
-  {n:"万兴剧厂",c:"视频生成",d:"万兴科技AI影视平台，3D导演台拖拽式空间创作 🇨🇳",u:"https://reelmate.cn/",r:3,re:"3D空间创作"},
-  {n:"HappyHorse 1.1",c:"视频生成",d:"阿里视频生成模型大版本升级，五大维度提升限时4折 🇨🇳",u:"https://happyhorse.com",r:4,re:"阿里视频升级"},
-  {n:"MVLAND",c:"视频生成",d:"美图多Agent协同AI MV生成，输入歌词自动生成完整MV 🇨🇳",u:"https://mvland.com",r:3,re:"歌词生成MV"},
-  {n:"Seedance 2.5",c:"视频生成",d:"字节最新视频模型，原生30秒直出，50全模态素材，周星馳合作 🇨🇳",u:"https://seed.bytedance.com/",r:4,re:"原生视频突破"},
-  {n:"freebeat",c:"视频生成",d:"AI音乐视频生成器，节奏同步编辑，100万+创作者，多平台链接导入",u:"https://freebeat.ai/",r:3,re:"音乐视频同步",v:1},
-  {n:"OpenArt Director",c:"视频生成",d:"首创「感觉导演」AI电影制作，对话生成5分钟完整电影，9语种口型同步",u:"https://openart.ai/suite/director",r:4,re:"电影级导演",v:1},
-  {n:"FlashVSR",c:"视频编辑",d:"清华+上海AI实验室开源视频超分辨率，扩散模型12倍加速，注册送积分 🇨🇳",u:"https://flashvsr.com/zh",r:3,re:"视频超分加速",f:1,q:"注册送积分",g:"https://github.com/OpenImagingLab/FlashVSR"},
-  {n:"Aiarty Video Enhancer",c:"视频编辑",d:"本地AI视频增强桌面工具，13项功能一体，终身买断制 🇨🇳",u:"https://www.aiarty.com/cn/ai-video-enhancer/",r:3,re:"本地视频增强"},
-  {n:"抖音造世界",c:"3D创作",d:"抖音多Agent 3D世界创作工具，自然语言对话搭建虚拟世界 🇨🇳",u:"https://vcreate.douyin.com/",r:3,re:"对话式3D创作",f:1,q:"免费"},
-  {n:"浮云梦配音",c:"音频生成",d:"永久免费一站式AI创作平台，140+语言TTS/配音/音乐/绘图 🇨🇳",u:"https://fuym.cn/",r:3,re:"永久免费配音",f:1,q:"永久免费"},
-  {n:"Creatify Agent",c:"视频生成",d:"全球首个AI广告创意Agent，输入链接自动产出高转化广告",u:"https://creatify.ai/zh/features/agent",r:3,re:"广告创意Agent",v:1},
-  {n:"iClone Personal",c:"3D创作",d:"Reallusion专业3D动画软件永久免费版，AI Studio实现3D→AI生成",u:"https://www.reallusion.com/iclone/",r:3,re:"永久免费3D动画",f:1,q:"永久免费"},
-  {n:"蝶变3.0",c:"视频编辑",d:"⚠️ 已下线 - 4K花园AI短剧画质提升工具",u:"",r:2,re:"已停服"},
-  {n:"TikTok Symphony Agent",c:"短视频创作",d:"TikTok AI广告创意Agent，输入链接自动完成调研→脚本→素材→配音全流程",u:"https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite",r:3,re:"广告Agent全自动"},
-  {n:"OpenMontage",c:"视频生成",d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，28K+ Stars",u:"",r:4,re:"开源视频工厂",f:1,q:"开源免费",g:"https://github.com/calesthio/OpenMontage"},
-  {n:"Canva Grow 2.0",c:"设计工具",d:"Canva端到端AI营销引擎，广告创作+发布+优化全流程一体化",u:"https://www.canva.com/",r:3,re:"全链路营销",v:1},
-  {n:"TTSMaker",c:"音频生成",d:"完全免费可商用TTS工具，50+语言600+声音，🔥无限量声音不扣配额 🇨🇳",u:"https://www.ttsmaker.cn/",r:4,re:"免费可商用配音",f:1,q:"每周2万字符"},
-  {n:"Vidu Q3",c:"视频生成",d:"清华生数科技多镜头叙事视频生成，智慧剪辑16秒出片，国内直连 🇨🇳",u:"https://www.vidu.com/zh/",r:3,re:"多镜头叙事",f:1,q:"错峰无限/免费积分"},
-  {n:"MAGI-1",c:"视频生成",d:"Sand AI开源自回归视频生成模型，240亿参数",u:"https://magi.sand.ai/",r:4,re:"240亿参数开源",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1"},
-  {n:"Google Stitch 2.0",c:"设计工具",d:"Google Labs AI UI设计工具，400积分/天+15次redesign，Vibe Design/语音驱动多屏原型",u:"https://stitch.withgoogle.com/",r:4,re:"AI设计UI神器",f:1,q:"每天400积分",v:1},
-  {n:"Hedra",c:"视频生成",d:"AI角色视频生成，Character-3超逼真唇同步",u:"https://www.hedra.com/",r:4,re:"角色视频神器",f:1,q:"免费版可用",v:1},
-  {n:"Milo3D.ai",c:"3D创作",d:"免费AI 3D模型生成器，文字/图片秒变3D",u:"https://milo3d.ai/",r:4,re:"3D生成免费",f:1,q:"100免费额度"},
-  {n:"冬瓜配音",c:"音频生成",d:"国产免费AI配音，多角色对话无水印",u:"https://www.okaidub.com/",r:4,re:"配音神器国产",f:1,q:"免费版可用"},
-  {n:"WorkTool",c:"工作流工具",d:"71款在线工具集合+DeepSeek AI，免费无广告，纯前端隐私优先",u:"https://worktool.app/zh",r:3,re:"工具集合免费",f:1,q:"免费版可用"},
-  {n:"昆云AI短剧",c:"AI短剧",d:"一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成 🇨🇳",u:"https://kunyunkeji.cn",r:2,re:"一站式短剧",f:1,q:"免费"},
-  {n:"知剧AI",c:"AI短剧",d:"AI剧本创作平台，小说→分镜→台本→Word导出，在线免费使用 🇨🇳",u:"https://zhijuu.com",r:3,re:"剧本创作助手",f:1,q:"免费"},
-  {n:"Toonflow",c:"AI短剧",d:"开源一站式AI短剧，小说→视频全流程，Docker部署11K⭐ 🇨🇳",u:"https://toonflow.net",r:4,re:"开源短剧首选",f:1,q:"开源免费",g:"https://github.com/HBAI-Ltd/Toonflow-app"},
-  {n:"智剧通 ZJT",c:"AI短剧",d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署 🇨🇳",u:"",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT"},
-  {n:"Pixmax",c:"AI短剧",d:"多模型聚合协同，一个模型失败自动切换备选，工业级并行处理，团队协作 🇨🇳",u:"",r:3,re:"工业级短剧生产"},
-  {n:"Catimind（神经猫）",c:"AI短剧",d:"云端零部署浏览器直接使用，支持5万字/60集剧本一键上传批量生产 🇨🇳",u:"",r:3,re:"批量漫剧生产"},
-  {n:"升维画布",c:"AI短剧",d:"拖拽式操作，选模板→填故事→出片三步搞定，Gemini+Seedance驱动 🇨🇳",u:"",r:3,re:"零门槛短剧"},
-  {n:"Deep漫剧生成AI",c:"AI短剧",d:"手机端APP，碎片时间就能做AI漫剧，适合随时随地的创作场景 🇨🇳",u:"",r:3,re:"手机端漫剧"},
-  {n:"小云雀AI",c:"AI短剧",d:"轻量化AI漫剧工具，操作路径简单，适合快速体验 🇨🇳",u:"",r:2,re:"轻量化漫剧"},
-  {n:"VOZEB",c:"设计工具",d:"开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署",u:"https://github.com/csyqlz/vozeb",r:2,re:"AI Agent操控画布",f:1,q:"开源免费",g:"https://github.com/csyqlz/vozeb"},
-  {n:"腾讯混元Hy3",c:"工作流工具",d:"腾讯295B MoE大模型，Agent能力大增，元宝免费使用，一句话生成PPT/文档",u:"https://yuanbao.tencent.com/",r:4,re:"Agent能力领先",f:1,q:"永久免费"},
-  {n:"Meta Muse Image + Muse Video",c:"图像生成",d:"Meta MSL Agentic图像生成，先拆需求再出图，Arena三项第二，免费",u:"https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",r:4,re:"Agent图像生成",f:1,v:1,q:"免费"},
-  {n:"Seedream 5.0 Pro",c:"图像生成",d:"字节跳动最强多模态图像模型，中文小字排版零乱码，交互式精准编辑+图层分离 🇨🇳",u:"https://seed.bytedance.com/zh/seedream5_0_pro",r:4,re:"国产图像标杆",f:1,q:"即梦每日免费额度"},
-  {n:"MuseDock",c:"视频生成",d:"开源本地优先AI视频创作，HTML可编辑模板，Apache-2.0",u:"https://github.com/renmengwen/MuseDock",r:3,re:"开源视频可编辑",f:1,q:"开源免费",g:"https://github.com/renmengwen/MuseDock"},
-  {n:"PonPon AI Studio",c:"视频生成",d:"一站式AI视频创作，聚合Sora2/Kling3/Veo3/Seedance2，每日免费积分，Canvas画布跨模型对比",u:"https://ponpon.ai/zh-CN/ai-video-generator",r:4,re:"一站式视频创作",f:1,q:"每日免费积分"},
-  {n:"QevosAgent",c:"工作流工具",d:"免费开源本地AI智能体，30+工具/持久化记忆/Web看板，支持Qwen3/DeepSeek V4零API成本",u:"https://qevos.ai/cn.html",r:3,re:"本地AI智能体",f:1,q:"开源免费",g:"https://github.com/HongyunQiu/QevosAgent"},
-  {n:"InkOS",c:"AI写作",d:"开源AI故事创作Agent，npm安装即用，支持长篇/剧本/互动影游全流程",u:"https://github.com/narcooo/inkos",r:4,re:"开源故事创作",f:1,q:"开源免费",g:"https://github.com/narcooo/inkos"},
-  {n:"Hallmark",c:"设计工具",d:"Together AI开源设计技能包，57道品质门禁杜绝AI-Slop，让Cursor/Claude Code/Codex生成专业非模板化UI",u:"https://github.com/nutlope/hallmark",r:4,re:"开源设计门禁",f:1,q:"开源免费",g:"https://github.com/nutlope/hallmark"},
-  {n:"Kimi K3",c:"AI写作",d:"月之暗面2.8万亿参数最大开源大模型，100万Token上下文，网页聊天免费，支持编程/视频/科研/芯片设计",u:"https://kimi.com",r:5,re:"全球最大开源模型",f:1,q:"网页聊天免费"},
-  {n:"Kutt.AI",c:"视频生成",d:"一站式AI视频创作，整合Wan/Seedance等多模型，免费积分每天签到，60秒快速出片",u:"https://kutt.ai/zh",r:3,re:"多模型聚合平台",f:1,q:"注册10+每天10积分"},
-  {n:"百度秒哒3.5",c:"AI写作",d:"百度对话式零代码AI应用开发平台，新增6大能力，8岁小孩都能上手，一句话生成App+SEO自动优化",u:"https://www.miaoda.cn",r:4,re:"零代码AI开发",f:1,q:"免费基础版"},
-  {n:"Open Design v0.15.1",c:"设计工具",d:"开源Claude Design替代（80K星⭐），本地优先桌面App，20+ CLI接入，多模态视觉识别升级，输出HTML/PDF/PPTX",u:"https://open-design.ai/",r:4,re:"开源设计引擎",f:1,q:"开源免费",g:"https://github.com/nexu-io/open-design"},
-  {n:"SenseNova U1 Pro",c:"图像生成",d:"商汤交付级多模态模型，8K原生输出+Agent闭环，WAIC首发预览版免费邀测 🇨🇳",u:"https://www.sensenova.cn/",r:4,re:"8K超高清输出",f:1,q:"预览版免费邀测"},
-  {n:"vivago R1 (智象未来)",c:"视频生成",d:"全球首个无限时长AI视频多模态智能体，对话式创作，新用户免费40积分 🇨🇳",u:"https://hidreamai.com/",r:4,re:"无限时长视频",f:1,q:"注册送40积分"},
-  {n:"阿里万相Wan2.7-Video",c:"视频生成",d:"文生/图生/参考生/视频编辑四合一全链路视频模型，通义千问免费体验 🇨🇳",u:"https://tongyi.aliyun.com/wan/",r:4,re:"全链路视频模型",f:1,q:"免费体验"},
-  {n:"美图RoboNeo",c:"短视频创作",d:"美图AI Agent上线3D导演台，3D场景搭建+全链路工作流+Seedance 2.0接入，100积分免费体验 🇨🇳",u:"https://www.roboneo.com",r:3,re:"3D导演台创作",f:1,q:"注册送100积分"},
-  {n:"OpenWorker (吴恩达)",c:"AI写作",d:"吴恩达开源桌面AI智能体，4层权限安全机制，多模型自由切换，办公自动化",u:"https://github.com/andrewyng/aisuite",r:3,re:"开源桌面Agent",f:1,q:"开源免费",g:"https://github.com/andrewyng/aisuite"},
-  {n:"Treblo",c:"音频生成",d:"真正无限免费AI音乐生成器，4170+种风格，无限曲目，无水印可商用",u:"https://treblo.com",r:4,re:"无限免费AI音乐",f:1,v:1,q:"无限曲目免费"},
-  {n:"Nexora",c:"工作流工具",d:"MIT开源多Agent编排平台，46+LLM/90+工具/RAG/语义记忆，自部署零成本",u:"https://nexora.parendum.com",r:3,re:"开源Agent编排",f:1,q:"开源免费",g:"https://github.com/ParendumOU/Nexora"},
-  {n:"商汤Seko",c:"AI短剧",d:"商汤AI短剧Agent，一句话生百集，SekoIDX百集不崩脸，多人同步对口型，新人350积分免费体验 🇨🇳",u:"https://seko.sensetime.com/explore",r:4,re:"AI短剧工厂",f:1,q:"新用户350积分+每日送50"},
-  {n:"AI Commander (AI接线员)",c:"效率工具",d:"MIT开源的桌面语音输入工具，按耳机键说话自动输入文字，全程本地离线零费用",u:"https://github.com/YuJonny/AI-Commander",r:4,re:"免费语音输入神器",f:1,q:"开源免费",g:"https://github.com/YuJonny/AI-Commander"},
+// ===== 场景定义 =====
+const SCENES=[
+  {id:'all',label:'全部场景',icon:'🌐',cats:[]},
+  {id:'shortfilm',label:'AI短剧制作',icon:'🎬',cats:['AI短剧','短视频创作']},
+  {id:'video',label:'视频生成/编辑',icon:'🎥',cats:['视频生成','视频编辑','字幕配音','文档转视频','叙事视频','企业AI视频']},
+  {id:'image',label:'图像/设计创作',icon:'🎨',cats:['图像生成','设计工具']},
+  {id:'audio',label:'音频/音乐/配音',icon:'🎵',cats:['音频生成']},
+  {id:'3d',label:'3D创作',icon:'🧊',cats:['3D创作']},
+  {id:'workflow',label:'效率/工作流',icon:'⚡',cats:['工作流工具','效率工具','创意工作流','创意智能体','多模态生成']}
 ];
 
-// Sort by rating descending (same rating → alphabetical)
-TOOLS.sort((a,b)=>(b.r||0)-(a.r||0)||a.n.localeCompare(b.n));
+// ===== 工具数据（已移出停服工具，新增字段） =====
+const TOOLS=[
+  {n:"Kling 3.0/可灵",c:"视频生成",d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",r:4,re:"视频生成领先",f:1,q:"每天6次720p",diff:2,zh:1,hot:3},
+  {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3,re:"Google力作",f:1,v:1,q:"每月100积分",diff:2,zh:3,hot:3},
+  {n:"Seedance 3.0",c:"视频生成",d:"字节下一代视频模型，1小时长视频+多语情感配音",u:"https://seed.bytedance.com/",r:3,re:"长视频突破",diff:2,zh:1,hot:3},
+  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架",u:"",r:2,re:"开源可尝试",f:1,q:"开源免费",g:"https://github.com/jd-opensource/joyai-echo",diff:3,zh:1,hot:1},
+  {n:"Midjourney",c:"图像生成",d:"V8.1速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5,re:"行业标杆",v:1,diff:2,zh:3,hot:3},
+  {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器",u:"https://zimage.design/zh/",r:3,re:"开源图像模型",f:1,q:"开源免费",g:"https://github.com/Tongyi-MAI/Z-Image",diff:3,zh:1,hot:2},
+  {n:"Raphael AI",c:"图像生成",d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",r:3,re:"无限免费生成",f:1,v:1,q:"无限免费",diff:1,zh:1,hot:2},
+  {n:"Imagen 4 Ultra",c:"图像生成",d:"Google真实感最强图像API",u:"https://deepmind.google/technologies/imagen/",r:3,re:"Google真实感强",v:1,diff:2,zh:3,hot:2},
+  {n:"Ideogram 4.0",c:"图像生成",d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",r:4,re:"文字渲染领先",f:1,v:1,q:"每周10积分",g:"https://github.com/ideogram-oss/ideogram4",diff:2,zh:3,hot:2},
+  {n:"Reve 2.0",c:"图像生成",d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",r:4,re:"精准控制强",v:1,diff:2,zh:3,hot:2},
+  {n:"Figma",c:"设计工具",d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",r:4,re:"设计协作标杆",v:1,diff:2,zh:3,hot:3},
+  {n:"Pixso",c:"设计工具",d:"国内设计协作平台，AI智能设计",u:"https://pixso.cn",r:3,re:"国内设计协作",f:1,q:"免费",diff:2,zh:1,hot:2},
+  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",u:"https://felo.ai",r:2,re:"快速出稿生成",diff:1,zh:1,hot:1},
+  {n:"Genspark AI Design",c:"设计工具",d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",r:3,re:"免费积分多",f:1,v:1,q:"每天100积分",diff:1,zh:1,hot:2},
+  {n:"Lovart",c:"设计工具",d:"多模态AI设计Agent · 需邀请码，80万人排队",u:"",r:2,re:"排队中待用",diff:2,zh:3,hot:1},
+  {n:"腾讯Ardot",c:"设计工具",d:"腾讯AI设计智能体公测，一句话生成可编辑UI",u:"https://ardot.tencent.com/",r:3,re:"腾讯AI设计",diff:1,zh:1,hot:2},
+  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器",u:"https://mew.design/zh",r:2,re:"免费设计生成",f:1,q:"免费",diff:1,zh:1,hot:1},
+  {n:"Meshy 3D Agent",c:"3D创作",d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",r:3,re:"3D Agent首创",v:1,diff:2,zh:3,hot:2},
+  {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4,re:"视频编辑革新",v:1,diff:2,zh:3,hot:3},
+  {n:"Vibbit",c:"短视频创作",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2,re:"短视频Agent",v:1,diff:2,zh:1,hot:1},
+  {n:"LumenX Studio",c:"AI短剧",d:"阿里开源AI短漫剧全链路自动化平台",u:"",r:2,re:"开源短漫剧",f:1,q:"开源免费",g:"https://github.com/alibaba/LumenX",diff:3,zh:1,hot:2},
+  {n:"OiiOii 2.0",c:"短视频创作",d:"国产AI视频创作Agent，智能画布+拉片复刻",u:"https://oiioii.ai",r:3,re:"智能画布创作",diff:2,zh:1,hot:2},
+  {n:"腾讯Miora",c:"创意智能体",d:"腾讯全场景创意智能体工作室 · 需邀请码排期",u:"",r:2,re:"创意智能体",diff:2,zh:1,hot:1},
+  {n:"ElevenCreative Flows Agent",c:"创意工作流",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1,diff:2,zh:3,hot:2},
+  {n:"Felo Video",c:"文档转视频",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2,re:"文档转视频",diff:1,zh:1,hot:1},
+  {n:"Colossyan Cora",c:"企业AI视频",d:"企业培训视频Agent · 14天试用后$27/月",u:"https://www.colossyan.com",r:2,re:"企业培训视频",v:1,diff:1,zh:3,hot:1},
+  {n:"Utopai PAI 2.0",c:"叙事视频",d:"AI叙事视频平台 · 仅限订阅，无免费层",u:"https://pai.utopaistudios.com",r:2,re:"付费叙事视频",v:1,diff:2,zh:3,hot:1},
+  {n:"ComfyUI",c:"工作流工具",d:"节点式AI工作流，v0.24.0新增Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/comfyanonymous/ComfyUI",diff:3,zh:2,hot:3},
+  {n:"Grok Imagine",c:"多模态生成",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1,diff:2,zh:3,hot:3},
+  {n:"Adobe CC 6月更新",c:"设计工具",d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto",u:"https://www.adobe.com/cn/creativecloud.html",r:3,re:"全线AI升级",diff:2,zh:1,hot:2},
+  {n:"Omnify AI",c:"创意智能体",d:"清华团队多Agent创作平台，剧本→分镜→配音全链路",u:"https://omnifyai.cn/",r:3,re:"全链路Agent",diff:2,zh:1,hot:2},
+  {n:"Arrow 1.0",c:"图像生成",d:"全球首款SVG原生AI模型，矢量图无限缩放+逐层编辑",u:"https://app.quiver.ai/explore",r:3,re:"SVG原生AI",v:1,diff:2,zh:3,hot:1},
+  {n:"Meta Edits",c:"视频编辑",d:"Meta视频编辑App桌面版+AI创作助手上线",u:"https://creators.instagram.com/edits",r:3,re:"Meta视频编辑",v:1,diff:1,zh:3,hot:2},
+  {n:"MiniMax Hub",c:"视频生成",d:"一站式多模态AI视频平台，图像+视频+配音+音乐+剪辑五合一",u:"https://www.minimax.io/",r:4,re:"一站式多模态",f:1,q:"免费",diff:2,zh:1,hot:3},
+  {n:"Google Vids",c:"视频生成",d:"免费AI虚拟主播，写脚本即生成播报视频，Veo3.1每月10次免费",u:"https://workspace.google.com/products/vids/",r:3,re:"免费虚拟主播",f:1,v:1,q:"每月10次Veo3.1",diff:1,zh:3,hot:2},
+  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格",u:"",r:2,re:"开源草图转画",f:1,q:"开源免费",g:"https://github.com/ycbing/sketch-to-art",diff:2,zh:1,hot:1},
+  {n:"天工 Skywork 3.1",c:"设计工具",d:"昆仑万维AI设计+Agent平台，无限画布+百Agent并行，可导出Figma",u:"https://www.tiangong.cn/",r:3,re:"无限画布设计",diff:2,zh:1,hot:2},
+  {n:"Suno AI V4",c:"音频生成",d:"全球头部AI音乐平台年度最大更新，4分钟完整歌曲，12轨人声分轨",u:"https://suno.com/",r:4,re:"AI音乐标杆",f:1,v:1,q:"每天10首免费",diff:1,zh:3,hot:3},
+  {n:"Adobe Firefly Creative Skills",c:"设计工具",d:"Agent全面升级：一句话生成品牌VI+产品视频，进驻PS/PR/AI/ID",u:"https://www.adobe.com/cn/",r:4,re:"创意Agent升级",diff:2,zh:1,hot:3},
+  {n:"HappyOyster 1.0",c:"3D创作",d:"阿里云交互式3D世界模型，一句话生成可探索演化的三维世界",u:"https://happyoyster.cn/",r:3,re:"3D世界模型",f:1,q:"限时免费体验",diff:2,zh:1,hot:2},
+  {n:"Khala",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲",u:"",r:2,re:"开源歌曲生成",f:1,q:"开源免费",g:"https://github.com/Khala-Music-AI/Khala",diff:3,zh:1,hot:1},
+  {n:"Magi-1",c:"视频生成",d:"全球首个自回归视频生成模型100%开源，清华Sand.AI团队，无限长度",u:"https://sand.ai/",r:4,re:"开源视频革命",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1",diff:3,zh:2,hot:3},
+  {n:"Pixelle-Video",c:"短视频创作",d:"阿里开源AI全自动短视频引擎，26K⭐，输入主题→AI写文案→生成配图/视频→语音解说→BGM→一键合成全流程",u:"https://aidc-ai.github.io/Pixelle-Video/zh",r:4,re:"全自动短视频引擎",f:1,q:"开源免费",g:"https://github.com/ATH-MaaS/Pixelle-Video",diff:3,zh:1,hot:3},
+  {n:"Jellyfish",c:"AI短剧",d:"开源AI短剧工厂，剧本→分镜→成片全流程，全局种子根治人物漂移，4.5K⭐",u:"",r:4,re:"开源短剧工厂",f:1,q:"开源免费",g:"https://github.com/Forget-C/Jellyfish",diff:3,zh:1,hot:2},
+  {n:"Motion.so",c:"视频生成",d:"前沿动态设计Agent，一句话触发品牌调研到成片全链路",u:"https://motion.so/",r:4,re:"动态设计Agent",v:1,diff:2,zh:3,hot:2},
+  {n:"Palmier Pro",c:"视频编辑",d:"开源macOS视频编辑器，Claude/Codex直连时间线，多AI模型内置",u:"https://www.palmier.io/",r:4,re:"开源视频编辑器",f:1,v:1,q:"开源免费",g:"https://github.com/palmier-io/palmier-pro",diff:3,zh:3,hot:2},
+  {n:"万兴剧厂",c:"视频生成",d:"万兴科技AI影视平台，3D导演台拖拽式空间创作",u:"https://reelmate.cn/",r:3,re:"3D空间创作",diff:2,zh:1,hot:2},
+  {n:"HappyHorse 1.1",c:"视频生成",d:"阿里视频生成模型大版本升级，五大维度提升限时4折",u:"https://happyhorse.com",r:4,re:"阿里视频升级",diff:2,zh:1,hot:2},
+  {n:"MVLAND",c:"视频生成",d:"美图多Agent协同AI MV生成，输入歌词自动生成完整MV",u:"https://mvland.com",r:3,re:"歌词生成MV",diff:1,zh:1,hot:2},
+  {n:"Seedance 2.5",c:"视频生成",d:"字节最新视频模型，原生30秒直出，50全模态素材",u:"https://seed.bytedance.com/",r:4,re:"原生视频突破",diff:2,zh:1,hot:3},
+  {n:"freebeat",c:"视频生成",d:"AI音乐视频生成器，节奏同步编辑，100万+创作者，多平台链接导入",u:"https://freebeat.ai/",r:3,re:"音乐视频同步",v:1,diff:1,zh:3,hot:2},
+  {n:"OpenArt Director",c:"视频生成",d:"首创「感觉导演」AI电影制作，对话生成5分钟完整电影，9语种口型同步",u:"https://openart.ai/suite/director",r:4,re:"电影级导演",v:1,diff:2,zh:3,hot:2},
+  {n:"FlashVSR",c:"视频编辑",d:"清华+上海AI实验室开源视频超分辨率，扩散模型12倍加速，注册送积分",u:"https://flashvsr.com/zh",r:3,re:"视频超分加速",f:1,q:"注册送积分",g:"https://github.com/OpenImagingLab/FlashVSR",diff:3,zh:1,hot:2},
+  {n:"Aiarty Video Enhancer",c:"视频编辑",d:"本地AI视频增强桌面工具，13项功能一体，终身买断制",u:"https://www.aiarty.com/cn/ai-video-enhancer/",r:3,re:"本地视频增强",diff:1,zh:1,hot:1},
+  {n:"抖音造世界",c:"3D创作",d:"抖音多Agent 3D世界创作工具，自然语言对话搭建虚拟世界",u:"https://vcreate.douyin.com/",r:3,re:"对话式3D创作",f:1,q:"免费",diff:1,zh:1,hot:2},
+  {n:"浮云梦配音",c:"音频生成",d:"永久免费一站式AI创作平台，140+语言TTS/配音/音乐/绘图",u:"https://fuym.cn/",r:3,re:"永久免费配音",f:1,q:"永久免费",diff:1,zh:1,hot:2},
+  {n:"Creatify Agent",c:"视频生成",d:"全球首个AI广告创意Agent，输入链接自动产出高转化广告",u:"https://creatify.ai/zh/features/agent",r:3,re:"广告创意Agent",v:1,diff:1,zh:3,hot:2},
+  {n:"iClone Personal",c:"3D创作",d:"Reallusion专业3D动画软件永久免费版，AI Studio实现3D→AI生成",u:"https://www.reallusion.com/iclone/",r:3,re:"永久免费3D动画",f:1,q:"永久免费",diff:3,zh:3,hot:2},
+  {n:"TikTok Symphony Agent",c:"短视频创作",d:"TikTok AI广告创意Agent，输入链接自动完成调研→脚本→素材→配音全流程",u:"https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite",r:3,re:"广告Agent全自动",v:1,diff:1,zh:3,hot:2},
+  {n:"OpenMontage",c:"视频生成",d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，28K+ Stars",u:"",r:4,re:"开源视频工厂",f:1,q:"开源免费",g:"https://github.com/calesthio/OpenMontage",diff:3,zh:2,hot:3},
+  {n:"Canva Grow 2.0",c:"设计工具",d:"Canva端到端AI营销引擎，广告创作+发布+优化全流程一体化",u:"https://www.canva.com/",r:3,re:"全链路营销",v:1,diff:1,zh:3,hot:3},
+  {n:"TTSMaker",c:"音频生成",d:"完全免费可商用TTS工具，50+语言600+声音，无限量声音不扣配额",u:"https://www.ttsmaker.cn/",r:4,re:"免费可商用配音",f:1,q:"每周2万字符",diff:1,zh:1,hot:3},
+  {n:"Vidu Q3",c:"视频生成",d:"清华生数科技多镜头叙事视频生成，智慧剪辑16秒出片，国内直连",u:"https://www.vidu.com/zh/",r:3,re:"多镜头叙事",f:1,q:"错峰无限/免费积分",diff:2,zh:1,hot:2},
+  {n:"MAGI-1",c:"视频生成",d:"Sand AI开源自回归视频生成模型，240亿参数",u:"https://magi.sand.ai/",r:4,re:"240亿参数开源",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1",diff:3,zh:2,hot:2},
+  {n:"Google Stitch 2.0",c:"设计工具",d:"Google Labs AI UI设计工具，400积分/天+15次redesign，Vibe Design/语音驱动多屏原型",u:"https://stitch.withgoogle.com/",r:4,re:"AI设计UI神器",f:1,q:"每天400积分",v:1,diff:2,zh:3,hot:3},
+  {n:"Hedra",c:"视频生成",d:"AI角色视频生成，Character-3超逼真唇同步",u:"https://www.hedra.com/",r:4,re:"角色视频神器",f:1,q:"免费版可用",v:1,diff:1,zh:3,hot:2},
+  {n:"Milo3D.ai",c:"3D创作",d:"免费AI 3D模型生成器，文字/图片秒变3D",u:"https://milo3d.ai/",r:4,re:"3D生成免费",f:1,q:"100免费额度",diff:1,zh:3,hot:2},
+  {n:"冬瓜配音",c:"音频生成",d:"国产免费AI配音，多角色对话无水印",u:"https://www.okaidub.com/",r:4,re:"配音神器国产",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
+  {n:"WorkTool",c:"工作流工具",d:"71款在线工具集合+DeepSeek AI，免费无广告，纯前端隐私优先",u:"https://worktool.app/zh",r:3,re:"工具集合免费",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
+  {n:"昆云AI短剧",c:"AI短剧",d:"一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成",u:"https://kunyunkeji.cn",r:2,re:"一站式短剧",f:1,q:"免费",diff:1,zh:1,hot:1},
+  {n:"知剧AI",c:"AI短剧",d:"AI剧本创作平台，小说→分镜→台本→Word导出，在线免费使用",u:"https://zhijuu.com",r:3,re:"剧本创作助手",f:1,q:"免费",diff:1,zh:1,hot:2},
+  {n:"Toonflow",c:"AI短剧",d:"开源一站式AI短剧，小说→视频全流程，Docker部署11K⭐",u:"https://toonflow.net",r:4,re:"开源短剧首选",f:1,q:"开源免费",g:"https://github.com/HBAI-Ltd/Toonflow-app",diff:3,zh:1,hot:2},
+  {n:"智剧通 ZJT",c:"AI短剧",d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署",u:"",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT",diff:3,zh:1,hot:1},
+  {n:"Pixmax",c:"AI短剧",d:"多模型聚合协同，一个模型失败自动切换备选，工业级并行处理，团队协作",u:"",r:3,re:"工业级短剧生产",diff:2,zh:1,hot:1},
+  {n:"Catimind",c:"AI短剧",d:"云端零部署浏览器直接使用，支持5万字/60集剧本一键上传批量生产",u:"",r:3,re:"批量漫剧生产",diff:1,zh:1,hot:1},
+  {n:"升维画布",c:"AI短剧",d:"拖拽式操作，选模板→填故事→出片三步搞定，Gemini+Seedance驱动",u:"",r:3,re:"零门槛短剧",diff:1,zh:1,hot:1},
+  {n:"Deep漫剧生成AI",c:"AI短剧",d:"手机端APP，碎片时间就能做AI漫剧，适合随时随地的创作场景",u:"",r:3,re:"手机端漫剧",diff:1,zh:1,hot:1},
+  {n:"小云雀AI",c:"AI短剧",d:"轻量化AI漫剧工具，操作路径简单，适合快速体验",u:"",r:2,re:"轻量化漫剧",diff:1,zh:1,hot:1},
+  {n:"VOZEB",c:"设计工具",d:"开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署",u:"https://github.com/csyqlz/vozeb",r:2,re:"AI Agent操控画布",f:1,q:"开源免费",g:"https://github.com/csyqlz/vozeb",diff:3,zh:2,hot:1},
+  {n:"腾讯混元Hy3",c:"工作流工具",d:"腾讯295B MoE大模型，Agent能力大增，元宝免费使用，一句话生成PPT/文档",u:"https://yuanbao.tencent.com/",r:4,re:"Agent能力领先",f:1,q:"永久免费",diff:1,zh:1,hot:3},
+  {n:"Meta Muse Image + Muse Video",c:"图像生成",d:"Meta MSL Agentic图像生成，先拆需求再出图，Arena三项第二，免费",u:"https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",r:4,re:"Agent图像生成",f:1,v:1,q:"免费",diff:1,zh:3,hot:3},
+  {n:"Seedream 5.0 Pro",c:"图像生成",d:"字节跳动最强多模态图像模型，中文小字排版零乱码，交互式精准编辑+图层分离",u:"https://seed.bytedance.com/zh/seedream5_0_pro",r:4,re:"国产图像标杆",f:1,q:"即梦每日免费额度",diff:2,zh:1,hot:3},
+  {n:"MuseDock",c:"视频生成",d:"开源本地优先AI视频创作，HTML可编辑模板，Apache-2.0",u:"https://github.com/renmengwen/MuseDock",r:3,re:"开源视频可编辑",f:1,q:"开源免费",g:"https://github.com/renmengwen/MuseDock",diff:3,zh:2,hot:1},
+  {n:"PonPon AI Studio",c:"视频生成",d:"一站式AI视频创作，聚合Sora2/Kling3/Veo3/Seedance2，每日免费积分，Canvas画布跨模型对比",u:"https://ponpon.ai/zh-CN/ai-video-generator",r:4,re:"一站式视频创作",f:1,q:"每日免费积分",diff:2,zh:1,hot:2},
+  {n:"QevosAgent",c:"工作流工具",d:"免费开源本地AI智能体，30+工具/持久化记忆/Web看板，支持Qwen3/DeepSeek V4零API成本",u:"https://qevos.ai/cn.html",r:3,re:"本地AI智能体",f:1,q:"开源免费",g:"https://github.com/HongyunQiu/QevosAgent",diff:3,zh:1,hot:1},
+  {n:"InkOS",c:"AI写作",d:"开源AI故事创作Agent，npm安装即用，支持长篇/剧本/互动影游全流程",u:"https://github.com/narcooo/inkos",r:4,re:"开源故事创作",f:1,q:"开源免费",g:"https://github.com/narcooo/inkos",diff:3,zh:2,hot:2},
+  {n:"Hallmark",c:"设计工具",d:"Together AI开源设计技能包，57道品质门禁杜绝AI-Slop，让Cursor/Claude Code/Codex生成专业非模板化UI",u:"https://github.com/nutlope/hallmark",r:4,re:"开源设计门禁",f:1,q:"开源免费",g:"https://github.com/nutlope/hallmark",diff:3,zh:2,hot:2},
+  {n:"Kimi K3",c:"AI写作",d:"月之暗面2.8万亿参数最大开源大模型，100万Token上下文，网页聊天免费，支持编程/视频/科研/芯片设计",u:"https://kimi.com",r:5,re:"全球最大开源模型",f:1,q:"网页聊天免费",diff:1,zh:1,hot:3},
+  {n:"Kutt.AI",c:"视频生成",d:"一站式AI视频创作，整合Wan/Seedance等多模型，免费积分每天签到，60秒快速出片",u:"https://kutt.ai/zh",r:3,re:"多模型聚合平台",f:1,q:"注册10+每天10积分",diff:1,zh:1,hot:2},
+  {n:"百度秒哒3.5",c:"AI写作",d:"百度对话式零代码AI应用开发平台，新增6大能力，8岁小孩都能上手，一句话生成App+SEO自动优化",u:"https://www.miaoda.cn",r:4,re:"零代码AI开发",f:1,q:"免费基础版",diff:1,zh:1,hot:3},
+  {n:"Open Design v0.15.1",c:"设计工具",d:"开源Claude Design替代（80K星⭐），本地优先桌面App，20+ CLI接入，多模态视觉识别升级，输出HTML/PDF/PPTX",u:"https://open-design.ai/",r:4,re:"开源设计引擎",f:1,q:"开源免费",g:"https://github.com/nexu-io/open-design",diff:3,zh:2,hot:3},
+  {n:"SenseNova U1 Pro",c:"图像生成",d:"商汤交付级多模态模型，8K原生输出+Agent闭环，WAIC首发预览版免费邀测",u:"https://www.sensenova.cn/",r:4,re:"8K超高清输出",f:1,q:"预览版免费邀测",diff:2,zh:1,hot:2},
+  {n:"vivago R1",c:"视频生成",d:"全球首个无限时长AI视频多模态智能体，对话式创作，新用户免费40积分",u:"https://hidreamai.com/",r:4,re:"无限时长视频",f:1,q:"注册送40积分",diff:1,zh:1,hot:2},
+  {n:"阿里万相Wan2.7-Video",c:"视频生成",d:"文生/图生/参考生/视频编辑四合一全链路视频模型，通义千问免费体验",u:"https://tongyi.aliyun.com/wan/",r:4,re:"全链路视频模型",f:1,q:"免费体验",diff:2,zh:1,hot:3},
+  {n:"美图RoboNeo",c:"短视频创作",d:"美图AI Agent上线3D导演台，3D场景搭建+全链路工作流+Seedance 2.0接入，100积分免费体验",u:"https://www.roboneo.com",r:3,re:"3D导演台创作",f:1,q:"注册送100积分",diff:2,zh:1,hot:2},
+  {n:"OpenWorker",c:"AI写作",d:"吴恩达开源桌面AI智能体，4层权限安全机制，多模型自由切换，办公自动化",u:"https://github.com/andrewyng/aisuite",r:3,re:"开源桌面Agent",f:1,q:"开源免费",g:"https://github.com/andrewyng/aisuite",diff:3,zh:2,hot:2},
+  {n:"Treblo",c:"音频生成",d:"真正无限免费AI音乐生成器，4170+种风格，无限曲目，无水印可商用",u:"https://treblo.com",r:4,re:"无限免费AI音乐",f:1,v:1,q:"无限曲目免费",diff:1,zh:3,hot:2},
+  {n:"Nexora",c:"工作流工具",d:"MIT开源多Agent编排平台，46+LLM/90+工具/RAG/语义记忆，自部署零成本",u:"https://nexora.parendum.com",r:3,re:"开源Agent编排",f:1,q:"开源免费",g:"https://github.com/ParendumOU/Nexora",diff:3,zh:2,hot:1},
+  {n:"商汤Seko",c:"AI短剧",d:"商汤AI短剧Agent，一句话生百集，SekoIDX百集不崩脸，多人同步对口型，新人350积分免费体验",u:"https://seko.sensetime.com/explore",r:4,re:"AI短剧工厂",f:1,q:"新用户350积分+每日送50",diff:1,zh:1,hot:3},
+  {n:"AI Commander",c:"效率工具",d:"MIT开源的桌面语音输入工具，按耳机键说话自动输入文字，全程本地离线零费用",u:"https://github.com/YuJonny/AI-Commander",r:4,re:"免费语音输入神器",f:1,q:"开源免费",g:"https://github.com/YuJonny/AI-Commander",diff:2,zh:1,hot:2},
+];
 
-let showFree = 0;
-const allCats = [...new Set(TOOLS.map(t=>t.c))];
-const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn');
-count.textContent = TOOLS.length;
-let activeCat=null;
-document.getElementById('filters').innerHTML='<span class="filter-pill active" data-cat="">全部</span>'+allCats.map(c=>`<span class="filter-pill" data-cat="${c}">${c}</span>`).join('');
+// ===== 已停服工具归档 =====
+const ARCHIVED=[
+  {n:"iMideo",c:"视频生成",d:"50+AI视频工具一站式平台",r:3,re:"已停服",reason:"平台已下线"},
+  {n:"Subvideo.ai",c:"字幕配音",d:"AI配音+字幕一体化工具",r:2,re:"已停服",reason:"服务已终止"},
+  {n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人",r:2,re:"已停服",reason:"产品已下线"},
+  {n:"蝶变3.0",c:"视频编辑",d:"4K花园AI短剧画质提升工具",r:2,re:"已停服",reason:"服务已终止"},
+];
 
-function render(fc,q,free){
-  q=q.toLowerCase();let s=0;grid.innerHTML='';
+// ===== 更新日志 =====
+const CHANGELOG=[
+  {date:"07.30",type:"update",text:"全面改版：场景筛选+上手难度+中文+热度评级+暗色模式+归档"},
+  {date:"07.28",type:"add",text:"新增Kimi K3、DeepSeek V4 GA、Claude Opus 5、GLM-4.5等热点工具"},
+  {date:"07.27",type:"update",text:"优化热点卡片结构，增加参数和场景标签"},
+  {date:"07.26",type:"update",text:"新增场景筛选功能，支持按使用场景找工具"},
+  {date:"07.25",type:"add",text:"为全部工具补充上手难度、中文支持、热度评级"},
+  {date:"07.24",type:"fix",text:"清理已停服工具到历史归档区域"},
+  {date:"07.23",type:"add",text:"新增排序功能，支持按评分/名称/热度排序"},
+  {date:"07.22",type:"update",text:"优化搜索防抖和渲染性能"},
+];
+
+// ===== 状态 =====
+let showFree=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeScene='all';
+
+const allCats=[...new Set(TOOLS.map(t=>t.c))];
+const catCounts={};allCats.forEach(c=>catCounts[c]=TOOLS.filter(t=>t.c===c).length);
+const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn'),filtersWrap=document.getElementById('filtersWrap'),sortSelect=document.getElementById('sortSelect');
+
+const totalTools=TOOLS.length;
+count.textContent=totalTools;
+
+// 分类
+document.getElementById('filters').innerHTML=`<button class="filter-pill active" data-cat="" aria-pressed="true">全部 <span class="pill-count">${totalTools}</span></button>`+allCats.map(c=>`<button class="filter-pill" data-cat="${c}" aria-pressed="false">${c} <span class="pill-count">${catCounts[c]}</span></button>`).join('');
+
+// 场景
+document.getElementById('sceneWrap').innerHTML=SCENES.map(s=>`<button class="scene-pill ${s.id==='all'?'active':''}" data-scene="${s.id}" aria-pressed="${s.id==='all'}"><span class="scene-icon">${s.icon}</span>${s.label}</button>`).join('');
+
+function checkScrollHint(){const el=document.getElementById('filters');filtersWrap.classList.toggle('can-scroll',el.scrollWidth>el.clientWidth+2)}
+window.addEventListener('resize',checkScrollHint);setTimeout(checkScrollHint,100);
+
+function debounce(fn,wait){let t;return function(...args){clearTimeout(t);t=setTimeout(()=>fn.apply(this,args),wait)}}
+
+function getSortedTools(tools){const sorted=[...tools];switch(sortMode){case'rating-desc':sorted.sort((a,b)=>(b.r||0)-(a.r||0)||a.n.localeCompare(b.n));break;case'rating-asc':sorted.sort((a,b)=>(a.r||0)-(b.r||0)||a.n.localeCompare(b.n));break;case'name-asc':sorted.sort((a,b)=>a.n.localeCompare(b.n,'zh-CN'));break;case'name-desc':sorted.sort((a,b)=>b.n.localeCompare(a.n,'zh-CN'));break;case'hot-desc':sorted.sort((a,b)=>(b.hot||0)-(a.hot||0)||(b.r||0)-(a.r||0));break}return sorted}
+
+function diffLabel(d){if(!d||d===1)return{cls:'badge-diff-easy',t:'🟢 简单'};if(d===2)return{cls:'badge-diff-mid',t:'🟡 中等'};return{cls:'badge-diff-hard',t:'🔴 复杂'}}
+function zhLabel(z){if(!z||z===1)return'🇨🇳 中文';if(z===2)return'🌐 部分中文';return'❌ 无中文'}
+function hotLabel(h){if(!h||h===1)return'';if(h===2)return'🔥 热门';return'🔥🔥 很火'}
+
+function render(fc,q,free,scene){
+  q=(q||'').toLowerCase().trim();
+  const sceneObj=SCENES.find(s=>s.id===scene);
+  const sceneCats=sceneObj&&sceneObj.cats.length?sceneObj.cats:null;
+  let s=0;const fragment=document.createDocumentFragment();const filtered=[];
   TOOLS.forEach(t=>{
-    if(free && !t.f)return;
-    if((!fc||t.c===fc)&&(!q||t.n.toLowerCase().includes(q)||t.d.toLowerCase().includes(q))){
-      const l=(t.u?`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 官网</a>`:'')+(t.u&&t.g?' ':'')+(t.g?`<a href="${t.g}" target="_blank" rel="noopener" class="card-link">📦 开源</a>`:'')+(t.u&&t.w?' ':'')+(t.w?`<a href="${t.w}" target="_blank" rel="noopener" class="card-link">📖 文章</a>`:'')||'<span class="card-link disabled">暂无链接</span>';
-      const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
-      const dm=(t.u&&t.u.startsWith('http')?new URL(t.u).hostname:t.g?new URL(t.g).hostname:'');
-      const c=['#07c160','#ff6b6b','#4ecdc4','#45b7d1','#f39c12','#9b59b6','#e74c3c','#1abc9c','#3498db','#e67e22','#2ecc71','#e91e63'][t.n.length%12];
-      const ic=dm?`<img class="card-icon" src="https://${dm}/favicon.ico" onerror="this.style.display='none';this.nextSibling.style.display='inline-flex'" loading="lazy"><span class="card-icon-fallback" style="background:${c};display:none">${t.n[0]}</span>`:`<span class="card-icon-fallback" style="background:${c}">${t.n[0]}</span>`;
-      s++;grid.innerHTML+=`<div class="card">${t.v?'<span class="card-vpn">🪜</span>':''}<div class="card-name">${t.n}${ic}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div>${l}</div>`}
-  });count.textContent=s;
+    if(free&&!t.f)return;
+    if(fc&&t.c!==fc)return;
+    if(sceneCats&&!sceneCats.includes(t.c))return;
+    if(q&&!t.n.toLowerCase().includes(q)&&!t.d.toLowerCase().includes(q))return;
+    filtered.push(t);
+  });
+  const sorted=getSortedTools(filtered);
+  sorted.forEach((t,idx)=>{
+    const links=[];
+    if(t.u)links.push(`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 官网</a>`);
+    if(t.g)links.push(`<a href="${t.g}" target="_blank" rel="noopener" class="card-link">📦 开源</a>`);
+    if(t.w)links.push(`<a href="${t.w}" target="_blank" rel="noopener" class="card-link">📖 文章</a>`);
+    const l=links.length?links.join(' '):'<span class="card-link disabled">暂无链接</span>';
+    const stars='★'.repeat(t.r||0)+'☆'.repeat(5-(t.r||0));
+    const dm=(t.u&&t.u.startsWith('http'))?new URL(t.u).hostname:(t.g?new URL(t.g).hostname:'');
+    const palette=['#07c160','#ff6b6b','#4ecdc4','#45b7d1','#f39c12','#9b59b6','#e74c3c','#1abc9c','#3498db','#e67e22','#2ecc71','#e91e63'];
+    const cc=palette[t.n.length%palette.length];
+    const ic=dm?`<img class="card-icon" src="https://${dm}/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='inline-flex'"><span class="card-icon-fallback" style="background:${cc};display:none" aria-hidden="true">${t.n[0]}</span>`:`<span class="card-icon-fallback" style="background:${cc}" aria-hidden="true">${t.n[0]}</span>`;
+    const df=diffLabel(t.diff);
+    const hl=hotLabel(t.hot);
+    const badges=[];
+    if(t.new)badges.push('<span class="card-badge badge-new">🆕 新收录</span>');
+    badges.push(`<span class="card-badge ${df.cls}">${df.t}</span>`);
+    if(t.zh!==3)badges.push(`<span class="card-badge badge-zh">${zhLabel(t.zh)}</span>`);
+    if(hl)badges.push(`<span class="card-badge badge-hot">${hl}</span>`);
+    const div=document.createElement('article');div.className='card';
+    div.style.animationDelay=`${Math.min(idx*.04,.4)}s`;
+    div.innerHTML=`${t.v?'<span class="card-vpn" aria-label="需要梯子">🪜</span>':''}<div class="card-badge-wrap">${badges.join('')}</div><div class="card-name">${t.n}${ic}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars" aria-label="评分 ${t.r||0} 星">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div><div class="card-actions">${l}</div>`;
+    fragment.appendChild(div);s++;
+  });
+  grid.innerHTML='';
+  if(s===0){grid.innerHTML='<div class="empty-state"><div class="empty-state-icon">🔍</div><h3>未找到匹配的工具</h3><p>尝试更换关键词、切换场景/分类，或清除筛选条件</p></div>'}
+  else{grid.appendChild(fragment)}
+  count.textContent=s;
 }
-render(null,'',0);
+
+render(null,'',false,'all');
+
+// 分类
 document.getElementById('filters').addEventListener('click',e=>{
-  if(!e.target.classList.contains('filter-pill'))return;
-  document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('active'));
-  e.target.classList.add('active');activeCat=e.target.dataset.cat||null;render(activeCat,search.value,showFree);
+  const pill=e.target.closest('.filter-pill');if(!pill)return;
+  document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
+  pill.classList.add('active');pill.setAttribute('aria-pressed','true');
+  activeCat=pill.dataset.cat||null;
+  render(activeCat,searchQuery,showFree,activeScene);
 });
-freeBtn.addEventListener('click',()=>{
-  showFree=!showFree;
-  freeBtn.classList.toggle('active',showFree);
-  document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('active'));
+
+// 场景
+document.getElementById('sceneWrap').addEventListener('click',e=>{
+  const pill=e.target.closest('.scene-pill');if(!pill)return;
+  document.querySelectorAll('.scene-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
+  pill.classList.add('active');pill.setAttribute('aria-pressed','true');
+  activeScene=pill.dataset.scene||'all';
+  // 重置分类到全部
+  document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
+  document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');
+  document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');
   activeCat=null;
-  render(null,search.value,showFree);
+  render(activeCat,searchQuery,showFree,activeScene);
 });
-search.addEventListener('input',()=>render(activeCat,search.value));
+
+// 免费
+freeBtn.addEventListener('click',()=>{
+  showFree=!showFree;freeBtn.classList.toggle('active',showFree);freeBtn.setAttribute('aria-pressed',showFree?'true':'false');
+  if(showFree){document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');activeCat=null}
+  render(activeCat,searchQuery,showFree,activeScene);
+});
+
+// 搜索
+search.addEventListener('input',debounce(()=>{searchQuery=search.value;render(activeCat,searchQuery,showFree,activeScene)},250));
+
+// 排序
+sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;render(activeCat,searchQuery,showFree,activeScene)});
+
+// 归档
+function renderArchive(){
+  document.getElementById('archiveGrid').innerHTML=ARCHIVED.map(a=>`<div class="archive-card"><div class="archive-name">${a.n}</div><div style="font-size:12px;color:var(--text3)">${a.c}</div><div class="archive-reason">⚠️ ${a.reason}</div></div>`).join('');
+}
+renderArchive();
+
+// 更新日志
+function renderChangelog(){
+  const typeMap={add:'badge-add',update:'badge-update',fix:'badge-fix'};
+  const typeLabel={add:'新增',update:'优化',fix:'修复'};
+  document.getElementById('changelogList').innerHTML=CHANGELOG.map(c=>`<li><span class="changelog-date">${c.date}</span><span><span class="changelog-badge ${typeMap[c.type]}">${typeLabel[c.type]}</span>${c.text}</span></li>`).join('');
+}
+renderChangelog();
+
+// 折叠面板
+function toggleCollapse(id){
+  const header=document.getElementById(id+'Header');
+  const body=document.getElementById(id+'Body');
+  const isOpen=body.classList.contains('open');
+  if(isOpen){body.classList.remove('open');header.classList.remove('open');header.setAttribute('aria-expanded','false')}
+  else{body.classList.add('open');header.classList.add('open');header.setAttribute('aria-expanded','true')}
+}
+
+// 返回顶部
+const backToTop=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList.add('visible')}else{backToTop.classList.remove('visible')}});
 </script>
 </body>
 </html>
