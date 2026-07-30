@@ -255,24 +255,12 @@ footer .qrcode-hint span{color:var(--brand);font-weight:700}
       <div class="archive-grid" id="archiveGrid"></div>
     </div>
   </section>
-
-  <!-- 更新日志 -->
-  <section class="collapse-section" style="margin-top:16px">
-    <button class="collapse-header" id="changelogHeader" onclick="toggleCollapse('changelog')" aria-expanded="false">
-      <span>📝 更新日志</span>
-      <span class="chevron">▼</span>
-    </button>
-    <div class="collapse-body" id="changelogBody">
-      <ul class="changelog-list" id="changelogList"></ul>
-    </div>
-  </section>
 </main>
 
 <footer>
   <h2>关注「赛博上片指南」公众号</h2>
   <p>每天早上获取最新AI创作工具推荐，以上工具均来自每日日报精选</p>
   <div class="qrcode-hint">🔍 微信搜索 <span>赛博上片指南</span> 关注</div>
-  <p style="margin-top:18px;font-size:14px;color:var(--text3)">回复 <span style="color:var(--brand);font-weight:700">「工具」</span> 获取完整AI创作工具导航页</p>
 </footer>
 
 <button id="backToTop" class="back-to-top" aria-label="返回顶部" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
@@ -577,15 +565,7 @@ function renderArchive(){
 }
 renderArchive();
 
-// 更新日志
-function renderChangelog(){
-  const typeMap={add:'badge-add',update:'badge-update',fix:'badge-fix'};
-  const typeLabel={add:'新增',update:'优化',fix:'修复'};
-  document.getElementById('changelogList').innerHTML=CHANGELOG.map(c=>`<li><span class="changelog-date">${c.date}</span><span><span class="changelog-badge ${typeMap[c.type]}">${typeLabel[c.type]}</span>${c.text}</span></li>`).join('');
-}
-renderChangelog();
-
-// 折叠面板
+// 返回顶部
 function toggleCollapse(id){
   const header=document.getElementById(id+'Header');
   const body=document.getElementById(id+'Body');
