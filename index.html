@@ -136,6 +136,9 @@ header .count{display:inline-block;margin-top:14px;padding:6px 20px;background:v
 .card-vpn{position:absolute;top:8px;right:8px;font-size:13px;background:#ff6b6b22;color:#ff6b6b;padding:2px 6px;border-radius:6px;font-weight:600}
 .card-quota{font-size:12px;color:var(--success);font-weight:600;margin:2px 0 4px}
 .card-icon,.card-icon-fallback{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;margin-left:auto;flex-shrink:0;object-fit:contain}
+.page-btn{padding:8px 16px;border-radius:8px;font-size:14px;font-weight:600;background:var(--surface);border:1px solid var(--border);color:var(--text2);cursor:pointer;transition:all .15s;font-family:inherit;user-select:none}
+.page-btn:hover{border-color:var(--brand);color:var(--brand)}
+.page-btn.active{background:var(--brand);color:#fff;border-color:var(--brand);pointer-events:none}
 
 .empty-state{grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text3)}
 .empty-state-icon{font-size:48px;margin-bottom:12px;opacity:.6}
@@ -460,6 +463,7 @@ const CHANGELOG=[
 
 // ===== 状态 =====
 let showFree=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeScene='all';
+const PAGE_SIZE=36;let currentPage=0;
 
 const allCats=[...new Set(TOOLS.map(t=>t.c))];
 const catCounts={};allCats.forEach(c=>catCounts[c]=TOOLS.filter(t=>t.c===c).length);
@@ -489,7 +493,7 @@ function render(fc,q,free,scene){
   q=(q||'').toLowerCase().trim();
   const sceneObj=SCENES.find(s=>s.id===scene);
   const sceneCats=sceneObj&&sceneObj.cats.length?sceneObj.cats:null;
-  let s=0;const fragment=document.createDocumentFragment();const filtered=[];
+  let s=0;const filtered=[];
   TOOLS.forEach(t=>{
     if(free&&!t.f)return;
     if(fc&&t.c!==fc)return;
@@ -498,7 +502,11 @@ function render(fc,q,free,scene){
     filtered.push(t);
   });
   const sorted=getSortedTools(filtered);
-  sorted.forEach((t,idx)=>{
+  const totalPages=Math.ceil(sorted.length/PAGE_SIZE)||1;
+  if(currentPage>=totalPages)currentPage=totalPages-1;
+  const start=currentPage*PAGE_SIZE,pageItems=sorted.slice(start,start+PAGE_SIZE);
+  const fragment=document.createDocumentFragment();
+  pageItems.forEach((t,idx)=>{
     const links=[];
     if(t.u)links.push(`<a href="${t.u}" target="_blank" rel="noopener" class="card-link">🔗 官网</a>`);
     if(t.g)links.push(`<a href="${t.g}" target="_blank" rel="noopener" class="card-link">📦 开源</a>`);
@@ -524,8 +532,19 @@ function render(fc,q,free,scene){
   grid.innerHTML='';
   if(s===0){grid.innerHTML='<div class="empty-state"><div class="empty-state-icon">🔍</div><h3>未找到匹配的工具</h3><p>尝试更换关键词、切换场景/分类，或清除筛选条件</p></div>'}
   else{grid.appendChild(fragment)}
-  count.textContent=s;
+  count.textContent='第'+(currentPage+1)+'页/'+totalPages+'页 · '+s+'个工具';
+  let pg=document.getElementById('pagination');
+  if(!pg){pg=document.createElement('div');pg.id='pagination';pg.style.cssText='display:flex;justify-content:center;align-items:center;gap:8px;margin-top:24px;flex-wrap:wrap';grid.parentNode.insertBefore(pg,grid.nextSibling)}
+  if(totalPages<=1){pg.innerHTML='';return}
+  let html='';
+  if(currentPage>0)html+='<button class="page-btn" onclick="goPage('+(currentPage-1)+')">‹ 上一页</button>';
+  for(let i=Math.max(0,currentPage-2);i<Math.min(totalPages,currentPage+3);i++){
+    html+=i===currentPage?'<span class="page-btn active">'+(i+1)+'</span>':'<button class="page-btn" onclick="goPage('+i+')">'+(i+1)+'</button>'
+  }
+  if(currentPage<totalPages-1)html+='<button class="page-btn" onclick="goPage('+(currentPage+1)+')">下一页 ›</button>';
+  pg.innerHTML=html;
 }
+function goPage(n){currentPage=n;render(activeCat,searchQuery,showFree,activeScene)}
 
 render(null,'',false,'all');
 
@@ -534,7 +553,7 @@ document.getElementById('filters').addEventListener('click',e=>{
   const pill=e.target.closest('.filter-pill');if(!pill)return;
   document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
   pill.classList.add('active');pill.setAttribute('aria-pressed','true');
-  activeCat=pill.dataset.cat||null;
+  activeCat=pill.dataset.cat||null;currentPage=0;
   render(activeCat,searchQuery,showFree,activeScene);
 });
 
@@ -543,7 +562,7 @@ document.getElementById('sceneWrap').addEventListener('click',e=>{
   const pill=e.target.closest('.scene-pill');if(!pill)return;
   document.querySelectorAll('.scene-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
   pill.classList.add('active');pill.setAttribute('aria-pressed','true');
-  activeScene=pill.dataset.scene||'all';
+  activeScene=pill.dataset.scene||'all';currentPage=0;
   // 重置分类到全部
   document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
   document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');
@@ -560,10 +579,10 @@ freeBtn.addEventListener('click',()=>{
 });
 
 // 搜索
-search.addEventListener('input',debounce(()=>{searchQuery=search.value;render(activeCat,searchQuery,showFree,activeScene)},250));
+search.addEventListener('input',debounce(()=>{searchQuery=search.value;currentPage=0;render(activeCat,searchQuery,showFree,activeScene)},250));
 
 // 排序
-sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;render(activeCat,searchQuery,showFree,activeScene)});
+sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;currentPage=0;render(activeCat,searchQuery,showFree,activeScene)});
 
 // 归档
 function renderArchive(){
