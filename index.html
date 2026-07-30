@@ -206,7 +206,6 @@ footer .qrcode-hint span{color:var(--brand);font-weight:700}
 <header class="container">
   <h1>赛博上片指南 · AI创作工具导航</h1>
   <p>每日精选AI创作工具，覆盖视频生成 · 图像生成 · 设计工具 · 3D创作</p>
-  <div class="count">📰 已收录 <span id="toolCount">0</span> 个工具，持续更新</div>
 </header>
 
 <main id="main-content" class="container">
@@ -519,7 +518,7 @@ function render(fc,q,free,scene){
   grid.innerHTML='';
   if(s===0){grid.innerHTML='<div class="empty-state"><div class="empty-state-icon">🔍</div><h3>未找到匹配的工具</h3><p>尝试更换关键词、切换场景/分类，或清除筛选条件</p></div>'}
   else{grid.appendChild(fragment)}
-  count.textContent='第'+(currentPage+1)+'页/'+totalPages+'页 · '+s+'个工具';
+  count.textContent='';
   let pg=document.getElementById('pagination');
   if(!pg){pg=document.createElement('div');pg.id='pagination';pg.style.cssText='display:flex;justify-content:center;align-items:center;gap:8px;margin-top:24px;flex-wrap:wrap';grid.parentNode.insertBefore(pg,grid.nextSibling)}
   if(totalPages<=1){pg.innerHTML='';return}
