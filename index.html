@@ -208,12 +208,14 @@ function toggleTheme() {
 })();
 
 const HOTSPOT = {
-  date:"7月28日 16:00更新",
+  date:"7月30日 20:00更新",
   items:[
-    {"t":"\u{1F52E}", "h":"Kimi K3", "d":"月之暗面发布2.8万亿参数Kimi K3，全球最大开源模型，原生视觉+1M上下文，7月27日前开放权重"},
-    {"t":"\u{1F9E0}", "h":"DeepSeek V4 GA", "d":"DeepSeek V4正式版发布，百万上下文开源标配，V4-Flash仅0.2元/百万tokens，Agent能力比肩顶级闭源"},
-    {"t":"\u{1F3AF}", "h":"Claude Opus 5", "d":"Anthropic发布，接近Fable 5智能水平但价格仅一半，$5/$25每百万token，多项编码与知识工作基准登顶"},
-    {"t":"\u{1F916}", "h":"GLM-4.5", "d":"智谱发布原生融合智能体大模型，3550亿参数，推理/编码/Agent SOTA，全球第三国产第一，全面开源MIT"}]
+    {"t":"🔖", "h":"FLUX 3开源", "d":"Black Forest Labs发布FLUX 3多模态基础模型，首个同时训练图像/视频/音频的单架构模型，后续计划开源权重"},
+    {"t":"⚡", "h":"Magi-1开源", "d":"清华Sand AI开源全球首个自回归视频生成模型，240亿参数，无限长度生成，Apache 2.0协议"},
+    {"t":"🔔", "h":"SSI获Nvidia 50亿美元", "d":"Ilya Sutskever的Safe Superintelligence获Nvidia 50亿美元投资，12个月算力提升10倍"},
+    {"t":"🎬", "h":"Seko 2.0短剧", "d":"商汤Seko短剧Agent实测：一句话生成百集AI短剧，角色百集不崩脸，免费积分体验"},
+    {"t":"🤖", "h":"CatPaw上线", "d":"美团发布全场景AI Agent平台CatPaw，已覆盖9万员工、搭建超3万个Agent"},
+    {"t":"🎵", "h":"Lyria 3.5", "d":"Google发布音乐生成模型Lyria 3.5，Flow Music可直接创作完整歌曲，人声质量大幅提升"}]
 };
 function renderHotspot(){
   if(!HOTSPOT.items.length) return;
