@@ -239,6 +239,7 @@ footer .qrcode-hint span{color:var(--brand);font-weight:700}
     <div class="search-wrap">
       <input type="text" id="search" placeholder="搜索工具名或关键词…" autocomplete="off" aria-label="搜索工具">
       <button id="freeBtn" class="free-btn" aria-pressed="false" aria-label="仅显示免费工具">🆓 仅看免费</button>
+      <button id="openBtn" class="free-btn" aria-pressed="false" aria-label="仅显示开源工具">📦 仅看开源</button>
     </div>
 
     <div class="sort-bar">
@@ -501,7 +502,7 @@ const CHANGELOG=[
 ];
 
 // ===== 状态 =====
-let showFree=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeMain='all';
+let showFree=false,showOpen=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeMain='all';
 const PAGE_SIZE=36;let currentPage=0;
 
 // 大类计数（基于 m 数组）
@@ -516,7 +517,7 @@ function subCatsOf(mainId){
 // 当前大类下的细分计数
 function subCountsOf(mainId,sub){return mainTools(mainId).filter(t=>t.c===sub).length}
 
-const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn'),filtersWrap=document.getElementById('filtersWrap'),sortSelect=document.getElementById('sortSelect'),catSide=document.getElementById('catSide');
+const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn'),openBtn=document.getElementById('openBtn'),filtersWrap=document.getElementById('filtersWrap'),sortSelect=document.getElementById('sortSelect'),catSide=document.getElementById('catSide');
 
 const totalTools=TOOLS.length;
 count.textContent=totalTools;
@@ -570,6 +571,7 @@ function render(fc,q,free,main){
   let s=0;const filtered=[];
   TOOLS.forEach(t=>{
     if(free&&!t.f)return;
+    if(showOpen&&!t.g)return;
     if(fc&&t.c!==fc)return;
     if(mainId!=='all'&&!(t.m||[]).includes(mainId))return;
     if(q&&!t.n.toLowerCase().includes(q)&&!t.d.toLowerCase().includes(q))return;
@@ -631,12 +633,17 @@ document.getElementById('filters').addEventListener('click',e=>{
   render(activeCat,searchQuery,showFree,activeMain);
 });
 
-// 免费
-freeBtn.addEventListener('click',()=>{
-  showFree=!showFree;freeBtn.classList.toggle('active',showFree);freeBtn.setAttribute('aria-pressed',showFree?'true':'false');
-  if(showFree){document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');activeCat=null}
+// 筛选开关（免费/开源共用逻辑）
+function toggleFilter(flag,btn,setFlag){
+  setFlag(!flag);btn.classList.toggle('active',!flag);btn.setAttribute('aria-pressed',(!flag)?'true':'false');
+  document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
+  document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');
+  document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');
+  activeCat=null;currentPage=0;
   render(activeCat,searchQuery,showFree,activeMain);
-});
+}
+freeBtn.addEventListener('click',()=>toggleFilter(showFree,freeBtn,v=>showFree=v));
+openBtn.addEventListener('click',()=>toggleFilter(showOpen,openBtn,v=>showOpen=v));
 
 // 搜索
 search.addEventListener('input',debounce(()=>{searchQuery=search.value;currentPage=0;render(activeCat,searchQuery,showFree,activeMain)},250));
