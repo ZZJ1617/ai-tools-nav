@@ -90,6 +90,23 @@ header .count{display:inline-block;margin-top:14px;padding:6px 20px;background:v
 .scene-pill.active{background:var(--brand);color:#fff;border-color:var(--brand)}
 .scene-pill .scene-icon{font-size:15px}
 
+/* ===== 大类(竖向) + 细分(横向) 两级布局 ===== */
+.cat-layout{display:flex;gap:24px;align-items:flex-start;margin-bottom:8px}
+.cat-side{display:flex;flex-direction:column;gap:4px;min-width:140px;flex-shrink:0;position:sticky;top:12px;max-height:calc(100vh - 40px);overflow-y:auto;padding:10px;background:var(--bg-alt);border:1px solid var(--border);border-radius:14px}
+.cat-btn{padding:9px 12px;border-radius:9px;font-size:14px;font-weight:600;background:transparent;border:1px solid transparent;color:var(--text2);cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:8px;text-align:left;width:100%}
+.cat-btn:hover{background:var(--surface);color:var(--text);border-color:var(--border)}
+.cat-btn.active{background:var(--brand);color:#fff;border-color:var(--brand)}
+.cat-btn .cat-icon{font-size:16px}
+.cat-btn .cat-count{margin-left:auto;font-size:11px;opacity:.7;background:rgba(128,128,128,.15);border-radius:8px;padding:1px 7px;font-weight:500}
+.cat-btn.active .cat-count{background:rgba(255,255,255,.25)}
+.cat-main{flex:1;min-width:0}
+@media(max-width:640px){
+  .cat-layout{flex-direction:column}
+  .cat-side{flex-direction:row;flex-wrap:wrap;min-width:0;position:static;max-height:none;gap:6px;padding:8px}
+  .cat-btn{width:auto;padding:7px 12px;font-size:13px}
+  .cat-btn .cat-count{display:none}
+}
+
 .filters-wrap{margin-bottom:32px;position:relative}
 .filters-wrap::after{content:'';position:absolute;top:0;right:0;width:40px;height:100%;background:linear-gradient(to right,transparent,var(--bg));pointer-events:none;opacity:0;transition:opacity .3s}
 .filters-wrap.can-scroll::after{opacity:1}
@@ -101,16 +118,16 @@ header .count{display:inline-block;margin-top:14px;padding:6px 20px;background:v
 .filter-pill .pill-count{font-size:11px;font-weight:600;padding:1px 7px;border-radius:9999px;background:rgba(0,0,0,.06);color:var(--text3);transition:all .15s}
 .filter-pill.active .pill-count{background:rgba(255,255,255,.25);color:#fff}
 
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}}
 @media(max-width:600px){.grid{grid-template-columns:1fr}header h1{font-size:28px;letter-spacing:-.6px}}
 
-.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);transition:all .25s ease;display:flex;flex-direction:column;animation:fadeInUp .5s ease both;position:relative}
-.card:hover{border-color:var(--border-hover);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
-[data-theme="dark"] .card:hover{box-shadow:0 0 0 1px rgba(94,106,210,.25),0 12px 40px rgba(0,0,0,.3)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);transition:all .2s ease;display:flex;flex-direction:column;animation:fadeInUp .5s ease both;position:relative}
+.card:hover{border-color:var(--border-hover);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+[data-theme="dark"] .card:hover{box-shadow:0 0 0 1px rgba(94,106,210,.25),0 8px 24px rgba(0,0,0,.3)}
 
 .card-badge-wrap{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center}
-.card-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;letter-spacing:.2px;text-transform:uppercase}
+.card-badge{font-size:11px;font-weight:700;padding:3px 10px;border-radius:9999px;letter-spacing:.2px;text-transform:uppercase;white-space:nowrap}
 .badge-new{background:var(--tag-hot-bg);color:var(--tag-hot-text)}
 .badge-diff-easy{background:var(--tag-easy-bg);color:var(--tag-easy-text)}
 .badge-diff-mid{background:var(--tag-mid-bg);color:var(--tag-mid-text)}
@@ -118,18 +135,22 @@ header .count{display:inline-block;margin-top:14px;padding:6px 20px;background:v
 .badge-zh{background:rgba(0,117,222,.08);color:var(--badge-text)}
 .badge-hot{background:var(--tag-hot-bg);color:var(--tag-hot-text)}
 
-.card-name{font-size:19px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.2px;display:flex;align-items:center;width:100%}
-.card-cat{display:inline-block;padding:4px 14px;border-radius:9999px;font-size:13px;font-weight:600;color:var(--badge-text);background:var(--badge-bg);margin-bottom:8px;align-self:flex-start;letter-spacing:.1px}
-.card-stars{font-size:14px;color:#f5a623;margin-bottom:10px}
-.card-desc{font-size:14.5px;color:var(--text2);line-height:1.7;margin-bottom:14px;flex:1}
-.card-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.card-meta-tag{font-size:12px;color:var(--text3);background:var(--bg-alt);padding:3px 10px;border-radius:6px;font-weight:500}
-.card-actions{display:flex;gap:8px;flex-wrap:wrap}
-.card-link{display:inline-block;padding:8px 20px;border-radius:6px;font-size:14px;font-weight:600;text-align:center;background:var(--link-bg);border:1px solid var(--link-border);color:var(--brand);text-decoration:none;transition:all .15s}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.card-name{font-size:17px;font-weight:700;color:var(--text);letter-spacing:-.2px;display:flex;align-items:center;flex:1 1 auto;min-width:0;gap:10px}
+.card-name .card-icon,.card-name .card-icon-fallback{width:36px;height:36px;border-radius:8px;font-size:16px;margin-left:0;flex-shrink:0}
+.card-name-text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card-head .card-badge-wrap{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end;margin-bottom:0;flex:0 1 auto;max-width:none;white-space:nowrap}
+.card-cat{display:inline-block;padding:3px 10px;border-radius:9999px;font-size:11px;font-weight:600;color:var(--badge-text);background:var(--badge-bg);margin-bottom:6px;align-self:flex-start;letter-spacing:.1px}
+.card-stars{font-size:12px;color:#f5a623;margin-bottom:6px}
+.card-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:8px;flex:1;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.card-meta-tag{font-size:11px;color:var(--text3);background:var(--bg-alt);padding:2px 8px;border-radius:6px;font-weight:500}
+.card-actions{display:flex;gap:6px;flex-wrap:wrap}
+.card-link{display:inline-block;padding:5px 14px;border-radius:6px;font-size:12px;font-weight:600;text-align:center;background:var(--link-bg);border:1px solid var(--link-border);color:var(--brand);text-decoration:none;transition:all .15s}
 .card-link:hover{background:var(--link-hover-bg);border-color:var(--link-hover-bg);color:var(--link-hover-text)}
 .card-link.disabled{background:var(--disabled-bg);border:1px solid var(--disabled-border);color:var(--disabled-text);pointer-events:none;cursor:not-allowed}
-.card-vpn{position:absolute;top:8px;right:8px;font-size:13px;background:#ff6b6b22;color:#ff6b6b;padding:2px 6px;border-radius:6px;font-weight:600}
-.card-quota{font-size:12px;color:var(--success);font-weight:600;margin:2px 0 4px}
+.card-vpn{position:absolute;top:6px;right:8px;font-size:11px;background:#ff6b6b22;color:#ff6b6b;padding:1px 5px;border-radius:6px;font-weight:600}
+.card-quota{font-size:11px;color:var(--success);font-weight:600;margin:2px 0 4px}
 .card-icon,.card-icon-fallback{width:44px;height:44px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;margin-left:auto;flex-shrink:0;object-fit:contain}
 .back-to-top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--surface);border:1px solid var(--border);color:var(--text2);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);pointer-events:none;transition:all .3s ease;z-index:999}
 .back-to-top.visible{opacity:1;transform:translateY(0);pointer-events:auto}
@@ -231,19 +252,17 @@ footer .qrcode-hint span{color:var(--brand);font-weight:700}
       </select>
     </div>
 
-    <!-- 场景筛选 -->
-    <div class="scene-bar" id="sceneBar">
-      <div class="scene-title">🎯 按场景找工具</div>
-      <div class="scene-wrap" id="sceneWrap"></div>
+    <!-- 大类(竖向) + 细分(横向) 两级布局 -->
+    <div class="cat-layout">
+      <nav class="cat-side" id="catSide" aria-label="工具大类"></nav>
+      <div class="cat-main">
+        <div class="scene-bar" id="sceneBar" style="display:none"></div>
+        <nav class="filters-wrap" id="filtersWrap" aria-label="工具细分筛选">
+          <div class="filters" id="filters"></div>
+        </nav>
+        <div class="grid" id="grid"></div>
+      </div>
     </div>
-
-    <nav class="filters-wrap" id="filtersWrap" aria-label="工具分类筛选">
-      <div class="filters" id="filters"></div>
-    </nav>
-  </section>
-
-  <section aria-label="工具列表">
-    <div class="grid" id="grid"></div>
   </section>
 
   <!-- 历史归档 -->
@@ -305,140 +324,154 @@ function renderHotspot(){
 }
 renderHotspot();
 
-// ===== 场景定义 =====
-const SCENES=[
-  {id:'all',label:'全部场景',icon:'🌐',cats:[]},
-  {id:'shortfilm',label:'AI短剧制作',icon:'🎬',cats:['AI短剧']},
-  {id:'video',label:'视频生成',icon:'🎥',cats:['视频生成','视频编辑']},
-  {id:'image',label:'图像/设计创作',icon:'🎨',cats:['图像生成','设计工具']},
-  {id:'audio',label:'音频/音乐/配音',icon:'🎵',cats:['音频生成']},
-  {id:'3d',label:'3D创作',icon:'🧊',cats:['3D创作']},
-  {id:'write',label:'AI写作',icon:'✍️',cats:['AI写作']},
-  {id:'workflow',label:'效率/工作流',icon:'⚡',cats:['工作流Agent']}
+// ===== 大类定义（竖向导航，基于工具 m 字段） =====
+const MAINS=[
+  {id:'all',label:'全部',icon:'🌐'},
+  {id:'视频',label:'视频',icon:'🎬'},
+  {id:'音频',label:'音频',icon:'🎵'},
+  {id:'写作',label:'写作',icon:'✍️'},
+  {id:'图像',label:'图像',icon:'🎨'},
+  {id:'3D',label:'3D',icon:'🧊'},
+  {id:'办公',label:'办公',icon:'💼'},
+  {id:'Agent',label:'Agent',icon:'🤖'}
 ];
+
+// 兼容旧引用
+const SCENES=MAINS;
 
 // ===== 工具数据（已移出停服工具，新增字段） =====
 const TOOLS=[
-  {n:"Kling 3.0/可灵",c:"视频生成",d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",r:4,re:"视频生成领先",f:1,q:"每天6次720p",diff:2,zh:1,hot:3},
-  {n:"Veo 3.1",c:"视频生成",d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3,re:"Google力作",f:1,v:1,q:"每月100积分",diff:2,zh:3,hot:3},
-  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架",u:"",r:2,re:"开源可尝试",f:1,q:"开源免费",g:"https://github.com/jd-opensource/joyai-echo",diff:3,zh:1,hot:1},
-  {n:"Midjourney",c:"图像生成",d:"V8.2默认模型，速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5,re:"行业标杆",v:1,diff:2,zh:3,hot:3},
-  {n:"Z-Image",c:"图像生成",d:"阿里通义开源60亿参数图像生成器",u:"https://zimage.design/zh/",r:3,re:"开源图像模型",f:1,q:"开源免费",g:"https://github.com/Tongyi-MAI/Z-Image",diff:3,zh:1,hot:2},
-  {n:"Raphael AI",c:"图像生成",d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",r:3,re:"无限免费生成",f:1,v:1,q:"无限免费",diff:1,zh:1,hot:2},
-  {n:"Imagen 4 Ultra",c:"图像生成",d:"Google真实感最强图像API",u:"https://deepmind.google/technologies/imagen/",r:3,re:"Google真实感强",v:1,diff:2,zh:3,hot:2},
-  {n:"Ideogram 4.0",c:"图像生成",d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",r:4,re:"文字渲染领先",f:1,v:1,q:"每周10积分",g:"https://github.com/ideogram-oss/ideogram4",diff:2,zh:3,hot:2},
-  {n:"Reve 2.0",c:"图像生成",d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",r:4,re:"精准控制强",v:1,diff:2,zh:3,hot:2},
-  {n:"Figma",c:"设计工具",d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",r:4,re:"设计协作标杆",v:1,diff:2,zh:3,hot:3},
-  {n:"Pixso",c:"设计工具",d:"国内设计协作平台，AI智能设计",u:"https://pixso.cn",r:3,re:"国内设计协作",f:1,q:"免费",diff:2,zh:1,hot:2},
-  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",u:"https://felo.ai",r:2,re:"快速出稿生成",diff:1,zh:1,hot:1},
-  {n:"Genspark AI Design",c:"设计工具",d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",r:3,re:"免费积分多",f:1,v:1,q:"每天100积分",diff:1,zh:1,hot:2},
-  {n:"腾讯Ardot",c:"设计工具",d:"腾讯AI设计智能体公测，一句话生成可编辑UI",u:"https://ardot.tencent.com/",r:3,re:"腾讯AI设计",diff:1,zh:1,hot:2},
-  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器",u:"https://mew.design/zh",r:2,re:"免费设计生成",f:1,q:"免费",diff:1,zh:1,hot:1},
-  {n:"Meshy 3D Agent",c:"3D创作",d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",r:3,re:"3D Agent首创",v:1,diff:2,zh:3,hot:2},
-  {n:"Runway Aleph 2.0",c:"视频编辑",d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4,re:"视频编辑革新",v:1,diff:2,zh:3,hot:3},
-  {n:"Vibbit",c:"视频生成",d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2,re:"短视频Agent",v:1,diff:2,zh:1,hot:1},
-  {n:"LumenX Studio",c:"AI短剧",d:"阿里开源AI短漫剧全链路自动化平台",u:"",r:2,re:"开源短漫剧",f:1,q:"开源免费",g:"https://github.com/alibaba/LumenX",diff:3,zh:1,hot:2},
-  {n:"OiiOii 2.0",c:"视频生成",d:"国产AI视频创作Agent，智能画布+拉片复刻",u:"https://oiioii.ai",r:3,re:"智能画布创作",diff:2,zh:1,hot:2},
-  {n:"ElevenCreative Flows Agent",c:"工作流Agent",d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1,diff:2,zh:3,hot:2},
-  {n:"Felo Video",c:"视频生成",d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2,re:"文档转视频",diff:1,zh:1,hot:1},
-  {n:"Colossyan Cora",c:"视频编辑",d:"企业培训视频Agent · 14天试用后$27/月",u:"https://www.colossyan.com",r:2,re:"企业培训视频",v:1,diff:1,zh:3,hot:1},
-  {n:"Utopai PAI 2.0",c:"视频编辑",d:"AI叙事视频平台 · 仅限订阅，无免费层",u:"https://pai.utopaistudios.com",r:2,re:"付费叙事视频",v:1,diff:2,zh:3,hot:1},
-  {n:"ComfyUI",c:"工作流Agent",d:"节点式AI工作流，最新v0.34.2，支持Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/comfyanonymous/ComfyUI",diff:3,zh:2,hot:3},
-  {n:"Grok Imagine",c:"工作流Agent",d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1,diff:2,zh:3,hot:3},
-  {n:"Adobe CC 6月更新",c:"设计工具",d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto",u:"https://creativecloud.adobe.com/",r:3,re:"全线AI升级",diff:2,zh:1,hot:2},
-  {n:"Omnify AI",c:"工作流Agent",d:"清华团队多Agent创作平台，剧本→分镜→配音全链路",u:"https://omnifyai.cn/",r:3,re:"全链路Agent",diff:2,zh:1,hot:2},
-  {n:"Arrow 1.0",c:"图像生成",d:"全球首款SVG原生AI模型，矢量图无限缩放+逐层编辑",u:"https://app.quiver.ai/explore",r:3,re:"SVG原生AI",v:1,diff:2,zh:3,hot:1},
-  {n:"Meta Edits",c:"视频编辑",d:"Meta视频编辑App桌面版+AI创作助手上线",u:"https://creators.instagram.com/edits",r:3,re:"Meta视频编辑",v:1,diff:1,zh:3,hot:2},
-  {n:"MiniMax Hub",c:"视频生成",d:"一站式多模态AI视频平台，图像+视频+配音+音乐+剪辑五合一",u:"https://www.minimax.io/",r:4,re:"一站式多模态",f:1,q:"免费",diff:2,zh:1,hot:3},
-  {n:"Google Vids",c:"视频生成",d:"免费AI虚拟主播，写脚本即生成播报视频，Veo3.1每月10次免费",u:"https://workspace.google.com/products/vids/",r:3,re:"免费虚拟主播",f:1,v:1,q:"每月10次Veo3.1",diff:1,zh:3,hot:2},
-  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格",u:"",r:2,re:"开源草图转画",f:1,q:"开源免费",g:"https://github.com/ycbing/sketch-to-art",diff:2,zh:1,hot:1},
-  {n:"天工 Skywork 3.1",c:"设计工具",d:"昆仑万维AI设计+Agent平台，无限画布+百Agent并行，可导出Figma",u:"https://www.tiangong.cn/",r:3,re:"无限画布设计",diff:2,zh:1,hot:2},
-  {n:"Suno AI V5.5",c:"音频生成",d:"全球头部AI音乐平台，V5.5新增Voices音色克隆/Custom Models，44.1kHz完整歌曲",u:"https://suno.com/",r:4,re:"AI音乐标杆",f:1,v:1,q:"每天10首免费",diff:1,zh:3,hot:3},
-  {n:"Adobe Firefly Creative Skills",c:"设计工具",d:"Agent全面升级：一句话生成品牌VI+产品视频，进驻PS/PR/AI/ID",u:"https://creativecloud.adobe.com/",r:4,re:"创意Agent升级",diff:2,zh:1,hot:3},
-  {n:"HappyOyster 1.0",c:"3D创作",d:"阿里云交互式3D世界模型，一句话生成可探索演化的三维世界",u:"https://happyoyster.cn/",r:3,re:"3D世界模型",f:1,q:"限时免费体验",diff:2,zh:1,hot:2},
-  {n:"Khala",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲",u:"",r:2,re:"开源歌曲生成",f:1,q:"开源免费",g:"https://github.com/Khala-Music-AI/Khala",diff:3,zh:1,hot:1},
-  {n:"Magi-1",c:"视频生成",d:"全球首个自回归视频生成模型100%开源，清华Sand.AI团队，240亿参数，无限长度",u:"https://sand.ai/",r:4,re:"开源视频革命",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1",diff:3,zh:2,hot:3},
-  {n:"Pixelle-Video",c:"视频生成",d:"阿里开源AI全自动短视频引擎，27K⭐，输入主题→AI写文案→生成配图/视频→语音解说→BGM→一键合成全流程",u:"https://github.com/ATH-MaaS/Pixelle-Video",r:4,re:"全自动短视频引擎",f:1,q:"开源免费",g:"https://github.com/ATH-MaaS/Pixelle-Video",diff:3,zh:1,hot:3},
-  {n:"VibeKnow",c:"视频生成",d:"AI知识视频创作平台，PDF/Word/PPT/链接一键变讲解视频，自动分镜+数字人+配音+字幕+BGM，7种语言，注册送400积分 🇨🇳",u:"https://vibeknow.com",r:4,re:"文档一键变视频",f:1,q:"注册送400积分(约1条)",diff:1,zh:1,hot:3},
-  {n:"Jellyfish",c:"AI短剧",d:"开源AI短剧生产工作台，剧本→分镜→角色一致性→批量生成→导出全流程，Docker一键部署，6.2K⭐",u:"https://github.com/Forget-C/Jellyfish",r:4,re:"开源短剧工厂",f:1,q:"开源免费",g:"https://github.com/Forget-C/Jellyfish",diff:3,zh:1,hot:2},
-  {n:"Motion.so",c:"视频生成",d:"前沿动态设计Agent，一句话触发品牌调研到成片全链路",u:"https://motion.so/",r:4,re:"动态设计Agent",v:1,diff:2,zh:3,hot:2},
-  {n:"Palmier Pro",c:"视频编辑",d:"开源macOS视频编辑器，Claude/Codex直连时间线，多AI模型内置",u:"https://www.palmier.io/",r:4,re:"开源视频编辑器",f:1,v:1,q:"开源免费",g:"https://github.com/palmier-io/palmier-pro",diff:3,zh:3,hot:2},
-  {n:"万兴剧厂",c:"视频生成",d:"万兴科技AI影视平台，3D导演台拖拽式空间创作",u:"https://reelmate.cn/",r:3,re:"3D空间创作",diff:2,zh:1,hot:2},
-  {n:"HappyHorse 1.1",c:"视频生成",d:"阿里视频生成模型大版本升级，五大维度提升限时4折",u:"https://happyhorse.com",r:4,re:"阿里视频升级",diff:2,zh:1,hot:2},
-  {n:"MVLAND",c:"视频生成",d:"美图多Agent协同AI MV生成，输入歌词自动生成完整MV",u:"https://mvland.com",r:3,re:"歌词生成MV",diff:1,zh:1,hot:2},
-  {n:"Seedance 2.5",c:"视频生成",d:"字节最新视频模型，原生30秒直出，50全模态素材",u:"https://seed.bytedance.com/",r:4,re:"原生视频突破",diff:2,zh:1,hot:3},
-  {n:"freebeat",c:"视频生成",d:"AI音乐视频生成器，节奏同步编辑，100万+创作者，多平台链接导入",u:"https://freebeat.ai/",r:3,re:"音乐视频同步",v:1,diff:1,zh:3,hot:2},
-  {n:"OpenArt Director",c:"视频生成",d:"首创「感觉导演」AI电影制作，对话生成5分钟完整电影，9语种口型同步",u:"https://openart.ai/suite/director",r:4,re:"电影级导演",v:1,diff:2,zh:3,hot:2},
-  {n:"FlashVSR",c:"视频编辑",d:"清华+上海AI实验室开源视频超分辨率，扩散模型12倍加速，注册送积分",u:"https://flashvsr.com/zh",r:3,re:"视频超分加速",f:1,q:"注册送积分",g:"https://github.com/OpenImagingLab/FlashVSR",diff:3,zh:1,hot:2},
-  {n:"Aiarty Video Enhancer",c:"视频编辑",d:"本地AI视频增强桌面工具，13项功能一体，终身买断制",u:"https://www.aiarty.com/cn/ai-video-enhancer/",r:3,re:"本地视频增强",diff:1,zh:1,hot:1},
-  {n:"抖音造世界",c:"3D创作",d:"抖音多Agent 3D世界创作工具，自然语言对话搭建虚拟世界",u:"https://vcreate.douyin.com/",r:3,re:"对话式3D创作",f:1,q:"免费",diff:1,zh:1,hot:2},
-  {n:"浮云梦配音",c:"音频生成",d:"永久免费一站式AI创作平台，140+语言TTS/配音/音乐/绘图",u:"https://fuym.cn/",r:3,re:"永久免费配音",f:1,q:"永久免费",diff:1,zh:1,hot:2},
-  {n:"Creatify Agent",c:"视频生成",d:"全球首个AI广告创意Agent，输入链接自动产出高转化广告",u:"https://creatify.ai/zh/features/agent",r:3,re:"广告创意Agent",v:1,diff:1,zh:3,hot:2},
-  {n:"iClone Personal",c:"3D创作",d:"Reallusion专业3D动画软件永久免费版，AI Studio实现3D→AI生成",u:"https://www.reallusion.com/iclone/",r:3,re:"永久免费3D动画",f:1,q:"永久免费",diff:3,zh:3,hot:2},
-  {n:"TikTok Symphony Agent",c:"视频生成",d:"TikTok AI广告创意Agent，输入链接自动完成调研→脚本→素材→配音全流程",u:"https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite",r:3,re:"广告Agent全自动",v:1,diff:1,zh:3,hot:2},
-  {n:"OpenMontage",c:"视频生成",d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，54.7K Stars",u:"",r:4,re:"开源视频工厂",f:1,q:"开源免费",g:"https://github.com/calesthio/OpenMontage",diff:3,zh:2,hot:3},
-  {n:"Canva Grow 2.0",c:"设计工具",d:"Canva端到端AI营销引擎，广告创作+发布+优化全流程一体化",u:"https://www.canva.com/",r:3,re:"全链路营销",v:1,diff:1,zh:3,hot:3},
-  {n:"TTSMaker",c:"音频生成",d:"完全免费可商用TTS工具，50+语言600+声音，无限量声音不扣配额",u:"https://www.ttsmaker.cn/",r:4,re:"免费可商用配音",f:1,q:"每周2万字符",diff:1,zh:1,hot:3},
-  {n:"Vidu Q3",c:"视频生成",d:"清华生数科技多镜头叙事视频生成，智慧剪辑16秒出片，国内直连",u:"https://www.vidu.com/zh/",r:3,re:"多镜头叙事",f:1,q:"错峰无限/免费积分",diff:2,zh:1,hot:2},
-  {n:"Google Stitch 2.0",c:"设计工具",d:"Google Labs AI UI设计工具，400积分/天+15次redesign，Vibe Design/语音驱动多屏原型",u:"https://stitch.withgoogle.com/",r:4,re:"AI设计UI神器",f:1,q:"每天400积分",v:1,diff:2,zh:3,hot:3},
-  {n:"Hedra",c:"视频生成",d:"AI角色视频生成，Character-3超逼真唇同步",u:"https://www.hedra.com/",r:4,re:"角色视频神器",f:1,q:"免费版可用",v:1,diff:1,zh:3,hot:2},
-  {n:"Milo3D.ai",c:"3D创作",d:"免费AI 3D模型生成器，文字/图片秒变3D",u:"https://milo3d.ai/",r:4,re:"3D生成免费",f:1,q:"100免费额度",diff:1,zh:3,hot:2},
-  {n:"冬瓜配音",c:"音频生成",d:"国产免费AI配音，多角色对话无水印",u:"https://www.okaidub.com/",r:4,re:"配音神器国产",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
-  {n:"WorkTool",c:"工作流Agent",d:"71款在线工具集合+DeepSeek AI，免费无广告，纯前端隐私优先",u:"https://worktool.app/zh",r:3,re:"工具集合免费",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
-  {n:"昆云AI短剧",c:"AI短剧",d:"一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成",u:"https://kunyunkeji.cn",r:2,re:"一站式短剧",f:1,q:"免费",diff:1,zh:1,hot:1},
-  {n:"知剧AI",c:"AI短剧",d:"AI剧本创作平台，小说→分镜→台本→Word导出，在线免费使用",u:"https://zhijuu.com",r:3,re:"剧本创作助手",f:1,q:"免费",diff:1,zh:1,hot:2},
-  {n:"Toonflow",c:"AI短剧",d:"开源一站式AI短剧，小说→视频全流程，Docker部署14.4K⭐",u:"https://toonflow.net",r:4,re:"开源短剧首选",f:1,q:"开源免费",g:"https://github.com/HBAI-Ltd/Toonflow-app",diff:3,zh:1,hot:2},
-  {n:"智剧通 ZJT",c:"AI短剧",d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署",u:"",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT",diff:3,zh:1,hot:1},
-  {n:"Catimind",c:"AI短剧",d:"云端零部署浏览器直接使用，支持5万字/60集剧本一键上传批量生产",u:"https://catimind.com/",r:3,re:"批量漫剧生产",diff:1,zh:1,hot:1},
-  {n:"VOZEB",c:"设计工具",d:"开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署",u:"https://github.com/csyqlz/vozeb",r:2,re:"AI Agent操控画布",f:1,q:"开源免费",g:"https://github.com/csyqlz/vozeb",diff:3,zh:2,hot:1},
-  {n:"腾讯混元Hy3",c:"工作流Agent",d:"腾讯295B MoE大模型，Agent能力大增，元宝免费使用，一句话生成PPT/文档",u:"https://yuanbao.tencent.com/",r:4,re:"Agent能力领先",f:1,q:"永久免费",diff:1,zh:1,hot:3},
-  {n:"Meta Muse Image + Muse Video",c:"图像生成",d:"Meta MSL Agentic图像生成，先拆需求再出图，Arena三项第二，免费",u:"https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",r:4,re:"Agent图像生成",f:1,v:1,q:"免费",diff:1,zh:3,hot:3},
-  {n:"Seedream 5.0 Pro",c:"图像生成",d:"字节跳动最强多模态图像模型，中文小字排版零乱码，交互式精准编辑+图层分离",u:"https://seed.bytedance.com/zh/seedream5_0_pro",r:4,re:"国产图像标杆",f:1,q:"即梦每日免费额度",diff:2,zh:1,hot:3},
-  {n:"MuseDock",c:"视频生成",d:"开源本地优先AI视频创作，HTML可编辑模板，Apache-2.0",u:"https://github.com/renmengwen/MuseDock",r:3,re:"开源视频可编辑",f:1,q:"开源免费",g:"https://github.com/renmengwen/MuseDock",diff:3,zh:2,hot:1},
-  {n:"PonPon AI Studio",c:"视频生成",d:"一站式AI视频创作，聚合Sora2/Kling3/Veo3/Seedance2，每日免费积分，Canvas画布跨模型对比",u:"https://ponpon.ai/zh-CN/ai-video-generator",r:4,re:"一站式视频创作",f:1,q:"每日免费积分",diff:2,zh:1,hot:2},
-  {n:"QM",c:"工作流Agent",d:"YC开源的多人AI智能体框架，每员工独立工作区+Slack协作，支持Claude Code/Codex/OpenCode/Pi多引擎，MIT开源14.1K⭐",u:"https://github.com/yc-software/qm",r:4,re:"YC公司级Agent",f:1,q:"开源免费",g:"https://github.com/yc-software/qm",diff:3,zh:3,hot:3},
-  {n:"QevosAgent",c:"工作流Agent",d:"免费开源本地AI智能体，30+工具/持久化记忆/Web看板，支持Qwen3/DeepSeek V4零API成本",u:"https://qevos.ai/cn.html",r:3,re:"本地AI智能体",f:1,q:"开源免费",g:"https://github.com/HongyunQiu/QevosAgent",diff:3,zh:1,hot:1},
-  {n:"InkOS",c:"AI写作",d:"开源AI故事创作Agent，npm安装即用，支持长篇/剧本/互动影游全流程",u:"https://github.com/narcooo/inkos",r:4,re:"开源故事创作",f:1,q:"开源免费",g:"https://github.com/narcooo/inkos",diff:3,zh:2,hot:2},
-  {n:"Hallmark",c:"设计工具",d:"Together AI开源设计技能包，57道品质门禁杜绝AI-Slop，让Cursor/Claude Code/Codex生成专业非模板化UI",u:"https://github.com/nutlope/hallmark",r:4,re:"开源设计门禁",f:1,q:"开源免费",g:"https://github.com/nutlope/hallmark",diff:3,zh:2,hot:2},
-  {n:"Kimi K3",c:"AI写作",d:"月之暗面2.8万亿参数最大开源大模型，100万Token上下文，网页聊天免费，支持编程/视频/科研/芯片设计",u:"https://kimi.com",r:5,re:"全球最大开源模型",f:1,q:"网页聊天免费",diff:1,zh:1,hot:3},
-  {n:"Kutt.AI",c:"视频生成",d:"一站式AI视频创作，整合Wan/Seedance等多模型，免费积分每天签到，60秒快速出片",u:"https://kutt.ai/zh",r:3,re:"多模型聚合平台",f:1,q:"注册10+每天10积分",diff:1,zh:1,hot:2},
-  {n:"百度秒哒3.5",c:"AI写作",d:"百度对话式零代码AI应用开发平台，新增6大能力，8岁小孩都能上手，一句话生成App+SEO自动优化",u:"https://www.miaoda.cn",r:4,re:"零代码AI开发",f:1,q:"免费基础版",diff:1,zh:1,hot:3},
-  {n:"Open Design v0.21.0",c:"设计工具",d:"开源Claude Design替代（92.9K星⭐），本地优先桌面App，20+ CLI接入，多模态视觉识别升级，输出HTML/PDF/PPTX",u:"https://open-design.ai/",r:4,re:"开源设计引擎",f:1,q:"开源免费",g:"https://github.com/nexu-io/open-design",diff:3,zh:2,hot:3},
-  {n:"SenseNova U1 Pro",c:"图像生成",d:"商汤交付级多模态模型，8K原生输出+Agent闭环，WAIC首发预览版免费邀测",u:"https://www.sensenova.cn/",r:4,re:"8K超高清输出",f:1,q:"预览版免费邀测",diff:2,zh:1,hot:2},
-  {n:"vivago R1",c:"视频生成",d:"全球首个无限时长AI视频多模态智能体，对话式创作，新用户免费40积分",u:"https://hidreamai.com/",r:4,re:"无限时长视频",f:1,q:"注册送40积分",diff:1,zh:1,hot:2},
-  {n:"阿里万相Wan3.0",c:"视频生成",d:"all-in-one视频生成，四模态全能参考+文档/PPT直转视频，单次30秒，通义千问免费体验",u:"https://tongyi.aliyun.com/wan/",r:4,re:"全链路视频模型",f:1,q:"免费体验",diff:2,zh:1,hot:3},
-  {n:"美图RoboNeo",c:"视频生成",d:"美图AI Agent上线3D导演台，3D场景搭建+全链路工作流+Seedance 2.5接入，100积分免费体验",u:"https://www.roboneo.com",r:3,re:"3D导演台创作",f:1,q:"注册送100积分",diff:2,zh:1,hot:2},
-  {n:"OpenWorker",c:"AI写作",d:"吴恩达开源桌面AI智能体，4层权限安全机制，多模型自由切换，办公自动化",u:"https://github.com/andrewyng/aisuite",r:3,re:"开源桌面Agent",f:1,q:"开源免费",g:"https://github.com/andrewyng/aisuite",diff:3,zh:2,hot:2},
-  {n:"Treblo",c:"音频生成",d:"真正无限免费AI音乐生成器，4170+种风格，无限曲目，无水印可商用",u:"https://treblo.com",r:4,re:"无限免费AI音乐",f:1,v:1,q:"无限曲目免费",diff:1,zh:3,hot:2},
-  {n:"Nexora",c:"工作流Agent",d:"MIT开源多Agent编排平台，46+LLM/90+工具/RAG/语义记忆，自部署零成本",u:"https://nexora.parendum.com",r:3,re:"开源Agent编排",f:1,q:"开源免费",g:"https://github.com/ParendumOU/Nexora",diff:3,zh:2,hot:1},
-  {n:"商汤Seko",c:"AI短剧",d:"商汤AI短剧Agent，一句话生百集，SekoIDX百集不崩脸，多人同步对口型，新人350积分免费体验",u:"https://seko.sensetime.com/explore",r:4,re:"AI短剧工厂",f:1,q:"新用户350积分+每日送50",diff:1,zh:1,hot:3},
-  {n:"AI Commander",c:"工作流Agent",d:"MIT开源的桌面语音输入工具，按耳机键说话自动输入文字，全程本地离线零费用",u:"https://github.com/YuJonny/AI-Commander",r:4,re:"免费语音输入神器",f:1,q:"开源免费",g:"https://github.com/YuJonny/AI-Commander",diff:2,zh:1,hot:2},
-  {n:"OfficeCLI",c:"工作流Agent",d:"专为AI Agent打造的开源Office套件，单二进制读写Word/Excel/PPT，AI能'看到'渲染效果，350+公式引擎+原生透视表",u:"https://github.com/iOfficeAI/OfficeCLI",r:5,re:"AI办公自动化神器",f:1,q:"开源免费",g:"https://github.com/iOfficeAI/OfficeCLI",diff:2,zh:1,hot:2},
-  {n:"V2Fun",c:"3D创作",d:"国产AI 3D创作平台，文生图→图生3D→自动绑骨→角色动画一条龙，支持视频动捕，公测注册送1000点",u:"https://v2fun.art",r:4,re:"零门槛3D动画",f:1,q:"注册送1000点",diff:1,zh:1,hot:2},
-  {n:"no-ai-slop",c:"AI写作",d:"开源去AI味写作技能，20+种AI套话模式一键清除，支持草稿编辑+AI味检测，MIT免费",u:"https://github.com/petergyang/no-ai-slop",r:4,re:"一键去AI味",f:1,v:1,q:"开源免费",g:"https://github.com/petergyang/no-ai-slop",diff:2,zh:0,hot:2},
-  {n:"PenEcho",c:"工作流Agent",d:"Kimi官方赞助开源AI共享画布，手写/公式/草图直接喂AI秒回答案，可编辑文本写回画布，AGPL-3.0自带Key零成本，2.1K⭐",u:"https://github.com/penecho/penecho",r:4,re:"手写公式直喂AI",f:1,v:1,q:"开源免费",g:"https://github.com/penecho/penecho",diff:3,zh:1,hot:3},
-  {n:"火宝短剧",c:"AI短剧",d:"开源AI短剧平台：一句话或小说→剧本→角色→分镜→图生视频→配音→合成成片全自动，14.5K⭐，支持MiniMax/火山Seedance/阿里等国内API，B站教程刚火",u:"https://github.com/chatfire-AI/huobao-drama",r:4,re:"短剧全流程自动化",f:1,v:1,q:"开源免费(自备API Key)",g:"https://github.com/chatfire-AI/huobao-drama",diff:3,zh:1,hot:3},
-  {n:"DubbingX智声云配",c:"音频生成",d:"国产AI配音神器：大模型情绪配音自动识别文本情绪生成超自然语音，音色克隆1分钟录音免费训练，有声书/短视频/游戏配音，试用5000字",u:"https://dubbingx.com/",r:4,re:"情绪配音自然",f:1,q:"试用5000字/周",diff:2,zh:1,hot:3},
-  {n:"Capptivo",c:"视频编辑",d:"开源免费录屏神器：Screen Studio平替，智能跟随光标缩放+点击自动特写+本地Whisper字幕，Mac/Win/Linux三端，MIT免费商用",u:"https://capptivo.com",r:4,re:"录屏平替免费",f:1,q:"永久免费",g:"https://github.com/SECHAK-AG/capptivo",diff:2,zh:1,hot:2},
-  {n:"Lipvoice",c:"音频生成",d:"免费AI配音神器：5-8秒音频克隆音色语调情绪，IndexTTS2驱动，1分钱解锁12万字，无限次建模型，13种语言 ⚠️暂停新用户注册",u:"https://lipvoice.cn",r:4,re:"1分钱12万字",f:1,q:"暂停注册",diff:2,zh:1,hot:2},
-{n:"ObjectRemover",c:"视频编辑",d:"免费AI视频/图片物体移除：说一句\"删掉这个路人\"，水印/LOGO/杂物一键抹除背景自动修复，支持主体抠图带alpha导出，浏览器免信用卡100MB",u:"https://objectremover.video/",r:4,re:"说句话删干净",f:1,q:"免费100MB",diff:2,zh:1,hot:2},
-{n:"BrowserSkill",c:"工作流Agent",d:"腾讯开源浏览器自动化：让Claude Code/Cursor/Codex等AI智能体操作你已登录的浏览器，自动抓数据填表单，遇验证码暂停交还人工",u:"https://github.com/Tencent/BrowserSkill",r:4,re:"开源浏览器自动化",f:1,q:"开源免费",zh:1,hot:2,g:"https://github.com/Tencent/BrowserSkill"},
-{n:"GenOffice",c:"AI写作",d:"Genspark开源AI办公套件：Word/PPT/Excel/PDF四件套，AI一句话生成PPT、写公式、改PDF，文档本地保存",u:"https://genoffice.ai/",r:4,re:"开源免费AI办公",f:1,q:"软件免费/AI需🪜",v:1,g:"https://github.com/genspark-ai/genoffice"},
-{n:"Fish Audio",c:"音频生成",d:"国产TTS天花板免费开放API：83种语言、首字延迟70ms、支持声音克隆，公平使用无限量",u:"https://fish.audio/",r:5,re:"免费TTS语音合成",f:1,q:"API免费，每月8000积分",v:1},
-{n:"Oh My PPT",c:"设计工具",d:"本地优先开源AI PPT生成器：描述主题自动出稿，旧PPTX导入接近100%还原，可导出可编辑PPTX，支持Ollama离线",u:"https://www.ohmyppt.cc",r:4,re:"本地开源PPT生成",f:1,q:"开源免费",g:"https://github.com/arcsin1/oh-my-ppt"},
-{n:"Dograh",c:"工作流Agent",d:"开源语音Agent平台，Vapi/Retell自托管免费替代：拖拽搭建电话客服/预约/线索筛选智能体，一条Docker命令部署，MCP原生",u:"https://www.dograh.com",r:4,re:"开源语音Agent",f:1,q:"开源免费",v:1,g:"https://github.com/dograh-hq/dograh"},
-{n:"Fictoi",c:"工作流Agent",d:"本地AI互动游戏制作器：一句话创意7步生成视觉小说，IP-Adapter锁脸不崩，导出纯HTML双击即玩，版权归你可商用",u:"https://fictoi.itch.io/fictoi",r:4,re:"零代码做互动游戏",f:1,q:"工具永久免费，AI自理",v:1},
-  {n:"video-shotcraft",c:"视频生成",d:"开源电影分镜技能包：152张镜头配方卡+209种运镜样片，剪映工程可直接导出",u:"https://github.com/Vincentwei1021/video-shotcraft",r:4,re:"分镜设计领先",f:1,v:1,q:"开源免费",g:"https://github.com/Vincentwei1021/video-shotcraft"},
-  {n:"快乐虾米 HappyShrimp",c:"音频生成",d:"阿里AI音乐模型，一句话自然语言端到端生成整曲，作词作曲编曲演唱一体成型",u:"https://www.happyshrimp.cn/",r:4,re:"整曲生成领先",f:1,q:"新人送免费积分",diff:1,zh:1,hot:3},
-  {n:"Maestro",c:"视频生成",d:"100%本地AI视频/图像/音乐三合一工作室，导演模式一句话出片，数据不上传隐私拉满",u:"https://github.com/Blizaine/Maestro",r:4,re:"本地三合一隐私",f:1,q:"开源免费",g:"https://github.com/Blizaine/Maestro"},
-  {n:"AIGCPanel",c:"视频生成",d:"开源AI数字人桌面应用：本地数字人合成/声音克隆/视频对口型，Win/Mac/Linux中文界面",u:"https://github.com/modstart-lib/aigcpanel",r:4,re:"开源数字人本地跑",f:1,q:"开源免费",g:"https://github.com/modstart-lib/aigcpanel"},
-{n:"归藏PPT Skill",c:"设计工具",d:"开源AI网页PPT技能：一句话生成杂志级单文件HTML横向翻页PPT，两套视觉系统+演讲者模式",u:"https://github.com/op7418/guizang-ppt-skill",r:4,re:"设计规则硬核",f:1,v:1,q:"开源免费",g:"https://github.com/op7418/guizang-ppt-skill"},
-  {n:"Meetily",c:"工作流Agent",d:"开源本地会议纪要：录音转文字+AI摘要全在本机，数据不出电脑",u:"https://github.com/Zackriya-Solutions/meetily",r:4,re:"本地隐私纪要",f:1,v:0,q:"开源免费",g:"https://github.com/Zackriya-Solutions/meetily"},
-  {n:"PINVOU 桌面AI工作台",c:"工作流Agent",d:"国产开源桌面AI智能体：办公/设计/编程三模式一应用，本地优先，DeepSeek/Kimi/豆包/MiniMax等国产模型模板全兼容",u:"https://pinvou.com/",r:4,re:"三合一智能体",f:1,v:0,q:"开源免费，模型BYOK",g:"https://github.com/Pinvou/pinvou-agent"},
-  {n:"讲映",c:"视频生成",d:"本地免费PPT/PDF转讲解视频工作台：自动解析页面、AI生成讲稿、免费配音、字幕时间轴一条龙，数据全留本机",u:"https://jiangying.cloudlark.net/",r:4,re:"文档秒变视频",f:1,v:0,q:"软件免费，AI自带Key"},
-  {n:"NarratoAI",c:"视频生成",d:"开源一站式影视解说：LLM写文案+自动剪辑+配音+字幕，可导出剪映草稿",u:"https://github.com/linyqh/NarratoAI",r:4,re:"影视解说流水线",f:1,v:0,q:"开源免费",g:"https://github.com/linyqh/NarratoAI",diff:3,zh:1,hot:2},
-  {n:"DramaBuddy漫剧助手",c:"AI短剧",d:"阅文AI漫剧平台：10万部IP授权+剧本市集，买剧本/定制/接单保底加分成",u:"https://aicomic.yuewen.com",r:4,re:"版权变现生态",f:0,q:"充100元=1000积分",diff:2,zh:1,hot:2},
-  {n:"猫步简历",c:"AI写作",d:"开源免费AI简历生成器：DeepSeek一键生成+诊断+润色+中英翻译，超高清PDF导出",u:"https://maobucv.com/",r:4,re:"简历生成免费开源",f:1,v:0,q:"永久免费",g:"https://github.com/Hacker233/resume-design",diff:1,zh:1,hot:1},
+  {n:"Kling 3.0/可灵",c:"视频生成",m:["视频"],d:"快手AI视频生成，4K/60fps",u:"https://klingai.com",r:4,re:"视频生成领先",f:1,q:"每天6次720p",diff:2,zh:1,hot:3},
+  {n:"Veo 3.1",c:"视频生成",m:["视频"],d:"Google视频生成，原生音频+4K",u:"https://deepmind.google/technologies/veo/",r:3,re:"Google力作",f:1,v:1,q:"每月100积分",diff:2,zh:3,hot:3},
+  {n:"JoyAI-Echo",c:"视频生成",m:["视频"],d:"京东开源5分钟长视频生成框架",u:"",r:2,re:"开源可尝试",f:1,q:"开源免费",g:"https://github.com/jd-opensource/joyai-echo",diff:3,zh:1,hot:1},
+  {n:"Midjourney",c:"图像生成",m:["图像", "视频"],d:"V8.2默认模型，速度提升4-5倍+首款视频模型V1",u:"https://www.midjourney.com",r:5,re:"行业标杆",v:1,diff:2,zh:3,hot:3},
+  {n:"Z-Image",c:"图像生成",m:["图像"],d:"阿里通义开源60亿参数图像生成器",u:"https://zimage.design/zh/",r:3,re:"开源图像模型",f:1,q:"开源免费",g:"https://github.com/Tongyi-MAI/Z-Image",diff:3,zh:1,hot:2},
+  {n:"Raphael AI",c:"图像生成",m:["图像"],d:"全球首个无限免费AI图像生成器",u:"https://raphael.app/zh",r:3,re:"无限免费生成",f:1,v:1,q:"无限免费",diff:1,zh:1,hot:2},
+  {n:"Imagen 4 Ultra",c:"图像生成",m:["图像"],d:"Google真实感最强图像API",u:"https://deepmind.google/technologies/imagen/",r:3,re:"Google真实感强",v:1,diff:2,zh:3,hot:2},
+  {n:"Ideogram 4.0",c:"图像生成",m:["图像"],d:"开源93亿参数，文字渲染准确率超越800亿大模型",u:"https://ideogram.ai/",r:4,re:"文字渲染领先",f:1,v:1,q:"每周10积分",g:"https://github.com/ideogram-oss/ideogram4",diff:2,zh:3,hot:2},
+  {n:"Reve 2.0",c:"图像生成",m:["图像"],d:"4K原生图像模型，布局式精确控制，全球第2",u:"https://www.reve.com",r:4,re:"精准控制强",v:1,diff:2,zh:3,hot:2},
+  {n:"Figma",c:"设计工具",m:["图像"],d:"全面推出AI设计功能，1万积分免费",u:"https://www.figma.com",r:4,re:"设计协作标杆",v:1,diff:2,zh:3,hot:3},
+  {n:"Pixso",c:"设计工具",m:["图像"],d:"国内设计协作平台，AI智能设计",u:"https://pixso.cn",r:3,re:"国内设计协作",f:1,q:"免费",diff:2,zh:1,hot:2},
+  {n:"Felo AI Designer",c:"设计工具",m:["图像"],d:"8+模型集成，30秒出稿",u:"https://felo.ai",r:2,re:"快速出稿生成",diff:1,zh:1,hot:1},
+  {n:"Genspark AI Design",c:"设计工具",m:["图像"],d:"每天100免费积分，16+设计类别",u:"https://www.genspark.ai",r:3,re:"免费积分多",f:1,v:1,q:"每天100积分",diff:1,zh:1,hot:2},
+  {n:"腾讯Ardot",c:"设计工具",m:["图像"],d:"腾讯AI设计智能体公测，一句话生成可编辑UI",u:"https://ardot.tencent.com/",r:3,re:"腾讯AI设计",diff:1,zh:1,hot:2},
+  {n:"Mew Design",c:"设计工具",m:["图像"],d:"自然语言驱动的免费AI设计生成器",u:"https://mew.design/zh",r:2,re:"免费设计生成",f:1,q:"免费",diff:1,zh:1,hot:1},
+  {n:"Meshy 3D Agent",c:"3D创作",m:["3D"],d:"全球首个3D创作AI Agent，多轮对话产出整套3D资产",u:"https://www.meshy.ai/",r:3,re:"3D Agent首创",v:1,diff:2,zh:3,hot:2},
+  {n:"Runway Aleph 2.0",c:"视频编辑",m:["视频"],d:"编辑一帧自动应用全片",u:"https://runwayml.com",r:4,re:"视频编辑革新",v:1,diff:2,zh:3,hot:3},
+  {n:"Vibbit",c:"视频生成",m:["视频"],d:"AI Agent + 57个工具短视频平台",u:"https://vibbit.ai/zh-CN",r:2,re:"短视频Agent",v:1,diff:2,zh:1,hot:1},
+  {n:"LumenX Studio",c:"AI短剧",m:["视频"],d:"阿里开源AI短漫剧全链路自动化平台",u:"",r:2,re:"开源短漫剧",f:1,q:"开源免费",g:"https://github.com/alibaba/LumenX",diff:3,zh:1,hot:2},
+  {n:"OiiOii 2.0",c:"视频生成",m:["视频"],d:"国产AI视频创作Agent，智能画布+拉片复刻",u:"https://oiioii.ai",r:3,re:"智能画布创作",diff:2,zh:1,hot:2},
+  {n:"ElevenCreative Flows Agent",c:"工作流Agent",m:["视频"],d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1,diff:2,zh:3,hot:2},
+  {n:"Felo Video",c:"视频生成",m:["视频", "办公"],d:"文档/网页转视频，10分钟出片",u:"https://felo.ai",r:2,re:"文档转视频",diff:1,zh:1,hot:1},
+  {n:"Colossyan Cora",c:"视频编辑",m:["视频"],d:"企业培训视频Agent · 14天试用后$27/月",u:"https://www.colossyan.com",r:2,re:"企业培训视频",v:1,diff:1,zh:3,hot:1},
+  {n:"Utopai PAI 2.0",c:"视频编辑",m:["视频"],d:"AI叙事视频平台 · 仅限订阅，无免费层",u:"https://pai.utopaistudios.com",r:2,re:"付费叙事视频",v:1,diff:2,zh:3,hot:1},
+  {n:"ComfyUI",c:"工作流Agent",m:["图像", "视频"],d:"节点式AI工作流，最新v0.34.2，支持Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/comfyanonymous/ComfyUI",diff:3,zh:2,hot:3},
+  {n:"Grok Imagine",c:"工作流Agent",m:["图像", "视频", "音频"],d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1,diff:2,zh:3,hot:3},
+  {n:"Adobe CC 6月更新",c:"设计工具",m:["图像"],d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto",u:"https://creativecloud.adobe.com/",r:3,re:"全线AI升级",diff:2,zh:1,hot:2},
+  {n:"Omnify AI",c:"工作流Agent",m:["视频"],d:"清华团队多Agent创作平台，剧本→分镜→配音全链路",u:"https://omnifyai.cn/",r:3,re:"全链路Agent",diff:2,zh:1,hot:2},
+  {n:"Arrow 1.0",c:"图像生成",m:["图像"],d:"全球首款SVG原生AI模型，矢量图无限缩放+逐层编辑",u:"https://app.quiver.ai/explore",r:3,re:"SVG原生AI",v:1,diff:2,zh:3,hot:1},
+  {n:"Meta Edits",c:"视频编辑",m:["视频"],d:"Meta视频编辑App桌面版+AI创作助手上线",u:"https://creators.instagram.com/edits",r:3,re:"Meta视频编辑",v:1,diff:1,zh:3,hot:2},
+  {n:"MiniMax Hub",c:"视频生成",m:["视频", "音频"],d:"一站式多模态AI视频平台，图像+视频+配音+音乐+剪辑五合一",u:"https://www.minimax.io/",r:4,re:"一站式多模态",f:1,q:"免费",diff:2,zh:1,hot:3},
+  {n:"Google Vids",c:"视频生成",m:["视频", "办公"],d:"免费AI虚拟主播，写脚本即生成播报视频，Veo3.1每月10次免费",u:"https://workspace.google.com/products/vids/",r:3,re:"免费虚拟主播",f:1,v:1,q:"每月10次Veo3.1",diff:1,zh:3,hot:2},
+  {n:"SketchToArt",c:"图像生成",m:["图像"],d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格",u:"",r:2,re:"开源草图转画",f:1,q:"开源免费",g:"https://github.com/ycbing/sketch-to-art",diff:2,zh:1,hot:1},
+  {n:"天工 Skywork 3.1",c:"设计工具",m:["图像"],d:"昆仑万维AI设计+Agent平台，无限画布+百Agent并行，可导出Figma",u:"https://www.tiangong.cn/",r:3,re:"无限画布设计",diff:2,zh:1,hot:2},
+  {n:"Suno AI V5.5",c:"音频生成",m:["音频"],d:"全球头部AI音乐平台，V5.5新增Voices音色克隆/Custom Models，44.1kHz完整歌曲",u:"https://suno.com/",r:4,re:"AI音乐标杆",f:1,v:1,q:"每天10首免费",diff:1,zh:3,hot:3},
+  {n:"Adobe Firefly Creative Skills",c:"设计工具",m:["图像"],d:"Agent全面升级：一句话生成品牌VI+产品视频，进驻PS/PR/AI/ID",u:"https://creativecloud.adobe.com/",r:4,re:"创意Agent升级",diff:2,zh:1,hot:3},
+  {n:"HappyOyster 1.0",c:"3D创作",m:["3D"],d:"阿里云交互式3D世界模型，一句话生成可探索演化的三维世界",u:"https://happyoyster.cn/",r:3,re:"3D世界模型",f:1,q:"限时免费体验",diff:2,zh:1,hot:2},
+  {n:"Khala",c:"音频生成",m:["音频"],d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲",u:"",r:2,re:"开源歌曲生成",f:1,q:"开源免费",g:"https://github.com/Khala-Music-AI/Khala",diff:3,zh:1,hot:1},
+  {n:"Magi-1",c:"视频生成",m:["视频"],d:"全球首个自回归视频生成模型100%开源，清华Sand.AI团队，240亿参数，无限长度",u:"https://sand.ai/",r:4,re:"开源视频革命",f:1,q:"开源免费",g:"https://github.com/SandAI-org/MAGI-1",diff:3,zh:2,hot:3},
+  {n:"Pixelle-Video",c:"视频生成",m:["视频"],d:"阿里开源AI全自动短视频引擎，27K⭐，输入主题→AI写文案→生成配图/视频→语音解说→BGM→一键合成全流程",u:"https://github.com/ATH-MaaS/Pixelle-Video",r:4,re:"全自动短视频引擎",f:1,q:"开源免费",g:"https://github.com/ATH-MaaS/Pixelle-Video",diff:3,zh:1,hot:3},
+  {n:"VibeKnow",c:"视频生成",m:["视频", "办公"],d:"AI知识视频创作平台，PDF/Word/PPT/链接一键变讲解视频，自动分镜+数字人+配音+字幕+BGM，7种语言，注册送400积分 🇨🇳",u:"https://vibeknow.com",r:4,re:"文档一键变视频",f:1,q:"注册送400积分(约1条)",diff:1,zh:1,hot:3},
+  {n:"Jellyfish",c:"AI短剧",m:["视频"],d:"开源AI短剧生产工作台，剧本→分镜→角色一致性→批量生成→导出全流程，Docker一键部署，6.2K⭐",u:"https://github.com/Forget-C/Jellyfish",r:4,re:"开源短剧工厂",f:1,q:"开源免费",g:"https://github.com/Forget-C/Jellyfish",diff:3,zh:1,hot:2},
+  {n:"Motion.so",c:"视频生成",m:["视频"],d:"前沿动态设计Agent，一句话触发品牌调研到成片全链路",u:"https://motion.so/",r:4,re:"动态设计Agent",v:1,diff:2,zh:3,hot:2},
+  {n:"Palmier Pro",c:"视频编辑",m:["视频"],d:"开源macOS视频编辑器，Claude/Codex直连时间线，多AI模型内置",u:"https://www.palmier.io/",r:4,re:"开源视频编辑器",f:1,v:1,q:"开源免费",g:"https://github.com/palmier-io/palmier-pro",diff:3,zh:3,hot:2},
+  {n:"万兴剧厂",c:"视频生成",m:["视频"],d:"万兴科技AI影视平台，3D导演台拖拽式空间创作",u:"https://reelmate.cn/",r:3,re:"3D空间创作",diff:2,zh:1,hot:2},
+  {n:"HappyHorse 1.1",c:"视频生成",m:["视频"],d:"阿里视频生成模型大版本升级，五大维度提升限时4折",u:"https://happyhorse.com",r:4,re:"阿里视频升级",diff:2,zh:1,hot:2},
+  {n:"MVLAND",c:"视频生成",m:["视频", "音频"],d:"美图多Agent协同AI MV生成，输入歌词自动生成完整MV",u:"https://mvland.com",r:3,re:"歌词生成MV",diff:1,zh:1,hot:2},
+  {n:"Seedance 2.5",c:"视频生成",m:["视频"],d:"字节最新视频模型，原生30秒直出，50全模态素材",u:"https://seed.bytedance.com/",r:4,re:"原生视频突破",diff:2,zh:1,hot:3},
+  {n:"freebeat",c:"视频生成",m:["视频", "音频"],d:"AI音乐视频生成器，节奏同步编辑，100万+创作者，多平台链接导入",u:"https://freebeat.ai/",r:3,re:"音乐视频同步",v:1,diff:1,zh:3,hot:2},
+  {n:"OpenArt Director",c:"视频生成",m:["视频"],d:"首创「感觉导演」AI电影制作，对话生成5分钟完整电影，9语种口型同步",u:"https://openart.ai/suite/director",r:4,re:"电影级导演",v:1,diff:2,zh:3,hot:2},
+  {n:"FlashVSR",c:"视频编辑",m:["视频"],d:"清华+上海AI实验室开源视频超分辨率，扩散模型12倍加速，注册送积分",u:"https://flashvsr.com/zh",r:3,re:"视频超分加速",f:1,q:"注册送积分",g:"https://github.com/OpenImagingLab/FlashVSR",diff:3,zh:1,hot:2},
+  {n:"Aiarty Video Enhancer",c:"视频编辑",m:["视频"],d:"本地AI视频增强桌面工具，13项功能一体，终身买断制",u:"https://www.aiarty.com/cn/ai-video-enhancer/",r:3,re:"本地视频增强",diff:1,zh:1,hot:1},
+  {n:"抖音造世界",c:"3D创作",m:["3D"],d:"抖音多Agent 3D世界创作工具，自然语言对话搭建虚拟世界",u:"https://vcreate.douyin.com/",r:3,re:"对话式3D创作",f:1,q:"免费",diff:1,zh:1,hot:2},
+  {n:"浮云梦配音",c:"音频生成",m:["音频", "图像"],d:"永久免费一站式AI创作平台，140+语言TTS/配音/音乐/绘图",u:"https://fuym.cn/",r:3,re:"永久免费配音",f:1,q:"永久免费",diff:1,zh:1,hot:2},
+  {n:"Creatify Agent",c:"视频生成",m:["视频"],d:"全球首个AI广告创意Agent，输入链接自动产出高转化广告",u:"https://creatify.ai/zh/features/agent",r:3,re:"广告创意Agent",v:1,diff:1,zh:3,hot:2},
+  {n:"iClone Personal",c:"3D创作",m:["3D"],d:"Reallusion专业3D动画软件永久免费版，AI Studio实现3D→AI生成",u:"https://www.reallusion.com/iclone/",r:3,re:"永久免费3D动画",f:1,q:"永久免费",diff:3,zh:3,hot:2},
+  {n:"TikTok Symphony Agent",c:"视频生成",m:["视频"],d:"TikTok AI广告创意Agent，输入链接自动完成调研→脚本→素材→配音全流程",u:"https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite",r:3,re:"广告Agent全自动",v:1,diff:1,zh:3,hot:2},
+  {n:"OpenMontage",c:"视频生成",m:["视频"],d:"全球首个开源Agent驱动视频生产系统，AI编程助手变视频工作室，54.7K Stars",u:"",r:4,re:"开源视频工厂",f:1,q:"开源免费",g:"https://github.com/calesthio/OpenMontage",diff:3,zh:2,hot:3},
+  {n:"Canva Grow 2.0",c:"设计工具",m:["办公"],d:"Canva端到端AI营销引擎，广告创作+发布+优化全流程一体化",u:"https://www.canva.com/",r:3,re:"全链路营销",v:1,diff:1,zh:3,hot:3},
+  {n:"TTSMaker",c:"音频生成",m:["音频"],d:"完全免费可商用TTS工具，50+语言600+声音，无限量声音不扣配额",u:"https://www.ttsmaker.cn/",r:4,re:"免费可商用配音",f:1,q:"每周2万字符",diff:1,zh:1,hot:3},
+  {n:"Vidu Q3",c:"视频生成",m:["视频"],d:"清华生数科技多镜头叙事视频生成，智慧剪辑16秒出片，国内直连",u:"https://www.vidu.com/zh/",r:3,re:"多镜头叙事",f:1,q:"错峰无限/免费积分",diff:2,zh:1,hot:2},
+  {n:"Google Stitch 2.0",c:"设计工具",m:["图像"],d:"Google Labs AI UI设计工具，400积分/天+15次redesign，Vibe Design/语音驱动多屏原型",u:"https://stitch.withgoogle.com/",r:4,re:"AI设计UI神器",f:1,q:"每天400积分",v:1,diff:2,zh:3,hot:3},
+  {n:"Hedra",c:"视频生成",m:["视频"],d:"AI角色视频生成，Character-3超逼真唇同步",u:"https://www.hedra.com/",r:4,re:"角色视频神器",f:1,q:"免费版可用",v:1,diff:1,zh:3,hot:2},
+  {n:"Milo3D.ai",c:"3D创作",m:["3D"],d:"免费AI 3D模型生成器，文字/图片秒变3D",u:"https://milo3d.ai/",r:4,re:"3D生成免费",f:1,q:"100免费额度",diff:1,zh:3,hot:2},
+  {n:"冬瓜配音",c:"音频生成",m:["音频"],d:"国产免费AI配音，多角色对话无水印",u:"https://www.okaidub.com/",r:4,re:"配音神器国产",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
+  {n:"WorkTool",c:"工作流Agent",m:["办公"],d:"71款在线工具集合+DeepSeek AI，免费无广告，纯前端隐私优先",u:"https://worktool.app/zh",r:3,re:"工具集合免费",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
+  {n:"昆云AI短剧",c:"AI短剧",m:["视频"],d:"一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成",u:"https://kunyunkeji.cn",r:2,re:"一站式短剧",f:1,q:"免费",diff:1,zh:1,hot:1},
+  {n:"知剧AI",c:"AI短剧",m:["视频"],d:"AI剧本创作平台，小说→分镜→台本→Word导出，在线免费使用",u:"https://zhijuu.com",r:3,re:"剧本创作助手",f:1,q:"免费",diff:1,zh:1,hot:2},
+  {n:"Toonflow",c:"AI短剧",m:["视频"],d:"开源一站式AI短剧，小说→视频全流程，Docker部署14.4K⭐",u:"https://toonflow.net",r:4,re:"开源短剧首选",f:1,q:"开源免费",g:"https://github.com/HBAI-Ltd/Toonflow-app",diff:3,zh:1,hot:2},
+  {n:"智剧通 ZJT",c:"AI短剧",m:["视频"],d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署",u:"",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT",diff:3,zh:1,hot:1},
+  {n:"Catimind",c:"AI短剧",m:["视频"],d:"云端零部署浏览器直接使用，支持5万字/60集剧本一键上传批量生产",u:"https://catimind.com/",r:3,re:"批量漫剧生产",diff:1,zh:1,hot:1},
+  {n:"VOZEB",c:"设计工具",m:["图像"],d:"开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署",u:"https://github.com/csyqlz/vozeb",r:2,re:"AI Agent操控画布",f:1,q:"开源免费",g:"https://github.com/csyqlz/vozeb",diff:3,zh:2,hot:1},
+  {n:"腾讯混元Hy3",c:"工作流Agent",m:["办公", "Agent"],d:"腾讯295B MoE大模型，Agent能力大增，元宝免费使用，一句话生成PPT/文档",u:"https://yuanbao.tencent.com/",r:4,re:"Agent能力领先",f:1,q:"永久免费",diff:1,zh:1,hot:3},
+  {n:"Meta Muse Image + Muse Video",c:"图像生成",m:["图像", "视频"],d:"Meta MSL Agentic图像生成，先拆需求再出图，Arena三项第二，免费",u:"https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",r:4,re:"Agent图像生成",f:1,v:1,q:"免费",diff:1,zh:3,hot:3},
+  {n:"Seedream 5.0 Pro",c:"图像生成",m:["图像"],d:"字节跳动最强多模态图像模型，中文小字排版零乱码，交互式精准编辑+图层分离",u:"https://seed.bytedance.com/zh/seedream5_0_pro",r:4,re:"国产图像标杆",f:1,q:"即梦每日免费额度",diff:2,zh:1,hot:3},
+  {n:"MuseDock",c:"视频生成",m:["视频"],d:"开源本地优先AI视频创作，HTML可编辑模板，Apache-2.0",u:"https://github.com/renmengwen/MuseDock",r:3,re:"开源视频可编辑",f:1,q:"开源免费",g:"https://github.com/renmengwen/MuseDock",diff:3,zh:2,hot:1},
+  {n:"PonPon AI Studio",c:"视频生成",m:["视频"],d:"一站式AI视频创作，聚合Sora2/Kling3/Veo3/Seedance2，每日免费积分，Canvas画布跨模型对比",u:"https://ponpon.ai/zh-CN/ai-video-generator",r:4,re:"一站式视频创作",f:1,q:"每日免费积分",diff:2,zh:1,hot:2},
+  {n:"QM",c:"工作流Agent",m:["Agent"],d:"YC开源的多人AI智能体框架，每员工独立工作区+Slack协作，支持Claude Code/Codex/OpenCode/Pi多引擎，MIT开源14.1K⭐",u:"https://github.com/yc-software/qm",r:4,re:"YC公司级Agent",f:1,q:"开源免费",g:"https://github.com/yc-software/qm",diff:3,zh:3,hot:3},
+  {n:"QevosAgent",c:"工作流Agent",m:["Agent"],d:"免费开源本地AI智能体，30+工具/持久化记忆/Web看板，支持Qwen3/DeepSeek V4零API成本",u:"https://qevos.ai/cn.html",r:3,re:"本地AI智能体",f:1,q:"开源免费",g:"https://github.com/HongyunQiu/QevosAgent",diff:3,zh:1,hot:1},
+  {n:"InkOS",c:"AI写作",m:["写作"],d:"开源AI故事创作Agent，npm安装即用，支持长篇/剧本/互动影游全流程",u:"https://github.com/narcooo/inkos",r:4,re:"开源故事创作",f:1,q:"开源免费",g:"https://github.com/narcooo/inkos",diff:3,zh:2,hot:2},
+  {n:"Hallmark",c:"设计工具",m:["图像"],d:"Together AI开源设计技能包，57道品质门禁杜绝AI-Slop，让Cursor/Claude Code/Codex生成专业非模板化UI",u:"https://github.com/nutlope/hallmark",r:4,re:"开源设计门禁",f:1,q:"开源免费",g:"https://github.com/nutlope/hallmark",diff:3,zh:2,hot:2},
+  {n:"Kimi K3",c:"AI写作",m:["写作", "Agent"],d:"月之暗面2.8万亿参数最大开源大模型，100万Token上下文，网页聊天免费，支持编程/视频/科研/芯片设计",u:"https://kimi.com",r:5,re:"全球最大开源模型",f:1,q:"网页聊天免费",diff:1,zh:1,hot:3},
+  {n:"Kutt.AI",c:"视频生成",m:["视频"],d:"一站式AI视频创作，整合Wan/Seedance等多模型，免费积分每天签到，60秒快速出片",u:"https://kutt.ai/zh",r:3,re:"多模型聚合平台",f:1,q:"注册10+每天10积分",diff:1,zh:1,hot:2},
+  {n:"百度秒哒3.5",c:"AI写作",m:["写作", "Agent"],d:"百度对话式零代码AI应用开发平台，新增6大能力，8岁小孩都能上手，一句话生成App+SEO自动优化",u:"https://www.miaoda.cn",r:4,re:"零代码AI开发",f:1,q:"免费基础版",diff:1,zh:1,hot:3},
+  {n:"Open Design v0.21.0",c:"设计工具",m:["图像"],d:"开源Claude Design替代（92.9K星⭐），本地优先桌面App，20+ CLI接入，多模态视觉识别升级，输出HTML/PDF/PPTX",u:"https://open-design.ai/",r:4,re:"开源设计引擎",f:1,q:"开源免费",g:"https://github.com/nexu-io/open-design",diff:3,zh:2,hot:3},
+  {n:"SenseNova U1 Pro",c:"图像生成",m:["图像"],d:"商汤交付级多模态模型，8K原生输出+Agent闭环，WAIC首发预览版免费邀测",u:"https://www.sensenova.cn/",r:4,re:"8K超高清输出",f:1,q:"预览版免费邀测",diff:2,zh:1,hot:2},
+  {n:"vivago R1",c:"视频生成",m:["视频"],d:"全球首个无限时长AI视频多模态智能体，对话式创作，新用户免费40积分",u:"https://hidreamai.com/",r:4,re:"无限时长视频",f:1,q:"注册送40积分",diff:1,zh:1,hot:2},
+  {n:"阿里万相Wan3.0",c:"视频生成",m:["视频"],d:"all-in-one视频生成，四模态全能参考+文档/PPT直转视频，单次30秒，通义千问免费体验",u:"https://tongyi.aliyun.com/wan/",r:4,re:"全链路视频模型",f:1,q:"免费体验",diff:2,zh:1,hot:3},
+  {n:"美图RoboNeo",c:"视频生成",m:["视频"],d:"美图AI Agent上线3D导演台，3D场景搭建+全链路工作流+Seedance 2.5接入，100积分免费体验",u:"https://www.roboneo.com",r:3,re:"3D导演台创作",f:1,q:"注册送100积分",diff:2,zh:1,hot:2},
+  {n:"OpenWorker",c:"AI写作",m:["写作", "Agent"],d:"吴恩达开源桌面AI智能体，4层权限安全机制，多模型自由切换，办公自动化",u:"https://github.com/andrewyng/aisuite",r:3,re:"开源桌面Agent",f:1,q:"开源免费",g:"https://github.com/andrewyng/aisuite",diff:3,zh:2,hot:2},
+  {n:"Treblo",c:"音频生成",m:["音频"],d:"真正无限免费AI音乐生成器，4170+种风格，无限曲目，无水印可商用",u:"https://treblo.com",r:4,re:"无限免费AI音乐",f:1,v:1,q:"无限曲目免费",diff:1,zh:3,hot:2},
+  {n:"Nexora",c:"工作流Agent",m:["Agent"],d:"MIT开源多Agent编排平台，46+LLM/90+工具/RAG/语义记忆，自部署零成本",u:"https://nexora.parendum.com",r:3,re:"开源Agent编排",f:1,q:"开源免费",g:"https://github.com/ParendumOU/Nexora",diff:3,zh:2,hot:1},
+  {n:"商汤Seko",c:"AI短剧",m:["视频"],d:"商汤AI短剧Agent，一句话生百集，SekoIDX百集不崩脸，多人同步对口型，新人350积分免费体验",u:"https://seko.sensetime.com/explore",r:4,re:"AI短剧工厂",f:1,q:"新用户350积分+每日送50",diff:1,zh:1,hot:3},
+  {n:"AI Commander",c:"工作流Agent",m:["办公"],d:"MIT开源的桌面语音输入工具，按耳机键说话自动输入文字，全程本地离线零费用",u:"https://github.com/YuJonny/AI-Commander",r:4,re:"免费语音输入神器",f:1,q:"开源免费",g:"https://github.com/YuJonny/AI-Commander",diff:2,zh:1,hot:2},
+  {n:"OfficeCLI",c:"工作流Agent",m:["办公", "Agent"],d:"专为AI Agent打造的开源Office套件，单二进制读写Word/Excel/PPT，AI能'看到'渲染效果，350+公式引擎+原生透视表",u:"https://github.com/iOfficeAI/OfficeCLI",r:5,re:"AI办公自动化神器",f:1,q:"开源免费",g:"https://github.com/iOfficeAI/OfficeCLI",diff:2,zh:1,hot:2},
+  {n:"V2Fun",c:"3D创作",m:["3D"],d:"国产AI 3D创作平台，文生图→图生3D→自动绑骨→角色动画一条龙，支持视频动捕，公测注册送1000点",u:"https://v2fun.art",r:4,re:"零门槛3D动画",f:1,q:"注册送1000点",diff:1,zh:1,hot:2},
+  {n:"no-ai-slop",c:"AI写作",m:["写作"],d:"开源去AI味写作技能，20+种AI套话模式一键清除，支持草稿编辑+AI味检测，MIT免费",u:"https://github.com/petergyang/no-ai-slop",r:4,re:"一键去AI味",f:1,v:1,q:"开源免费",g:"https://github.com/petergyang/no-ai-slop",diff:2,zh:0,hot:2},
+  {n:"PenEcho",c:"工作流Agent",m:["图像"],d:"Kimi官方赞助开源AI共享画布，手写/公式/草图直接喂AI秒回答案，可编辑文本写回画布，AGPL-3.0自带Key零成本，2.1K⭐",u:"https://github.com/penecho/penecho",r:4,re:"手写公式直喂AI",f:1,v:1,q:"开源免费",g:"https://github.com/penecho/penecho",diff:3,zh:1,hot:3},
+  {n:"火宝短剧",c:"AI短剧",m:["视频"],d:"开源AI短剧平台：一句话或小说→剧本→角色→分镜→图生视频→配音→合成成片全自动，14.5K⭐，支持MiniMax/火山Seedance/阿里等国内API，B站教程刚火",u:"https://github.com/chatfire-AI/huobao-drama",r:4,re:"短剧全流程自动化",f:1,v:1,q:"开源免费(自备API Key)",g:"https://github.com/chatfire-AI/huobao-drama",diff:3,zh:1,hot:3},
+  {n:"DubbingX智声云配",c:"音频生成",m:["音频"],d:"国产AI配音神器：大模型情绪配音自动识别文本情绪生成超自然语音，音色克隆1分钟录音免费训练，有声书/短视频/游戏配音，试用5000字",u:"https://dubbingx.com/",r:4,re:"情绪配音自然",f:1,q:"试用5000字/周",diff:2,zh:1,hot:3},
+  {n:"Capptivo",c:"视频编辑",m:["视频"],d:"开源免费录屏神器：Screen Studio平替，智能跟随光标缩放+点击自动特写+本地Whisper字幕，Mac/Win/Linux三端，MIT免费商用",u:"https://capptivo.com",r:4,re:"录屏平替免费",f:1,q:"永久免费",g:"https://github.com/SECHAK-AG/capptivo",diff:2,zh:1,hot:2},
+  {n:"Lipvoice",c:"音频生成",m:["音频"],d:"免费AI配音神器：5-8秒音频克隆音色语调情绪，IndexTTS2驱动，1分钱解锁12万字，无限次建模型，13种语言 ⚠️暂停新用户注册",u:"https://lipvoice.cn",r:4,re:"1分钱12万字",f:1,q:"暂停注册",diff:2,zh:1,hot:2},
+{n:"ObjectRemover",c:"视频编辑",m:["视频"],d:"免费AI视频/图片物体移除：说一句\"删掉这个路人\"，水印/LOGO/杂物一键抹除背景自动修复，支持主体抠图带alpha导出，浏览器免信用卡100MB",u:"https://objectremover.video/",r:4,re:"说句话删干净",f:1,q:"免费100MB",diff:2,zh:1,hot:2},
+{n:"BrowserSkill",c:"工作流Agent",m:["Agent"],d:"腾讯开源浏览器自动化：让Claude Code/Cursor/Codex等AI智能体操作你已登录的浏览器，自动抓数据填表单，遇验证码暂停交还人工",u:"https://github.com/Tencent/BrowserSkill",r:4,re:"开源浏览器自动化",f:1,q:"开源免费",zh:1,hot:2,g:"https://github.com/Tencent/BrowserSkill"},
+{n:"GenOffice",c:"AI写作",m:["办公", "写作"],d:"Genspark开源AI办公套件：Word/PPT/Excel/PDF四件套，AI一句话生成PPT、写公式、改PDF，文档本地保存",u:"https://genoffice.ai/",r:4,re:"开源免费AI办公",f:1,q:"软件免费/AI需🪜",v:1,g:"https://github.com/genspark-ai/genoffice"},
+{n:"Fish Audio",c:"音频生成",m:["音频"],d:"国产TTS天花板免费开放API：83种语言、首字延迟70ms、支持声音克隆，公平使用无限量",u:"https://fish.audio/",r:5,re:"免费TTS语音合成",f:1,q:"API免费，每月8000积分",v:1},
+{n:"Oh My PPT",c:"设计工具",m:["办公"],d:"本地优先开源AI PPT生成器：描述主题自动出稿，旧PPTX导入接近100%还原，可导出可编辑PPTX，支持Ollama离线",u:"https://www.ohmyppt.cc",r:4,re:"本地开源PPT生成",f:1,q:"开源免费",g:"https://github.com/arcsin1/oh-my-ppt"},
+{n:"Dograh",c:"工作流Agent",m:["Agent"],d:"开源语音Agent平台，Vapi/Retell自托管免费替代：拖拽搭建电话客服/预约/线索筛选智能体，一条Docker命令部署，MCP原生",u:"https://www.dograh.com",r:4,re:"开源语音Agent",f:1,q:"开源免费",v:1,g:"https://github.com/dograh-hq/dograh"},
+{n:"Fictoi",c:"工作流Agent",m:["Agent"],d:"本地AI互动游戏制作器：一句话创意7步生成视觉小说，IP-Adapter锁脸不崩，导出纯HTML双击即玩，版权归你可商用",u:"https://fictoi.itch.io/fictoi",r:4,re:"零代码做互动游戏",f:1,q:"工具永久免费，AI自理",v:1},
+  {n:"video-shotcraft",c:"视频生成",m:["视频"],d:"开源电影分镜技能包：152张镜头配方卡+209种运镜样片，剪映工程可直接导出",u:"https://github.com/Vincentwei1021/video-shotcraft",r:4,re:"分镜设计领先",f:1,v:1,q:"开源免费",g:"https://github.com/Vincentwei1021/video-shotcraft"},
+  {n:"快乐虾米 HappyShrimp",c:"音频生成",m:["音频"],d:"阿里AI音乐模型，一句话自然语言端到端生成整曲，作词作曲编曲演唱一体成型",u:"https://www.happyshrimp.cn/",r:4,re:"整曲生成领先",f:1,q:"新人送免费积分",diff:1,zh:1,hot:3},
+  {n:"Maestro",c:"视频生成",m:["视频", "图像", "音频"],d:"100%本地AI视频/图像/音乐三合一工作室，导演模式一句话出片，数据不上传隐私拉满",u:"https://github.com/Blizaine/Maestro",r:4,re:"本地三合一隐私",f:1,q:"开源免费",g:"https://github.com/Blizaine/Maestro"},
+  {n:"AIGCPanel",c:"视频生成",m:["视频"],d:"开源AI数字人桌面应用：本地数字人合成/声音克隆/视频对口型，Win/Mac/Linux中文界面",u:"https://github.com/modstart-lib/aigcpanel",r:4,re:"开源数字人本地跑",f:1,q:"开源免费",g:"https://github.com/modstart-lib/aigcpanel"},
+{n:"归藏PPT Skill",c:"设计工具",m:["办公"],d:"开源AI网页PPT技能：一句话生成杂志级单文件HTML横向翻页PPT，两套视觉系统+演讲者模式",u:"https://github.com/op7418/guizang-ppt-skill",r:4,re:"设计规则硬核",f:1,v:1,q:"开源免费",g:"https://github.com/op7418/guizang-ppt-skill"},
+  {n:"Meetily",c:"工作流Agent",m:["办公"],d:"开源本地会议纪要：录音转文字+AI摘要全在本机，数据不出电脑",u:"https://github.com/Zackriya-Solutions/meetily",r:4,re:"本地隐私纪要",f:1,v:0,q:"开源免费",g:"https://github.com/Zackriya-Solutions/meetily"},
+  {n:"PINVOU 桌面AI工作台",c:"工作流Agent",m:["办公", "Agent"],d:"国产开源桌面AI智能体：办公/设计/编程三模式一应用，本地优先，DeepSeek/Kimi/豆包/MiniMax等国产模型模板全兼容",u:"https://pinvou.com/",r:4,re:"三合一智能体",f:1,v:0,q:"开源免费，模型BYOK",g:"https://github.com/Pinvou/pinvou-agent"},
+  {n:"讲映",c:"视频生成",m:["视频", "办公"],d:"本地免费PPT/PDF转讲解视频工作台：自动解析页面、AI生成讲稿、免费配音、字幕时间轴一条龙，数据全留本机",u:"https://jiangying.cloudlark.net/",r:4,re:"文档秒变视频",f:1,v:0,q:"软件免费，AI自带Key"},
+  {n:"NarratoAI",c:"视频生成",m:["视频"],d:"开源一站式影视解说：LLM写文案+自动剪辑+配音+字幕，可导出剪映草稿",u:"https://github.com/linyqh/NarratoAI",r:4,re:"影视解说流水线",f:1,v:0,q:"开源免费",g:"https://github.com/linyqh/NarratoAI",diff:3,zh:1,hot:2},
+  {n:"DramaBuddy漫剧助手",c:"AI短剧",m:["视频"],d:"阅文AI漫剧平台：10万部IP授权+剧本市集，买剧本/定制/接单保底加分成",u:"https://aicomic.yuewen.com",r:4,re:"版权变现生态",f:0,q:"充100元=1000积分",diff:2,zh:1,hot:2},
+  {n:"猫步简历",c:"AI写作",m:["写作", "办公"],d:"开源免费AI简历生成器：DeepSeek一键生成+诊断+润色+中英翻译，超高清PDF导出",u:"https://maobucv.com/",r:4,re:"简历生成免费开源",f:1,v:0,q:"永久免费",g:"https://github.com/Hacker233/resume-design",diff:1,zh:1,hot:1},
+  {n:"OpenClaw",c:"Agent框架",d:"开源个人AI助手，任意OS/平台，可接入各类模型与工具，38.8万⭐",u:"https://github.com/openclaw/openclaw",r:5,re:"个人AI助手标杆",f:1,q:"开源免费",g:"https://github.com/openclaw/openclaw",diff:3,zh:1,hot:3,m:["Agent"]},
+  {n:"Hermes Agent",c:"Agent框架",d:"Nous Research出品，会长大的AI Agent：跨会话记忆+技能系统+多平台网关，23.9万⭐",u:"https://hermes-agent.nousresearch.com",r:5,re:"记忆+技能系统",f:1,q:"开源免费",g:"https://github.com/NousResearch/hermes-agent",diff:3,zh:2,hot:3,m:["Agent"]},
+  {n:"DeepSeek Harness",c:"Agent框架",d:"DeepSeek官方harness：一切皆插件，模型/工具/技能/界面全可换，headless+web双模式，20.8万⭐",u:"https://github.com/deepseek-ai/deepseek-harness",r:5,re:"官方插件化harness",f:1,q:"开源免费",g:"https://github.com/deepseek-ai/deepseek-harness",diff:3,zh:1,hot:3,m:["Agent"]},
+  {n:"Claude Code",c:"Agent框架",d:"Anthropic终端编码Agent，14.3万⭐，可接DeepSeek等国产API省钱",u:"https://claude.com/code",r:5,re:"终端编码Agent",f:0,v:1,q:"订阅制",diff:2,zh:3,hot:3,m:["Agent"]},
+  {n:"OpenAI Codex",c:"Agent框架",d:"OpenAI轻量终端编码Agent，12万⭐，Rust编写，支持云端沙箱",u:"https://github.com/openai/codex",r:4,re:"轻量编码Agent",f:1,q:"部分免费",g:"https://github.com/openai/codex",diff:2,zh:3,hot:3,m:["Agent"]},
+  {n:"Reasonix",c:"Agent框架",d:"DeepSeek原生编码Agent：prefix-cache优化省80%token，长会话可一直跑，35.3k⭐",u:"https://reasonix.io",r:4,re:"缓存优化省成本",f:1,q:"开源免费",g:"https://github.com/esengine/DeepSeek-Reasonix",diff:2,zh:1,hot:2,m:["Agent"]},
+  {n:"MetaGPT",c:"Agent框架",d:"多Agent框架：AI软件公司，一行需求产出架构/代码/测试，7万⭐",u:"https://github.com/FoundationAgents/MetaGPT",r:4,re:"多Agent协作",f:1,q:"开源免费",g:"https://github.com/FoundationAgents/MetaGPT",diff:3,zh:1,hot:2,m:["Agent"]},
+  {n:"AutoGen",c:"Agent框架",d:"微软多Agent编程框架，支持复杂工作流编排，6万⭐",u:"https://github.com/microsoft/autogen",r:4,re:"微软Agent框架",f:1,q:"开源免费",g:"https://github.com/microsoft/autogen",diff:3,zh:2,hot:2,m:["Agent"]},
+  {n:"crewAI",c:"Agent框架",d:"角色扮演多Agent编排框架，pipeline式任务分配，5.8万⭐",u:"https://github.com/crewAIInc/crewAI",r:4,re:"角色编排Agent",f:1,q:"开源免费",g:"https://github.com/crewAIInc/crewAI",diff:3,zh:2,hot:2,m:["Agent"]},
+  {n:"nanobot",c:"Agent框架",d:"超轻量开源自托管个人AI Agent，支持多平台消息接入，4.7万⭐",u:"https://github.com/HKUDS/nanobot",r:4,re:"轻量个人Agent",f:1,q:"开源免费",g:"https://github.com/HKUDS/nanobot",diff:2,zh:1,hot:2,m:["Agent"]},
+  {n:"AstrBot",c:"Agent框架",d:"AI助手与开发框架，集成多平台消息/多模型/插件生态，3.9万⭐",u:"https://github.com/AstrBotDevs/AstrBot",r:4,re:"多平台AI助手",f:1,q:"开源免费",g:"https://github.com/AstrBotDevs/AstrBot",diff:2,zh:1,hot:2,m:["Agent"]},
 ];
 
 // ===== 已停服工具归档 =====
@@ -468,21 +501,57 @@ const CHANGELOG=[
 ];
 
 // ===== 状态 =====
-let showFree=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeScene='all';
+let showFree=false,activeCat=null,sortMode='rating-desc',searchQuery='',activeMain='all';
 const PAGE_SIZE=36;let currentPage=0;
 
-const allCats=[...new Set(TOOLS.map(t=>t.c))];
-const catCounts={};allCats.forEach(c=>catCounts[c]=TOOLS.filter(t=>t.c===c).length);
-const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn'),filtersWrap=document.getElementById('filtersWrap'),sortSelect=document.getElementById('sortSelect');
+// 大类计数（基于 m 数组）
+const mainTools=id=>id==='all'?TOOLS:TOOLS.filter(t=>(t.m||[]).includes(id));
+const mainCounts={};MAINS.forEach(m=>mainCounts[m.id]=mainTools(m.id).length);
+// 细分列表：某大类下的细分（用 c 去重，保持出现顺序）
+function subCatsOf(mainId){
+  const list=mainTools(mainId);
+  const seen=[];list.forEach(t=>{if(!seen.includes(t.c))seen.push(t.c)});
+  return seen;
+}
+// 当前大类下的细分计数
+function subCountsOf(mainId,sub){return mainTools(mainId).filter(t=>t.c===sub).length}
+
+const grid=document.getElementById('grid'),search=document.getElementById('search'),count=document.getElementById('toolCount'),freeBtn=document.getElementById('freeBtn'),filtersWrap=document.getElementById('filtersWrap'),sortSelect=document.getElementById('sortSelect'),catSide=document.getElementById('catSide');
 
 const totalTools=TOOLS.length;
 count.textContent=totalTools;
 
-// 分类
-document.getElementById('filters').innerHTML=`<button class="filter-pill active" data-cat="" aria-pressed="true">全部 <span class="pill-count">${totalTools}</span></button>`+allCats.map(c=>`<button class="filter-pill" data-cat="${c}" aria-pressed="false">${c} <span class="pill-count">${catCounts[c]}</span></button>`).join('');
+// ===== 竖向大类渲染 =====
+function renderCatSide(){
+  catSide.innerHTML=MAINS.map(m=>`<button class="cat-btn ${m.id===activeMain?'active':''}" data-main="${m.id}" aria-pressed="${m.id===activeMain}"><span class="cat-icon">${m.icon}</span>${m.label}<span class="cat-count">${mainCounts[m.id]}</span></button>`).join('');
+}
 
-// 场景
-document.getElementById('sceneWrap').innerHTML=SCENES.map(s=>`<button class="scene-pill ${s.id==='all'?'active':''}" data-scene="${s.id}" aria-pressed="${s.id==='all'}"><span class="scene-icon">${s.icon}</span>${s.label}</button>`).join('');
+// ===== 细分横向chips渲染（跟随大类） =====
+function renderSubCats(){
+  const subs=activeMain==='all'?[]:subCatsOf(activeMain);
+  const filtersEl=document.getElementById('filters');
+  if(activeMain==='all'){
+    // 全部：显示全部细分（两级都要能筛）
+    const allSubs=[...new Set(TOOLS.map(t=>t.c))];
+    filtersEl.innerHTML=`<button class="filter-pill active" data-cat="" aria-pressed="true">全部 <span class="pill-count">${totalTools}</span></button>`+allSubs.map(c=>`<button class="filter-pill" data-cat="${c}" aria-pressed="false">${c} <span class="pill-count">${TOOLS.filter(t=>t.c===c).length}</span></button>`).join('');
+  }else{
+    // 某大类下：细分chips（首个为"全部"+大类名）
+    filtersEl.innerHTML=`<button class="filter-pill active" data-cat="" aria-pressed="true">全部 <span class="pill-count">${mainCounts[activeMain]}</span></button>`+subs.map(c=>`<button class="filter-pill" data-cat="${c}" aria-pressed="false">${c} <span class="pill-count">${subCountsOf(activeMain,c)}</span></button>`).join('');
+  }
+}
+
+renderCatSide();
+renderSubCats();
+
+// 大类点击
+catSide.addEventListener('click',e=>{
+  const btn=e.target.closest('.cat-btn');if(!btn)return;
+  activeMain=btn.dataset.main;activeCat=null;currentPage=0;
+  renderCatSide();renderSubCats();render(null,searchQuery,showFree,activeMain);
+});
+
+// 兼容旧 sceneWrap 引用（可能无此元素）
+function noop(){}
 
 function checkScrollHint(){const el=document.getElementById('filters');filtersWrap.classList.toggle('can-scroll',el.scrollWidth>el.clientWidth+2)}
 window.addEventListener('resize',checkScrollHint);setTimeout(checkScrollHint,100);
@@ -495,15 +564,14 @@ function diffLabel(d){if(!d||d===1)return{cls:'badge-diff-easy',t:'🟢 简单'}
 function zhLabel(z){if(!z||z===1)return'🇨🇳 中文';if(z===2)return'🌐 部分中文';return'❌ 无中文'}
 function hotLabel(h){if(!h||h===1)return'';if(h===2)return'🔥 热门';return'🔥🔥 很火'}
 
-function render(fc,q,free,scene){
+function render(fc,q,free,main){
   q=(q||'').toLowerCase().trim();
-  const sceneObj=SCENES.find(s=>s.id===scene);
-  const sceneCats=sceneObj&&sceneObj.cats.length?sceneObj.cats:null;
+  const mainId=main||'all';
   let s=0;const filtered=[];
   TOOLS.forEach(t=>{
     if(free&&!t.f)return;
     if(fc&&t.c!==fc)return;
-    if(sceneCats&&!sceneCats.includes(t.c))return;
+    if(mainId!=='all'&&!(t.m||[]).includes(mainId))return;
     if(q&&!t.n.toLowerCase().includes(q)&&!t.d.toLowerCase().includes(q))return;
     filtered.push(t);
   });
@@ -532,7 +600,7 @@ function render(fc,q,free,scene){
     if(hl)badges.push(`<span class="card-badge badge-hot">${hl}</span>`);
     const div=document.createElement('article');div.className='card';
     div.style.animationDelay=`${Math.min(idx*.04,.4)}s`;
-    div.innerHTML=`${t.v?'<span class="card-vpn" aria-label="需要梯子">🪜</span>':''}<div class="card-badge-wrap">${badges.join('')}</div><div class="card-name">${t.n}${ic}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars" aria-label="评分 ${t.r||0} 星">${stars} · ${t.re}</div><div class="card-cat">${t.c}</div><div class="card-desc">${t.d}</div><div class="card-actions">${l}</div>`;
+    div.innerHTML=`${t.v?'<span class="card-vpn" aria-label="需要梯子">🪜</span>':''}<div class="card-head"><div class="card-name">${ic}<span class="card-name-text">${t.n}</span></div></div><div class="card-badge-wrap">${badges.join('')}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-stars" aria-label="评分 ${t.r||0} 星">${stars} · ${t.re}</div><div class="card-desc">${t.d}</div><div class="card-actions">${l}</div>`;
     fragment.appendChild(div);s++;
   });
   grid.innerHTML='';
@@ -550,7 +618,7 @@ function render(fc,q,free,scene){
   if(currentPage<totalPages-1)html+='<button class="page-btn" onclick="goPage('+(currentPage+1)+')">下一页 ›</button>';
   pg.innerHTML=html;
 }
-function goPage(n){currentPage=n;render(activeCat,searchQuery,showFree,activeScene)}
+function goPage(n){currentPage=n;render(activeCat,searchQuery,showFree,activeMain)}
 
 render(null,'',false,'all');
 
@@ -560,35 +628,21 @@ document.getElementById('filters').addEventListener('click',e=>{
   document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
   pill.classList.add('active');pill.setAttribute('aria-pressed','true');
   activeCat=pill.dataset.cat||null;currentPage=0;
-  render(activeCat,searchQuery,showFree,activeScene);
-});
-
-// 场景
-document.getElementById('sceneWrap').addEventListener('click',e=>{
-  const pill=e.target.closest('.scene-pill');if(!pill)return;
-  document.querySelectorAll('.scene-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
-  pill.classList.add('active');pill.setAttribute('aria-pressed','true');
-  activeScene=pill.dataset.scene||'all';currentPage=0;
-  // 重置分类到全部
-  document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});
-  document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');
-  document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');
-  activeCat=null;
-  render(activeCat,searchQuery,showFree,activeScene);
+  render(activeCat,searchQuery,showFree,activeMain);
 });
 
 // 免费
 freeBtn.addEventListener('click',()=>{
   showFree=!showFree;freeBtn.classList.toggle('active',showFree);freeBtn.setAttribute('aria-pressed',showFree?'true':'false');
   if(showFree){document.querySelectorAll('.filter-pill').forEach(p=>{p.classList.remove('active');p.setAttribute('aria-pressed','false')});document.querySelector('.filter-pill[data-cat=""]')?.classList.add('active');document.querySelector('.filter-pill[data-cat=""]')?.setAttribute('aria-pressed','true');activeCat=null}
-  render(activeCat,searchQuery,showFree,activeScene);
+  render(activeCat,searchQuery,showFree,activeMain);
 });
 
 // 搜索
-search.addEventListener('input',debounce(()=>{searchQuery=search.value;currentPage=0;render(activeCat,searchQuery,showFree,activeScene)},250));
+search.addEventListener('input',debounce(()=>{searchQuery=search.value;currentPage=0;render(activeCat,searchQuery,showFree,activeMain)},250));
 
 // 排序
-sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;currentPage=0;render(activeCat,searchQuery,showFree,activeScene)});
+sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;currentPage=0;render(activeCat,searchQuery,showFree,activeMain)});
 
 // 归档
 function renderArchive(){
