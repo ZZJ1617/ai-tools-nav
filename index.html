@@ -171,31 +171,27 @@ header .meta b{color:var(--ink);font-weight:700}
 .card-vpn{font-family:var(--mono);font-size:10px;color:var(--vpn);white-space:nowrap;
   border:1px solid color-mix(in srgb,var(--vpn) 40%,transparent);border-radius:3px;padding:1px 5px}
 
-/* ── 今日通告（Call Sheet）──────────────────────────────── */
-.hotspot{margin-bottom:34px;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);overflow:hidden}
+/* ── 今日通告（小方格 · 不占版面，工具优先往前放）───────── */
+.hotspot{margin-bottom:26px}
 .sheet-head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap;
-  padding:14px 18px;border-bottom:1px solid var(--line);background:var(--paper)}
+  padding-bottom:9px;margin-bottom:11px;border-bottom:1px solid var(--line)}
 .sheet-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
   display:inline-flex;align-items:center;gap:9px}
 .sheet-kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--slate);
   box-shadow:0 0 0 3px color-mix(in srgb,var(--slate) 30%,transparent);animation:pulse 2.4s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
 .sheet-date{font-family:var(--mono);font-size:11.5px;color:var(--ink3)}
-.sheet-row{display:flex;gap:14px;padding:11px 18px;border-bottom:1px solid var(--line)}
-.sheet-row:last-child{border-bottom:none}
-.sheet-no{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--slate);padding-top:2px;min-width:22px}
-.sheet-body{min-width:0}
-.sheet-body h3{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
-.sheet-body p{font-size:12.5px;color:var(--ink2);line-height:1.55;overflow-wrap:anywhere;margin-top:2px;
+.sheet-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(156px,1fr));gap:8px}
+.sheet-tile{display:flex;flex-direction:column;justify-content:space-between;gap:9px;min-height:112px;
+  padding:11px 12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  text-decoration:none;color:var(--ink2);transition:border-color .18s,transform .18s}
+a.sheet-tile:hover{border-color:var(--ink3);transform:translateY(-2px)}
+.tile-emoji{font-size:15px;line-height:1}
+.tile-h{font-size:12.5px;font-weight:700;color:var(--ink);line-height:1.42;letter-spacing:-.01em;
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.sheet-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:6px}
-.sheet-tags span{font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;
-  color:var(--ink3);border:1px solid var(--line);border-radius:3px;padding:2px 7px}
-.sheet-link{display:inline-block;margin-top:7px;font-family:var(--mono);font-size:11px;font-weight:700;
-  color:var(--ink);border-bottom:1px solid var(--ink);text-decoration:none;padding-bottom:1px}
-.sheet-link:hover{background:var(--slate);border-color:var(--slate)}
-@media(min-width:900px){}
-@media(max-width:700px){.hotspot-grid{grid-template-columns:1fr}}
+.tile-src{font-family:var(--mono);font-size:10px;letter-spacing:.02em;color:var(--ink3);transition:color .18s}
+a.sheet-tile:hover .tile-src{color:var(--ink)}
+@media(max-width:560px){.sheet-tiles{grid-template-columns:repeat(2,1fr)}}
 
 /* ── 已停服归档 ─────────────────────────────────────────── */
 .collapse-section{margin-bottom:24px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--surface)}
@@ -345,12 +341,14 @@ const HOTSPOT={
 function renderHotspot(){
   if(!HOTSPOT.items.length)return;
   const h=document.getElementById('hotspot');
-  const rows=HOTSPOT.items.map((i,idx)=>{
-    const tags=`<span>${i.params}</span><span>${i.scene}</span>`;
-    const link=i.link?`<a class="sheet-link" href="${i.link}" target="_blank" rel="noopener">🔗 消息来源</a>`:'';
-    return `<article class="sheet-row"><span class="sheet-no">${String(idx+1).padStart(2,'0')}</span><div class="sheet-body"><h3>${i.t} ${i.h}</h3><p>${i.d}</p><div class="sheet-tags">${tags}</div>${link}</div></article>`;
+  const tip=i=>[i.d,[i.params,i.scene].filter(Boolean).join(' · ')].filter(Boolean).join('\n').replace(/"/g,'&quot;');
+  const tiles=HOTSPOT.items.map(i=>{
+    const inner=`<span class="tile-emoji">${i.t}</span><span class="tile-h">${i.h}</span>${i.link?'<span class="tile-src">消息来源 →</span>':''}`;
+    return i.link
+      ? `<a class="sheet-tile" href="${i.link}" target="_blank" rel="noopener" title="${tip(i)}">${inner}</a>`
+      : `<div class="sheet-tile" title="${tip(i)}">${inner}</div>`;
   }).join('');
-  h.innerHTML=`<header class="sheet-head"><span class="sheet-kicker">今日通告 · Call Sheet</span><span class="sheet-date">${HOTSPOT.date}</span></header><div class="sheet-rows">${rows}</div>`;
+  h.innerHTML=`<header class="sheet-head"><span class="sheet-kicker">今日通告 · Call Sheet</span><span class="sheet-date">${HOTSPOT.date}</span></header><div class="sheet-tiles">${tiles}</div>`;
 }
 renderHotspot();
 
