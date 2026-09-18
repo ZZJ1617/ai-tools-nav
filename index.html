@@ -88,7 +88,6 @@ header .meta b{color:var(--ink);font-weight:700}
 
 .sort-bar{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:18px;
   font-family:var(--mono);font-size:12px;color:var(--ink3);letter-spacing:.02em}
-.sort-bar .only-note{margin-right:auto;color:var(--ink3);letter-spacing:.02em}
 .sort-bar select{padding:7px 11px;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);
   color:var(--ink2);font-size:12.5px;font-family:var(--mono);cursor:pointer;outline:none}
 .sort-bar select:focus{border-color:var(--ink)}
@@ -212,6 +211,8 @@ a.sheet-tile:hover .tile-src{color:var(--ink)}
 .archive-card{padding:12px 14px;border-radius:3px;background:var(--paper);border:1px solid var(--line2)}
 .archive-card .archive-name{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--ink2);margin-bottom:3px}
 .archive-card .archive-reason{font-size:11.5px;margin-top:4px;color:var(--ink3)}
+.archive-card .archive-link{font-family:var(--mono);font-size:10.5px;color:var(--ink3);text-decoration:none;border-bottom:1px solid var(--line);margin-left:2px}
+.archive-card .archive-link:hover{color:var(--ink);border-color:var(--ink3)}
 
 /* ── 分页 ───────────────────────────────────────────────── */
 .page-btn{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;padding:8px 14px;border-radius:3px;
@@ -272,7 +273,6 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
     </div>
 
     <div class="sort-bar">
-      <span class="only-note">仅收录 3★ 及以上</span>
       <label for="sortSelect">排序</label>
       <select id="sortSelect" aria-label="排序方式">
         <option value="rating-desc">评分从高到低</option>
@@ -298,7 +298,7 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
   <!-- 历史归档 -->
   <section class="collapse-section" style="margin-top:46px">
     <button class="collapse-header" id="archiveHeader" onclick="toggleCollapse('archive')" aria-expanded="false">
-      <span>📦 历史归档 · 已停服工具</span>
+      <span>📦 历史归档（已停服 / 已下架）</span>
       <span class="chevron">▼</span>
     </button>
     <div class="collapse-body" id="archiveBody">
@@ -516,10 +516,23 @@ const TOOLS=[
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
-  {n:"iMideo",c:"视频生成",d:"50+AI视频工具一站式平台",r:3,re:"已停服",reason:"平台已下线"},
-  {n:"Subvideo.ai",c:"音频生成",d:"AI配音+字幕一体化工具",r:2,re:"已停服",reason:"服务已终止"},
-  {n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人",r:2,re:"已停服",reason:"产品已下线"},
-  {n:"蝶变3.0",c:"视频编辑",d:"4K花园AI短剧画质提升工具",r:2,re:"已停服",reason:"服务已终止"},
+{n:"iMideo",c:"视频生成",d:"50+AI视频工具一站式平台",r:3,re:"已停服",reason:"平台已下线"},
+{n:"Subvideo.ai",c:"音频生成",d:"AI配音+字幕一体化工具",r:2,re:"已停服",reason:"服务已终止"},
+{n:"P-Video-Avatar",c:"视频生成",d:"Pruna AI单张照片生成动态数字人",r:2,re:"已停服",reason:"产品已下线"},
+{n:"蝶变3.0",c:"视频编辑",d:"4K花园AI短剧画质提升工具",r:2,re:"已停服",reason:"服务已终止"},
+  {n:"JoyAI-Echo",c:"视频生成",d:"京东开源5分钟长视频生成框架",r:2,re:"开源可尝试",reason:"评分 2★，已下架",u:"https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/"},
+  {n:"Felo AI Designer",c:"设计工具",d:"8+模型集成，30秒出稿",r:2,re:"快速出稿生成",reason:"评分 2★，已下架",u:"https://felo.ai"},
+  {n:"Mew Design",c:"设计工具",d:"自然语言驱动的免费AI设计生成器",r:2,re:"免费设计生成",reason:"评分 2★，已下架",u:"https://mew.design/zh"},
+  {n:"Vibbit",c:"视频生成",d:"AI Agent + 57个工具短视频平台",r:2,re:"短视频Agent",reason:"评分 2★，已下架",u:"https://vibbit.ai/zh-CN"},
+  {n:"LumenX Studio",c:"AI短剧",d:"阿里开源AI短漫剧全链路自动化平台",r:2,re:"开源短漫剧",reason:"评分 2★，已下架"},
+  {n:"Felo Video",c:"视频生成",d:"文档/网页转视频，10分钟出片",r:2,re:"文档转视频",reason:"评分 2★，已下架",u:"https://felo.ai"},
+  {n:"Colossyan Cora",c:"视频编辑",d:"企业培训视频Agent · 14天试用后$27/月",r:2,re:"企业培训视频",reason:"评分 2★，已下架",u:"https://www.colossyan.com"},
+  {n:"Utopai PAI 2.0",c:"视频编辑",d:"AI叙事视频平台 · 仅限订阅，无免费层",r:2,re:"付费叙事视频",reason:"评分 2★，已下架",u:"https://pai.utopaistudios.com"},
+  {n:"SketchToArt",c:"图像生成",d:"MIT开源AI草图转画作工具，智谱+阿里双模引擎，12种风格",r:2,re:"开源草图转画",reason:"评分 2★，已下架"},
+  {n:"Shao",c:"音频生成",d:"央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲",r:2,re:"开源歌曲生成",reason:"评分 2★，已下架",u:"https://shao-music-ai.github.io/Shao/"},
+  {n:"昆云AI短剧",c:"AI短剧",d:"一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成",r:2,re:"一站式短剧",reason:"评分 2★，已下架",u:"https://kunyunkeji.cn"},
+  {n:"VOZEB",c:"设计工具",d:"开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署",r:2,re:"AI Agent操控画布",reason:"评分 2★，已下架",u:"https://github.com/csyqlz/vozeb"}
+
 ];
 
 // ===== 状态 =====
@@ -675,7 +688,7 @@ sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;currentPage=
 
 // 归档
 function renderArchive(){
-  document.getElementById('archiveGrid').innerHTML=ARCHIVED.map(a=>`<div class="archive-card"><div class="archive-name">${a.n}</div><div style="font-size:12px;color:var(--text3)">${a.c}</div><div class="archive-reason">⚠️ ${a.reason}</div></div>`).join('');
+  document.getElementById('archiveGrid').innerHTML=ARCHIVED.map(a=>`<div class="archive-card"><div class="archive-name">${a.n}${a.u?` <a class="archive-link" href="${a.u}" target="_blank" rel="noopener">↗ 官网</a>`:''}</div><div style="font-size:12px;color:var(--ink3)">${a.c}</div><div class="archive-reason">⚠️ ${a.reason}</div></div>`).join('');
 }
 renderArchive();
 
