@@ -12,6 +12,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zzj1617.github.io/ai-tools-nav/">
 <link rel="canonical" href="https://zzj1617.github.io/ai-tools-nav/">
+<meta property="og:site_name" content="赛博上片指南">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zzj1617.github.io/ai-tools-nav/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI 创作工具导航 · 赛博上片指南">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI创作工具导航 | 赛博上片指南">
+<meta name="twitter:description" content="收录免费/开源 AI 创作工具，视频生成/设计/3D/音频一站式导航，每日更新">
+<meta name="twitter:image" content="https://zzj1617.github.io/ai-tools-nav/og-cover.png">
 
 
 <style>
@@ -149,7 +159,7 @@ header .meta b{color:var(--ink);font-weight:700}
 .card-name .card-icon,.card-name .card-icon-fallback{width:30px;height:30px;border-radius:3px;font-size:14px;flex-shrink:0;margin:0}
 .card-icon,.card-icon-fallback{display:inline-flex;align-items:center;justify-content:center;
   color:#fff;font-weight:700;object-fit:contain}
-.card-name-text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.card-name-text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin:0;font-size:inherit;font-weight:inherit;line-height:inherit}
 .card-badge-wrap{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
 .card-badge{font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
   padding:2px 7px;border:1px solid var(--line);border-radius:3px;color:var(--ink2);background:transparent;white-space:nowrap}
@@ -243,6 +253,13 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
 @keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}html{scroll-behavior:auto}}
 
+.nojs{max-width:760px;margin:0 auto;padding:28px 20px 40px}
+.nojs h2{font-size:18px;color:var(--ink);margin:0 0 8px}
+.nojs p{font-size:13px;color:var(--ink3);margin:0 0 14px;line-height:1.7}
+.nojs ul{list-style:none;padding:0;margin:0}
+.nojs li{font-size:13px;line-height:1.85;color:var(--ink2);border-bottom:1px dashed var(--line);padding:7px 0}
+.nojs a{color:var(--ink);font-weight:600}
+.nb-cat{font-family:var(--mono);font-size:11px;color:var(--ink3);margin-left:6px}
 </style>
 </head>
 <body>
@@ -396,7 +413,7 @@ const TOOLS=[
   {n:"ElevenCreative Flows Agent",why:"50+ 模型的画布式视频工作流",c:"工作流Agent",m:["视频"],d:"50+模型画布式视频工作流",u:"https://elevenlabs.io/app/flows",r:3,re:"画布式工作流",v:1,diff:2,zh:3,hot:2},
   {n:"ComfyUI",why:"节点流派首选，新模型第一时间支持",c:"工作流Agent",m:["图像", "视频"],d:"节点式AI工作流，最新v0.35.0，支持Flux2/Grok节点",u:"https://comfy.org",r:4,re:"节点工作流首选",f:1,q:"开源免费",g:"https://github.com/Comfy-Org/ComfyUI",diff:3,zh:2,hot:3},
   {n:"Grok Imagine",why:"xAI 图片+视频+音频统一 API（需梯子）",c:"工作流Agent",m:["图像", "视频", "音频"],d:"xAI图片+视频+音频统一API",u:"https://grok.com/imagine",r:4,re:"多模态API强",v:1,diff:2,zh:3,hot:3},
-  {n:"Adobe CC 6月更新",why:"PS/AE/PR 全线 AI 升级，加离线移除",c:"设计工具",m:["图像"],d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto",u:"https://creativecloud.adobe.com/",r:3,re:"全线AI升级",diff:2,zh:1,hot:2},
+  {n:"Adobe CC 6月更新",why:"PS/AE/PR 全线 AI 升级，加离线移除",c:"设计工具",m:["图像"],d:"PS/AE/PR/LR全线AI升级，离线Remove Tool+重制Roto",u:"https://www.adobe.com/creativecloud.html",r:3,re:"全线AI升级",diff:2,zh:1,hot:2},
   {n:"Omnify AI",why:"清华团队，剧本→分镜→配音全链路",c:"工作流Agent",m:["视频"],d:"清华团队多Agent创作平台，剧本→分镜→配音全链路",u:"https://omnifyai.cn/",r:3,re:"全链路Agent",diff:2,zh:1,hot:2},
   {n:"Arrow 1.0",why:"首个 SVG 原生模型，矢量图无限缩放",c:"图像生成",m:["图像"],d:"全球首款SVG原生AI模型，矢量图无限缩放+逐层编辑",u:"https://app.quiver.ai/explore",r:3,re:"SVG原生AI",v:1,diff:2,zh:3,hot:1},
   {n:"Meta Edits",why:"Meta 官方视频编辑 App 桌面版",c:"视频编辑",m:["视频"],d:"Meta视频编辑App桌面版+AI创作助手上线",u:"https://creators.instagram.com/edits",r:3,re:"Meta视频编辑",v:1,diff:1,zh:3,hot:2},
@@ -436,7 +453,7 @@ const TOOLS=[
   {n:"WorkTool",why:"71 款工具 + DeepSeek，纯前端不上传",c:"工作流Agent",m:["办公"],d:"71款在线工具集合+DeepSeek AI，免费无广告，纯前端隐私优先",u:"https://worktool.app/zh",r:3,re:"工具集合免费",f:1,q:"免费版可用",diff:1,zh:1,hot:2},
   {n:"知剧AI",why:"小说→分镜→台本，免费在线用",c:"AI短剧",m:["视频"],d:"AI剧本创作平台，小说→分镜→台本→Word导出，在线免费使用",u:"https://zhijuu.com",r:3,re:"剧本创作助手",f:1,q:"免费",diff:1,zh:1,hot:2},
   {n:"Toonflow",why:"开源短剧首选，15.2K⭐，Docker 部署",c:"AI短剧",m:["视频"],d:"开源一站式AI短剧，小说→视频全流程，Docker部署15.2K⭐",u:"https://toonflow.net",r:4,re:"开源短剧首选",f:1,q:"开源免费",g:"https://github.com/HBAI-Ltd/Toonflow-app",diff:3,zh:1,hot:2},
-  {n:"智剧通 ZJT",why:"多 Agent 画布协作，开源可自部署",c:"AI短剧",m:["视频"],d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署",u:"http://ailive.perseids.cn",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT",diff:3,zh:1,hot:1},
+  {n:"智剧通 ZJT",why:"多 Agent 画布协作，开源可自部署",c:"AI短剧",m:["视频"],d:"多Agent协作短剧平台，无限画布+团队实时协作，开源可自部署",u:"https://ailive.perseids.cn",r:3,re:"多Agent画布协作",f:1,q:"开源免费",g:"https://github.com/jeffstric/ZJT",diff:3,zh:1,hot:1},
   {n:"Catimind",why:"云端零部署，5 万字剧本批量生产",c:"AI短剧",m:["视频"],d:"云端零部署浏览器直接使用，支持5万字/60集剧本一键上传批量生产",u:"https://catimind.com/",r:3,re:"批量漫剧生产",diff:1,zh:1,hot:1},
   {n:"腾讯混元Hy3",why:"295B MoE，元宝永久免费，一句话出 PPT",c:"工作流Agent",m:["办公", "Agent"],d:"腾讯295B MoE大模型，Agent能力大增，元宝免费使用，一句话生成PPT/文档",u:"https://yuanbao.tencent.com/",r:4,re:"Agent能力领先",f:1,q:"永久免费",diff:1,zh:1,hot:3},
   {n:"Meta Muse Image + Muse Video",why:"先拆需求再出图，Arena 三项第二且免费",c:"图像生成",m:["图像", "视频"],d:"Meta MSL Agentic图像生成，先拆需求再出图，Arena三项第二，免费",u:"https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",r:4,re:"Agent图像生成",f:1,v:1,q:"免费",diff:1,zh:3,hot:3},
@@ -632,7 +649,7 @@ function render(fc,q,free,main){
     const dm=(t.u&&t.u.startsWith('http'))?new URL(t.u).hostname:(t.g?new URL(t.g).hostname:'');
     const palette=['#07c160','#ff6b6b','#4ecdc4','#45b7d1','#f39c12','#9b59b6','#e74c3c','#1abc9c','#3498db','#e67e22','#2ecc71','#e91e63'];
     const cc=palette[t.n.length%palette.length];
-    const ic=dm?`<img class="card-icon" src="https://${dm}/favicon.ico" alt="" loading="lazy" onerror="this.style.display='none';this.nextSibling.style.display='inline-flex'"><span class="card-icon-fallback" style="background:${cc};display:none" aria-hidden="true">${t.n[0]}</span>`:`<span class="card-icon-fallback" style="background:${cc}" aria-hidden="true">${t.n[0]}</span>`;
+    const ic=dm?`<img class="card-icon" src="icons/${dm}.png" alt="${t.n}" loading="lazy" onerror="if(!this.dataset.fb){this.dataset.fb=1;this.src='https://${dm}/favicon.ico'}else{this.style.display='none';this.nextSibling.style.display='inline-flex'}"><span class="card-icon-fallback" style="background:${cc};display:none" aria-hidden="true">${t.n[0]}</span>`:`<span class="card-icon-fallback" style="background:${cc}" aria-hidden="true">${t.n[0]}</span>`;
     const df=diffLabel(t.diff);
     const hl=hotLabel(t.hot);
     const badges=[];
@@ -643,7 +660,7 @@ function render(fc,q,free,main){
     const div=document.createElement('article');div.className='card';
     div.style.animationDelay=`${Math.min(idx*.04,.4)}s`;
     const inv='#'+String(TOOLS.indexOf(t)+1).padStart(3,'0');
-    div.innerHTML=`<div class="card-top"><span class="inv">${inv} · ${t.c}</span><span class="card-top-right">${t.v?'<span class="card-vpn" aria-label="需要梯子">🪜 梯</span>':''}<span class="stars" aria-label="评分 ${t.r||0} 星">${stars}</span></span></div><div class="card-head"><div class="card-name">${ic}<span class="card-name-text">${t.n}</span></div></div><div class="card-badge-wrap">${badges.join('')}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-desc">${t.d}</div>${t.why?`<div class="card-why"><span class="why-mark">推荐理由</span>${t.why}</div>`:''}<div class="card-actions">${l}</div>`;
+    div.innerHTML=`<div class="card-top"><span class="inv">${inv} · ${t.c}</span><span class="card-top-right">${t.v?'<span class="card-vpn" aria-label="需要梯子">🪜 梯</span>':''}<span class="stars" aria-label="评分 ${t.r||0} 星">${stars}</span></span></div><div class="card-head"><div class="card-name">${ic}<h3 class="card-name-text">${t.n}</h3></div></div><div class="card-badge-wrap">${badges.join('')}</div>${t.q?`<div class="card-quota">${t.q}</div>`:''}<div class="card-desc">${t.d}</div>${t.why?`<div class="card-why"><span class="why-mark">推荐理由</span>${t.why}</div>`:''}<div class="card-actions">${l}</div>`;
     fragment.appendChild(div);s++;
   });
   grid.innerHTML='';
@@ -711,5 +728,1013 @@ function toggleCollapse(id){
 const backToTop=document.getElementById('backToTop');
 window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList.add('visible')}else{backToTop.classList.remove('visible')}});
 </script>
+<!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
+<noscript>
+  <section class="nojs" aria-label="全部工具（无脚本版）">
+    <h2>全部 AI 创作工具（共 141 个 · 无脚本版）</h2>
+    <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
+    <ul>
+      <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://deepmind.google/technologies/veo/" target="_blank" rel="noopener">Veo 3.1</a> — 原生带音效的 4K 视频，Google 亲儿子 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.midjourney.com" target="_blank" rel="noopener">Midjourney</a> — 图像生成行业基准，V8.2 又快 4-5 倍 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://zimage.design/zh/" target="_blank" rel="noopener">Z-Image</a> — 通义开源 60 亿参数，中文提示词友好 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://raphael.app/zh" target="_blank" rel="noopener">Raphael AI</a> — 真·无限免费，还不用梯子 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://deepmind.google/technologies/imagen/" target="_blank" rel="noopener">Imagen 4 Ultra</a> — 真实感最强的档位，Google 官方 API <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://ideogram.ai/" target="_blank" rel="noopener">Ideogram 4.0</a> — 图里写字不糊，93 亿参数还开源 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://www.reve.com" target="_blank" rel="noopener">Reve 2.0</a> — 4K 原生 + 布局式精控，排版党友好 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://www.figma.com" target="_blank" rel="noopener">Figma</a> — 设计协作的事实标准，AI 功能全面铺开 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://pixso.cn" target="_blank" rel="noopener">Pixso</a> — 国内版的 Figma，AI 设计免费可用 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.genspark.ai" target="_blank" rel="noopener">Genspark AI Design</a> — 每天 100 免费积分，覆盖 16+ 设计类别 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://ardot.tencent.com/" target="_blank" rel="noopener">腾讯Ardot</a> — 腾讯出品，一句话生成可编辑 UI <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.meshy.ai/" target="_blank" rel="noopener">Meshy 3D Agent</a> — 首个 3D 创作 Agent，多轮对话产整套资产 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://runwayml.com" target="_blank" rel="noopener">Runway Aleph 2.0</a> — 改一帧自动应用到全片，编辑范式变了 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://oiioii.ai" target="_blank" rel="noopener">OiiOii 2.0</a> — 智能画布 + 拉片复刻，国产创作 Agent <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://elevenlabs.io/app/flows" target="_blank" rel="noopener">ElevenCreative Flows Agent</a> — 50+ 模型的画布式视频工作流 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://comfy.org" target="_blank" rel="noopener">ComfyUI</a> — 节点流派首选，新模型第一时间支持 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://grok.com/imagine" target="_blank" rel="noopener">Grok Imagine</a> — xAI 图片+视频+音频统一 API（需梯子） <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://www.adobe.com/creativecloud.html" target="_blank" rel="noopener">Adobe CC 6月更新</a> — PS/AE/PR 全线 AI 升级，加离线移除 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://omnifyai.cn/" target="_blank" rel="noopener">Omnify AI</a> — 清华团队，剧本→分镜→配音全链路 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://app.quiver.ai/explore" target="_blank" rel="noopener">Arrow 1.0</a> — 首个 SVG 原生模型，矢量图无限缩放 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://creators.instagram.com/edits" target="_blank" rel="noopener">Meta Edits</a> — Meta 官方视频编辑 App 桌面版 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://www.minimax.io/" target="_blank" rel="noopener">MiniMax Hub</a> — 图像+视频+配音+音乐+剪辑五合一，免费 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://workspace.google.com/products/vids/" target="_blank" rel="noopener">Google Vids</a> — 免费虚拟主播，每月还送 10 次 Veo3.1 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.tiangong.cn/" target="_blank" rel="noopener">天工 Skywork 3.1</a> — 无限画布 + 百 Agent 并行，可导 Figma <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://suno.com/" target="_blank" rel="noopener">Suno AI V5.5</a> — AI 音乐头部，每天 10 首免费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://creativecloud.adobe.com/" target="_blank" rel="noopener">Adobe Firefly Creative Skills</a> — 一句话出品牌 VI + 产品视频，进驻 PS/PR <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://happyoyster.cn/" target="_blank" rel="noopener">HappyOyster 1.0</a> — 阿里云 3D 世界模型，一句话生成可探索世界 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://sand.ai/" target="_blank" rel="noopener">Magi-1</a> — 全球首个自回归视频模型，100% 开源 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/ATH-MaaS/Pixelle-Video" target="_blank" rel="noopener">Pixelle-Video</a> — 阿里开源、28.1K⭐，主题进去成片出来 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://vibeknow.com" target="_blank" rel="noopener">VibeKnow</a> — 文档一键变讲解视频，注册送 400 积分 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/Forget-C/Jellyfish" target="_blank" rel="noopener">Jellyfish</a> — 开源短剧工作台，剧本到成片全流程 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://motion.so/" target="_blank" rel="noopener">Motion.so</a> — 动态设计 Agent，一句话走完调研到成片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.palmier.io/" target="_blank" rel="noopener">Palmier Pro</a> — 开源 macOS 剪辑器，Claude 直连 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://reelmate.cn/" target="_blank" rel="noopener">万兴剧厂</a> — 3D 导演台拖拽式空间创作 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://happyhorse.com" target="_blank" rel="noopener">HappyHorse 1.1</a> — 阿里视频模型大版本升级，五维提升 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://mvland.com" target="_blank" rel="noopener">MVLAND</a> — 美图多 Agent，歌词自动生成完整 MV <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://seed.bytedance.com/" target="_blank" rel="noopener">Seedance 2.5</a> — 字节最新视频模型，原生 30 秒直出 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://freebeat.ai/" target="_blank" rel="noopener">freebeat</a> — 音乐视频节奏自动同步，百万创作者在用 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://openart.ai/suite/director" target="_blank" rel="noopener">OpenArt Director</a> — 对话生成 5 分钟电影，9 语种口型同步 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://flashvsr.com/zh" target="_blank" rel="noopener">FlashVSR</a> — 清华开源视频超分，扩散模型 12 倍加速 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://www.aiarty.com/cn/ai-video-enhancer/" target="_blank" rel="noopener">Aiarty Video Enhancer</a> — 本地视频增强，13 项功能一体、买断制 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://vcreate.douyin.com/" target="_blank" rel="noopener">抖音造世界</a> — 对话式搭 3D 世界，免费 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://fuym.cn/" target="_blank" rel="noopener">浮云梦配音</a> — 永久免费，140+ 语言 TTS/配音/音乐 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://creatify.ai/zh/features/agent" target="_blank" rel="noopener">Creatify Agent</a> — 首个广告创意 Agent，链接进去广告出来 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.reallusion.com/iclone/" target="_blank" rel="noopener">iClone Personal</a> — 专业 3D 动画软件永久免费版 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite" target="_blank" rel="noopener">TikTok Symphony Agent</a> — 链接输入，调研→脚本→素材→配音全自动 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.openmontage.video/" target="_blank" rel="noopener">OpenMontage</a> — 开源 Agent 驱动视频生产，58.5K⭐ <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva Grow 2.0</a> — 广告创作 + 发布 + 优化一体化 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.ttsmaker.cn/" target="_blank" rel="noopener">TTSMaker</a> — 免费可商用，每周 2 万字符不扣配额 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://www.vidu.com/zh/" target="_blank" rel="noopener">Vidu Q3</a> — 清华生数多镜头叙事，16 秒出片、国内直连 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://stitch.withgoogle.com/" target="_blank" rel="noopener">Google Stitch 2.0</a> — 每天 400 积分出 UI 稿（需梯子） <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.hedra.com/" target="_blank" rel="noopener">Hedra</a> — Character-3 唇形同步超逼真 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://milo3d.ai/" target="_blank" rel="noopener">Milo3D.ai</a> — 文字/图片秒变 3D，送 100 免费额度 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://www.okaidub.com/" target="_blank" rel="noopener">冬瓜配音</a> — 国产免费，多角色对话无水印 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://worktool.app/zh" target="_blank" rel="noopener">WorkTool</a> — 71 款工具 + DeepSeek，纯前端不上传 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://zhijuu.com" target="_blank" rel="noopener">知剧AI</a> — 小说→分镜→台本，免费在线用 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://toonflow.net" target="_blank" rel="noopener">Toonflow</a> — 开源短剧首选，15.2K⭐，Docker 部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://ailive.perseids.cn" target="_blank" rel="noopener">智剧通 ZJT</a> — 多 Agent 画布协作，开源可自部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://catimind.com/" target="_blank" rel="noopener">Catimind</a> — 云端零部署，5 万字剧本批量生产 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://yuanbao.tencent.com/" target="_blank" rel="noopener">腾讯混元Hy3</a> — 295B MoE，元宝永久免费，一句话出 PPT <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/" target="_blank" rel="noopener">Meta Muse Image + Muse Video</a> — 先拆需求再出图，Arena 三项第二且免费 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://seed.bytedance.com/zh/seedream5_0_pro" target="_blank" rel="noopener">Seedream 5.0 Pro</a> — 中文小字排版零乱码，即梦每日免费额度 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/renmengwen/MuseDock" target="_blank" rel="noopener">MuseDock</a> — 开源本地优先，HTML 模板可编辑 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://ponpon.ai/zh-CN/ai-video-generator" target="_blank" rel="noopener">PonPon AI Studio</a> — 聚合 Sora2/可灵3/Veo3，每日送免费积分 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/yc-software/qm" target="_blank" rel="noopener">QM</a> — YC 开源，给每个员工独立 Agent 工作区 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://qevos.ai/cn.html" target="_blank" rel="noopener">QevosAgent</a> — 本地免费 Agent，30+ 工具 + 持久记忆 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/narcooo/inkos" target="_blank" rel="noopener">InkOS</a> — npm 即用的开源故事创作 Agent <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/nutlope/hallmark" target="_blank" rel="noopener">Hallmark</a> — 57 道品质门禁，专治 AI-Slop <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://kimi.com" target="_blank" rel="noopener">Kimi K3</a> — 2.8 万亿参数全球最大开源模型，网页免费 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://kutt.ai/zh" target="_blank" rel="noopener">Kutt.AI</a> — 多模型聚合，每日签到领积分、60 秒出片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.miaoda.cn" target="_blank" rel="noopener">百度秒哒3.5</a> — 零代码生成 App，基础版免费 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://open-design.ai/" target="_blank" rel="noopener">Open Design v0.22.2</a> — 96K⭐ 的 Claude Design 开源替代 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.sensenova.cn/" target="_blank" rel="noopener">SenseNova U1 Pro</a> — 商汤交付级，8K 原生输出 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://hidreamai.com/" target="_blank" rel="noopener">vivago R1</a> — 全球首个无限时长视频智能体 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://tongyi.aliyun.com/wan/" target="_blank" rel="noopener">阿里万相Wan3.0</a> — 四模态参考 + 文档直转视频，通义里免费 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.roboneo.com" target="_blank" rel="noopener">美图RoboNeo</a> — 3D 场景搭建 + 全链路工作流 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/andrewyng/aisuite" target="_blank" rel="noopener">OpenWorker</a> — 吴恩达开源桌面 Agent，4 层权限机制 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://treblo.com" target="_blank" rel="noopener">Treblo</a> — 真·无限免费，4170+ 风格、可商用 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://nexora.parendum.com" target="_blank" rel="noopener">Nexora</a> — 46+ LLM / 90+ 工具，自部署零成本 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://seko.sensetime.com/explore" target="_blank" rel="noopener">商汤Seko</a> — 一句话生百集，百集不崩脸 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/YuJonny/AI-Commander" target="_blank" rel="noopener">AI Commander</a> — 按耳机键说话就输入，全本地零费用 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/iOfficeAI/OfficeCLI" target="_blank" rel="noopener">OfficeCLI</a> — 单二进制读写 Word/Excel/PPT <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://v2fun.art" target="_blank" rel="noopener">V2Fun</a> — 文生图→图生 3D→自动绑骨，送 1000 点 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/petergyang/no-ai-slop" target="_blank" rel="noopener">no-ai-slop</a> — 20+ 种 AI 套话一键清除 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/penecho/penecho" target="_blank" rel="noopener">PenEcho</a> — 手写/公式/草图直接喂 AI，Kimi 官方赞助 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/chatfire-AI/huobao-drama" target="_blank" rel="noopener">火宝短剧</a> — 一句话到成片全自动，14.5K⭐ <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://dubbingx.com/" target="_blank" rel="noopener">DubbingX智声云配</a> — 大模型情绪配音，1 分钟录音克隆音色 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://capptivo.com" target="_blank" rel="noopener">Capptivo</a> — Screen Studio 的免费开源平替，自动缩放 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://lipvoice.cn" target="_blank" rel="noopener">Lipvoice</a> — 5-8 秒克隆音色，1 分钱解锁 12 万字 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://objectremover.video/" target="_blank" rel="noopener">ObjectRemover</a> — 说一句话就把视频里的东西删干净 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/Tencent/BrowserSkill" target="_blank" rel="noopener">BrowserSkill</a> — 腾讯开源，让 AI 操作你已登录的浏览器 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://genoffice.ai/" target="_blank" rel="noopener">GenOffice</a> — 开源四件套，一句话出 Office 文档 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://fish.audio/" target="_blank" rel="noopener">Fish Audio</a> — 首字延迟 70ms、83 种语言，API 免费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://www.ohmyppt.cc" target="_blank" rel="noopener">Oh My PPT</a> — 本地优先开源，旧 PPTX 导入近 100% 还原 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.dograh.com" target="_blank" rel="noopener">Dograh</a> — Vapi/Retell 的免费自托管平替，拖拽搭客服 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://fictoi.itch.io/fictoi" target="_blank" rel="noopener">Fictoi</a> — 一句话 7 步做出视觉小说，导出纯 HTML <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/Vincentwei1021/video-shotcraft" target="_blank" rel="noopener">video-shotcraft</a> — 152 张镜头配方 + 209 种运镜样片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.happyshrimp.cn/" target="_blank" rel="noopener">快乐虾米 HappyShrimp</a> — 一句话端到端出整曲，词曲编唱一体 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/Blizaine/Maestro" target="_blank" rel="noopener">Maestro</a> — 本地三合一（视频/图像/音乐），数据不上传 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/modstart-lib/aigcpanel" target="_blank" rel="noopener">AIGCPanel</a> — 本地数字人 + 声音克隆 + 对口型，三端中文 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/op7418/guizang-ppt-skill" target="_blank" rel="noopener">归藏PPT Skill</a> — 一句话出杂志级横向翻页 PPT <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/Zackriya-Solutions/meetily" target="_blank" rel="noopener">Meetily</a> — 会议纪要全在本机，数据不出电脑 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://pinvou.com/" target="_blank" rel="noopener">PINVOU 桌面AI工作台</a> — 办公/设计/编程三模式，本地优先 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://jiangying.cloudlark.net/" target="_blank" rel="noopener">讲映</a> — PPT/PDF 自动转讲解视频，软件免费 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/linyqh/NarratoAI" target="_blank" rel="noopener">NarratoAI</a> — 影视解说流水线，可导出剪映草稿 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://aicomic.yuewen.com" target="_blank" rel="noopener">DramaBuddy漫剧助手</a> — 阅文 10 万部 IP 授权 + 剧本市集 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://maobucv.com/" target="_blank" rel="noopener">猫步简历</a> — DeepSeek 一键生成简历，永久免费 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">OpenClaw</a> — 个人 AI 助手标杆，开源可自部署 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://hermes-agent.nousresearch.com" target="_blank" rel="noopener">Hermes Agent</a> — 带记忆 + 技能系统，越用越顺手 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/deepseek-ai/deepseek-harness" target="_blank" rel="noopener">DeepSeek Harness</a> — DeepSeek 官方插件化 harness <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://claude.com/code" target="_blank" rel="noopener">Claude Code</a> — 终端里的编码 Agent，口碑标杆 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/openai/codex" target="_blank" rel="noopener">OpenAI Codex</a> — 轻量编码 Agent，部分免费 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://reasonix.io" target="_blank" rel="noopener">Reasonix</a> — 字节级稳定前缀缓存，长会话省 80% <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/FoundationAgents/MetaGPT" target="_blank" rel="noopener">MetaGPT</a> — 多 Agent 协作写软件的老牌框架 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/microsoft/autogen" target="_blank" rel="noopener">AutoGen</a> — 微软官方 Agent 框架，生态成熟 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/crewAIInc/crewAI" target="_blank" rel="noopener">crewAI</a> — 角色编排式 Agent，上手快 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/HKUDS/nanobot" target="_blank" rel="noopener">nanobot</a> — 轻量个人 Agent，依赖少 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/AstrBotDevs/AstrBot" target="_blank" rel="noopener">AstrBot</a> — 多平台 AI 助手，插件生态活跃 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://www.fjds.cn/" target="_blank" rel="noopener">白菜AI短剧</a> — 一个软件全包短剧全流程，送 50 积分 <span class="nb-cat">短视频创作</span></li>
+      <li><a href="https://github.com/Nanako0129/sepia" target="_blank" rel="noopener">sepia</a> — 从叙事结构层修 AI 味，改词骗不过检测器 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/eternityspring/shuohao-skills" target="_blank" rel="noopener">shuohao-skills</a> — 52 道脚本化质检门，小说到成片 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/buxuku/SmartSub" target="_blank" rel="noopener">妙幕SmartSub</a> — 8 类转写引擎 + 20 种翻译，全程本地 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/diegosouzapw/OmniRoute" target="_blank" rel="noopener">OmniRoute</a> — npm 一行起，把 352 项免费额度聚成网关 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/xixihhhh/hotclip" target="_blank" rel="noopener">HotClip</a> — 读逐字稿挑爆点，素材不传云 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/alchaincyf/huashu-excel" target="_blank" rel="noopener">huashu-excel</a> — 先对账再给数字，脏表也能出结论 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/debpalash/VoiceStudio" target="_blank" rel="noopener">VoiceStudio</a> — 全本地不要 Key，646 种语言配音一把梭 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/ooolabdev/ooosplat" target="_blank" rel="noopener">OOOSplat</a> — 装包即用，环绕拍一圈就出 3D <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/ZJU-REAL/Easel" target="_blank" rel="noopener">Easel</a> — 热榜→选题→七个平台一键发 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://bananaslides.online" target="_blank" rel="noopener">Banana Slides</a> — 一句话改 PPT，开源原生应用 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/letorig/video-generator-client" target="_blank" rel="noopener">Video Gen Client</a> — Seedance/可灵/MiniMax 一处调 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/Player-YN/PawWork_ZhuaZhua" target="_blank" rel="noopener">PawWork 爪爪</a> — 开发者模式加载即用，选中页面直接改 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://firecrawl.github.io/anydoc/" target="_blank" rel="noopener">anydoc</a> — 六种文档一键变干净 Markdown <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/yizhi-chengzi/video-ai-talking" target="_blank" rel="noopener">video-ai-talking</a> — 真人视频自动对口型，接口可走国内 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/jtydhr88/screenwriting-skills" target="_blank" rel="noopener">screenwriting-skills</a> — 26 个编剧技能，来自 47 本编剧书 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://lnkiai.github.io/m3e-canvas/" target="_blank" rel="noopener">M3E Canvas</a> — 画完草图直接出提示词 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/yang0/handraw-style" target="_blank" rel="noopener">手绘风格提示词库</a> — 271 种画风，记编号就能用 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/kajisho5/ffmpeg-skill" target="_blank" rel="noopener">ffmpeg-skill</a> — 本地 FFmpeg 剪片，不上传不要 Key <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/EverettFish/holo-card-studio" target="_blank" rel="noopener">Holo Card Studio</a> — 一句话出会随视角闪的 3D 卡 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/ChenShuo2004/cs-board" target="_blank" rel="noopener">CS Board 白板声画工坊</a> — 参考音频加中文文案直达白板动画 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/tigerless-labs/agent-memory" target="_blank" rel="noopener">agent-memory</a> — 记忆是纯 Markdown，本地不要 Key <span class="nb-cat">工作流Agent</span></li>
+    </ul>
+  </section>
+</noscript>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "AI 创作工具导航 · 赛博上片指南",
+ "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
+ "numberOfItems": 141,
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Kling 3.0/可灵",
+   "url": "https://klingai.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Veo 3.1",
+   "url": "https://deepmind.google/technologies/veo/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Midjourney",
+   "url": "https://www.midjourney.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "Z-Image",
+   "url": "https://zimage.design/zh/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "Raphael AI",
+   "url": "https://raphael.app/zh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Imagen 4 Ultra",
+   "url": "https://deepmind.google/technologies/imagen/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "name": "Ideogram 4.0",
+   "url": "https://ideogram.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 8,
+   "name": "Reve 2.0",
+   "url": "https://www.reve.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 9,
+   "name": "Figma",
+   "url": "https://www.figma.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 10,
+   "name": "Pixso",
+   "url": "https://pixso.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
+   "name": "Genspark AI Design",
+   "url": "https://www.genspark.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 12,
+   "name": "腾讯Ardot",
+   "url": "https://ardot.tencent.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 13,
+   "name": "Meshy 3D Agent",
+   "url": "https://www.meshy.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 14,
+   "name": "Runway Aleph 2.0",
+   "url": "https://runwayml.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "name": "OiiOii 2.0",
+   "url": "https://oiioii.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 16,
+   "name": "ElevenCreative Flows Agent",
+   "url": "https://elevenlabs.io/app/flows"
+  },
+  {
+   "@type": "ListItem",
+   "position": 17,
+   "name": "ComfyUI",
+   "url": "https://comfy.org"
+  },
+  {
+   "@type": "ListItem",
+   "position": 18,
+   "name": "Grok Imagine",
+   "url": "https://grok.com/imagine"
+  },
+  {
+   "@type": "ListItem",
+   "position": 19,
+   "name": "Adobe CC 6月更新",
+   "url": "https://www.adobe.com/creativecloud.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 20,
+   "name": "Omnify AI",
+   "url": "https://omnifyai.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 21,
+   "name": "Arrow 1.0",
+   "url": "https://app.quiver.ai/explore"
+  },
+  {
+   "@type": "ListItem",
+   "position": 22,
+   "name": "Meta Edits",
+   "url": "https://creators.instagram.com/edits"
+  },
+  {
+   "@type": "ListItem",
+   "position": 23,
+   "name": "MiniMax Hub",
+   "url": "https://www.minimax.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 24,
+   "name": "Google Vids",
+   "url": "https://workspace.google.com/products/vids/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 25,
+   "name": "天工 Skywork 3.1",
+   "url": "https://www.tiangong.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 26,
+   "name": "Suno AI V5.5",
+   "url": "https://suno.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 27,
+   "name": "Adobe Firefly Creative Skills",
+   "url": "https://creativecloud.adobe.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 28,
+   "name": "HappyOyster 1.0",
+   "url": "https://happyoyster.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 29,
+   "name": "Magi-1",
+   "url": "https://sand.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 30,
+   "name": "Pixelle-Video",
+   "url": "https://github.com/ATH-MaaS/Pixelle-Video"
+  },
+  {
+   "@type": "ListItem",
+   "position": 31,
+   "name": "VibeKnow",
+   "url": "https://vibeknow.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 32,
+   "name": "Jellyfish",
+   "url": "https://github.com/Forget-C/Jellyfish"
+  },
+  {
+   "@type": "ListItem",
+   "position": 33,
+   "name": "Motion.so",
+   "url": "https://motion.so/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 34,
+   "name": "Palmier Pro",
+   "url": "https://www.palmier.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 35,
+   "name": "万兴剧厂",
+   "url": "https://reelmate.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 36,
+   "name": "HappyHorse 1.1",
+   "url": "https://happyhorse.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 37,
+   "name": "MVLAND",
+   "url": "https://mvland.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 38,
+   "name": "Seedance 2.5",
+   "url": "https://seed.bytedance.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 39,
+   "name": "freebeat",
+   "url": "https://freebeat.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 40,
+   "name": "OpenArt Director",
+   "url": "https://openart.ai/suite/director"
+  },
+  {
+   "@type": "ListItem",
+   "position": 41,
+   "name": "FlashVSR",
+   "url": "https://flashvsr.com/zh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 42,
+   "name": "Aiarty Video Enhancer",
+   "url": "https://www.aiarty.com/cn/ai-video-enhancer/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 43,
+   "name": "抖音造世界",
+   "url": "https://vcreate.douyin.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 44,
+   "name": "浮云梦配音",
+   "url": "https://fuym.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 45,
+   "name": "Creatify Agent",
+   "url": "https://creatify.ai/zh/features/agent"
+  },
+  {
+   "@type": "ListItem",
+   "position": 46,
+   "name": "iClone Personal",
+   "url": "https://www.reallusion.com/iclone/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 47,
+   "name": "TikTok Symphony Agent",
+   "url": "https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite"
+  },
+  {
+   "@type": "ListItem",
+   "position": 48,
+   "name": "OpenMontage",
+   "url": "https://www.openmontage.video/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 49,
+   "name": "Canva Grow 2.0",
+   "url": "https://www.canva.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 50,
+   "name": "TTSMaker",
+   "url": "https://www.ttsmaker.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 51,
+   "name": "Vidu Q3",
+   "url": "https://www.vidu.com/zh/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 52,
+   "name": "Google Stitch 2.0",
+   "url": "https://stitch.withgoogle.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 53,
+   "name": "Hedra",
+   "url": "https://www.hedra.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 54,
+   "name": "Milo3D.ai",
+   "url": "https://milo3d.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 55,
+   "name": "冬瓜配音",
+   "url": "https://www.okaidub.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 56,
+   "name": "WorkTool",
+   "url": "https://worktool.app/zh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 57,
+   "name": "知剧AI",
+   "url": "https://zhijuu.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 58,
+   "name": "Toonflow",
+   "url": "https://toonflow.net"
+  },
+  {
+   "@type": "ListItem",
+   "position": 59,
+   "name": "智剧通 ZJT",
+   "url": "https://ailive.perseids.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 60,
+   "name": "Catimind",
+   "url": "https://catimind.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 61,
+   "name": "腾讯混元Hy3",
+   "url": "https://yuanbao.tencent.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 62,
+   "name": "Meta Muse Image + Muse Video",
+   "url": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 63,
+   "name": "Seedream 5.0 Pro",
+   "url": "https://seed.bytedance.com/zh/seedream5_0_pro"
+  },
+  {
+   "@type": "ListItem",
+   "position": 64,
+   "name": "MuseDock",
+   "url": "https://github.com/renmengwen/MuseDock"
+  },
+  {
+   "@type": "ListItem",
+   "position": 65,
+   "name": "PonPon AI Studio",
+   "url": "https://ponpon.ai/zh-CN/ai-video-generator"
+  },
+  {
+   "@type": "ListItem",
+   "position": 66,
+   "name": "QM",
+   "url": "https://github.com/yc-software/qm"
+  },
+  {
+   "@type": "ListItem",
+   "position": 67,
+   "name": "QevosAgent",
+   "url": "https://qevos.ai/cn.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 68,
+   "name": "InkOS",
+   "url": "https://github.com/narcooo/inkos"
+  },
+  {
+   "@type": "ListItem",
+   "position": 69,
+   "name": "Hallmark",
+   "url": "https://github.com/nutlope/hallmark"
+  },
+  {
+   "@type": "ListItem",
+   "position": 70,
+   "name": "Kimi K3",
+   "url": "https://kimi.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 71,
+   "name": "Kutt.AI",
+   "url": "https://kutt.ai/zh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 72,
+   "name": "百度秒哒3.5",
+   "url": "https://www.miaoda.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 73,
+   "name": "Open Design v0.22.2",
+   "url": "https://open-design.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 74,
+   "name": "SenseNova U1 Pro",
+   "url": "https://www.sensenova.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 75,
+   "name": "vivago R1",
+   "url": "https://hidreamai.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 76,
+   "name": "阿里万相Wan3.0",
+   "url": "https://tongyi.aliyun.com/wan/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 77,
+   "name": "美图RoboNeo",
+   "url": "https://www.roboneo.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 78,
+   "name": "OpenWorker",
+   "url": "https://github.com/andrewyng/aisuite"
+  },
+  {
+   "@type": "ListItem",
+   "position": 79,
+   "name": "Treblo",
+   "url": "https://treblo.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 80,
+   "name": "Nexora",
+   "url": "https://nexora.parendum.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 81,
+   "name": "商汤Seko",
+   "url": "https://seko.sensetime.com/explore"
+  },
+  {
+   "@type": "ListItem",
+   "position": 82,
+   "name": "AI Commander",
+   "url": "https://github.com/YuJonny/AI-Commander"
+  },
+  {
+   "@type": "ListItem",
+   "position": 83,
+   "name": "OfficeCLI",
+   "url": "https://github.com/iOfficeAI/OfficeCLI"
+  },
+  {
+   "@type": "ListItem",
+   "position": 84,
+   "name": "V2Fun",
+   "url": "https://v2fun.art"
+  },
+  {
+   "@type": "ListItem",
+   "position": 85,
+   "name": "no-ai-slop",
+   "url": "https://github.com/petergyang/no-ai-slop"
+  },
+  {
+   "@type": "ListItem",
+   "position": 86,
+   "name": "PenEcho",
+   "url": "https://github.com/penecho/penecho"
+  },
+  {
+   "@type": "ListItem",
+   "position": 87,
+   "name": "火宝短剧",
+   "url": "https://github.com/chatfire-AI/huobao-drama"
+  },
+  {
+   "@type": "ListItem",
+   "position": 88,
+   "name": "DubbingX智声云配",
+   "url": "https://dubbingx.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 89,
+   "name": "Capptivo",
+   "url": "https://capptivo.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 90,
+   "name": "Lipvoice",
+   "url": "https://lipvoice.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 91,
+   "name": "ObjectRemover",
+   "url": "https://objectremover.video/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 92,
+   "name": "BrowserSkill",
+   "url": "https://github.com/Tencent/BrowserSkill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 93,
+   "name": "GenOffice",
+   "url": "https://genoffice.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 94,
+   "name": "Fish Audio",
+   "url": "https://fish.audio/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 95,
+   "name": "Oh My PPT",
+   "url": "https://www.ohmyppt.cc"
+  },
+  {
+   "@type": "ListItem",
+   "position": 96,
+   "name": "Dograh",
+   "url": "https://www.dograh.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 97,
+   "name": "Fictoi",
+   "url": "https://fictoi.itch.io/fictoi"
+  },
+  {
+   "@type": "ListItem",
+   "position": 98,
+   "name": "video-shotcraft",
+   "url": "https://github.com/Vincentwei1021/video-shotcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 99,
+   "name": "快乐虾米 HappyShrimp",
+   "url": "https://www.happyshrimp.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 100,
+   "name": "Maestro",
+   "url": "https://github.com/Blizaine/Maestro"
+  },
+  {
+   "@type": "ListItem",
+   "position": 101,
+   "name": "AIGCPanel",
+   "url": "https://github.com/modstart-lib/aigcpanel"
+  },
+  {
+   "@type": "ListItem",
+   "position": 102,
+   "name": "归藏PPT Skill",
+   "url": "https://github.com/op7418/guizang-ppt-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 103,
+   "name": "Meetily",
+   "url": "https://github.com/Zackriya-Solutions/meetily"
+  },
+  {
+   "@type": "ListItem",
+   "position": 104,
+   "name": "PINVOU 桌面AI工作台",
+   "url": "https://pinvou.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 105,
+   "name": "讲映",
+   "url": "https://jiangying.cloudlark.net/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 106,
+   "name": "NarratoAI",
+   "url": "https://github.com/linyqh/NarratoAI"
+  },
+  {
+   "@type": "ListItem",
+   "position": 107,
+   "name": "DramaBuddy漫剧助手",
+   "url": "https://aicomic.yuewen.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 108,
+   "name": "猫步简历",
+   "url": "https://maobucv.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 109,
+   "name": "OpenClaw",
+   "url": "https://github.com/openclaw/openclaw"
+  },
+  {
+   "@type": "ListItem",
+   "position": 110,
+   "name": "Hermes Agent",
+   "url": "https://hermes-agent.nousresearch.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 111,
+   "name": "DeepSeek Harness",
+   "url": "https://github.com/deepseek-ai/deepseek-harness"
+  },
+  {
+   "@type": "ListItem",
+   "position": 112,
+   "name": "Claude Code",
+   "url": "https://claude.com/code"
+  },
+  {
+   "@type": "ListItem",
+   "position": 113,
+   "name": "OpenAI Codex",
+   "url": "https://github.com/openai/codex"
+  },
+  {
+   "@type": "ListItem",
+   "position": 114,
+   "name": "Reasonix",
+   "url": "https://reasonix.io"
+  },
+  {
+   "@type": "ListItem",
+   "position": 115,
+   "name": "MetaGPT",
+   "url": "https://github.com/FoundationAgents/MetaGPT"
+  },
+  {
+   "@type": "ListItem",
+   "position": 116,
+   "name": "AutoGen",
+   "url": "https://github.com/microsoft/autogen"
+  },
+  {
+   "@type": "ListItem",
+   "position": 117,
+   "name": "crewAI",
+   "url": "https://github.com/crewAIInc/crewAI"
+  },
+  {
+   "@type": "ListItem",
+   "position": 118,
+   "name": "nanobot",
+   "url": "https://github.com/HKUDS/nanobot"
+  },
+  {
+   "@type": "ListItem",
+   "position": 119,
+   "name": "AstrBot",
+   "url": "https://github.com/AstrBotDevs/AstrBot"
+  },
+  {
+   "@type": "ListItem",
+   "position": 120,
+   "name": "白菜AI短剧",
+   "url": "https://www.fjds.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 121,
+   "name": "sepia",
+   "url": "https://github.com/Nanako0129/sepia"
+  },
+  {
+   "@type": "ListItem",
+   "position": 122,
+   "name": "shuohao-skills",
+   "url": "https://github.com/eternityspring/shuohao-skills"
+  },
+  {
+   "@type": "ListItem",
+   "position": 123,
+   "name": "妙幕SmartSub",
+   "url": "https://github.com/buxuku/SmartSub"
+  },
+  {
+   "@type": "ListItem",
+   "position": 124,
+   "name": "OmniRoute",
+   "url": "https://github.com/diegosouzapw/OmniRoute"
+  },
+  {
+   "@type": "ListItem",
+   "position": 125,
+   "name": "HotClip",
+   "url": "https://github.com/xixihhhh/hotclip"
+  },
+  {
+   "@type": "ListItem",
+   "position": 126,
+   "name": "huashu-excel",
+   "url": "https://github.com/alchaincyf/huashu-excel"
+  },
+  {
+   "@type": "ListItem",
+   "position": 127,
+   "name": "VoiceStudio",
+   "url": "https://github.com/debpalash/VoiceStudio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 128,
+   "name": "OOOSplat",
+   "url": "https://github.com/ooolabdev/ooosplat"
+  },
+  {
+   "@type": "ListItem",
+   "position": 129,
+   "name": "Easel",
+   "url": "https://github.com/ZJU-REAL/Easel"
+  },
+  {
+   "@type": "ListItem",
+   "position": 130,
+   "name": "Banana Slides",
+   "url": "https://bananaslides.online"
+  },
+  {
+   "@type": "ListItem",
+   "position": 131,
+   "name": "Video Gen Client",
+   "url": "https://github.com/letorig/video-generator-client"
+  },
+  {
+   "@type": "ListItem",
+   "position": 132,
+   "name": "PawWork 爪爪",
+   "url": "https://github.com/Player-YN/PawWork_ZhuaZhua"
+  },
+  {
+   "@type": "ListItem",
+   "position": 133,
+   "name": "anydoc",
+   "url": "https://firecrawl.github.io/anydoc/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 134,
+   "name": "video-ai-talking",
+   "url": "https://github.com/yizhi-chengzi/video-ai-talking"
+  },
+  {
+   "@type": "ListItem",
+   "position": 135,
+   "name": "screenwriting-skills",
+   "url": "https://github.com/jtydhr88/screenwriting-skills"
+  },
+  {
+   "@type": "ListItem",
+   "position": 136,
+   "name": "M3E Canvas",
+   "url": "https://lnkiai.github.io/m3e-canvas/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 137,
+   "name": "手绘风格提示词库",
+   "url": "https://github.com/yang0/handraw-style"
+  },
+  {
+   "@type": "ListItem",
+   "position": 138,
+   "name": "ffmpeg-skill",
+   "url": "https://github.com/kajisho5/ffmpeg-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 139,
+   "name": "Holo Card Studio",
+   "url": "https://github.com/EverettFish/holo-card-studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 140,
+   "name": "CS Board 白板声画工坊",
+   "url": "https://github.com/ChenShuo2004/cs-board"
+  },
+  {
+   "@type": "ListItem",
+   "position": 141,
+   "name": "agent-memory",
+   "url": "https://github.com/tigerless-labs/agent-memory"
+  }
+ ]
+}
+</script>
+<!-- SEO:STATIC:END -->
 </body>
 </html>

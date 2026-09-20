@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zzj1617.github.io/ai-tools-nav/sitemap.xml
