@@ -298,6 +298,7 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
         <option value="name-desc">名称 Z-A</option>
         <option value="hot-desc">热度优先</option>
       </select>
+      <button id="copyLinkBtn" class="free-btn copy-link" aria-label="复制当前筛选链接">🔗 复制链接</button>
     </div>
 
     <!-- 大类（竖向）+ 细分（横向）两级 -->
@@ -622,7 +623,36 @@ function diffLabel(d){if(!d||d===1)return{cls:'badge-diff-easy',t:'🟢 简单'}
 function zhLabel(z){if(!z||z===1)return'🇨🇳 中文';if(z===2)return'🌐 部分中文';return'❌ 无中文'}
 function hotLabel(h){if(!h||h===1)return'';if(h===2)return'🔥 热门';return'🔥🔥 很火'}
 
+// ===== URL 状态同步：筛出来的结果可以分享/收藏 =====
+function syncUrl(){
+  const p=new URLSearchParams();
+  if(searchQuery)p.set('q',searchQuery);
+  if(activeMain&&activeMain!=='all')p.set('main',activeMain);
+  if(activeCat)p.set('cat',activeCat);
+  if(showFree)p.set('free','1');
+  if(showOpen)p.set('open','1');
+  if(sortMode&&sortMode!=='rating-desc')p.set('sort',sortMode);
+  if(currentPage>0)p.set('page',String(currentPage+1));
+  const qs=p.toString();
+  history.replaceState(null,'',location.pathname+(qs?'?'+qs:''));
+}
+function readUrlState(){
+  const p=new URLSearchParams(location.search);
+  searchQuery=p.get('q')||'';
+  activeMain=p.get('main')||'all';
+  activeCat=p.get('cat')||null;
+  showFree=p.get('free')==='1';
+  showOpen=p.get('open')==='1';
+  sortMode=p.get('sort')||'rating-desc';
+  const pg=parseInt(p.get('page')||'1',10);
+  currentPage=(isNaN(pg)||pg<1)?0:pg-1;
+  const si=document.getElementById('search');if(si)si.value=searchQuery;
+  const ss=document.getElementById('sortSelect');if(ss)ss.value=sortMode;
+  const fb=document.getElementById('freeBtn');if(fb&&showFree){fb.classList.add('active');fb.setAttribute('aria-pressed','true')}
+  const ob=document.getElementById('openBtn');if(ob&&showOpen){ob.classList.add('active');ob.setAttribute('aria-pressed','true')}
+}
 function render(fc,q,free,main){
+  syncUrl();
   q=(q||'').toLowerCase().trim();
   const mainId=main||'all';
   let s=0;const filtered=[];
@@ -680,7 +710,11 @@ function render(fc,q,free,main){
 }
 function goPage(n){currentPage=n;render(activeCat,searchQuery,showFree,activeMain)}
 
-render(null,'',false,'all');
+readUrlState();
+renderCatSide();renderSubCats();
+if(activeMain!=='all')document.querySelectorAll('.cat-btn').forEach(b=>b.classList.toggle('active',b.dataset.main===activeMain));
+if(activeCat)document.querySelectorAll('.filter-pill').forEach(p=>{const on=p.dataset.cat===activeCat;p.classList.toggle('active',on);p.setAttribute('aria-pressed',on?'true':'false')});
+render(activeCat,searchQuery,showFree,activeMain);
 
 // 分类
 document.getElementById('filters').addEventListener('click',e=>{
@@ -708,6 +742,14 @@ search.addEventListener('input',debounce(()=>{searchQuery=search.value;currentPa
 
 // 排序
 sortSelect.addEventListener('change',()=>{sortMode=sortSelect.value;currentPage=0;render(activeCat,searchQuery,showFree,activeMain)});
+
+// 复制当前筛选链接
+document.getElementById('copyLinkBtn')?.addEventListener('click',async()=>{
+  const b=document.getElementById('copyLinkBtn');const t=b.textContent;
+  try{await navigator.clipboard.writeText(location.href);b.textContent='✅ 已复制';}
+  catch(e){window.prompt('复制这个链接：',location.href);b.textContent='✅ 已复制';}
+  setTimeout(()=>{b.textContent=t},1600);
+});
 
 // 归档
 function renderArchive(){
