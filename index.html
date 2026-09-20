@@ -536,6 +536,11 @@ const TOOLS=[
   {n:"Holo Card Studio",why:"一句话出会随视角闪的 3D 卡",c:"3D创作",m:["3D"],d:"MIT开源的Codex技能(1.6k★):给一句描述或一张参考图,自动画好主体/背景/线稿/文字四层图、搭好Blender场景再组装成Three.js网页,浏览器里能拖着转、翻面、拉滑块看镭射星光流动;做完还给你可编辑的card.blend工程,做角色卡/纪念卡/发布会物料直接用",u:"https://github.com/EverettFish/holo-card-studio",r:3,re:"全息卡Blender工程",f:1,q:"开源免费(需Codex与Blender)",g:"https://github.com/EverettFish/holo-card-studio",diff:2,zh:1,hot:2},
   {n:"CS Board 白板声画工坊",why:"参考音频加中文文案直达白板动画",c:"视频生成",m:["视频"],d:"MIT开源的本地白板动画工作台(626★):上传一段参考音频、粘贴中文文案,自动跑完音色克隆、分镜拆解、插画绘制、手绘笔迹、字幕与音画合成导出MP4;12套视觉模板,动态信息图按真实旁白时间逐项展开,素材密钥与成片都留在本机,配音接自建IndexTTS、生图用自填模型Key",u:"https://github.com/ChenShuo2004/cs-board",r:3,re:"中文文案出白板动画",f:1,q:"开源免费(配音/生图BYOK)",g:"https://github.com/ChenShuo2004/cs-board",diff:3,zh:1,hot:2},
   {n:"agent-memory",why:"记忆是纯 Markdown，本地不要 Key",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent长期记忆运行时(939★):一个Markdown目录就是唯一事实来源,旁边的SQLite索引只当缓存随时可删,检索在本机排序、返回文件路径而不是把原文灌进上下文;会话边界自动写入,睡眠时段按价值整理,Claude Code与Codex CLI共用同一份记忆,全程不要API Key",u:"https://github.com/tigerless-labs/agent-memory",r:3,re:"本地记忆不要Key",f:1,q:"开源免费",g:"https://github.com/tigerless-labs/agent-memory",diff:2,zh:3,hot:2},
+{n:"Timeline Studio",why:"浏览器里本地跑AI剪辑，不要Key",c:"视频编辑",m:["视频"],d:"MIT开源的本地优先浏览器剪辑器(844★):CapCut风格多轨时间线,配音、字幕、配乐、去水印修复、人像抠像与数字人全用WebGPU在本机跑,模型优先从ModelScope拉国内直连,工程与素材不上传;内置Agent技能与21个网页工具,人和AI改的是同一份可编辑时间线",u:"https://video-editor.ai-creator.top/",r:4,re:"浏览器内本地AI剪辑",f:1,q:"开源免费",g:"https://github.com/MartinDelophy/ai-video-editor",diff:1,zh:1,hot:2},
+{n:"YuE2",why:"9.8k★开源音乐模型,网页可直接试",c:"音频生成",m:["音频"],d:"Apache-2.0的音乐生成模型(9.8k★,YuE2-3B):把符号规划与音频生成统一,先排好段落结构再出音,人声与伴奏一起生成,支持零样本翻唱与按乐谱改段落;官方开了免费在线试听站,权重在HuggingFace可本地部署,并配了Agent技能",u:"https://yue.noizai.net/",r:4,re:"开源音乐前沿",f:1,q:"开源免费",g:"https://github.com/multimodal-art-projection/YuE",diff:3,zh:2,hot:3},
+{n:"PSD2Live",why:"分层PSD自动出可编辑Live2D皮套",c:"3D创作",m:["3D"],d:"GPL-3.0开源的Live2D自动生成流水线(424★):把按命名规范分好层的PSD丢进去,自动完成图层语义识别、网格剖分、九轴面部经纬网与变形器搭建,连头发摆动与果冻眼物理、6秒无缝待机动作一起生成,导出可编辑的.cmo3工程与.moc3运行时文件;做虚拟主播皮套能省掉手工绑骨",u:"https://github.com/tsunehimatoi/psd2live",r:3,re:"PSD自动绑骨",f:1,q:"开源免费(需JDK21与Cubism SDK)",g:"https://github.com/tsunehimatoi/psd2live",diff:3,zh:1,hot:2},
+{n:"learn-from-materials",why:"结论都能追回原文的学习网页",c:"办公效率",m:["办公"],d:"MIT开源的学习技能包(414★):把PDF、电子书、论文或整组文档一起丢进去,先完整读完再产出可追溯知识库——每条结论都标回原文出处,再生成可测验、可做笔记的互动学习网页与同步Markdown;材料事实与模型补充分开标注,离线优先、最小权限,装进Codex等宿主即用",u:"https://github.com/dmoshehun-prog/learn-from-materials",r:4,re:"每条结论有出处",f:1,q:"开源免费",g:"https://github.com/dmoshehun-prog/learn-from-materials",diff:2,zh:1,hot:2},
+{n:"PRINTFILM",why:"1.4k★开源短剧平台,Docker全套部署",c:"AI短剧",m:["视频"],d:"MIT开源的AI短剧/漫剧创作平台(v0.2.0,1.4k★):主题或剧本进,分镜、生图、生视频到成片一条流水线走完,口播由视频模型出片时一并生成;19种视觉风格,角色/场景/道具/音色可锁定跨集复用,自带登录、按量计费、管理后台与开放API,Docker一键起全栈;生成链路固定走TokenFree第三方中转,需自备key",u:"https://www.printfilm.com",r:3,re:"短剧平台级自部署",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/yi1108/printfilm",diff:3,zh:1,hot:3},
 
 ];
 
@@ -774,7 +779,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 141 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 146 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -918,6 +923,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/EverettFish/holo-card-studio" target="_blank" rel="noopener">Holo Card Studio</a> — 一句话出会随视角闪的 3D 卡 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/ChenShuo2004/cs-board" target="_blank" rel="noopener">CS Board 白板声画工坊</a> — 参考音频加中文文案直达白板动画 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/tigerless-labs/agent-memory" target="_blank" rel="noopener">agent-memory</a> — 记忆是纯 Markdown，本地不要 Key <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://video-editor.ai-creator.top/" target="_blank" rel="noopener">Timeline Studio</a> — 浏览器里本地跑AI剪辑，不要Key <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://yue.noizai.net/" target="_blank" rel="noopener">YuE2</a> — 9.8k★开源音乐模型,网页可直接试 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/tsunehimatoi/psd2live" target="_blank" rel="noopener">PSD2Live</a> — 分层PSD自动出可编辑Live2D皮套 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/dmoshehun-prog/learn-from-materials" target="_blank" rel="noopener">learn-from-materials</a> — 结论都能追回原文的学习网页 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://www.printfilm.com" target="_blank" rel="noopener">PRINTFILM</a> — 1.4k★开源短剧平台,Docker全套部署 <span class="nb-cat">AI短剧</span></li>
     </ul>
   </section>
 </noscript>
@@ -927,7 +937,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 141,
+ "numberOfItems": 146,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1774,6 +1784,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 141,
    "name": "agent-memory",
    "url": "https://github.com/tigerless-labs/agent-memory"
+  },
+  {
+   "@type": "ListItem",
+   "position": 142,
+   "name": "Timeline Studio",
+   "url": "https://video-editor.ai-creator.top/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 143,
+   "name": "YuE2",
+   "url": "https://yue.noizai.net/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 144,
+   "name": "PSD2Live",
+   "url": "https://github.com/tsunehimatoi/psd2live"
+  },
+  {
+   "@type": "ListItem",
+   "position": 145,
+   "name": "learn-from-materials",
+   "url": "https://github.com/dmoshehun-prog/learn-from-materials"
+  },
+  {
+   "@type": "ListItem",
+   "position": 146,
+   "name": "PRINTFILM",
+   "url": "https://www.printfilm.com"
   }
  ]
 }
