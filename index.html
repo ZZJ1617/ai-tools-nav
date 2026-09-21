@@ -540,7 +540,10 @@ const TOOLS=[
 {n:"PSD2Live",why:"分层PSD自动出可编辑Live2D皮套",c:"3D创作",m:["3D"],d:"GPL-3.0开源的Live2D自动生成流水线(424★):把按命名规范分好层的PSD丢进去,自动完成图层语义识别、网格剖分、九轴面部经纬网与变形器搭建,连头发摆动与果冻眼物理、6秒无缝待机动作一起生成,导出可编辑的.cmo3工程与.moc3运行时文件;做虚拟主播皮套能省掉手工绑骨",u:"https://github.com/tsunehimatoi/psd2live",r:3,re:"PSD自动绑骨",f:1,q:"开源免费(需JDK21与Cubism SDK)",g:"https://github.com/tsunehimatoi/psd2live",diff:3,zh:1,hot:2},
 {n:"learn-from-materials",why:"结论都能追回原文的学习网页",c:"办公效率",m:["办公"],d:"MIT开源的学习技能包(414★):把PDF、电子书、论文或整组文档一起丢进去,先完整读完再产出可追溯知识库——每条结论都标回原文出处,再生成可测验、可做笔记的互动学习网页与同步Markdown;材料事实与模型补充分开标注,离线优先、最小权限,装进Codex等宿主即用",u:"https://github.com/dmoshehun-prog/learn-from-materials",r:4,re:"每条结论有出处",f:1,q:"开源免费",g:"https://github.com/dmoshehun-prog/learn-from-materials",diff:2,zh:1,hot:2},
 {n:"PRINTFILM",why:"1.8k★开源短剧平台,Docker全套部署",c:"AI短剧",m:["视频"],d:"MIT开源的AI短剧/漫剧创作平台(v0.2.0,1.8k★):主题或剧本进,分镜、生图、生视频到成片一条流水线走完,口播由视频模型出片时一并生成;19种视觉风格,角色/场景/道具/音色可锁定跨集复用,自带登录、按量计费、管理后台与开放API,Docker一键起全栈;生成链路固定走TokenFree第三方中转,需自备key",u:"https://www.printfilm.com",r:3,re:"短剧平台级自部署",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/yi1108/printfilm",diff:3,zh:1,hot:3},
-
+{n:"导演台 DirectorDesk",why:"下载即用，AI短剧先三维预演再出片",c:"AI短剧",m:["视频","3D"],d:"MIT开源的三维预演工具(198★,v0.4.8):给AI短剧和视频搭场景、排走位、设计运镜再导出参考视频,内置AI助手,也能开局域网MCP让外部Agent直接改当前工程;Windows有安装版与免安装版,中文界面,不用任何Key",u:"https://github.com/mangfufu/director-desk",r:3,re:"短剧三维预演",f:1,q:"开源免费",g:"https://github.com/mangfufu/director-desk",diff:1,zh:1,hot:2},
+{n:"Qwen-Image-2.1",why:"7B开源权重，直接出RGBA透明图",c:"图像生成",m:["图像"],d:"阿里千问开源的统一图像模型(874★):文生图与图像编辑同一套权重,原生输出带透明通道的RGBA图、可从实拍照片抠出主体或在透明图层上改文字,最多10张参考图、原生2K,已能进ComfyUI跑;权重上HuggingFace与魔搭,许可是Qwen研究许可不是Apache",u:"https://github.com/QwenLM/Qwen-Image-2.1",r:3,re:"原生透明图开源",f:1,q:"开源权重",g:"https://github.com/QwenLM/Qwen-Image-2.1",diff:3,zh:1,hot:3},
+{n:"MCP for Blender",why:"一句提示词让任意LLM建模改场景",c:"3D创作",m:["3D","Agent"],d:"用任意LLM控制Blender的MCP插件(2.9万★,MIT,原名blender-mcp):提示词辅助三维建模、场景搭建与材质调整,uvx一行装好,主流Agent客户端都能接;默认开匿名遥测,配置里加DISABLE_TELEMETRY=true可关",u:"https://github.com/ahujasid/mcp-for-blender",r:4,re:"LLM直控Blender",f:1,q:"开源免费",g:"https://github.com/ahujasid/mcp-for-blender",diff:2,zh:3,hot:3},
+{n:"headcount",why:"16部门172技能，按需装一个部门",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent组织技能库(1.6k★):按公司结构切成16个部门、172个技能,每个部门可独立安装,项目只加载需要的部分;技能以department:skill命名不冲突,在Claude Code与ChatGPT/Codex里同一套清单,适合给办公、调研、评审类任务配固定职能",u:"https://github.com/cbrock84/headcount",r:3,re:"172技能组织",f:1,q:"开源免费",g:"https://github.com/cbrock84/headcount",diff:2,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -778,7 +781,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 146 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 150 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -927,6 +930,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/tsunehimatoi/psd2live" target="_blank" rel="noopener">PSD2Live</a> — 分层PSD自动出可编辑Live2D皮套 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/dmoshehun-prog/learn-from-materials" target="_blank" rel="noopener">learn-from-materials</a> — 结论都能追回原文的学习网页 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://www.printfilm.com" target="_blank" rel="noopener">PRINTFILM</a> — 1.8k★开源短剧平台,Docker全套部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/mangfufu/director-desk" target="_blank" rel="noopener">导演台 DirectorDesk</a> — 下载即用，AI短剧先三维预演再出片 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank" rel="noopener">Qwen-Image-2.1</a> — 7B开源权重，直接出RGBA透明图 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/ahujasid/mcp-for-blender" target="_blank" rel="noopener">MCP for Blender</a> — 一句提示词让任意LLM建模改场景 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/cbrock84/headcount" target="_blank" rel="noopener">headcount</a> — 16部门172技能，按需装一个部门 <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -936,7 +943,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 146,
+ "numberOfItems": 150,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1813,6 +1820,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 146,
    "name": "PRINTFILM",
    "url": "https://www.printfilm.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 147,
+   "name": "导演台 DirectorDesk",
+   "url": "https://github.com/mangfufu/director-desk"
+  },
+  {
+   "@type": "ListItem",
+   "position": 148,
+   "name": "Qwen-Image-2.1",
+   "url": "https://github.com/QwenLM/Qwen-Image-2.1"
+  },
+  {
+   "@type": "ListItem",
+   "position": 149,
+   "name": "MCP for Blender",
+   "url": "https://github.com/ahujasid/mcp-for-blender"
+  },
+  {
+   "@type": "ListItem",
+   "position": 150,
+   "name": "headcount",
+   "url": "https://github.com/cbrock84/headcount"
   }
  ]
 }
