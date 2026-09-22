@@ -545,7 +545,11 @@ const TOOLS=[
 {n:"导演台 DirectorDesk",why:"下载即用，AI短剧先三维预演再出片",c:"AI短剧",m:["视频","3D"],d:"MIT开源的三维预演工具(198★,v0.4.8):给AI短剧和视频搭场景、排走位、设计运镜再导出参考视频,内置AI助手,也能开局域网MCP让外部Agent直接改当前工程;Windows有安装版与免安装版,中文界面,不用任何Key",u:"https://github.com/mangfufu/director-desk",r:3,re:"短剧三维预演",f:1,q:"开源免费",g:"https://github.com/mangfufu/director-desk",diff:1,zh:1,hot:2},
 {n:"Qwen-Image-2.1",why:"7B开源权重，直接出RGBA透明图",c:"图像生成",m:["图像"],d:"阿里千问开源的统一图像模型(874★):文生图与图像编辑同一套权重,原生输出带透明通道的RGBA图、可从实拍照片抠出主体或在透明图层上改文字,最多10张参考图、原生2K,已能进ComfyUI跑;权重上HuggingFace与魔搭,许可是Qwen研究许可不是Apache",u:"https://github.com/QwenLM/Qwen-Image-2.1",r:3,re:"原生透明图开源",f:1,q:"开源权重",g:"https://github.com/QwenLM/Qwen-Image-2.1",diff:3,zh:1,hot:3},
 {n:"MCP for Blender",why:"一句提示词让任意LLM建模改场景",c:"3D创作",m:["3D","Agent"],d:"用任意LLM控制Blender的MCP插件(2.9万★,MIT,原名blender-mcp):提示词辅助三维建模、场景搭建与材质调整,uvx一行装好,主流Agent客户端都能接;默认开匿名遥测,配置里加DISABLE_TELEMETRY=true可关",u:"https://github.com/ahujasid/mcp-for-blender",r:4,re:"LLM直控Blender",f:1,q:"开源免费",g:"https://github.com/ahujasid/mcp-for-blender",diff:2,zh:3,hot:3},
-{n:"headcount",why:"16部门172技能，按需装一个部门",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent组织技能库(1.6k★):按公司结构切成16个部门、172个技能,每个部门可独立安装,项目只加载需要的部分;技能以department:skill命名不冲突,在Claude Code与ChatGPT/Codex里同一套清单,适合给办公、调研、评审类任务配固定职能",u:"https://github.com/cbrock84/headcount",r:3,re:"172技能组织",f:1,q:"开源免费",g:"https://github.com/cbrock84/headcount",diff:2,zh:3,hot:2}
+{n:"headcount",why:"16部门172技能，按需装一个部门",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent组织技能库(1.6k★):按公司结构切成16个部门、172个技能,每个部门可独立安装,项目只加载需要的部分;技能以department:skill命名不冲突,在Claude Code与ChatGPT/Codex里同一套清单,适合给办公、调研、评审类任务配固定职能",u:"https://github.com/cbrock84/headcount",r:3,re:"172技能组织",f:1,q:"开源免费",g:"https://github.com/cbrock84/headcount",diff:2,zh:3,hot:2},
+{n:"VoxCPM2",why:"开源可商用，会 9 种中文方言的 TTS",c:"音频生成",m:["音频"],d:"面壁智能OpenBMB开源的2B语音合成模型(3.79万★,Apache-2.0可商用):20亿参数、200万小时多语种数据,支持30种语言+9种中文方言(四川话/粤语/吴语/东北话/河南话等),原生48kHz输出。两点最实用——音色设计:用文字描述性别/年龄/情绪/语速就能造出全新音色,不需要参考音频;可控克隆:一段短参考音频复刻音色,还能加风格指令改情绪和节奏。HuggingFace有在线Demo、官网另给国内体验入口,权重在魔搭与HF双份,4090上RTF约0.3并支持流式",u:"https://voxcpm.com",r:5,re:"开源TTS标杆",f:1,q:"开源免费",g:"https://github.com/OpenBMB/VoxCPM",diff:2,zh:1,hot:3},
+{n:"Hypit",why:"把剪辑从按秒改成按词的视频语言",c:"视频编辑",m:["视频","Agent"],d:"给编码Agent(Claude Code/Codex等)用的视频语言SVML(1.35万★,改版Apache-2.0:自己用、给客户做项目、单租户自部署都可商用;Trendshift TypeScript日榜第一):核心是把剪辑从「按秒」改成「按词」,字幕、素材、B-roll、动效全部锚定字词,改一句字幕不用重对时间轴。三种用法:丢一个参考视频让Agent重建它的镜头与节奏、从内置播客/街采/视频通话模板起手、或直接描述要什么视频让Agent从零写工作流;不调用任何生成模型也能纯靠字幕+代码渲染出片,零生成成本。装法就一行 npx skills add hypit-ai/hypit -g",u:"https://hypit.ai",r:4,re:"视频工作流语言",f:1,q:"开源免费",g:"https://github.com/hypit-ai/hypit",diff:3,zh:1,hot:3},
+{n:"Anything2Explainer",why:"丢个话题，跑出带配音字幕的讲解片",c:"视频生成",m:["视频","Agent"],d:"把任意话题或文章变成带配音、字幕、章节进度条的讲解视频(1975★,PolyForm非商用许可:自己用免费、商用需作者授权),是Claude Code/Codex的技能包而非CLI:每一帧都用Remotion(React+TS)代码画出来,不吃素材库、不碰生成视频模型,没有素材版权问题。中文旁白走edge-tts云希音色、英文走kokoro-82m,也可以自带TTS;输出1280x720 H.264 MP4,连研究稿、旁白、分镜、每个镜头的源码和质检报告一起给你。参考成片「RAG与知识库」4分54秒,2-8分钟的片子约1-3小时跑完,全程只在4个检查点问你",u:"https://github.com/Vincentwei1021/anything2explainer",r:4,re:"话题直达讲解片",f:1,q:"开源免费(限非商用)",g:"https://github.com/Vincentwei1021/anything2explainer",diff:3,zh:1,hot:2},
+{n:"Amagine3D",why:"说需求长出可编辑外壳 3D，能导 STEP",c:"3D创作",m:["3D"],d:"Amagine开源、面向硬件创客的3D能力层(6176★,Apache-2.0):给一段产品描述、几张参考图和关键尺寸,它先摆内部元器件与接口,再长出外壳、控件与散热结构;多零件时会一起做装配间隙和打印公差,铰链/滑盖这类机构还沿运动路径查碰撞。最关键是产出可编辑:每个零件都留着build123d与Python源码,能导出真STEP、STL和带色区的3MF;生成过程在真几何环境里量壁厚、查干涉和装板尺寸,不靠模型嘴上说合格。需要Node 22+与本机Python 3.10-3.13,模型接OpenAI Responses兼容的key或网关",u:"https://github.com/amagine-ai/Amagine3D",r:4,re:"硬件外壳3D生成",f:1,q:"开源免费(需自带模型Key)",g:"https://github.com/amagine-ai/Amagine3D",diff:3,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -783,7 +787,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 150 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 154 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -936,6 +940,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank" rel="noopener">Qwen-Image-2.1</a> — 7B开源权重，直接出RGBA透明图 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/ahujasid/mcp-for-blender" target="_blank" rel="noopener">MCP for Blender</a> — 一句提示词让任意LLM建模改场景 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/cbrock84/headcount" target="_blank" rel="noopener">headcount</a> — 16部门172技能，按需装一个部门 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://voxcpm.com" target="_blank" rel="noopener">VoxCPM2</a> — 开源可商用，会 9 种中文方言的 TTS <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://hypit.ai" target="_blank" rel="noopener">Hypit</a> — 把剪辑从按秒改成按词的视频语言 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/Vincentwei1021/anything2explainer" target="_blank" rel="noopener">Anything2Explainer</a> — 丢个话题，跑出带配音字幕的讲解片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/amagine-ai/Amagine3D" target="_blank" rel="noopener">Amagine3D</a> — 说需求长出可编辑外壳 3D，能导 STEP <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -945,7 +953,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 150,
+ "numberOfItems": 154,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1846,6 +1854,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 150,
    "name": "headcount",
    "url": "https://github.com/cbrock84/headcount"
+  },
+  {
+   "@type": "ListItem",
+   "position": 151,
+   "name": "VoxCPM2",
+   "url": "https://voxcpm.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 152,
+   "name": "Hypit",
+   "url": "https://hypit.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 153,
+   "name": "Anything2Explainer",
+   "url": "https://github.com/Vincentwei1021/anything2explainer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 154,
+   "name": "Amagine3D",
+   "url": "https://github.com/amagine-ai/Amagine3D"
   }
  ]
 }
