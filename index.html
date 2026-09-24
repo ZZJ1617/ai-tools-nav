@@ -552,7 +552,12 @@ const TOOLS=[
 {n:"VoxCPM2",why:"开源可商用，会 9 种中文方言的 TTS",c:"音频生成",m:["音频"],d:"面壁智能OpenBMB开源的2B语音合成模型(3.79万★,Apache-2.0可商用):20亿参数、200万小时多语种数据,支持30种语言+9种中文方言(四川话/粤语/吴语/东北话/河南话等),原生48kHz输出。两点最实用——音色设计:用文字描述性别/年龄/情绪/语速就能造出全新音色,不需要参考音频;可控克隆:一段短参考音频复刻音色,还能加风格指令改情绪和节奏。HuggingFace有在线Demo、官网另给国内体验入口,权重在魔搭与HF双份,4090上RTF约0.3并支持流式",u:"https://voxcpm.com",r:5,re:"开源TTS标杆",f:1,q:"开源免费",g:"https://github.com/OpenBMB/VoxCPM",diff:2,zh:1,hot:3},
 {n:"Hypit",why:"把剪辑从按秒改成按词的视频语言",c:"视频编辑",m:["视频","Agent"],d:"给编码Agent(Claude Code/Codex等)用的视频语言SVML(1.35万★,改版Apache-2.0:自己用、给客户做项目、单租户自部署都可商用;Trendshift TypeScript日榜第一):核心是把剪辑从「按秒」改成「按词」,字幕、素材、B-roll、动效全部锚定字词,改一句字幕不用重对时间轴。三种用法:丢一个参考视频让Agent重建它的镜头与节奏、从内置播客/街采/视频通话模板起手、或直接描述要什么视频让Agent从零写工作流;不调用任何生成模型也能纯靠字幕+代码渲染出片,零生成成本。装法就一行 npx skills add hypit-ai/hypit -g",u:"https://hypit.ai",r:4,re:"视频工作流语言",f:1,q:"开源免费",g:"https://github.com/hypit-ai/hypit",diff:3,zh:1,hot:3},
 {n:"Anything2Explainer",why:"丢个话题，跑出带配音字幕的讲解片",c:"视频生成",m:["视频","Agent"],d:"把任意话题或文章变成带配音、字幕、章节进度条的讲解视频(1975★,PolyForm非商用许可:自己用免费、商用需作者授权),是Claude Code/Codex的技能包而非CLI:每一帧都用Remotion(React+TS)代码画出来,不吃素材库、不碰生成视频模型,没有素材版权问题。中文旁白走edge-tts云希音色、英文走kokoro-82m,也可以自带TTS;输出1280x720 H.264 MP4,连研究稿、旁白、分镜、每个镜头的源码和质检报告一起给你。参考成片「RAG与知识库」4分54秒,2-8分钟的片子约1-3小时跑完,全程只在4个检查点问你",u:"https://github.com/Vincentwei1021/anything2explainer",r:4,re:"话题直达讲解片",f:1,q:"开源免费(限非商用)",g:"https://github.com/Vincentwei1021/anything2explainer",diff:3,zh:1,hot:2},
-{n:"Amagine3D",why:"说需求长出可编辑外壳 3D，能导 STEP",c:"3D创作",m:["3D"],d:"Amagine开源、面向硬件创客的3D能力层(6176★,Apache-2.0):给一段产品描述、几张参考图和关键尺寸,它先摆内部元器件与接口,再长出外壳、控件与散热结构;多零件时会一起做装配间隙和打印公差,铰链/滑盖这类机构还沿运动路径查碰撞。最关键是产出可编辑:每个零件都留着build123d与Python源码,能导出真STEP、STL和带色区的3MF;生成过程在真几何环境里量壁厚、查干涉和装板尺寸,不靠模型嘴上说合格。需要Node 22+与本机Python 3.10-3.13,模型接OpenAI Responses兼容的key或网关",u:"https://github.com/amagine-ai/Amagine3D",r:4,re:"硬件外壳3D生成",f:1,q:"开源免费(需自带模型Key)",g:"https://github.com/amagine-ai/Amagine3D",diff:3,zh:1,hot:2}
+{n:"Amagine3D",why:"说需求长出可编辑外壳 3D，能导 STEP",c:"3D创作",m:["3D"],d:"Amagine开源、面向硬件创客的3D能力层(6176★,Apache-2.0):给一段产品描述、几张参考图和关键尺寸,它先摆内部元器件与接口,再长出外壳、控件与散热结构;多零件时会一起做装配间隙和打印公差,铰链/滑盖这类机构还沿运动路径查碰撞。最关键是产出可编辑:每个零件都留着build123d与Python源码,能导出真STEP、STL和带色区的3MF;生成过程在真几何环境里量壁厚、查干涉和装板尺寸,不靠模型嘴上说合格。需要Node 22+与本机Python 3.10-3.13,模型接OpenAI Responses兼容的key或网关",u:"https://github.com/amagine-ai/Amagine3D",r:4,re:"硬件外壳3D生成",f:1,q:"开源免费(需自带模型Key)",g:"https://github.com/amagine-ai/Amagine3D",diff:3,zh:1,hot:2},
+  {n:"ZCode",why:"智谱官方编码工作台，三端都能跑",c:"工作流Agent",m:["Agent"],d:"智谱(Z.ai)官方开源的AI编程工作台(Apache-2.0,6669★):桌面应用、浏览器界面和终端Agent共用同一套后端与Agent运行时,官方定位是GLM-5.3的配套harness,多智能体协作、Goals长任务(自己规划-执行-验证)、Skills技能包都在里面;还能从微信/飞书/Telegram远程给Bot下指令,人在外面任务也继续跑。Mac/Windows/Linux都有现成安装包(v3.14.3,Linux标Beta),不想装客户端可以直接开浏览器版。客户端源码全公开可自部署,模型走GLM Coding订阅或自带Key",u:"https://zcode.z.ai/",r:4,re:"官方GLM编程台",f:1,q:"客户端开源免费(模型BYOK/订阅)",g:"https://github.com/zai-org/ZCode",diff:1,zh:1,hot:3},
+  {n:"易创 Easy Writing",why:"稿子全存本机，AI 走自带 Key",c:"AI写作",m:["写作"],d:"AGPL-3.0开源的纯本地网文写作桌面软件(618★,v1.1.0):作品、设定、码字记录全存在本机SQLite,不注册不登录,断网也能写;卷/章目录树、拖拽排序、全书搜索替换、边写边存、码字统计、定时自动备份成txt+json、整本导出都有,由真实网文平台的客户端改造而来,日常写过稿的地方都打磨过。AI部分是BYOK:可配DeepSeek、通义千问、智谱、Kimi及任何OpenAI兼容接口,Ollama、LM Studio等本地模型Key留空即可;提示词全开放成本地md文件,连每个场景的采样温度都能单独调。Windows/macOS有现成安装包,另有浏览器版",u:"https://github.com/yilujian/easy-writing",r:4,re:"纯本地网文写作",f:1,q:"开源免费(AI需自带Key)",g:"https://github.com/yilujian/easy-writing",diff:1,zh:1,hot:2},
+  {n:"早耳 hayamimi",why:"纯 CPU 本地实时字幕，不要 Key",c:"音频生成",m:["音频"],d:"MIT开源的实时听写工具(347★):所有模型量化成INT8 ONNX跑sherpa-onnx,不要GPU、不调云API,常驻内存压在2GB以下;不是拿一个通用Whisper硬扛,而是按语种把每句话路由给对应的专门模型(日中韩粤英五条专用线+24种欧洲语言,其余约1600种语言回退Meta Omnilingual),停口后约100ms落定稿,带说话人标签与实时翻译。附带浏览器直播看板和OBS字幕覆盖层,还能把手机/ESP32的麦克风通过WebSocket接入同一条流水线;Windows上可用系统声回环把电脑里正放的声音直接转成字幕。Python3.10+与ffmpeg即可,模型一次下载后离线跑",u:"https://github.com/oboroge0/hayamimi",r:4,re:"纯CPU实时听写",f:1,q:"开源免费",g:"https://github.com/oboroge0/hayamimi",diff:2,zh:2,hot:2},
+  {n:"AuK 腾讯混元",why:"1.5B 开源语音模型，能生成也能改",c:"音频生成",m:["音频"],d:"腾讯混元开源的1.5B语音基础模型(1248★,代码与权重走MIT):把生成和编辑合进同一套自然语言指令接口——零样本与指令式TTS、内容编辑(改台词重录)、声学编辑、副语言编辑(情绪语气)、语音增强、人声分离,同一个模型换个说法就能切任务,不用为每件事换工具;另有4步蒸馏的AuK-Flash做快速推理。权重在魔搭与HF双份,官方Gradio在线Demo国内走ModelScope就能试,社区也把它接进ComfyUI当自定义节点。2026-09更新后编码器内存降了约7.5GiB、支持CPU offload与Apple Silicon的MLX推理,消费级显卡也能跑起来",u:"https://auk-project.github.io/",r:4,re:"语音生成编辑一体",f:1,q:"开源免费(权重MIT)",g:"https://github.com/Tencent-Hunyuan/AuK",diff:3,zh:1,hot:2},
+  {n:"原生字幕拼图",why:"保留原字幕取帧，拼 3:4 分享长图",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能包(800★):从本地视频或用得上的在线视频里,按文字稿定位讲得好的那几句,精确取帧后拼成适合社交平台发布的3:4字幕长图——默认1张主图占约70%高度、下面4条台词条各占7.5%,条间距为0,台词之间不留空档。硬字幕不OCR重绘、不翻译改写,画面像素原样保留;脚本字幕会标注来源,不冒充原字幕。输出含字幕区预览、聚焦候选帧、成品JPG、时间点清单与总览图,每张都过一遍质检。可装进Codex等兼容Agent,Python3.10+与ffmpeg即可,URL模式才需要yt-dlp",u:"https://github.com/chengyi-ai/native-subtitle-quote-image",r:3,re:"字幕取帧拼长图",f:1,q:"开源免费",g:"https://github.com/chengyi-ai/native-subtitle-quote-image",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -790,7 +795,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 154 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 159 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -947,6 +952,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://hypit.ai" target="_blank" rel="noopener">Hypit</a> — 把剪辑从按秒改成按词的视频语言 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://github.com/Vincentwei1021/anything2explainer" target="_blank" rel="noopener">Anything2Explainer</a> — 丢个话题，跑出带配音字幕的讲解片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/amagine-ai/Amagine3D" target="_blank" rel="noopener">Amagine3D</a> — 说需求长出可编辑外壳 3D，能导 STEP <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://zcode.z.ai/" target="_blank" rel="noopener">ZCode</a> — 智谱官方编码工作台，三端都能跑 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/yilujian/easy-writing" target="_blank" rel="noopener">易创 Easy Writing</a> — 稿子全存本机，AI 走自带 Key <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/oboroge0/hayamimi" target="_blank" rel="noopener">早耳 hayamimi</a> — 纯 CPU 本地实时字幕，不要 Key <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://auk-project.github.io/" target="_blank" rel="noopener">AuK 腾讯混元</a> — 1.5B 开源语音模型，能生成也能改 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/chengyi-ai/native-subtitle-quote-image" target="_blank" rel="noopener">原生字幕拼图</a> — 保留原字幕取帧，拼 3:4 分享长图 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -956,7 +966,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 154,
+ "numberOfItems": 159,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1881,6 +1891,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 154,
    "name": "Amagine3D",
    "url": "https://github.com/amagine-ai/Amagine3D"
+  },
+  {
+   "@type": "ListItem",
+   "position": 155,
+   "name": "ZCode",
+   "url": "https://zcode.z.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 156,
+   "name": "易创 Easy Writing",
+   "url": "https://github.com/yilujian/easy-writing"
+  },
+  {
+   "@type": "ListItem",
+   "position": 157,
+   "name": "早耳 hayamimi",
+   "url": "https://github.com/oboroge0/hayamimi"
+  },
+  {
+   "@type": "ListItem",
+   "position": 158,
+   "name": "AuK 腾讯混元",
+   "url": "https://auk-project.github.io/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 159,
+   "name": "原生字幕拼图",
+   "url": "https://github.com/chengyi-ai/native-subtitle-quote-image"
   }
  ]
 }
