@@ -557,7 +557,10 @@ const TOOLS=[
   {n:"易创 Easy Writing",why:"稿子全存本机，AI 走自带 Key",c:"AI写作",m:["写作"],d:"AGPL-3.0开源的纯本地网文写作桌面软件(618★,v1.1.0):作品、设定、码字记录全存在本机SQLite,不注册不登录,断网也能写;卷/章目录树、拖拽排序、全书搜索替换、边写边存、码字统计、定时自动备份成txt+json、整本导出都有,由真实网文平台的客户端改造而来,日常写过稿的地方都打磨过。AI部分是BYOK:可配DeepSeek、通义千问、智谱、Kimi及任何OpenAI兼容接口,Ollama、LM Studio等本地模型Key留空即可;提示词全开放成本地md文件,连每个场景的采样温度都能单独调。Windows/macOS有现成安装包,另有浏览器版",u:"https://github.com/yilujian/easy-writing",r:4,re:"纯本地网文写作",f:1,q:"开源免费(AI需自带Key)",g:"https://github.com/yilujian/easy-writing",diff:1,zh:1,hot:2},
   {n:"早耳 hayamimi",why:"纯 CPU 本地实时字幕，不要 Key",c:"音频生成",m:["音频"],d:"MIT开源的实时听写工具(347★):所有模型量化成INT8 ONNX跑sherpa-onnx,不要GPU、不调云API,常驻内存压在2GB以下;不是拿一个通用Whisper硬扛,而是按语种把每句话路由给对应的专门模型(日中韩粤英五条专用线+24种欧洲语言,其余约1600种语言回退Meta Omnilingual),停口后约100ms落定稿,带说话人标签与实时翻译。附带浏览器直播看板和OBS字幕覆盖层,还能把手机/ESP32的麦克风通过WebSocket接入同一条流水线;Windows上可用系统声回环把电脑里正放的声音直接转成字幕。Python3.10+与ffmpeg即可,模型一次下载后离线跑",u:"https://github.com/oboroge0/hayamimi",r:4,re:"纯CPU实时听写",f:1,q:"开源免费",g:"https://github.com/oboroge0/hayamimi",diff:2,zh:2,hot:2},
   {n:"AuK 腾讯混元",why:"1.5B 开源语音模型，能生成也能改",c:"音频生成",m:["音频"],d:"腾讯混元开源的1.5B语音基础模型(1248★,代码与权重走MIT):把生成和编辑合进同一套自然语言指令接口——零样本与指令式TTS、内容编辑(改台词重录)、声学编辑、副语言编辑(情绪语气)、语音增强、人声分离,同一个模型换个说法就能切任务,不用为每件事换工具;另有4步蒸馏的AuK-Flash做快速推理。权重在魔搭与HF双份,官方Gradio在线Demo国内走ModelScope就能试,社区也把它接进ComfyUI当自定义节点。2026-09更新后编码器内存降了约7.5GiB、支持CPU offload与Apple Silicon的MLX推理,消费级显卡也能跑起来",u:"https://auk-project.github.io/",r:4,re:"语音生成编辑一体",f:1,q:"开源免费(权重MIT)",g:"https://github.com/Tencent-Hunyuan/AuK",diff:3,zh:1,hot:2},
-  {n:"原生字幕拼图",why:"保留原字幕取帧，拼 3:4 分享长图",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能包(800★):从本地视频或用得上的在线视频里,按文字稿定位讲得好的那几句,精确取帧后拼成适合社交平台发布的3:4字幕长图——默认1张主图占约70%高度、下面4条台词条各占7.5%,条间距为0,台词之间不留空档。硬字幕不OCR重绘、不翻译改写,画面像素原样保留;脚本字幕会标注来源,不冒充原字幕。输出含字幕区预览、聚焦候选帧、成品JPG、时间点清单与总览图,每张都过一遍质检。可装进Codex等兼容Agent,Python3.10+与ffmpeg即可,URL模式才需要yt-dlp",u:"https://github.com/chengyi-ai/native-subtitle-quote-image",r:3,re:"字幕取帧拼长图",f:1,q:"开源免费",g:"https://github.com/chengyi-ai/native-subtitle-quote-image",diff:2,zh:1,hot:2}
+  {n:"原生字幕拼图",why:"保留原字幕取帧，拼 3:4 分享长图",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能包(800★):从本地视频或用得上的在线视频里,按文字稿定位讲得好的那几句,精确取帧后拼成适合社交平台发布的3:4字幕长图——默认1张主图占约70%高度、下面4条台词条各占7.5%,条间距为0,台词之间不留空档。硬字幕不OCR重绘、不翻译改写,画面像素原样保留;脚本字幕会标注来源,不冒充原字幕。输出含字幕区预览、聚焦候选帧、成品JPG、时间点清单与总览图,每张都过一遍质检。可装进Codex等兼容Agent,Python3.10+与ffmpeg即可,URL模式才需要yt-dlp",u:"https://github.com/chengyi-ai/native-subtitle-quote-image",r:3,re:"字幕取帧拼长图",f:1,q:"开源免费",g:"https://github.com/chengyi-ai/native-subtitle-quote-image",diff:2,zh:1,hot:2},
+{n:"去AI味 qu-ai-wei",why:"MIT，专治中文AI味，不编事实不降格",c:"AI写作",m:["写作"],d:"MIT开源的简体中文改写skill(606★,v0.9.1):重组句子、段落与长文的信息结构,清理中文AI味最重的那几类——空转的引入(随着…发展/在…背景下)、只强调不增信息的值得一提、反复对称的「不是X而是Y」「不仅X更Y」、被硬拆成「首先其次最后」的个人叙述,以及翻译腔与过度工整的表达。边界写得比功能还清楚:不改事实、不替作者编观点经历和细节,不会把技术文档/公文/学术文字统一改成聊天口气,照原文声口保留正式程度;只贴原文不要求编辑时它会停手。附10类中文AI味结构对照表(哪类该改、哪类该留)与边界案例,可装进Codex/Claude Code/Cursor/OpenCode/Kimi Code等兼容Agent",u:"https://github.com/LifelongLazyLearner/qu-ai-wei",r:4,re:"中文去AI味改写",f:1,q:"开源免费",g:"https://github.com/LifelongLazyLearner/qu-ai-wei",diff:2,zh:1,hot:2},
+{n:"OpenHiggsfield",why:"38个模型一条提示栏，能整站自部署",c:"视频生成",m:["图像","视频"],d:"代码公开、可整站自托管的生图生视频工作台(3734★,Next.js 16+React 19,现成托管站openhiggsfield.ai国内可直接打开):一个composer同时驱动两类产出,选哪个模型决定出图还是出片;模型目录共38个(8个生图+30个生视频,含Seedance 2.5/2.0、可灵3系列、万相Wan、Qwen、Flux、Ideogram、Recraft、LTX、MiniMax、PixVerse等),每个模型自己声明可用参数(比例/分辨率/时长/输出格式/音频/批量/提示词增强),界面只渲染这个模型真正支持的开关,不会给你一排点了报错的选项。支持首帧/尾帧/参考图/视频/音频按角色上传,一次最多4个结果、提交后4秒轮询到出片;成片进画廊,按图/视频/素材/收藏四个视角切换,历史里任何一次结果都能直接当素材复用,删除有6秒撤销。⚠️生成必须填自有平台key(id:secret),属开源壳BYOK——界面免费不等于生成免费;托管站由服务端代收key有盗刷风险,能用建议自己部署",u:"https://openhiggsfield.ai",r:3,re:"38模型一号工作台",f:1,q:"代码公开自托管(生成需自带平台Key)",g:"https://github.com/wide-trace/open-higgsfield",diff:3,zh:3,hot:2},
+{n:"OpenMuse",why:"MIT，自带浏览器与终端的常驻Agent",c:"工作流Agent",m:["Agent"],d:"CopilotKit开源的常驻个人Agent应用(MIT,2178★,React Native三端,iOS/Android/Web都能用):不是又一个聊天框,而是一台「Agent电脑」——常驻Chromium加可选隔离Linux终端,能自己开网页、跑命令、动文件、把PDF在电脑与应用之间搬运;任务以持久计划的形式列出来,带进度、输入请求、暂停/继续/取消/重试、审批与执行回执,进程中断用SQL租约恢复。另有邮箱与日历适配器、目标与定时盯页(价格或文案变化去重告警)、消费CSV汇总、内联的邮件/浏览器/PDF/计划/财务卡片;看不下去时可以点接管,用同一浏览器会话自己接着干。自部署要Node 24+pnpm与CopilotKit Intelligence项目key,委派工作可接OpenAI兼容端点(能指向DeepSeek等国产API),本地样例模式不需要模型",u:"https://github.com/CopilotKit/OpenMuse",r:3,re:"常驻个人Agent三端",f:1,q:"开源免费(自部署，需项目Key)",g:"https://github.com/CopilotKit/OpenMuse",diff:3,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -795,7 +798,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 159 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 162 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -957,6 +960,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/oboroge0/hayamimi" target="_blank" rel="noopener">早耳 hayamimi</a> — 纯 CPU 本地实时字幕，不要 Key <span class="nb-cat">音频生成</span></li>
       <li><a href="https://auk-project.github.io/" target="_blank" rel="noopener">AuK 腾讯混元</a> — 1.5B 开源语音模型，能生成也能改 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/chengyi-ai/native-subtitle-quote-image" target="_blank" rel="noopener">原生字幕拼图</a> — 保留原字幕取帧，拼 3:4 分享长图 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/LifelongLazyLearner/qu-ai-wei" target="_blank" rel="noopener">去AI味 qu-ai-wei</a> — MIT，专治中文AI味，不编事实不降格 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://openhiggsfield.ai" target="_blank" rel="noopener">OpenHiggsfield</a> — 38个模型一条提示栏，能整站自部署 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/CopilotKit/OpenMuse" target="_blank" rel="noopener">OpenMuse</a> — MIT，自带浏览器与终端的常驻Agent <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -966,7 +972,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 159,
+ "numberOfItems": 162,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1921,6 +1927,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 159,
    "name": "原生字幕拼图",
    "url": "https://github.com/chengyi-ai/native-subtitle-quote-image"
+  },
+  {
+   "@type": "ListItem",
+   "position": 160,
+   "name": "去AI味 qu-ai-wei",
+   "url": "https://github.com/LifelongLazyLearner/qu-ai-wei"
+  },
+  {
+   "@type": "ListItem",
+   "position": 161,
+   "name": "OpenHiggsfield",
+   "url": "https://openhiggsfield.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 162,
+   "name": "OpenMuse",
+   "url": "https://github.com/CopilotKit/OpenMuse"
   }
  ]
 }
