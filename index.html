@@ -561,7 +561,12 @@ const TOOLS=[
   {n:"原生字幕拼图",why:"保留原字幕取帧，拼 3:4 分享长图",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能包(800★):从本地视频或用得上的在线视频里,按文字稿定位讲得好的那几句,精确取帧后拼成适合社交平台发布的3:4字幕长图——默认1张主图占约70%高度、下面4条台词条各占7.5%,条间距为0,台词之间不留空档。硬字幕不OCR重绘、不翻译改写,画面像素原样保留;脚本字幕会标注来源,不冒充原字幕。输出含字幕区预览、聚焦候选帧、成品JPG、时间点清单与总览图,每张都过一遍质检。可装进Codex等兼容Agent,Python3.10+与ffmpeg即可,URL模式才需要yt-dlp",u:"https://github.com/chengyi-ai/native-subtitle-quote-image",r:3,re:"字幕取帧拼长图",f:1,q:"开源免费",g:"https://github.com/chengyi-ai/native-subtitle-quote-image",diff:2,zh:1,hot:2},
 {n:"去AI味 qu-ai-wei",why:"MIT，专治中文AI味，不编事实不降格",c:"AI写作",m:["写作"],d:"MIT开源的简体中文改写skill(606★,v0.9.1):重组句子、段落与长文的信息结构,清理中文AI味最重的那几类——空转的引入(随着…发展/在…背景下)、只强调不增信息的值得一提、反复对称的「不是X而是Y」「不仅X更Y」、被硬拆成「首先其次最后」的个人叙述,以及翻译腔与过度工整的表达。边界写得比功能还清楚:不改事实、不替作者编观点经历和细节,不会把技术文档/公文/学术文字统一改成聊天口气,照原文声口保留正式程度;只贴原文不要求编辑时它会停手。附10类中文AI味结构对照表(哪类该改、哪类该留)与边界案例,可装进Codex/Claude Code/Cursor/OpenCode/Kimi Code等兼容Agent",u:"https://github.com/LifelongLazyLearner/qu-ai-wei",r:4,re:"中文去AI味改写",f:1,q:"开源免费",g:"https://github.com/LifelongLazyLearner/qu-ai-wei",diff:2,zh:1,hot:2},
 {n:"OpenHiggsfield",why:"38个模型一条提示栏，能整站自部署",c:"视频生成",m:["图像","视频"],d:"代码公开、可整站自托管的生图生视频工作台(3734★,Next.js 16+React 19,现成托管站openhiggsfield.ai国内可直接打开):一个composer同时驱动两类产出,选哪个模型决定出图还是出片;模型目录共38个(8个生图+30个生视频,含Seedance 2.5/2.0、可灵3系列、万相Wan、Qwen、Flux、Ideogram、Recraft、LTX、MiniMax、PixVerse等),每个模型自己声明可用参数(比例/分辨率/时长/输出格式/音频/批量/提示词增强),界面只渲染这个模型真正支持的开关,不会给你一排点了报错的选项。支持首帧/尾帧/参考图/视频/音频按角色上传,一次最多4个结果、提交后4秒轮询到出片;成片进画廊,按图/视频/素材/收藏四个视角切换,历史里任何一次结果都能直接当素材复用,删除有6秒撤销。⚠️生成必须填自有平台key(id:secret),属开源壳BYOK——界面免费不等于生成免费;托管站由服务端代收key有盗刷风险,能用建议自己部署",u:"https://openhiggsfield.ai",r:3,re:"38模型一号工作台",f:1,q:"代码公开自托管(生成需自带平台Key)",g:"https://github.com/wide-trace/open-higgsfield",diff:3,zh:3,hot:2},
-{n:"OpenMuse",why:"MIT，自带浏览器与终端的常驻Agent",c:"工作流Agent",m:["Agent"],d:"CopilotKit开源的常驻个人Agent应用(MIT,2178★,React Native三端,iOS/Android/Web都能用):不是又一个聊天框,而是一台「Agent电脑」——常驻Chromium加可选隔离Linux终端,能自己开网页、跑命令、动文件、把PDF在电脑与应用之间搬运;任务以持久计划的形式列出来,带进度、输入请求、暂停/继续/取消/重试、审批与执行回执,进程中断用SQL租约恢复。另有邮箱与日历适配器、目标与定时盯页(价格或文案变化去重告警)、消费CSV汇总、内联的邮件/浏览器/PDF/计划/财务卡片;看不下去时可以点接管,用同一浏览器会话自己接着干。自部署要Node 24+pnpm与CopilotKit Intelligence项目key,委派工作可接OpenAI兼容端点(能指向DeepSeek等国产API),本地样例模式不需要模型",u:"https://github.com/CopilotKit/OpenMuse",r:3,re:"常驻个人Agent三端",f:1,q:"开源免费(自部署，需项目Key)",g:"https://github.com/CopilotKit/OpenMuse",diff:3,zh:3,hot:2}
+{n:"OpenMuse",why:"MIT，自带浏览器与终端的常驻Agent",c:"工作流Agent",m:["Agent"],d:"CopilotKit开源的常驻个人Agent应用(MIT,2178★,React Native三端,iOS/Android/Web都能用):不是又一个聊天框,而是一台「Agent电脑」——常驻Chromium加可选隔离Linux终端,能自己开网页、跑命令、动文件、把PDF在电脑与应用之间搬运;任务以持久计划的形式列出来,带进度、输入请求、暂停/继续/取消/重试、审批与执行回执,进程中断用SQL租约恢复。另有邮箱与日历适配器、目标与定时盯页(价格或文案变化去重告警)、消费CSV汇总、内联的邮件/浏览器/PDF/计划/财务卡片;看不下去时可以点接管,用同一浏览器会话自己接着干。自部署要Node 24+pnpm与CopilotKit Intelligence项目key,委派工作可接OpenAI兼容端点(能指向DeepSeek等国产API),本地样例模式不需要模型",u:"https://github.com/CopilotKit/OpenMuse",r:3,re:"常驻个人Agent三端",f:1,q:"开源免费(自部署，需项目Key)",g:"https://github.com/CopilotKit/OpenMuse",diff:3,zh:3,hot:2},
+{n:"JIZURA 字面",why:"粘歌词就出歌词MV，零安装免费",c:"视频生成",m:["视频"],d:"MIT开源的浏览器文字PV工具(568★):把歌词粘进去,它按歌词MV的常用手法自动组切——布局/动效/装饰/转场/收尾拆成860个小部件×27种风格,每次组合都换一套,改随机种子就是全新一版。可读入歌曲自动检测拍点让画面卡在鼓点上,也能手动敲拍同步;导出带音轨的MP4、PNG序列、透明PNG,还能出绿幕/黑底素材供后期合成,AE用户另有工程JSON与面板(脚本版+CEP版)。全程在浏览器里算,歌词与音频不上传(只加载Google字体),有简体中文页面",u:"https://852wa.github.io/JIZURA/zh-hans/",r:4,re:"零安装出歌词MV",f:1,q:"免费",g:"https://github.com/852wa/JIZURA",diff:1,zh:1,hot:2},
+{n:"YuE2 Studio",why:"Windows一键装，本地离线出整首歌",c:"音频生成",m:["音频"],d:"把开源音乐模型YuE2封装成Windows原生桌面应用(MIT,166★,基于yue2.cpp,运行时不依赖Python):填风格标签加自己的歌词,先生成一份可编辑乐谱,再把乐谱唱成48kHz整首歌。附逐词卡拉OK时间轴、GPU六轨分离(鼓/贝斯/其他/人声/吉他/钢琴)、音轨转MIDI、音色参考翻唱、同一乐谱换音色重渲染;安装包带自动更新,另有免安装便携版,模型首次下载后可全离线跑,生成不限次数。⚠️需NVIDIA显卡6GB显存起(无显卡可退CPU但慢),模型权重另占4-10GB;权重许可为CC BY-NC 4.0(个人创作者可自用并变现,公司商用需向原作者取得授权),安装包建议走代理下载",u:"https://timoncool.github.io/YuE2-Studio/zh.html",r:4,re:"本地出一整首歌",f:1,q:"开源免费(模型非商用)",g:"https://github.com/timoncool/YuE2-Studio",diff:2,zh:1,hot:3},
+{n:"LiveStream Agent Studio",why:"抖音直播电商复盘做成一整条工作流",c:"工作流Agent",m:["Agent"],d:"MIT开源的Windows本地AI工作台(1025★,中文界面),把主播发现、直播拆解、话术与流量复盘、短视频编导放进一个入口:读你账号可见的蝉妈妈榜单/主播页,出结构化达人拆解;把整场直播录屏转成带秒级时间戳的逐字稿并导出Excel;再把逐字稿与巨量百应分钟流量表对齐,标出讲哪句话时进了多少人、谁走了、哪个商品被曝光点击;短视频端可粘贴参考链接,提取真实逐字稿后产出原创脚本、分镜与拍摄建议。任务记录、数据库与产出文件都在本机workspace,蝉妈妈与抖音登录态存本地专用浏览器profile,Key只写进被Git忽略的本地.env。⚠️需自备阿里云百炼DashScope Key、私有OSS Bucket与限定前缀的RAM AccessKey,云端转写按量计费",u:"https://github.com/HanyuanWang/LiveStream-Agent-Studio",r:4,re:"直播电商Agent",f:1,q:"开源免费(转写/模型自备阿里云Key)",g:"https://github.com/HanyuanWang/LiveStream-Agent-Studio",diff:2,zh:1,hot:2},
+{n:"Bang Motion",why:"让Agent做出像视频的开场与产品演示",c:"视频生成",m:["视频"],d:"MIT开源的动态图形技能(523★,Claude Code/Codex/Cursor/Gemini CLI都能用):把开场片头、产品发布、应用演示、动态字体、解说片写成Agent能自查的规则——一个连续的世界、真的会动的镜头、贯穿全场的主体、活在场景里的文字,产出是单个index.html,播起来像视频而不是翻页PPT。风格不靠模板堆:先强制写一份品牌风格简报,再从概念菜单里选结构,所以每个项目长得都不一样;另附五种解说风格与成套示例。纯前端产物,不需要任何生成模型的API Key",u:"https://github.com/bangtutorial/bang-motion",r:4,re:"像视频的动效片",f:1,q:"开源免费(需Agent)",g:"https://github.com/bangtutorial/bang-motion",diff:2,zh:3,hot:2},
+{n:"Three.js 古建营造",why:"一句话出会自己搭建的古建3D网站",c:"3D创作",m:["3D"],d:"中文作者开源的Agent技能(292★,MIT,Codex/Claude Code/Cursor可用):给一句话就生成一个真正可绕转的三维建筑网站,砖层、木构、斗拱、层层屋檐按一条0-1时间轴逐块拼装,能播放、暂停、往回拖、重播;砖/木/灰泥/瓦/石/铜全是程序化PBR材质,不买模型也不靠贴图,另配屋檐与石狮的特写机位。输出是可运行的Vite+React+Three.js工程(npm ci && npm run dev),示例为一座钟楼;全程不需要任何API Key",u:"https://github.com/lhlGitHub/threejs-architecture-effects",r:3,re:"古建3D网站",f:1,q:"开源免费(需Agent)",g:"https://github.com/lhlGitHub/threejs-architecture-effects",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -799,7 +804,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 162 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 167 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -964,6 +969,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/LifelongLazyLearner/qu-ai-wei" target="_blank" rel="noopener">去AI味 qu-ai-wei</a> — MIT，专治中文AI味，不编事实不降格 <span class="nb-cat">AI写作</span></li>
       <li><a href="https://openhiggsfield.ai" target="_blank" rel="noopener">OpenHiggsfield</a> — 38个模型一条提示栏，能整站自部署 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/CopilotKit/OpenMuse" target="_blank" rel="noopener">OpenMuse</a> — MIT，自带浏览器与终端的常驻Agent <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://852wa.github.io/JIZURA/zh-hans/" target="_blank" rel="noopener">JIZURA 字面</a> — 粘歌词就出歌词MV，零安装免费 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://timoncool.github.io/YuE2-Studio/zh.html" target="_blank" rel="noopener">YuE2 Studio</a> — Windows一键装，本地离线出整首歌 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/HanyuanWang/LiveStream-Agent-Studio" target="_blank" rel="noopener">LiveStream Agent Studio</a> — 抖音直播电商复盘做成一整条工作流 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/bangtutorial/bang-motion" target="_blank" rel="noopener">Bang Motion</a> — 让Agent做出像视频的开场与产品演示 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/lhlGitHub/threejs-architecture-effects" target="_blank" rel="noopener">Three.js 古建营造</a> — 一句话出会自己搭建的古建3D网站 <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -973,7 +983,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 162,
+ "numberOfItems": 167,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1946,6 +1956,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 162,
    "name": "OpenMuse",
    "url": "https://github.com/CopilotKit/OpenMuse"
+  },
+  {
+   "@type": "ListItem",
+   "position": 163,
+   "name": "JIZURA 字面",
+   "url": "https://852wa.github.io/JIZURA/zh-hans/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 164,
+   "name": "YuE2 Studio",
+   "url": "https://timoncool.github.io/YuE2-Studio/zh.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 165,
+   "name": "LiveStream Agent Studio",
+   "url": "https://github.com/HanyuanWang/LiveStream-Agent-Studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 166,
+   "name": "Bang Motion",
+   "url": "https://github.com/bangtutorial/bang-motion"
+  },
+  {
+   "@type": "ListItem",
+   "position": 167,
+   "name": "Three.js 古建营造",
+   "url": "https://github.com/lhlGitHub/threejs-architecture-effects"
   }
  ]
 }
