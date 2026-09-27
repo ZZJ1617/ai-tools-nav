@@ -566,7 +566,13 @@ const TOOLS=[
 {n:"YuE2 Studio",why:"Windows一键装，本地离线出整首歌",c:"音频生成",m:["音频"],d:"把开源音乐模型YuE2封装成Windows原生桌面应用(MIT,166★,基于yue2.cpp,运行时不依赖Python):填风格标签加自己的歌词,先生成一份可编辑乐谱,再把乐谱唱成48kHz整首歌。附逐词卡拉OK时间轴、GPU六轨分离(鼓/贝斯/其他/人声/吉他/钢琴)、音轨转MIDI、音色参考翻唱、同一乐谱换音色重渲染;安装包带自动更新,另有免安装便携版,模型首次下载后可全离线跑,生成不限次数。⚠️需NVIDIA显卡6GB显存起(无显卡可退CPU但慢),模型权重另占4-10GB;权重许可为CC BY-NC 4.0(个人创作者可自用并变现,公司商用需向原作者取得授权),安装包建议走代理下载",u:"https://timoncool.github.io/YuE2-Studio/zh.html",r:4,re:"本地出一整首歌",f:1,q:"开源免费(模型非商用)",g:"https://github.com/timoncool/YuE2-Studio",diff:2,zh:1,hot:3},
 {n:"LiveStream Agent Studio",why:"抖音直播电商复盘做成一整条工作流",c:"工作流Agent",m:["Agent"],d:"MIT开源的Windows本地AI工作台(1025★,中文界面),把主播发现、直播拆解、话术与流量复盘、短视频编导放进一个入口:读你账号可见的蝉妈妈榜单/主播页,出结构化达人拆解;把整场直播录屏转成带秒级时间戳的逐字稿并导出Excel;再把逐字稿与巨量百应分钟流量表对齐,标出讲哪句话时进了多少人、谁走了、哪个商品被曝光点击;短视频端可粘贴参考链接,提取真实逐字稿后产出原创脚本、分镜与拍摄建议。任务记录、数据库与产出文件都在本机workspace,蝉妈妈与抖音登录态存本地专用浏览器profile,Key只写进被Git忽略的本地.env。⚠️需自备阿里云百炼DashScope Key、私有OSS Bucket与限定前缀的RAM AccessKey,云端转写按量计费",u:"https://github.com/HanyuanWang/LiveStream-Agent-Studio",r:4,re:"直播电商Agent",f:1,q:"开源免费(转写/模型自备阿里云Key)",g:"https://github.com/HanyuanWang/LiveStream-Agent-Studio",diff:2,zh:1,hot:2},
 {n:"Bang Motion",why:"让Agent做出像视频的开场与产品演示",c:"视频生成",m:["视频"],d:"MIT开源的动态图形技能(523★,Claude Code/Codex/Cursor/Gemini CLI都能用):把开场片头、产品发布、应用演示、动态字体、解说片写成Agent能自查的规则——一个连续的世界、真的会动的镜头、贯穿全场的主体、活在场景里的文字,产出是单个index.html,播起来像视频而不是翻页PPT。风格不靠模板堆:先强制写一份品牌风格简报,再从概念菜单里选结构,所以每个项目长得都不一样;另附五种解说风格与成套示例。纯前端产物,不需要任何生成模型的API Key",u:"https://github.com/bangtutorial/bang-motion",r:4,re:"像视频的动效片",f:1,q:"开源免费(需Agent)",g:"https://github.com/bangtutorial/bang-motion",diff:2,zh:3,hot:2},
-{n:"Three.js 古建营造",why:"一句话出会自己搭建的古建3D网站",c:"3D创作",m:["3D"],d:"中文作者开源的Agent技能(292★,MIT,Codex/Claude Code/Cursor可用):给一句话就生成一个真正可绕转的三维建筑网站,砖层、木构、斗拱、层层屋檐按一条0-1时间轴逐块拼装,能播放、暂停、往回拖、重播;砖/木/灰泥/瓦/石/铜全是程序化PBR材质,不买模型也不靠贴图,另配屋檐与石狮的特写机位。输出是可运行的Vite+React+Three.js工程(npm ci && npm run dev),示例为一座钟楼;全程不需要任何API Key",u:"https://github.com/lhlGitHub/threejs-architecture-effects",r:3,re:"古建3D网站",f:1,q:"开源免费(需Agent)",g:"https://github.com/lhlGitHub/threejs-architecture-effects",diff:2,zh:1,hot:2}
+{n:"Three.js 古建营造",why:"一句话出会自己搭建的古建3D网站",c:"3D创作",m:["3D"],d:"中文作者开源的Agent技能(292★,MIT,Codex/Claude Code/Cursor可用):给一句话就生成一个真正可绕转的三维建筑网站,砖层、木构、斗拱、层层屋檐按一条0-1时间轴逐块拼装,能播放、暂停、往回拖、重播;砖/木/灰泥/瓦/石/铜全是程序化PBR材质,不买模型也不靠贴图,另配屋檐与石狮的特写机位。输出是可运行的Vite+React+Three.js工程(npm ci && npm run dev),示例为一座钟楼;全程不需要任何API Key",u:"https://github.com/lhlGitHub/threejs-architecture-effects",r:3,re:"古建3D网站",f:1,q:"开源免费(需Agent)",g:"https://github.com/lhlGitHub/threejs-architecture-effects",diff:2,zh:1,hot:2},
+{n:"magpie",why:"一个菜单栏管住所有 Agent 的模型",c:"工作流Agent",m:["Agent"],d:"MIT开源的模型路由小工具(1186★,macOS/Windows/Linux三端,单文件<15MB):把本机所有Agent的模型选择收进一处,菜单栏点一下就能把Codex切到DeepSeek、Claude Code切到Kimi、Gemini CLI切到GLM。自带本地网关(127.0.0.1:3425)把OpenAI Chat、Responses与Anthropic Messages三种协议互转,Agent不再各自持有厂商key与url;改配置只动你要改的那一个键,注释与缩进原样保留、写入原子化;登录过的Claude Code/Codex/Copilot订阅会变成provider给所有Agent共用;预设含DeepSeek/Kimi/GLM/MiniMax/通义/Ollama/LM Studio等,模型列表按厂商实时拉取,支持把整套设置存成profile一键切换;含Hermes Agent/ZCode/OpenCode/Cursor CLI等20余种Agent。⚠️模型费用仍按各家API计费",u:"https://usemagpie.ai",r:4,re:"Agent模型一处切",f:1,q:"开源免费(BYOK)",g:"https://github.com/yetone/magpie",diff:2,zh:3,hot:3},
+{n:"yovoice",why:"本地配音与声音克隆，不吃字数费",c:"音频生成",m:["音频"],d:"Apache-2.0开源的本地语音工作台(197★,macOS 14+与Windows 10/11都有安装包,另有Linux CLI):把IndexTTS 2.0/2.5、VoxCPM2、OmniVoice、Qwen3-TTS收进一个界面,导入或现录1-60秒参考音即可克隆音色,可调情绪、按参考片段模仿语气,也能只用一段文字描述设计出一个从未存在的声音,输出48kHz。带配音工程管理:裁剪、试听、多版本导出;模型在应用内断点续传下载(支持GGUF导入),Apple Silicon走Metal、Windows可下CUDA包或走CPU/Vulkan,全离线、不调云端API、不按字符收费;另附Agent技能可让Agent自己搭本地语音生成。⚠️OmniVoice权重为CC-BY-NC(不可商用),其余模型许可各异,商用前逐项确认",u:"https://yovoice.leemysw.com",r:4,re:"本地TTS+克隆",f:1,q:"开源免费(部分模型非商用)",g:"https://github.com/leemysw/yovoice",diff:2,zh:1,hot:2},
+{n:"ACE-Step Studio",why:"4GB显存本地出整首带人声的歌",c:"音频生成",m:["音频"],d:"MIT开源的Windows本地音乐工作室(356★,基于acestep.cpp原生版,单可执行文件、运行时不依赖Python/Node):填一段风格描述加歌词,或用一句话让它自己写词曲,ACE-Step 1.5的planner先排好段落结构再由DiT渲染成最长十分钟的整首歌(带人声)。附翻唱/remix/局部重绘、131个LoRA目录、拿自己几首歌在显卡上训LoRA、GPU六轨分离(鼓/贝斯/其他/人声/吉他/钢琴)、任意音轨转MIDI、逐词卡拉OK时间轴、降噪与母带处理、VST3插件链、出歌词视频,另有Winamp复古播放器(十段均衡器+MilkDrop)与200条官方示例。软件与默认模型均为MIT,用它生成的歌可商用;模型集3.1-18.5GB按显卡选,4GB显存起,内置HTTP/HTTPS/SOCKS5代理便于下载,界面含中文。⚠️2.0起只有Windows构建,无独显会退CPU慢跑",u:"https://timoncool.github.io/ACE-Step-Studio/zh.html",r:4,re:"本地出整首歌",f:1,q:"开源免费",g:"https://github.com/timoncool/ACE-Step-Studio",diff:2,zh:1,hot:3},
+{n:"3dicon",why:"一句话出带真透明的循环3D图标",c:"3D创作",m:["3D"],d:"MIT开源的Claude Code插件技能(475★):说一句「做一个3D火焰图标」,它先出静图给你确认,再让画面动起来,最后交一个带真实alpha通道的循环动画WebP,可直接丢进App或网页UI。循环不接口子的做法很巧:同一张静图同时当作第一帧与最后一帧送去生成;背景按自选底色精确抠除,所以软边缘不会发白边。全流程走OpenRouter,静图与动效一个key覆盖,首次运行下180MB抠图模型,需本机有ffmpeg。⚠️要自备OpenRouter Key,生成按量计费",u:"https://github.com/samyost1/3dicon",r:3,re:"循环3D图标",f:1,q:"开源免费(BYOK)",g:"https://github.com/samyost1/3dicon",diff:2,zh:3,hot:2},
+{n:"qiaomu-download",why:"跟Agent说一句「下载这个」就存好",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能(348★):把链接丢给Claude Code/Codex等Agent说一句「下载这个」,它自己识别页面里的视频或单曲并保存——YouTube/Shorts、B站/b23.tv、抖音、TikTok、小红书、X、Instagram、Facebook、Vimeo、Twitch、Reddit、微博、SoundCloud用同一句表达,视频号与Spotify单曲有内置适配器(Spotify只借公开曲目信息配YouTube音源,不碰加密流)。每个任务先查yt-dlp官方stable并按现有包管理器升级;公开访问优先,失败才按需用本机浏览器Cookie;下载后用ffprobe验真(流/时长/分辨率/体积)再返回可点击的绝对路径;默认单链接、禁播放列表扩张、禁覆盖、重复任务加锁。⚠️不做登录与验证码自动化,受账号限制的内容仍需你自己处理",u:"https://github.com/joeseesun/qiaomu-download",r:4,re:"一句话下载素材",f:1,q:"开源免费(需Agent)",g:"https://github.com/joeseesun/qiaomu-download",diff:2,zh:1,hot:2}
+
 ];
 
 // ===== 已停服工具归档 =====
@@ -804,7 +810,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 167 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 172 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -974,6 +980,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/HanyuanWang/LiveStream-Agent-Studio" target="_blank" rel="noopener">LiveStream Agent Studio</a> — 抖音直播电商复盘做成一整条工作流 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://github.com/bangtutorial/bang-motion" target="_blank" rel="noopener">Bang Motion</a> — 让Agent做出像视频的开场与产品演示 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/lhlGitHub/threejs-architecture-effects" target="_blank" rel="noopener">Three.js 古建营造</a> — 一句话出会自己搭建的古建3D网站 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://usemagpie.ai" target="_blank" rel="noopener">magpie</a> — 一个菜单栏管住所有 Agent 的模型 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://yovoice.leemysw.com" target="_blank" rel="noopener">yovoice</a> — 本地配音与声音克隆，不吃字数费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://timoncool.github.io/ACE-Step-Studio/zh.html" target="_blank" rel="noopener">ACE-Step Studio</a> — 4GB显存本地出整首带人声的歌 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/samyost1/3dicon" target="_blank" rel="noopener">3dicon</a> — 一句话出带真透明的循环3D图标 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/joeseesun/qiaomu-download" target="_blank" rel="noopener">qiaomu-download</a> — 跟Agent说一句「下载这个」就存好 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -983,7 +994,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 167,
+ "numberOfItems": 172,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -1986,6 +1997,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 167,
    "name": "Three.js 古建营造",
    "url": "https://github.com/lhlGitHub/threejs-architecture-effects"
+  },
+  {
+   "@type": "ListItem",
+   "position": 168,
+   "name": "magpie",
+   "url": "https://usemagpie.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 169,
+   "name": "yovoice",
+   "url": "https://yovoice.leemysw.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 170,
+   "name": "ACE-Step Studio",
+   "url": "https://timoncool.github.io/ACE-Step-Studio/zh.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 171,
+   "name": "3dicon",
+   "url": "https://github.com/samyost1/3dicon"
+  },
+  {
+   "@type": "ListItem",
+   "position": 172,
+   "name": "qiaomu-download",
+   "url": "https://github.com/joeseesun/qiaomu-download"
   }
  ]
 }
