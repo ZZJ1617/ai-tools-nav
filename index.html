@@ -567,7 +567,11 @@ const TOOLS=[
 {n:"yovoice",why:"本地配音与声音克隆，不吃字数费",c:"音频生成",m:["音频"],d:"Apache-2.0开源的本地语音工作台(229★,macOS 14+与Windows 10/11都有安装包,另有Linux CLI):把IndexTTS 2.0/2.5、VoxCPM2、OmniVoice、Qwen3-TTS收进一个界面,导入或现录1-60秒参考音即可克隆音色,可调情绪、按参考片段模仿语气,也能只用一段文字描述设计出一个从未存在的声音,输出48kHz。带配音工程管理:裁剪、试听、多版本导出;模型在应用内断点续传下载(支持GGUF导入),Apple Silicon走Metal、Windows可下CUDA包或走CPU/Vulkan,全离线、不调云端API、不按字符收费;另附Agent技能可让Agent自己搭本地语音生成。⚠️OmniVoice权重为CC-BY-NC(不可商用),其余模型许可各异,商用前逐项确认",u:"https://yovoice.leemysw.com",r:4,re:"本地TTS+克隆",f:1,q:"开源免费(部分模型非商用)",g:"https://github.com/leemysw/yovoice",diff:2,zh:1,hot:2},
 {n:"ACE-Step Studio",why:"4GB显存本地出整首带人声的歌",c:"音频生成",m:["音频"],d:"MIT开源的Windows本地音乐工作室(356★,基于acestep.cpp原生版,单可执行文件、运行时不依赖Python/Node):填一段风格描述加歌词,或用一句话让它自己写词曲,ACE-Step 1.5的planner先排好段落结构再由DiT渲染成最长十分钟的整首歌(带人声)。附翻唱/remix/局部重绘、131个LoRA目录、拿自己几首歌在显卡上训LoRA、GPU六轨分离(鼓/贝斯/其他/人声/吉他/钢琴)、任意音轨转MIDI、逐词卡拉OK时间轴、降噪与母带处理、VST3插件链、出歌词视频,另有Winamp复古播放器(十段均衡器+MilkDrop)与200条官方示例。软件与默认模型均为MIT,用它生成的歌可商用;模型集3.1-18.5GB按显卡选,4GB显存起,内置HTTP/HTTPS/SOCKS5代理便于下载,界面含中文。⚠️2.0起只有Windows构建,无独显会退CPU慢跑",u:"https://timoncool.github.io/ACE-Step-Studio/zh.html",r:4,re:"本地出整首歌",f:1,q:"开源免费",g:"https://github.com/timoncool/ACE-Step-Studio",diff:2,zh:1,hot:3},
 {n:"3dicon",why:"一句话出带真透明的循环3D图标",c:"3D创作",m:["3D"],d:"MIT开源的Claude Code插件技能(500★):说一句「做一个3D火焰图标」,它先出静图给你确认,再让画面动起来,最后交一个带真实alpha通道的循环动画WebP,可直接丢进App或网页UI。循环不接口子的做法很巧:同一张静图同时当作第一帧与最后一帧送去生成;背景按自选底色精确抠除,所以软边缘不会发白边。全流程走OpenRouter,静图与动效一个key覆盖,首次运行下180MB抠图模型,需本机有ffmpeg。⚠️要自备OpenRouter Key,生成按量计费",u:"https://github.com/samyost1/3dicon",r:3,re:"循环3D图标",f:1,q:"开源免费(BYOK)",g:"https://github.com/samyost1/3dicon",diff:2,zh:3,hot:2},
-{n:"qiaomu-download",why:"跟Agent说一句「下载这个」就存好",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能(348★):把链接丢给Claude Code/Codex等Agent说一句「下载这个」,它自己识别页面里的视频或单曲并保存——YouTube/Shorts、B站/b23.tv、抖音、TikTok、小红书、X、Instagram、Facebook、Vimeo、Twitch、Reddit、微博、SoundCloud用同一句表达,视频号与Spotify单曲有内置适配器(Spotify只借公开曲目信息配YouTube音源,不碰加密流)。每个任务先查yt-dlp官方stable并按现有包管理器升级;公开访问优先,失败才按需用本机浏览器Cookie;下载后用ffprobe验真(流/时长/分辨率/体积)再返回可点击的绝对路径;默认单链接、禁播放列表扩张、禁覆盖、重复任务加锁。⚠️不做登录与验证码自动化,受账号限制的内容仍需你自己处理",u:"https://github.com/joeseesun/qiaomu-download",r:4,re:"一句话下载素材",f:1,q:"开源免费(需Agent)",g:"https://github.com/joeseesun/qiaomu-download",diff:2,zh:1,hot:2}
+{n:"qiaomu-download",why:"跟Agent说一句「下载这个」就存好",c:"视频编辑",m:["视频"],d:"MIT开源的Agent技能(348★):把链接丢给Claude Code/Codex等Agent说一句「下载这个」,它自己识别页面里的视频或单曲并保存——YouTube/Shorts、B站/b23.tv、抖音、TikTok、小红书、X、Instagram、Facebook、Vimeo、Twitch、Reddit、微博、SoundCloud用同一句表达,视频号与Spotify单曲有内置适配器(Spotify只借公开曲目信息配YouTube音源,不碰加密流)。每个任务先查yt-dlp官方stable并按现有包管理器升级;公开访问优先,失败才按需用本机浏览器Cookie;下载后用ffprobe验真(流/时长/分辨率/体积)再返回可点击的绝对路径;默认单链接、禁播放列表扩张、禁覆盖、重复任务加锁。⚠️不做登录与验证码自动化,受账号限制的内容仍需你自己处理",u:"https://github.com/joeseesun/qiaomu-download",r:4,re:"一句话下载素材",f:1,q:"开源免费(需Agent)",g:"https://github.com/joeseesun/qiaomu-download",diff:2,zh:1,hot:2},
+{n:"AutoClip",why:"字幕一分析，长视频自动切高光片段",c:"视频编辑",m:["视频"],d:"MIT开源的本地高光剪辑工具(9012★,Python+Tauri桌面版,Windows x64与macOS Apple Silicon各有安装包,包内自带Python与FFmpeg,双击装完就有界面):导入本地视频、YouTube或B站链接(可同时给SRT字幕),它按字幕分析精彩片段、给出片段标题与话题时间线,再生成片段与合集,导出竖屏/横屏1080p并烧字幕与标题卡、自动生成封面,可直接发布或定时发布(B站粘一次Cookie即可);也可开启游戏视觉分析识别录屏高光(需多模态模型)。模型可填Qwen/DeepSeek/豆包/Kimi/GLM等国内云端Key,也可接Ollama/LM Studio完全本地跑;另有Docker/Web、CLI、MCP与Agent技能四种入口,界面含中文。⚠️Windows安装包的安装/导入/保存作者标注仍待实机验证;无字幕时需另配本地Whisper转写;云端模型按各家API计费",u:"https://zhouxiaoka.github.io/autoclip_intro/",r:4,re:"本地切高光",f:1,q:"开源免费(BYOK)",g:"https://github.com/zhouxiaoka/autoclip",diff:2,zh:1,hot:3},
+{n:"BridgeClip",why:"本地找高光切竖屏，逐词字幕9种样式",c:"视频编辑",m:["视频"],d:"MIT开源的桌面切片工具(307★,BridgeMind出品,Windows签名的.exe、macOS已公证的.dmg(Apple Silicon与Intel)与Linux的AppImage/deb同一版本发布,包内自带Python、FFmpeg与yt-dlp):把播客、直播录像或YouTube/Twitch链接丢进去,它先转写带逐词时间戳,再由LLM挑出最精彩的几段,裁成9:16或16:9并烧上逐词高亮字幕;导出前9种字幕样式(Viral/Hormozi/Bold/Clean/Minimal/Fire/Glow/Neon/Karaoke)可实时预览,素材库列病毒指数、时间码与标签,任务队列最多并行两路,可剪掉静音、1×-2×变速且保持音高,成片可选接Zernio账号定时发布;渲染全在本机FFmpeg完成,提交前会给出预估API花费。⚠️转写与片段规划必须走OpenRouter,要自备OpenRouter Key并按量付费(应用本身不收钱),国内注册与充值门槛较高",u:"https://bridgeclip.ai",r:3,re:"本地切竖屏短片",f:1,q:"开源免费(BYOK)",g:"https://github.com/bridge-mind/bridgeclip",diff:2,zh:3,hot:2},
+{n:"BeefTV",why:"画布连线调模型，项目数据全在本机",c:"视频生成",m:["视频"],d:"MIT开源的本地优先视频创作工作台(314★,React+Go+Wails桌面端,Windows amd64与macOS arm64/amd64都有免安装压缩包,解压即用、不注册不登录):在一个自由画布上把角色、场景、分镜、素材与提示词当节点连线,直接生成文字、图片、视频与音频,结果写回画布可继续裁切、标注、局部重绘、拆分、引用与组合,一次生成变成能接着改的工作流;另带项目库、个人资产库、异步任务队列、模型渠道管理与创作工具。数据默认全在本机(SQLite+本地资源目录),模型渠道自由配置、不绑单一Provider、原生适配火山方舟等国内渠道,中文界面与中文更新日志。⚠️2026年9月24日才开源、一周内连发十余版,作者明示数据结构与外部接口仍会变;macOS包未完成公证,首次打开需在「隐私与安全性」里手动允许;模型费用按各家API计费",u:"https://github.com/glanderness/BeefTV",r:3,re:"本地画布工作台",f:1,q:"开源免费(BYOK)",g:"https://github.com/glanderness/BeefTV",diff:2,zh:1,hot:2},
+{n:"zh-tech-writing",why:"按阮一峰规范写中文，专治AI腔",c:"AI写作",m:["写作"],d:"MIT开源的中文写作 Agent 技能(301★,适用于Claude Code及支持Agent Skills的工具):给AI装上一份中文写作规范——逗号隔开的每一截尽量在20字以内、多用肯定句与主动语态、直接把动词用出来不套「进行/做出」、每段第一句说重点、标题不跳级;另附一份14条「AI腔清单」,专门清理开场与结尾套话、「不是A而是B」句式、硬凑三连排比、宣传腔形容词、黑话、破折号与翻译腔,并用具体事实替换「强大/无缝」这类形容词,找不到事实就删掉空话或直接问你。规则整理自阮一峰《中文技术文档的写作规范》,可只出「原句→改后→原因」的清单不改文件;装了autocorrect还会自动补中英文之间的空格、把半角标点改全角。⚠️要挂在使用Agent(如Claude Code)上用,技能本身不含模型",u:"https://github.com/leter/zh-tech-writing",r:3,re:"中文写作去AI腔",f:1,q:"开源免费(需Agent)",g:"https://github.com/leter/zh-tech-writing",diff:1,zh:1,hot:2}
 
 ];
 
@@ -806,7 +810,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 172 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 176 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -856,7 +860,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://creatify.ai/zh/features/agent" target="_blank" rel="noopener">Creatify Agent</a> — 首个广告创意 Agent，链接进去广告出来 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://www.reallusion.com/iclone/" target="_blank" rel="noopener">iClone Personal</a> — 专业 3D 动画软件永久免费版 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite" target="_blank" rel="noopener">TikTok Symphony Agent</a> — 链接输入，调研→脚本→素材→配音全自动 <span class="nb-cat">视频生成</span></li>
-      <li><a href="https://www.openmontage.video/" target="_blank" rel="noopener">OpenMontage</a> — 开源 Agent 驱动视频生产，58.5K⭐ <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.openmontage.video/" target="_blank" rel="noopener">OpenMontage</a> — 开源 Agent 驱动视频生产，61.7K⭐ <span class="nb-cat">视频生成</span></li>
       <li><a href="https://www.canva.com/" target="_blank" rel="noopener">Canva Grow 2.0</a> — 广告创作 + 发布 + 优化一体化 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://www.ttsmaker.cn/" target="_blank" rel="noopener">TTSMaker</a> — 免费可商用，每周 2 万字符不扣配额 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://www.vidu.com/zh/" target="_blank" rel="noopener">Vidu Q3</a> — 清华生数多镜头叙事，16 秒出片、国内直连 <span class="nb-cat">视频生成</span></li>
@@ -866,7 +870,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://www.okaidub.com/" target="_blank" rel="noopener">冬瓜配音</a> — 国产免费，多角色对话无水印 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://worktool.app/zh" target="_blank" rel="noopener">WorkTool</a> — 71 款工具 + DeepSeek，纯前端不上传 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://zhijuu.com" target="_blank" rel="noopener">知剧AI</a> — 小说→分镜→台本，免费在线用 <span class="nb-cat">AI短剧</span></li>
-      <li><a href="https://toonflow.net" target="_blank" rel="noopener">Toonflow</a> — 开源短剧首选，15.2K⭐，Docker 部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://toonflow.net" target="_blank" rel="noopener">Toonflow</a> — 开源短剧首选，16.1K⭐，Docker 部署 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://ailive.perseids.cn" target="_blank" rel="noopener">智剧通 ZJT</a> — 多 Agent 画布协作，开源可自部署 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://catimind.com/" target="_blank" rel="noopener">Catimind</a> — 云端零部署，5 万字剧本批量生产 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://yuanbao.tencent.com/" target="_blank" rel="noopener">腾讯混元Hy3</a> — 295B MoE，元宝永久免费，一句话出 PPT <span class="nb-cat">工作流Agent</span></li>
@@ -951,10 +955,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/ChenShuo2004/cs-board" target="_blank" rel="noopener">CS Board 白板声画工坊</a> — 参考音频加中文文案直达白板动画 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/tigerless-labs/agent-memory" target="_blank" rel="noopener">agent-memory</a> — 记忆是纯 Markdown，本地不要 Key <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://video-editor.ai-creator.top/" target="_blank" rel="noopener">Timeline Studio</a> — 浏览器里本地跑AI剪辑，不要Key <span class="nb-cat">视频编辑</span></li>
-      <li><a href="https://yue.noizai.net/" target="_blank" rel="noopener">YuE2</a> — 9.8k★开源音乐模型,网页可直接试 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://yue.noizai.net/" target="_blank" rel="noopener">YuE2</a> — 1.0万★开源音乐模型,网页可直接试 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/tsunehimatoi/psd2live" target="_blank" rel="noopener">PSD2Live</a> — 分层PSD自动出可编辑Live2D皮套 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/dmoshehun-prog/learn-from-materials" target="_blank" rel="noopener">learn-from-materials</a> — 结论都能追回原文的学习网页 <span class="nb-cat">办公效率</span></li>
-      <li><a href="https://www.printfilm.com" target="_blank" rel="noopener">PRINTFILM</a> — 1.8k★开源短剧平台,Docker全套部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://www.printfilm.com" target="_blank" rel="noopener">PRINTFILM</a> — 3.4k★开源短剧平台,Docker全套部署 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/mangfufu/director-desk" target="_blank" rel="noopener">导演台 DirectorDesk</a> — 下载即用，AI短剧先三维预演再出片 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/QwenLM/Qwen-Image-2.1" target="_blank" rel="noopener">Qwen-Image-2.1</a> — 7B开源权重，直接出RGBA透明图 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/ahujasid/mcp-for-blender" target="_blank" rel="noopener">MCP for Blender</a> — 一句提示词让任意LLM建模改场景 <span class="nb-cat">3D创作</span></li>
@@ -981,6 +985,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://timoncool.github.io/ACE-Step-Studio/zh.html" target="_blank" rel="noopener">ACE-Step Studio</a> — 4GB显存本地出整首带人声的歌 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/samyost1/3dicon" target="_blank" rel="noopener">3dicon</a> — 一句话出带真透明的循环3D图标 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/joeseesun/qiaomu-download" target="_blank" rel="noopener">qiaomu-download</a> — 跟Agent说一句「下载这个」就存好 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://zhouxiaoka.github.io/autoclip_intro/" target="_blank" rel="noopener">AutoClip</a> — 字幕一分析，长视频自动切高光片段 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://bridgeclip.ai" target="_blank" rel="noopener">BridgeClip</a> — 本地找高光切竖屏，逐词字幕9种样式 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/glanderness/BeefTV" target="_blank" rel="noopener">BeefTV</a> — 画布连线调模型，项目数据全在本机 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/leter/zh-tech-writing" target="_blank" rel="noopener">zh-tech-writing</a> — 按阮一峰规范写中文，专治AI腔 <span class="nb-cat">AI写作</span></li>
     </ul>
   </section>
 </noscript>
@@ -990,7 +998,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 172,
+ "numberOfItems": 176,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2023,6 +2031,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 172,
    "name": "qiaomu-download",
    "url": "https://github.com/joeseesun/qiaomu-download"
+  },
+  {
+   "@type": "ListItem",
+   "position": 173,
+   "name": "AutoClip",
+   "url": "https://zhouxiaoka.github.io/autoclip_intro/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 174,
+   "name": "BridgeClip",
+   "url": "https://bridgeclip.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 175,
+   "name": "BeefTV",
+   "url": "https://github.com/glanderness/BeefTV"
+  },
+  {
+   "@type": "ListItem",
+   "position": 176,
+   "name": "zh-tech-writing",
+   "url": "https://github.com/leter/zh-tech-writing"
   }
  ]
 }
