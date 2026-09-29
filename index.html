@@ -568,7 +568,13 @@ const TOOLS=[
 {n:"AutoClip",why:"字幕一分析，长视频自动切高光片段",c:"视频编辑",m:["视频"],d:"MIT开源的本地高光剪辑工具(9012★,Python+Tauri桌面版,Windows x64与macOS Apple Silicon各有安装包,包内自带Python与FFmpeg,双击装完就有界面):导入本地视频、YouTube或B站链接(可同时给SRT字幕),它按字幕分析精彩片段、给出片段标题与话题时间线,再生成片段与合集,导出竖屏/横屏1080p并烧字幕与标题卡、自动生成封面,可直接发布或定时发布(B站粘一次Cookie即可);也可开启游戏视觉分析识别录屏高光(需多模态模型)。模型可填Qwen/DeepSeek/豆包/Kimi/GLM等国内云端Key,也可接Ollama/LM Studio完全本地跑;另有Docker/Web、CLI、MCP与Agent技能四种入口,界面含中文。⚠️Windows安装包的安装/导入/保存作者标注仍待实机验证;无字幕时需另配本地Whisper转写;云端模型按各家API计费",u:"https://zhouxiaoka.github.io/autoclip_intro/",r:4,re:"本地切高光",f:1,q:"开源免费(BYOK)",g:"https://github.com/zhouxiaoka/autoclip",diff:2,zh:1,hot:3},
 {n:"BridgeClip",why:"本地找高光切竖屏，逐词字幕9种样式",c:"视频编辑",m:["视频"],d:"MIT开源的桌面切片工具(307★,BridgeMind出品,Windows签名的.exe、macOS已公证的.dmg(Apple Silicon与Intel)与Linux的AppImage/deb同一版本发布,包内自带Python、FFmpeg与yt-dlp):把播客、直播录像或YouTube/Twitch链接丢进去,它先转写带逐词时间戳,再由LLM挑出最精彩的几段,裁成9:16或16:9并烧上逐词高亮字幕;导出前9种字幕样式(Viral/Hormozi/Bold/Clean/Minimal/Fire/Glow/Neon/Karaoke)可实时预览,素材库列病毒指数、时间码与标签,任务队列最多并行两路,可剪掉静音、1×-2×变速且保持音高,成片可选接Zernio账号定时发布;渲染全在本机FFmpeg完成,提交前会给出预估API花费。⚠️转写与片段规划必须走OpenRouter,要自备OpenRouter Key并按量付费(应用本身不收钱),国内注册与充值门槛较高",u:"https://bridgeclip.ai",r:3,re:"本地切竖屏短片",f:1,q:"开源免费(BYOK)",g:"https://github.com/bridge-mind/bridgeclip",diff:2,zh:3,hot:2},
 {n:"BeefTV",why:"画布连线调模型，项目数据全在本机",c:"视频生成",m:["视频"],d:"MIT开源的本地优先视频创作工作台(314★,React+Go+Wails桌面端,Windows amd64与macOS arm64/amd64都有免安装压缩包,解压即用、不注册不登录):在一个自由画布上把角色、场景、分镜、素材与提示词当节点连线,直接生成文字、图片、视频与音频,结果写回画布可继续裁切、标注、局部重绘、拆分、引用与组合,一次生成变成能接着改的工作流;另带项目库、个人资产库、异步任务队列、模型渠道管理与创作工具。数据默认全在本机(SQLite+本地资源目录),模型渠道自由配置、不绑单一Provider、原生适配火山方舟等国内渠道,中文界面与中文更新日志。⚠️2026年9月24日才开源、一周内连发十余版,作者明示数据结构与外部接口仍会变;macOS包未完成公证,首次打开需在「隐私与安全性」里手动允许;模型费用按各家API计费",u:"https://github.com/glanderness/BeefTV",r:3,re:"本地画布工作台",f:1,q:"开源免费(BYOK)",g:"https://github.com/glanderness/BeefTV",diff:2,zh:1,hot:2},
-{n:"zh-tech-writing",why:"按阮一峰规范写中文，专治AI腔",c:"AI写作",m:["写作"],d:"MIT开源的中文写作 Agent 技能(301★,适用于Claude Code及支持Agent Skills的工具):给AI装上一份中文写作规范——逗号隔开的每一截尽量在20字以内、多用肯定句与主动语态、直接把动词用出来不套「进行/做出」、每段第一句说重点、标题不跳级;另附一份14条「AI腔清单」,专门清理开场与结尾套话、「不是A而是B」句式、硬凑三连排比、宣传腔形容词、黑话、破折号与翻译腔,并用具体事实替换「强大/无缝」这类形容词,找不到事实就删掉空话或直接问你。规则整理自阮一峰《中文技术文档的写作规范》,可只出「原句→改后→原因」的清单不改文件;装了autocorrect还会自动补中英文之间的空格、把半角标点改全角。⚠️要挂在使用Agent(如Claude Code)上用,技能本身不含模型",u:"https://github.com/leter/zh-tech-writing",r:3,re:"中文写作去AI腔",f:1,q:"开源免费(需Agent)",g:"https://github.com/leter/zh-tech-writing",diff:1,zh:1,hot:2}
+{n:"zh-tech-writing",why:"按阮一峰规范写中文，专治AI腔",c:"AI写作",m:["写作"],d:"MIT开源的中文写作 Agent 技能(301★,适用于Claude Code及支持Agent Skills的工具):给AI装上一份中文写作规范——逗号隔开的每一截尽量在20字以内、多用肯定句与主动语态、直接把动词用出来不套「进行/做出」、每段第一句说重点、标题不跳级;另附一份14条「AI腔清单」,专门清理开场与结尾套话、「不是A而是B」句式、硬凑三连排比、宣传腔形容词、黑话、破折号与翻译腔,并用具体事实替换「强大/无缝」这类形容词,找不到事实就删掉空话或直接问你。规则整理自阮一峰《中文技术文档的写作规范》,可只出「原句→改后→原因」的清单不改文件;装了autocorrect还会自动补中英文之间的空格、把半角标点改全角。⚠️要挂在使用Agent(如Claude Code)上用,技能本身不含模型",u:"https://github.com/leter/zh-tech-writing",r:3,re:"中文写作去AI腔",f:1,q:"开源免费(需Agent)",g:"https://github.com/leter/zh-tech-writing",diff:1,zh:1,hot:2},
+
+{n:"Layerive",why:"本地版本树管图，改字重绘都不丢",c:"图像生成",m:["图像"],d:"LGPL-3.0开源的本地AI图片工作台(272★,React19+SQLite;官方在Releases发Windows安装与便携包、macOS的DMG、Linux的AppImage/deb,也能自己npm run build后开浏览器用,全程不登录):把反复改图当成一个项目来管——文生图一次出1-4张,再用视觉模型识别画面做局部重绘、图片改字、框选去元素、参考图换主体、按比例扩图、提取素材与变清晰,每个结果都存成一个版本,可回看、左右对比,或从旧版本继续分支;另带批量文生图(统一风格)、变量批量改图、提示词画廊与项目ZIP导入导出。图片、对话、修改历史与模型配置全留在本机SQLite与本地文件夹。模型自备:图片模型预设带日日新/OpenAI/Gemini/Grok与自定义(OpenAI兼容中转站),视觉识别走Chat Completions等三种协议,可混搭。中文界面。⚠️模型调用费自理",u:"https://github.com/newljs/Layerive",r:4,re:"本地版本树改图",f:1,q:"开源免费(BYOK)",g:"https://github.com/newljs/Layerive",diff:2,zh:1,hot:2},
+{n:"Pascal Editor",why:"浏览器里拉墙建模，也能交给Agent改",c:"3D创作",m:["3D"],d:"MIT开源的本地优先3D建筑编辑器(2.4万★,React Three Fiber+WebGPU):打开editor.pascal.app就能在浏览器里拉墙、开门窗、铺楼板屋顶、分层画图纸,带爆炸视图、剖切与X-ray看内部结构与管线,可第一人称在屋里走一圈,适合家装与建筑方案做可视化原型;面向AI的那半是把建筑模型经MCP交给Agent读写——一行 npx @pascal-app/cli editor 就在本机起带鉴权的MCP服务,项目存在~/.pascal/data/pascal.db,仓库另带pascal-3d、furniture-fit两个Agent技能(npx skills add pascalorg/editor)。本地CLI不需要账号、不需要API Key、不上传项目。⚠️官网标注Pascal Next的新交互尚未并入开源版,界面以英文为主",u:"https://editor.pascal.app",r:4,re:"开源3D建筑编辑器",f:1,q:"开源免费",g:"https://github.com/pascalorg/editor",diff:2,zh:3,hot:3},
+{n:"户型装修设计 floorplan-3d",why:"免安装户型设计，2D摆完切3D走一圈",c:"设计工具",m:["3D"],d:"纯前端的免费户型设计工具(297★,整站只有一个index.html,打开演示网页即用、不装不注册):默认带一套三室两厅两卫样板间(套内使用面积约87.18㎡,尺寸按mm标),左侧家具库6组60余件都按真实尺寸(双人床1800×2000、三人沙发2400×900、浴缸1600×750),拖到平面图上可贴墙吸附、按Shift自由旋转、量距离、拆非承重墙(承重墙单独标出),图层的尺寸标注/房间名/家具/网格/承重墙都能单独开关;做完切3D——鸟瞰、斜视、俯视、点房间名飞过去,桌面WASD加鼠标第一人称漫游,能点门开关、切全高墙或剖切墙、拖日照时间滑块、开夜景灯光,2D里改的家具在3D同步;地面可换木地板/地砖/大理石/水磨石,并按面积加5%损耗估装修造价。中文界面。⚠️2026年9月29日才建仓、仓库暂无开源许可证,长期维护未知,可下载自部署",u:"https://wy51ai.github.io/floorplan-3d/",r:3,re:"免安装户型设计",f:1,q:"免费",diff:1,zh:1,hot:2},
+{n:"AIHOT",why:"信源换成你的，就成你行业的热点站",c:"工作流Agent",m:["Agent"],d:"MIT开源的行业热点站框架(2600★,作者设计师出身、与AI一起重写):一条流水线跑完从采集到日报——从一批信源收资料、大模型判重与预筛、对可能重要的条目独立打两次分、过门槛才进精选、写成中文标题与摘要、把不同来源说的同一件事聚成事件、按讨论量排热度、每天早上出日报;每一步的提示词原文与入选门槛都在industry/prompts/里,把信源和标准换成你的,它就是法律/HR/金融等任意行业的AIHOT。自带网站前台与后台,演示站aihot.news,内置18个公开海外AI资讯源做示范;部署走Docker Compose(Node 24加PostgreSQL 17)。⚠️要Docker与本机常驻,门槛偏工程向;模型Key自备",u:"https://aihot.news",r:3,re:"自建行业热点站",f:1,q:"开源免费(BYOK)",g:"https://github.com/KKKKhazix/AIHOT",diff:3,zh:1,hot:3},
+{n:"样格 WeChat Style Extractor",why:"一篇公众号文章，拆出整套排版参数",c:"办公效率",m:["办公"],d:"MIT开源的公众号排版拆解工具(151★,TypeScript,已有免费体验站,也能本地npm install跑,需Node 22.13+):贴一篇公众号文章链接,它统计并展示颜色、字号、行高、间距与内容组件规则,正文原图、懒加载图与卡片背景图都保留,再把样式内联成一段可直接粘进公众号编辑器的富文本,另带手机端文章预览——想抄某个号的视觉风格时,不用再人手量数值。出于安全,解析接口只访问mp.weixin.qq.com并限制跳转域名、响应大小与读取时间,代码可自部署。⚠️样式统计是启发式识别,未识别项不显示;微信偶尔对服务器访问弹安全验证页,提示后稍后重试即可",u:"https://wechat-style-extractor.godkey810.chatgpt.site/",r:3,re:"拆解公众号排版",f:1,q:"开源免费",g:"https://github.com/sennkuwu/wechat-style-extractor",diff:2,zh:1,hot:2}
 
 ];
 
@@ -807,7 +813,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 176 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 181 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -986,6 +992,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://bridgeclip.ai" target="_blank" rel="noopener">BridgeClip</a> — 本地找高光切竖屏，逐词字幕9种样式 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://github.com/glanderness/BeefTV" target="_blank" rel="noopener">BeefTV</a> — 画布连线调模型，项目数据全在本机 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/leter/zh-tech-writing" target="_blank" rel="noopener">zh-tech-writing</a> — 按阮一峰规范写中文，专治AI腔 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/newljs/Layerive" target="_blank" rel="noopener">Layerive</a> — 本地版本树管图，改字重绘都不丢 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://editor.pascal.app" target="_blank" rel="noopener">Pascal Editor</a> — 浏览器里拉墙建模，也能交给Agent改 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://wy51ai.github.io/floorplan-3d/" target="_blank" rel="noopener">户型装修设计 floorplan-3d</a> — 免安装户型设计，2D摆完切3D走一圈 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://aihot.news" target="_blank" rel="noopener">AIHOT</a> — 信源换成你的，就成你行业的热点站 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://wechat-style-extractor.godkey810.chatgpt.site/" target="_blank" rel="noopener">样格 WeChat Style Extractor</a> — 一篇公众号文章，拆出整套排版参数 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -995,7 +1006,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 176,
+ "numberOfItems": 181,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2052,6 +2063,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 176,
    "name": "zh-tech-writing",
    "url": "https://github.com/leter/zh-tech-writing"
+  },
+  {
+   "@type": "ListItem",
+   "position": 177,
+   "name": "Layerive",
+   "url": "https://github.com/newljs/Layerive"
+  },
+  {
+   "@type": "ListItem",
+   "position": 178,
+   "name": "Pascal Editor",
+   "url": "https://editor.pascal.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 179,
+   "name": "户型装修设计 floorplan-3d",
+   "url": "https://wy51ai.github.io/floorplan-3d/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 180,
+   "name": "AIHOT",
+   "url": "https://aihot.news"
+  },
+  {
+   "@type": "ListItem",
+   "position": 181,
+   "name": "样格 WeChat Style Extractor",
+   "url": "https://wechat-style-extractor.godkey810.chatgpt.site/"
   }
  ]
 }
