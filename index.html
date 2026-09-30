@@ -574,8 +574,11 @@ const TOOLS=[
 {n:"Pascal Editor",why:"浏览器里拉墙建模，也能交给Agent改",c:"3D创作",m:["3D"],d:"MIT开源的本地优先3D建筑编辑器(2.4万★,React Three Fiber+WebGPU):打开editor.pascal.app就能在浏览器里拉墙、开门窗、铺楼板屋顶、分层画图纸,带爆炸视图、剖切与X-ray看内部结构与管线,可第一人称在屋里走一圈,适合家装与建筑方案做可视化原型;面向AI的那半是把建筑模型经MCP交给Agent读写——一行 npx @pascal-app/cli editor 就在本机起带鉴权的MCP服务,项目存在~/.pascal/data/pascal.db,仓库另带pascal-3d、furniture-fit两个Agent技能(npx skills add pascalorg/editor)。本地CLI不需要账号、不需要API Key、不上传项目。⚠️官网标注Pascal Next的新交互尚未并入开源版,界面以英文为主",u:"https://editor.pascal.app",r:4,re:"开源3D建筑编辑器",f:1,q:"开源免费",g:"https://github.com/pascalorg/editor",diff:2,zh:3,hot:3},
 {n:"户型装修设计 floorplan-3d",why:"免安装户型设计，2D摆完切3D走一圈",c:"设计工具",m:["3D"],d:"纯前端的免费户型设计工具(297★,整站只有一个index.html,打开演示网页即用、不装不注册):默认带一套三室两厅两卫样板间(套内使用面积约87.18㎡,尺寸按mm标),左侧家具库6组60余件都按真实尺寸(双人床1800×2000、三人沙发2400×900、浴缸1600×750),拖到平面图上可贴墙吸附、按Shift自由旋转、量距离、拆非承重墙(承重墙单独标出),图层的尺寸标注/房间名/家具/网格/承重墙都能单独开关;做完切3D——鸟瞰、斜视、俯视、点房间名飞过去,桌面WASD加鼠标第一人称漫游,能点门开关、切全高墙或剖切墙、拖日照时间滑块、开夜景灯光,2D里改的家具在3D同步;地面可换木地板/地砖/大理石/水磨石,并按面积加5%损耗估装修造价。中文界面。⚠️2026年9月29日才建仓、仓库暂无开源许可证,长期维护未知,可下载自部署",u:"https://wy51ai.github.io/floorplan-3d/",r:3,re:"免安装户型设计",f:1,q:"免费",diff:1,zh:1,hot:2},
 {n:"AIHOT",why:"信源换成你的，就成你行业的热点站",c:"工作流Agent",m:["Agent"],d:"MIT开源的行业热点站框架(2600★,作者设计师出身、与AI一起重写):一条流水线跑完从采集到日报——从一批信源收资料、大模型判重与预筛、对可能重要的条目独立打两次分、过门槛才进精选、写成中文标题与摘要、把不同来源说的同一件事聚成事件、按讨论量排热度、每天早上出日报;每一步的提示词原文与入选门槛都在industry/prompts/里,把信源和标准换成你的,它就是法律/HR/金融等任意行业的AIHOT。自带网站前台与后台,演示站aihot.news,内置18个公开海外AI资讯源做示范;部署走Docker Compose(Node 24加PostgreSQL 17)。⚠️要Docker与本机常驻,门槛偏工程向;模型Key自备",u:"https://aihot.news",r:3,re:"自建行业热点站",f:1,q:"开源免费(BYOK)",g:"https://github.com/KKKKhazix/AIHOT",diff:3,zh:1,hot:3},
-{n:"样格 WeChat Style Extractor",why:"一篇公众号文章，拆出整套排版参数",c:"办公效率",m:["办公"],d:"MIT开源的公众号排版拆解工具(151★,TypeScript,已有免费体验站,也能本地npm install跑,需Node 22.13+):贴一篇公众号文章链接,它统计并展示颜色、字号、行高、间距与内容组件规则,正文原图、懒加载图与卡片背景图都保留,再把样式内联成一段可直接粘进公众号编辑器的富文本,另带手机端文章预览——想抄某个号的视觉风格时,不用再人手量数值。出于安全,解析接口只访问mp.weixin.qq.com并限制跳转域名、响应大小与读取时间,代码可自部署。⚠️样式统计是启发式识别,未识别项不显示;微信偶尔对服务器访问弹安全验证页,提示后稍后重试即可",u:"https://wechat-style-extractor.godkey810.chatgpt.site/",r:3,re:"拆解公众号排版",f:1,q:"开源免费",g:"https://github.com/sennkuwu/wechat-style-extractor",diff:2,zh:1,hot:2}
-
+{n:"样格 WeChat Style Extractor",why:"一篇公众号文章，拆出整套排版参数",c:"办公效率",m:["办公"],d:"MIT开源的公众号排版拆解工具(151★,TypeScript,已有免费体验站,也能本地npm install跑,需Node 22.13+):贴一篇公众号文章链接,它统计并展示颜色、字号、行高、间距与内容组件规则,正文原图、懒加载图与卡片背景图都保留,再把样式内联成一段可直接粘进公众号编辑器的富文本,另带手机端文章预览——想抄某个号的视觉风格时,不用再人手量数值。出于安全,解析接口只访问mp.weixin.qq.com并限制跳转域名、响应大小与读取时间,代码可自部署。⚠️样式统计是启发式识别,未识别项不显示;微信偶尔对服务器访问弹安全验证页,提示后稍后重试即可",u:"https://wechat-style-extractor.godkey810.chatgpt.site/",r:3,re:"拆解公众号排版",f:1,q:"开源免费",g:"https://github.com/sennkuwu/wechat-style-extractor",diff:2,zh:1,hot:2},
+{n:"ComeCut 来剪",why:"网页打开就剪，免注册、素材不出本机",c:"视频编辑",m:["视频"],d:"AGPL-3.0开源的轻量视频编辑器(598★,Web/Win/Mac/Linux四端,目前均标Beta):网页版打开即用,不注册、不上传——在浏览器里建项目、把素材拖进时间线、直接导出成片,媒体区支持mp4/mkv/wav/mp3/srt/vtt/lrc/jpg/png,带多轨时间线与音量表;网页版音频转文本已上线,AI字幕翻译能出SRT/VTT/LRC双语,界面有简体中文。⚠️ASR模型默认从huggingface.co下载,国内要换镜像或先手动放模型;若用它的AI生图/AI文本要自备模型Key;导出依赖浏览器WebCodecs,老浏览器可能只能出静帧",u:"https://juntaosun.github.io/ComeCut/web/",r:4,re:"免注册网页剪片",f:1,v:0,q:"开源免费",g:"https://github.com/juntaosun/ComeCut",diff:1,zh:1,hot:2},
+{n:"Presenton",why:"1万★开源PPT，桌面版免费不限次",c:"办公效率",m:["办公"],d:"Apache-2.0开源的AI演示文稿生成器(1.08万★):官网下载页FAQ原文写明桌面版「完全免费开源,没有隐藏收费、订阅或使用次数限制」,数据不出本机;三条路可选——桌面应用(Win/mac/Linux,0.9.11-beta,包体740MB-814MB)、Docker自部署、云端按积分付费($10/200积分,1积分=1页);模型可接任意OpenAI兼容端点或本地Ollama,导出的是能在PowerPoint/Google Slides里继续改的PPTX和PDF。⚠️桌面版仍标beta、包体偏大;生成要自带模型Key,别当在线免费用;界面英文",u:"https://presenton.ai/download",r:4,re:"桌面版不限次数",f:1,v:0,q:"开源免费(生成BYOK)",g:"https://github.com/presenton/presenton",diff:2,zh:3,hot:3},
+{n:"anidoodle",why:"31 种手绘风格，纯代码画不耗生图额度",c:"图像生成",m:["图像","视频"],d:"Apache-2.0开源的手绘风格创作技能包(711★):插画、绘制过程延时、讲解片、交互网页全部用代码画出来,同一份源码在任何机器、任何尺寸下每次都重绘成一模一样;现成风格31种,产出PNG、带配乐的MP4、GIF、WebM、透明动图与单文件HTML,另附一套按帧卡点的音效包。装进Claude Code、Codex、Grok Build等能读技能包的Agent即可用,只要Node 20+与ffmpeg;因为不调用任何生图模型,做图不花生图额度。⚠️前提是有一个能跑的编程Agent(模型Key自备),不是点开就用的网页",u:"https://github.com/alexgreensh/anidoodle",r:4,re:"代码出插画动效",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/alexgreensh/anidoodle",diff:2,zh:2,hot:2},
+{n:"dots",why:"一条命令起浏览器 Agent，网页认不出是机器",c:"工作流Agent",m:["Agent"],d:"MIT开源的浏览器Agent(1304★,与OpenAI同名产品无关):自带一个在C++层打过补丁的真实Firefox引擎,指纹在引擎内决定而不是用JS涂抹,没有WebDriver标记、没有自动化全局变量,点击与按键都按真人节奏发出;一个--seed对应一套互相自洽的屏幕/字体/GPU/时区/语言,--profile-dir保存登录态与Cookie,--proxy让时区语言跟着出口走。装法就一条uvx命令,起的是本地界面(127.0.0.1:8765),左边对话右边浏览器实时同步,模型可换OpenRouter上任意一个。⚠️要自备OpenRouter Key,模型与代理都得花钱;定位偏自动化与查资料",u:"https://github.com/feder-cr/dots",r:4,re:"自带反检测浏览器",f:1,v:1,q:"开源免费(模型Key自备)",g:"https://github.com/feder-cr/dots",diff:2,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -813,7 +816,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 181 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 185 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -997,6 +1000,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://wy51ai.github.io/floorplan-3d/" target="_blank" rel="noopener">户型装修设计 floorplan-3d</a> — 免安装户型设计，2D摆完切3D走一圈 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://aihot.news" target="_blank" rel="noopener">AIHOT</a> — 信源换成你的，就成你行业的热点站 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://wechat-style-extractor.godkey810.chatgpt.site/" target="_blank" rel="noopener">样格 WeChat Style Extractor</a> — 一篇公众号文章，拆出整套排版参数 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://juntaosun.github.io/ComeCut/web/" target="_blank" rel="noopener">ComeCut 来剪</a> — 网页打开就剪，免注册、素材不出本机 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://presenton.ai/download" target="_blank" rel="noopener">Presenton</a> — 1万★开源PPT，桌面版免费不限次 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/alexgreensh/anidoodle" target="_blank" rel="noopener">anidoodle</a> — 31 种手绘风格，纯代码画不耗生图额度 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/feder-cr/dots" target="_blank" rel="noopener">dots</a> — 一条命令起浏览器 Agent，网页认不出是机器 <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -1006,7 +1013,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 181,
+ "numberOfItems": 185,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2093,6 +2100,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 181,
    "name": "样格 WeChat Style Extractor",
    "url": "https://wechat-style-extractor.godkey810.chatgpt.site/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 182,
+   "name": "ComeCut 来剪",
+   "url": "https://juntaosun.github.io/ComeCut/web/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 183,
+   "name": "Presenton",
+   "url": "https://presenton.ai/download"
+  },
+  {
+   "@type": "ListItem",
+   "position": 184,
+   "name": "anidoodle",
+   "url": "https://github.com/alexgreensh/anidoodle"
+  },
+  {
+   "@type": "ListItem",
+   "position": 185,
+   "name": "dots",
+   "url": "https://github.com/feder-cr/dots"
   }
  ]
 }
