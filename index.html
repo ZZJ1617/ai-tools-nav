@@ -579,7 +579,12 @@ const TOOLS=[
 {n:"ComeCut 来剪",why:"网页打开就剪，免注册、素材不出本机",c:"视频编辑",m:["视频"],d:"AGPL-3.0开源的轻量视频编辑器(598★,Web/Win/Mac/Linux四端,目前均标Beta):网页版打开即用,不注册、不上传——在浏览器里建项目、把素材拖进时间线、直接导出成片,媒体区支持mp4/mkv/wav/mp3/srt/vtt/lrc/jpg/png,带多轨时间线与音量表;网页版音频转文本已上线,AI字幕翻译能出SRT/VTT/LRC双语,界面有简体中文。⚠️ASR模型默认从huggingface.co下载,国内要换镜像或先手动放模型;若用它的AI生图/AI文本要自备模型Key;导出依赖浏览器WebCodecs,老浏览器可能只能出静帧",u:"https://juntaosun.github.io/ComeCut/web/",r:4,re:"免注册网页剪片",f:1,v:0,q:"开源免费",g:"https://github.com/juntaosun/ComeCut",diff:1,zh:1,hot:2},
 {n:"Presenton",why:"1万★开源PPT，桌面版免费不限次",c:"办公效率",m:["办公"],d:"Apache-2.0开源的AI演示文稿生成器(1.08万★):官网下载页FAQ原文写明桌面版「完全免费开源,没有隐藏收费、订阅或使用次数限制」,数据不出本机;三条路可选——桌面应用(Win/mac/Linux,0.9.11-beta,包体740MB-814MB)、Docker自部署、云端按积分付费($10/200积分,1积分=1页);模型可接任意OpenAI兼容端点或本地Ollama,导出的是能在PowerPoint/Google Slides里继续改的PPTX和PDF。⚠️桌面版仍标beta、包体偏大;生成要自带模型Key,别当在线免费用;界面英文",u:"https://presenton.ai/download",r:4,re:"桌面版不限次数",f:1,v:0,q:"开源免费(生成BYOK)",g:"https://github.com/presenton/presenton",diff:2,zh:3,hot:3},
 {n:"anidoodle",why:"31 种手绘风格，纯代码画不耗生图额度",c:"图像生成",m:["图像","视频"],d:"Apache-2.0开源的手绘风格创作技能包(711★):插画、绘制过程延时、讲解片、交互网页全部用代码画出来,同一份源码在任何机器、任何尺寸下每次都重绘成一模一样;现成风格31种,产出PNG、带配乐的MP4、GIF、WebM、透明动图与单文件HTML,另附一套按帧卡点的音效包。装进Claude Code、Codex、Grok Build等能读技能包的Agent即可用,只要Node 20+与ffmpeg;因为不调用任何生图模型,做图不花生图额度。⚠️前提是有一个能跑的编程Agent(模型Key自备),不是点开就用的网页",u:"https://github.com/alexgreensh/anidoodle",r:4,re:"代码出插画动效",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/alexgreensh/anidoodle",diff:2,zh:2,hot:2},
-{n:"dots",why:"一条命令起浏览器 Agent，网页认不出是机器",c:"工作流Agent",m:["Agent"],d:"MIT开源的浏览器Agent(1304★,与OpenAI同名产品无关):自带一个在C++层打过补丁的真实Firefox引擎,指纹在引擎内决定而不是用JS涂抹,没有WebDriver标记、没有自动化全局变量,点击与按键都按真人节奏发出;一个--seed对应一套互相自洽的屏幕/字体/GPU/时区/语言,--profile-dir保存登录态与Cookie,--proxy让时区语言跟着出口走。装法就一条uvx命令,起的是本地界面(127.0.0.1:8765),左边对话右边浏览器实时同步,模型可换OpenRouter上任意一个。⚠️要自备OpenRouter Key,模型与代理都得花钱;定位偏自动化与查资料",u:"https://github.com/feder-cr/dots",r:4,re:"自带反检测浏览器",f:1,v:1,q:"开源免费(模型Key自备)",g:"https://github.com/feder-cr/dots",diff:2,zh:3,hot:2}
+{n:"dots",why:"一条命令起浏览器 Agent，网页认不出是机器",c:"工作流Agent",m:["Agent"],d:"MIT开源的浏览器Agent(1304★,与OpenAI同名产品无关):自带一个在C++层打过补丁的真实Firefox引擎,指纹在引擎内决定而不是用JS涂抹,没有WebDriver标记、没有自动化全局变量,点击与按键都按真人节奏发出;一个--seed对应一套互相自洽的屏幕/字体/GPU/时区/语言,--profile-dir保存登录态与Cookie,--proxy让时区语言跟着出口走。装法就一条uvx命令,起的是本地界面(127.0.0.1:8765),左边对话右边浏览器实时同步,模型可换OpenRouter上任意一个。⚠️要自备OpenRouter Key,模型与代理都得花钱;定位偏自动化与查资料",u:"https://github.com/feder-cr/dots",r:4,re:"自带反检测浏览器",f:1,v:1,q:"开源免费(模型Key自备)",g:"https://github.com/feder-cr/dots",diff:2,zh:3,hot:2},
+{n:"OpenCut",why:"9.1万星开源剪映平替，网页端免登录",c:"视频编辑",m:["视频"],d:"MIT开源的剪映替代(9.1万★,GitHub上星标最高的开源剪辑器):网页端打开就是项目页,不用注册、不加水印,素材在浏览器里处理、项目存本机,桌面版与移动端共用一个代码库;线上跑的classic版是v0.3.0,已有蒙版、曲线图编辑器、音量与速度控制、预览缩放、画布背景与贴纸。⚠️主仓README写明正在ground-up重写、功能仍在迁移,重写版将部署在new.opencut.app,线上仍是classic版,当Beta用,界面英文",u:"https://opencut.app/",r:4,re:"开源剪映平替",f:1,v:0,q:"开源免费",g:"https://github.com/OpenCut-app/OpenCut",diff:2,zh:3,hot:3},
+{n:"Voicebox",why:"几秒音色克隆，本地跑不吃字数费",c:"音频生成",m:["音频"],d:"MIT开源的本地语音工作室(5.6万★):扔几秒钟音频就能克隆音色,内置Qwen3-TTS、Kokoro、Chatterbox等7个引擎随时切换,23种语言朗读,还带全局热键听写(任意输入框里说话转文字)、给MCP Agent配音、用本地小LLM改写再朗读;推理全在本机,不注册账号、不要API Key、声音不出机器。Windows有MSI、macOS有DMG,单包500多MB自带模型;Linux暂无预编译包需自行build。⚠️界面英文,首次启动要下模型,显卡后端按CUDA/DirectML/MLX选",u:"https://voicebox.sh",r:4,re:"本地音色克隆",f:1,v:0,q:"开源免费",g:"https://github.com/jamiepine/voicebox",diff:2,zh:3,hot:3},
+{n:"Compositor",why:"Mac 上免费的 Photoshop，图层蒙版全齐",c:"设计工具",m:["图像"],d:"MIT开源的图像编辑器(6748★,发布两周冲上热门):按Photoshop的合成修图工作流做——图层与文件夹、全套混合模式、图层/剪贴/文件夹蒙版、13种调整图层、图层样式(描边/投影/内发光)、内容识别填充、主体选择、对象描边、去背景、Camera Raw面板(光学与几何校正),蒙版能羽化到图层像素之外,全GPU渲染可随时改;Xcode工程开源,想加功能直接改。⚠️目前只有macOS版(官网下载或brew),界面英文;它不做AI生图,是修图工具",u:"https://robbietilton.com/compositor",r:4,re:"Mac版PS平替",f:1,v:0,q:"开源免费",g:"https://github.com/robbietilton/Compositor",diff:2,zh:3,hot:3},
+{n:"logo-design-skill",why:"给编程 Agent 装上品牌设计总监",c:"设计工具",m:["图像"],d:"MIT开源的Logo设计技能包(1267★):装进Claude Code、Codex、Gemini CLI、Cursor后,Agent按真实设计流程走——先问清品牌与受众,再照自带的1400多个真实Logo库查同类惯例与几何结构,出8-12个一句话概念、挑3个画成可编辑SVG,然后按16px像素测试、单色、反白、镜像、眯眼与竞品货架测试逐项审,最后停在「给你看概念并推荐一套」等你点头;配套的零依赖Python脚本能审SVG、出概念总览图与提案板、渲染PNG、导出整套favicon与app图标。⚠️要自备能读技能包的编程Agent,不是网页工具",u:"https://github.com/kaankiziltug/logo-design-skill",r:4,re:"Agent版标识设计",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/kaankiziltug/logo-design-skill",diff:2,zh:3,hot:2},
+{n:"VIVA Short AI",why:"小说一键拆成分镜，剧本生成不限量",c:"AI短剧",m:["视频"],d:"网页版短剧工作台,中文界面:把爆款剧本、小说原文或一句想法丢进去,自动拆出场景表、人物设定与环境提示词,再批量出图出视频并保持全剧角色与画风一致,分镜/图片/视频/提示词可一键打包导出接剪辑;定价页写明免费版$0/月、每天送3积分、AI视频脚本生成「免费不限量」,Pro $6/月含200积分与商用授权。⚠️图片与视频生成要花积分,免费额度很薄(每天3积分、最多2张图),长期用得上付费档;它的生成质量我没有实测过",u:"https://vivashort.com",r:3,re:"脚本免费不限量",f:1,v:0,q:"每日3积分",diff:1,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -817,7 +822,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 185 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 190 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1005,6 +1010,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://presenton.ai/download" target="_blank" rel="noopener">Presenton</a> — 1万★开源PPT，桌面版免费不限次 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/alexgreensh/anidoodle" target="_blank" rel="noopener">anidoodle</a> — 31 种手绘风格，纯代码画不耗生图额度 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/feder-cr/dots" target="_blank" rel="noopener">dots</a> — 一条命令起浏览器 Agent，网页认不出是机器 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://opencut.app/" target="_blank" rel="noopener">OpenCut</a> — 9.1万星开源剪映平替，网页端免登录 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://voicebox.sh" target="_blank" rel="noopener">Voicebox</a> — 几秒音色克隆，本地跑不吃字数费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://robbietilton.com/compositor" target="_blank" rel="noopener">Compositor</a> — Mac 上免费的 Photoshop，图层蒙版全齐 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">logo-design-skill</a> — 给编程 Agent 装上品牌设计总监 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://vivashort.com" target="_blank" rel="noopener">VIVA Short AI</a> — 小说一键拆成分镜，剧本生成不限量 <span class="nb-cat">AI短剧</span></li>
     </ul>
   </section>
 </noscript>
@@ -1014,7 +1024,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 185,
+ "numberOfItems": 190,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2125,6 +2135,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 185,
    "name": "dots",
    "url": "https://github.com/feder-cr/dots"
+  },
+  {
+   "@type": "ListItem",
+   "position": 186,
+   "name": "OpenCut",
+   "url": "https://opencut.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 187,
+   "name": "Voicebox",
+   "url": "https://voicebox.sh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 188,
+   "name": "Compositor",
+   "url": "https://robbietilton.com/compositor"
+  },
+  {
+   "@type": "ListItem",
+   "position": 189,
+   "name": "logo-design-skill",
+   "url": "https://github.com/kaankiziltug/logo-design-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 190,
+   "name": "VIVA Short AI",
+   "url": "https://vivashort.com"
   }
  ]
 }
