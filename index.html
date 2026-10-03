@@ -582,7 +582,12 @@ const TOOLS=[
 {n:"Voicebox",why:"几秒音色克隆，本地跑不吃字数费",c:"音频生成",m:["音频"],d:"MIT开源的本地语音工作室(5.6万★):扔几秒钟音频就能克隆音色,内置Qwen3-TTS、Kokoro、Chatterbox等7个引擎随时切换,23种语言朗读,还带全局热键听写(任意输入框里说话转文字)、给MCP Agent配音、用本地小LLM改写再朗读;推理全在本机,不注册账号、不要API Key、声音不出机器。Windows有MSI、macOS有DMG,单包500多MB自带模型;Linux暂无预编译包需自行build。⚠️界面英文,首次启动要下模型,显卡后端按CUDA/DirectML/MLX选",u:"https://voicebox.sh",r:4,re:"本地音色克隆",f:1,v:0,q:"开源免费",g:"https://github.com/jamiepine/voicebox",diff:2,zh:3,hot:3},
 {n:"Compositor",why:"Mac 上免费的 Photoshop，图层蒙版全齐",c:"设计工具",m:["图像"],d:"MIT开源的图像编辑器(6748★,发布两周冲上热门):按Photoshop的合成修图工作流做——图层与文件夹、全套混合模式、图层/剪贴/文件夹蒙版、13种调整图层、图层样式(描边/投影/内发光)、内容识别填充、主体选择、对象描边、去背景、Camera Raw面板(光学与几何校正),蒙版能羽化到图层像素之外,全GPU渲染可随时改;Xcode工程开源,想加功能直接改。⚠️目前只有macOS版(官网下载或brew),界面英文;它不做AI生图,是修图工具",u:"https://robbietilton.com/compositor",r:4,re:"Mac版PS平替",f:1,v:0,q:"开源免费",g:"https://github.com/robbietilton/Compositor",diff:2,zh:3,hot:3},
 {n:"logo-design-skill",why:"给编程 Agent 装上品牌设计总监",c:"设计工具",m:["图像"],d:"MIT开源的Logo设计技能包(1267★):装进Claude Code、Codex、Gemini CLI、Cursor后,Agent按真实设计流程走——先问清品牌与受众,再照自带的1400多个真实Logo库查同类惯例与几何结构,出8-12个一句话概念、挑3个画成可编辑SVG,然后按16px像素测试、单色、反白、镜像、眯眼与竞品货架测试逐项审,最后停在「给你看概念并推荐一套」等你点头;配套的零依赖Python脚本能审SVG、出概念总览图与提案板、渲染PNG、导出整套favicon与app图标。⚠️要自备能读技能包的编程Agent,不是网页工具",u:"https://github.com/kaankiziltug/logo-design-skill",r:4,re:"Agent版标识设计",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/kaankiziltug/logo-design-skill",diff:2,zh:3,hot:2},
-{n:"VIVA Short AI",why:"小说一键拆成分镜，剧本生成不限量",c:"AI短剧",m:["视频"],d:"网页版短剧工作台,中文界面:把爆款剧本、小说原文或一句想法丢进去,自动拆出场景表、人物设定与环境提示词,再批量出图出视频并保持全剧角色与画风一致,分镜/图片/视频/提示词可一键打包导出接剪辑;定价页写明免费版$0/月、每天送3积分、AI视频脚本生成「免费不限量」,Pro $6/月含200积分与商用授权。⚠️图片与视频生成要花积分,免费额度很薄(每天3积分、最多2张图),长期用得上付费档;它的生成质量我没有实测过",u:"https://vivashort.com",r:3,re:"脚本免费不限量",f:1,v:0,q:"每日3积分",diff:1,zh:1,hot:2}
+{n:"VIVA Short AI",why:"小说一键拆成分镜，剧本生成不限量",c:"AI短剧",m:["视频"],d:"网页版短剧工作台,中文界面:把爆款剧本、小说原文或一句想法丢进去,自动拆出场景表、人物设定与环境提示词,再批量出图出视频并保持全剧角色与画风一致,分镜/图片/视频/提示词可一键打包导出接剪辑;定价页写明免费版$0/月、每天送3积分、AI视频脚本生成「免费不限量」,Pro $6/月含200积分与商用授权。⚠️图片与视频生成要花积分,免费额度很薄(每天3积分、最多2张图),长期用得上付费档;它的生成质量我没有实测过",u:"https://vivashort.com",r:3,re:"脚本免费不限量",f:1,v:0,q:"每日3积分",diff:1,zh:1,hot:2},
+{n:"HyperFrames",why:"写 HTML 就能渲成视频，HeyGen 出品",c:"视频编辑",m:["视频"],d:"HeyGen开源的HTML→视频渲染引擎(5.6万★、Apache-2.0):把HTML/CSS/媒体/可定位动画确定性地渲成MP4,同一份代码每次输出一致;本机CLI能用,也自带21个Agent技能(Claude Code/Codex/Cursor等),一句话让编程助手写页面出片。⚠️要Node 22+,文档站在境外",u:"https://hyperframes.heygen.com/",r:4,re:"HTML转视频引擎",f:1,v:1,q:"开源免费",g:"https://github.com/heygen-com/hyperframes",diff:3,zh:3,hot:3},
+{n:"EasyRead",why:"论文 PDF 边译边读，划线直接问 AI",c:"AI写作",m:["写作","办公"],d:"MIT开源的本地论文阅读器:拖入PDF后台逐页翻译,公式按原文重排、表格三线表、参考文献留原文,一键切原文对照并框出当前段位置,可划线记笔记导出Markdown;翻译模型自选——智谱GLM-4.7-Flash、硅基流动小模型免费,也能全离线走本机Ollama,文献库存在自己电脑;Win/macOS/Linux均有安装包。⚠️安装包无代码签名,Windows会弹SmartScreen",u:"https://edwardxlai.github.io/easyread/",r:4,re:"论文阅读利器",f:1,v:0,q:"开源免费(可选免费国内模型)",g:"https://github.com/Edwardxlai/easyread",diff:2,zh:1,hot:2},
+{n:"Strata",why:"一键在本机跑 125B 模型，还送免费接口",c:"工作流Agent",m:["Agent"],d:"MIT开源的本地大模型引擎:双击START-HERE.bat就在本机跑起Qwen3.8-Flash-Next(压缩后12GB显存可跑),并对本机提供OpenAI与Anthropic兼容接口(127.0.0.1:8080/v1),任意App和编程Agent直接接入,聊天记录只留本机。⚠️硬门槛:12GB以上显存显卡+32GB内存+约80GB磁盘(模型约70GB,首次启动占35-55GB内存);模型中文能力偏弱",u:"https://github.com/Niko1221/Strata",r:4,re:"本地跑125B模型",f:1,v:1,q:"开源免费",g:"https://github.com/Niko1221/Strata",diff:3,zh:3,hot:2},
+{n:"MxPage",why:"上传商品图，出整套电商详情长图",c:"设计工具",m:["图像"],d:"MIT开源的电商详情页生成器(灵矩绘境出品):上传商品参考图+补真实参数,Agent分析商品、推导卖点、规划每屏排版,一套最多出10张头图+20张详情图,支持文件夹批量处理、多语言图片翻译与小红书图文,导出分图ZIP或详情长图;有Windows桌面端也能自部署,要自备模型Key",u:"https://github.com/ziguishian/MxPage",r:3,re:"电商详情页生成",f:1,v:1,q:"开源免费(自备模型Key)",g:"https://github.com/ziguishian/MxPage",diff:2,zh:1,hot:2},
+{n:"explainroo",why:"配音和渲染全在本机，不花一分钱",c:"视频生成",m:["视频"],d:"MIT开源的讲解/科普视频流水线:把仓库丢给编程Agent,它写好台词(script.md)与画面(scenes.js),配音走本机Kokoro模型(28音色、不要账号不要Key)、对时用Whisper、Chrome后台渲染,成片直接落MP4,声音和渲染都不上云;官网有示例视频与文档。⚠️脚本那步要能读仓库的编程Agent",u:"https://github.com/vincentsch/explainroo",r:3,re:"本地讲解视频",f:1,v:1,q:"开源免费(配音渲染本地)",g:"https://github.com/vincentsch/explainroo",diff:3,zh:2,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -820,7 +825,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 190 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 195 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1013,6 +1018,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://robbietilton.com/compositor" target="_blank" rel="noopener">Compositor</a> — Mac 上免费的 Photoshop，图层蒙版全齐 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/kaankiziltug/logo-design-skill" target="_blank" rel="noopener">logo-design-skill</a> — 给编程 Agent 装上品牌设计总监 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://vivashort.com" target="_blank" rel="noopener">VIVA Short AI</a> — 小说一键拆成分镜，剧本生成不限量 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://hyperframes.heygen.com/" target="_blank" rel="noopener">HyperFrames</a> — 写 HTML 就能渲成视频，HeyGen 出品 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://edwardxlai.github.io/easyread/" target="_blank" rel="noopener">EasyRead</a> — 论文 PDF 边译边读，划线直接问 AI <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">Strata</a> — 一键在本机跑 125B 模型，还送免费接口 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/ziguishian/MxPage" target="_blank" rel="noopener">MxPage</a> — 上传商品图，出整套电商详情长图 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/vincentsch/explainroo" target="_blank" rel="noopener">explainroo</a> — 配音和渲染全在本机，不花一分钱 <span class="nb-cat">视频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1022,7 +1032,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 190,
+ "numberOfItems": 195,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2163,6 +2173,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 190,
    "name": "VIVA Short AI",
    "url": "https://vivashort.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 191,
+   "name": "HyperFrames",
+   "url": "https://hyperframes.heygen.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 192,
+   "name": "EasyRead",
+   "url": "https://edwardxlai.github.io/easyread/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 193,
+   "name": "Strata",
+   "url": "https://github.com/Niko1221/Strata"
+  },
+  {
+   "@type": "ListItem",
+   "position": 194,
+   "name": "MxPage",
+   "url": "https://github.com/ziguishian/MxPage"
+  },
+  {
+   "@type": "ListItem",
+   "position": 195,
+   "name": "explainroo",
+   "url": "https://github.com/vincentsch/explainroo"
   }
  ]
 }
