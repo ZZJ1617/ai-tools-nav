@@ -587,7 +587,12 @@ const TOOLS=[
 {n:"EasyRead",why:"论文 PDF 边译边读，划线直接问 AI",c:"AI写作",m:["写作","办公"],d:"MIT开源的本地论文阅读器:拖入PDF后台逐页翻译,公式按原文重排、表格三线表、参考文献留原文,一键切原文对照并框出当前段位置,可划线记笔记导出Markdown;翻译模型自选——智谱GLM-4.7-Flash、硅基流动小模型免费,也能全离线走本机Ollama,文献库存在自己电脑;Win/macOS/Linux均有安装包。⚠️安装包无代码签名,Windows会弹SmartScreen",u:"https://edwardxlai.github.io/easyread/",r:4,re:"论文阅读利器",f:1,v:0,q:"开源免费(可选免费国内模型)",g:"https://github.com/Edwardxlai/easyread",diff:2,zh:1,hot:2},
 {n:"Strata",why:"一键在本机跑 125B 模型，还送免费接口",c:"工作流Agent",m:["Agent"],d:"MIT开源的本地大模型引擎:双击START-HERE.bat就在本机跑起Qwen3.8-Flash-Next(压缩后12GB显存可跑),并对本机提供OpenAI与Anthropic兼容接口(127.0.0.1:8080/v1),任意App和编程Agent直接接入,聊天记录只留本机。⚠️硬门槛:12GB以上显存显卡+32GB内存+约80GB磁盘(模型约70GB,首次启动占35-55GB内存);模型中文能力偏弱",u:"https://github.com/Niko1221/Strata",r:4,re:"本地跑125B模型",f:1,v:1,q:"开源免费",g:"https://github.com/Niko1221/Strata",diff:3,zh:3,hot:2},
 {n:"MxPage",why:"上传商品图，出整套电商详情长图",c:"设计工具",m:["图像"],d:"MIT开源的电商详情页生成器(灵矩绘境出品):上传商品参考图+补真实参数,Agent分析商品、推导卖点、规划每屏排版,一套最多出10张头图+20张详情图,支持文件夹批量处理、多语言图片翻译与小红书图文,导出分图ZIP或详情长图;有Windows桌面端也能自部署,要自备模型Key",u:"https://github.com/ziguishian/MxPage",r:3,re:"电商详情页生成",f:1,v:1,q:"开源免费(自备模型Key)",g:"https://github.com/ziguishian/MxPage",diff:2,zh:1,hot:2},
-{n:"explainroo",why:"配音和渲染全在本机，不花一分钱",c:"视频生成",m:["视频"],d:"MIT开源的讲解/科普视频流水线:把仓库丢给编程Agent,它写好台词(script.md)与画面(scenes.js),配音走本机Kokoro模型(28音色、不要账号不要Key)、对时用Whisper、Chrome后台渲染,成片直接落MP4,声音和渲染都不上云;官网有示例视频与文档。⚠️脚本那步要能读仓库的编程Agent",u:"https://github.com/vincentsch/explainroo",r:3,re:"本地讲解视频",f:1,v:1,q:"开源免费(配音渲染本地)",g:"https://github.com/vincentsch/explainroo",diff:3,zh:2,hot:2}
+{n:"explainroo",why:"配音和渲染全在本机，不花一分钱",c:"视频生成",m:["视频"],d:"MIT开源的讲解/科普视频流水线:把仓库丢给编程Agent,它写好台词(script.md)与画面(scenes.js),配音走本机Kokoro模型(28音色、不要账号不要Key)、对时用Whisper、Chrome后台渲染,成片直接落MP4,声音和渲染都不上云;官网有示例视频与文档。⚠️脚本那步要能读仓库的编程Agent",u:"https://github.com/vincentsch/explainroo",r:3,re:"本地讲解视频",f:1,v:1,q:"开源免费(配音渲染本地)",g:"https://github.com/vincentsch/explainroo",diff:3,zh:2,hot:2},
+{n:"Oil UI 开源版",why:"先出几版方向小样，再让你挑",c:"设计工具",m:["图像"],d:"MIT开源的UI设计技能包(452★,2026-09-30建仓):装进支持skills的编程Agent后按一套真设计师流程走——先认品类、拆同类里做得最好的两三家,再从题材与受众推出能量/完成度/密度/分量/严肃度五个刻度定调性,每个方向从一个具体的材质或场景起步,骨架、字体、色彩、主视觉四项里任意两个方向最多一项相同;几个小样并排放进风格对比页,可切电脑与手机尺寸、方向键翻看,你点「选择」把一句话粘回Agent,它接着做完整页面。另有截图还原、按项目规范评审现有界面、视差与一镜到底叙事;开源版含方法与每个阶段一轮独立评审。⚠️要有能装skill的编程Agent(npx skills add oil-oil/oil-ui),输出是网页设计稿,不做生图",u:"https://ui.oiloil.org",r:4,re:"先并排比几版再选",f:1,q:"开源免费(Pro版另收费)",g:"https://github.com/oil-oil/oil-ui",diff:2,zh:1,hot:2},
+{n:"Qwen-Image Vulkan 本地版",why:"2GB显存本地生图改图，A卡也能跑",c:"图像生成",m:["图像"],d:"千问Qwen-Image-2.1的ncnn+Vulkan本地实现(Apache-2.0,275★):文生图、图像编辑、最多10张参考图输入、透明RGBA输出、动态分辨率与批量生成,带ControlNet(姿势/线稿)与4步加速LoRA;BF16全精度不量化,2GB显存起、不用CPU卸载,NVIDIA/AMD/Intel/Apple Silicon都能跑,也支持纯CPU,Windows/Linux/macOS都有免安装可执行文件,不需要CUDA/PyTorch/Python;作者附的实测里比torch与stable-diffusion.cpp更快。⚠️模型权重(BF16,体积大)要另去HuggingFace下,配好才能出图,首次部署要点耐心",u:"https://github.com/nihui/qwenimage-ncnn-vulkan/releases",r:3,re:"低显存本地生图",f:1,q:"开源免费",g:"https://github.com/nihui/qwenimage-ncnn-vulkan",diff:3,zh:2,hot:1},
+{n:"ReelMimic",why:"照着喜欢的片子做出同风格新片",c:"视频生成",m:["视频"],d:"MIT开源的视频翻拍流水线(1243★,2026-09-28建仓):丢进一支你喜欢的参考视频(本地文件、手机拍摄或YouTube链接都行),它先把这支片子拆开——剪辑节奏、镜头时长、转场、构图、色彩与运镜,再把制作方案摆给你确认;开工后由一支AI小队并行制作不同片段,每个镜头交给另一个Agent检查,不合格退回重做,不是一次生成听天由命。仓库自带成片案例(手绘风MV、旁白漫画)。⚠️要装Claude Code或Codex CLI这类编程Agent(Node 22.18+/Python 3.10+),生视频的模型Key自备;README有简体中文",u:"https://github.com/edenfunf/reelmimic",r:4,re:"拆解参考片风格",f:1,v:1,q:"开源免费(模型Key自备)",g:"https://github.com/edenfunf/reelmimic",diff:3,zh:2,hot:2},
+{n:"Answer me with HTML",why:"长回答变成一页能读的网页",c:"办公效率",m:["办公"],d:"MIT开源的Agent技能(821★,2026-10-02建仓):装好后照常用一句话提问(讲清TCP三次握手、梳理仓库模块关系、帮我定缓存方案),Agent只写一份简短Markdown草稿,排版交给技能自带的CLI,约50毫秒生成一页排版好的HTML,浏览器打开就能读、能分享。官方同模型同题对比(Claude Sonnet 5.5,3主题×3次取中位数):输出token从6873降到923(少7.4倍)、耗时46秒降到13秒,单次成本基本持平。支持Claude Code、Codex、Cursor、OpenCode",u:"https://github.com/QingYunA/answer-me-with-html",r:4,re:"省7倍输出token",f:1,v:1,q:"开源免费",g:"https://github.com/QingYunA/answer-me-with-html",diff:2,zh:2,hot:2},
+{n:"SeeCut 网感口播精剪",why:"口播成片能推成剪映分轨草稿",c:"视频编辑",m:["视频"],d:"开源的口播精剪技能(213★,中文文档):一段20-30秒竖屏半身口播(自己拍或数字人都行)加几张截图,交给编程Agent后由它自己看片、自己找真证据、编排动效、渲染,再用AI两两对比给自己质检、一轮轮迭代后才交你肉眼终审,产出成片+分层工程包+逐版交付报告;装了剪映草稿引擎还能直接推成剪映里分轨可改的草稿,音效自动配。数字人路线用的是豆包配音+HeyGen(按秒付费);一次循环出2-3版,25秒样片约1小时。⚠️需Claude Code类Agent与能看视频的Gemini额度(Antigravity CLI),目前只在macOS实测过,许可证要求保留出处声明",u:"https://github.com/YeJe-cpu/SeeCut",r:3,re:"口播自动精剪",f:1,v:1,q:"开源免费(Agent与看视频额度自备)",g:"https://github.com/YeJe-cpu/SeeCut",diff:3,zh:1,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -825,7 +830,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 195 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 200 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1023,6 +1028,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/Niko1221/Strata" target="_blank" rel="noopener">Strata</a> — 一键在本机跑 125B 模型，还送免费接口 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://github.com/ziguishian/MxPage" target="_blank" rel="noopener">MxPage</a> — 上传商品图，出整套电商详情长图 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/vincentsch/explainroo" target="_blank" rel="noopener">explainroo</a> — 配音和渲染全在本机，不花一分钱 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://ui.oiloil.org" target="_blank" rel="noopener">Oil UI 开源版</a> — 先出几版方向小样，再让你挑 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/nihui/qwenimage-ncnn-vulkan/releases" target="_blank" rel="noopener">Qwen-Image Vulkan 本地版</a> — 2GB显存本地生图改图，A卡也能跑 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/edenfunf/reelmimic" target="_blank" rel="noopener">ReelMimic</a> — 照着喜欢的片子做出同风格新片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> — 长回答变成一页能读的网页 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/YeJe-cpu/SeeCut" target="_blank" rel="noopener">SeeCut 网感口播精剪</a> — 口播成片能推成剪映分轨草稿 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -1032,7 +1042,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 195,
+ "numberOfItems": 200,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2203,6 +2213,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 195,
    "name": "explainroo",
    "url": "https://github.com/vincentsch/explainroo"
+  },
+  {
+   "@type": "ListItem",
+   "position": 196,
+   "name": "Oil UI 开源版",
+   "url": "https://ui.oiloil.org"
+  },
+  {
+   "@type": "ListItem",
+   "position": 197,
+   "name": "Qwen-Image Vulkan 本地版",
+   "url": "https://github.com/nihui/qwenimage-ncnn-vulkan/releases"
+  },
+  {
+   "@type": "ListItem",
+   "position": 198,
+   "name": "ReelMimic",
+   "url": "https://github.com/edenfunf/reelmimic"
+  },
+  {
+   "@type": "ListItem",
+   "position": 199,
+   "name": "Answer me with HTML",
+   "url": "https://github.com/QingYunA/answer-me-with-html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 200,
+   "name": "SeeCut 网感口播精剪",
+   "url": "https://github.com/YeJe-cpu/SeeCut"
   }
  ]
 }
