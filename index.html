@@ -593,7 +593,12 @@ const TOOLS=[
 {n:"Qwen-Image Vulkan 本地版",why:"2GB显存本地生图改图，A卡也能跑",c:"图像生成",m:["图像"],d:"千问Qwen-Image-2.1的ncnn+Vulkan本地实现(Apache-2.0,275★):文生图、图像编辑、最多10张参考图输入、透明RGBA输出、动态分辨率与批量生成,带ControlNet(姿势/线稿)与4步加速LoRA;BF16全精度不量化,2GB显存起、不用CPU卸载,NVIDIA/AMD/Intel/Apple Silicon都能跑,也支持纯CPU,Windows/Linux/macOS都有免安装可执行文件,不需要CUDA/PyTorch/Python;作者附的实测里比torch与stable-diffusion.cpp更快。⚠️模型权重(BF16,体积大)要另去HuggingFace下,配好才能出图,首次部署要点耐心",u:"https://github.com/nihui/qwenimage-ncnn-vulkan/releases",r:3,re:"低显存本地生图",f:1,q:"开源免费",g:"https://github.com/nihui/qwenimage-ncnn-vulkan",diff:3,zh:2,hot:1},
 {n:"ReelMimic",why:"照着喜欢的片子做出同风格新片",c:"视频生成",m:["视频"],d:"MIT开源的视频翻拍流水线(1307★,2026-09-28建仓):丢进一支你喜欢的参考视频(本地文件、手机拍摄或YouTube链接都行),它先把这支片子拆开——剪辑节奏、镜头时长、转场、构图、色彩与运镜,再把制作方案摆给你确认;开工后由一支AI小队并行制作不同片段,每个镜头交给另一个Agent检查,不合格退回重做,不是一次生成听天由命。仓库自带成片案例(手绘风MV、旁白漫画)。⚠️要装Claude Code或Codex CLI这类编程Agent(Node 22.18+/Python 3.10+),生视频的模型Key自备;README有简体中文",u:"https://github.com/edenfunf/reelmimic",r:4,re:"拆解参考片风格",f:1,v:1,q:"开源免费(模型Key自备)",g:"https://github.com/edenfunf/reelmimic",diff:3,zh:2,hot:2},
 {n:"Answer me with HTML",why:"长回答变成一页能读的网页",c:"办公效率",m:["办公"],d:"MIT开源的Agent技能(1342★,2026-10-02建仓):装好后照常用一句话提问(讲清TCP三次握手、梳理仓库模块关系、帮我定缓存方案),Agent只写一份简短Markdown草稿,排版交给技能自带的CLI,约50毫秒生成一页排版好的HTML,浏览器打开就能读、能分享。官方同模型同题对比(Claude Sonnet 5.5,3主题×3次取中位数):输出token从6873降到923(少7.4倍)、耗时46秒降到13秒,单次成本基本持平。支持Claude Code、Codex、Cursor、OpenCode",u:"https://github.com/QingYunA/answer-me-with-html",r:4,re:"省7倍输出token",f:1,v:1,q:"开源免费",g:"https://github.com/QingYunA/answer-me-with-html",diff:2,zh:2,hot:2},
-{n:"SeeCut 网感口播精剪",why:"口播成片能推成剪映分轨草稿",c:"视频编辑",m:["视频"],d:"开源的口播精剪技能(213★,中文文档):一段20-30秒竖屏半身口播(自己拍或数字人都行)加几张截图,交给编程Agent后由它自己看片、自己找真证据、编排动效、渲染,再用AI两两对比给自己质检、一轮轮迭代后才交你肉眼终审,产出成片+分层工程包+逐版交付报告;装了剪映草稿引擎还能直接推成剪映里分轨可改的草稿,音效自动配。数字人路线用的是豆包配音+HeyGen(按秒付费);一次循环出2-3版,25秒样片约1小时。⚠️需Claude Code类Agent与能看视频的Gemini额度(Antigravity CLI),目前只在macOS实测过,许可证要求保留出处声明",u:"https://github.com/YeJe-cpu/SeeCut",r:3,re:"口播自动精剪",f:1,v:1,q:"开源免费(Agent与看视频额度自备)",g:"https://github.com/YeJe-cpu/SeeCut",diff:3,zh:1,hot:1}
+{n:"SeeCut 网感口播精剪",why:"口播成片能推成剪映分轨草稿",c:"视频编辑",m:["视频"],d:"开源的口播精剪技能(213★,中文文档):一段20-30秒竖屏半身口播(自己拍或数字人都行)加几张截图,交给编程Agent后由它自己看片、自己找真证据、编排动效、渲染,再用AI两两对比给自己质检、一轮轮迭代后才交你肉眼终审,产出成片+分层工程包+逐版交付报告;装了剪映草稿引擎还能直接推成剪映里分轨可改的草稿,音效自动配。数字人路线用的是豆包配音+HeyGen(按秒付费);一次循环出2-3版,25秒样片约1小时。⚠️需Claude Code类Agent与能看视频的Gemini额度(Antigravity CLI),目前只在macOS实测过,许可证要求保留出处声明",u:"https://github.com/YeJe-cpu/SeeCut",r:3,re:"口播自动精剪",f:1,v:1,q:"开源免费(Agent与看视频额度自备)",g:"https://github.com/YeJe-cpu/SeeCut",diff:3,zh:1,hot:1},
+{n:"PhotoCraft",why:"开源PS，界面快捷键照搬，真PSD还能命令行驱动",c:"设计工具",m:["图像"],d:"Apache-2.0/MIT双许可的开源Photoshop(1542★,2026-09-30建仓,纯Rust重写,不联网不要账号):按PS的用法重做界面与快捷键——34个工具(选取框/套索/魔棒/快速选择/对象选择/画笔/仿制图章/修复画笔/钢笔/文字等)、16种调整图层(曲线分通道/色阶带直方图/黑白/通道混合器/渐变映射/可选颜色/颜色查找)、图层样式、图层组与剪贴蒙版、矢量蒙版、智能对象加智能滤镜、27种混合模式、32位深与RGB/灰度/CMYK/Lab及ICC色彩管理;能真读真写真PSD/PSB(官方称135个真实PSD里134个可字节级原样写回)。macOS/Windows/Linux原生加浏览器(WASM)四端,同一套748条命令同时供界面、CLI、JSON与MCP调用,你点得动的脚本和AI也调得动。⚠️仍是早期alpha,官方自认生成式功能是最大缺口,约二十个工具尚未补齐、插件不兼容",u:"https://getartcraft.com/apps/photocraft",r:4,re:"开源PS平替",f:1,q:"开源免费",g:"https://github.com/storytold/photocraft",diff:2,zh:3,hot:3},
+{n:"DesignCraft",why:"开源InDesign，杂志排版纯Rust离线跑",c:"设计工具",m:["图像"],d:"同一团队(ArtCraft)出的开源InDesign平替(Apache-2.0/MIT,208★,2026-10-01建仓,纯Rust clean-room重写):做的是版式与出版——多栏正文串接、绕排引文、母版页脚、段落排版引擎与样式表,自带一本样板杂志、每一页都由它自己排版导出,打开 File→New→Sample Document 就能看;macOS/Windows/Linux原生加浏览器(WASM)四端,也能被MCP驱动。⚠️版式工具门槛比修图高,项目还很新、功能在持续补齐",u:"https://getartcraft.com/apps/designcraft",r:3,re:"开源InDesign",f:1,q:"开源免费",g:"https://github.com/storytold/designcraft",diff:3,zh:3,hot:2},
+{n:"coucou",why:"不切窗口就能批准AI干活，3600★",c:"工作流Agent",m:["Agent"],d:"MIT开源的桌面小助手(3602★,2026-09-27建仓,Swift 6原生):macOS住在刘海、Windows/Linux停在屏幕顶端,盯着你手边的AI编程会话——它读了哪些文件、改了哪几行、要你批准什么,都在那一小块里逐条显示,Allow/Deny/Always 一键回,还能直接跳到对应终端窗口;空闲自己躲起来,鼠标靠近才探头。不传遥测、不要账号,Key留在系统钥匙串。Mac/Windows/Linux都有安装包。⚠️服务对象是编程Agent,不写代码的人用不上;跳终端、音乐、额度显示等功能为macOS独占",u:"https://coucou.app",r:4,re:"刘海里的Agent",f:1,q:"开源免费",g:"https://github.com/Louis-CFM/coucou",diff:1,zh:3,hot:3},
+{n:"精酿 BrewReel",why:"写份简报，用便宜模型出一条竖版宣传片",c:"视频生成",m:["视频"],d:"Apache-2.0开源的宣传片流水线(118★,2026-09-26建仓):把产品简报交给它,模型写分镜与文案、程序在本机按配方渲染,直接出1080×1920、30fps、带配乐音效的竖版成片;自带卡片/答题/角色漫游三种配方与六个行业模板,内置广告法校验,报错会原样回喂给模型重试(最多3次)。模型接口填任意OpenAI兼容地址,README示例就是DeepSeek这类便宜档;最省事的用法是把仓库丢进Claude Code或DeepSeek Harness的skills目录,让Agent照着出片。⚠️要Node 18+与Python 3.10+、依赖Remotion,本地渲染一条要几分钟,官方自称仍是预览版、成片先当草稿",u:"https://brewreel.com",r:3,re:"简报变宣传片",f:1,q:"开源免费(自备模型Key)",g:"https://github.com/Finderchangchang/brewreel",diff:3,zh:1,hot:2},
+{n:"微信流 WeChatBridge",why:"微信聊天记录一键送进AI助手或笔记",c:"办公效率",m:["办公"],d:"MIT开源的macOS小工具(1046★,Swift 6原生,DMG已签名并公证):微信4.1.13起多选聊天记录可以「合并转发」成一份含文字/图片/视频的ZIP,但转发列表只认带Share Extension的应用——它补的就是这个入口。装完微信的转发菜单里多出十二个目标,点一下就把归档送进豆包、千问办公、WorkBuddy、DeepSeek Harness等AI助手,或送进Obsidian自动生成按聊天名组织的Markdown笔记,也能只把文件路径交给终端类应用。⚠️目前仅macOS,微信客户端版本过低用不了",u:"https://render.qmuse.pub/p/muse/2413870555736078",r:4,re:"聊天记录直送",f:1,q:"开源免费",g:"https://github.com/freestylefly/WeChatBridge",diff:1,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -831,7 +836,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 200 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 205 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1034,6 +1039,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/edenfunf/reelmimic" target="_blank" rel="noopener">ReelMimic</a> — 照着喜欢的片子做出同风格新片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/QingYunA/answer-me-with-html" target="_blank" rel="noopener">Answer me with HTML</a> — 长回答变成一页能读的网页 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/YeJe-cpu/SeeCut" target="_blank" rel="noopener">SeeCut 网感口播精剪</a> — 口播成片能推成剪映分轨草稿 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://getartcraft.com/apps/photocraft" target="_blank" rel="noopener">PhotoCraft</a> — 开源PS，界面快捷键照搬，真PSD还能命令行驱动 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://getartcraft.com/apps/designcraft" target="_blank" rel="noopener">DesignCraft</a> — 开源InDesign，杂志排版纯Rust离线跑 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://coucou.app" target="_blank" rel="noopener">coucou</a> — 不切窗口就能批准AI干活，3600★ <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://brewreel.com" target="_blank" rel="noopener">精酿 BrewReel</a> — 写份简报，用便宜模型出一条竖版宣传片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://render.qmuse.pub/p/muse/2413870555736078" target="_blank" rel="noopener">微信流 WeChatBridge</a> — 微信聊天记录一键送进AI助手或笔记 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1043,7 +1053,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 200,
+ "numberOfItems": 205,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2244,6 +2254,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 200,
    "name": "SeeCut 网感口播精剪",
    "url": "https://github.com/YeJe-cpu/SeeCut"
+  },
+  {
+   "@type": "ListItem",
+   "position": 201,
+   "name": "PhotoCraft",
+   "url": "https://getartcraft.com/apps/photocraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 202,
+   "name": "DesignCraft",
+   "url": "https://getartcraft.com/apps/designcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 203,
+   "name": "coucou",
+   "url": "https://coucou.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 204,
+   "name": "精酿 BrewReel",
+   "url": "https://brewreel.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 205,
+   "name": "微信流 WeChatBridge",
+   "url": "https://render.qmuse.pub/p/muse/2413870555736078"
   }
  ]
 }
