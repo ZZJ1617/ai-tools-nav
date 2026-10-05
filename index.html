@@ -355,12 +355,13 @@ function toggleTheme(){
 
 // ===== 热点（结构化） =====
 const HOTSPOT={
-  date: "10月5日 08:10更新",
+  date: "10月5日 19:05更新",
   items: [
     {t: "🛒", h: "Shopify 上线对话式建店 Canvas", d: "Shopify 于当地时间 10 月 1 日推出 Canvas：商家在与 AI 智能体 Sidekick 的对话中直接改真实店铺代码，改动实时生效（不是静态预览），可跨屏幕尺寸看实时效果，也能随时点选元素手动微调。为让 Sidekick 改得动店铺结构，Shopify 重写了主题架构。发布初期不含第三方主题、应用区块、扩展、多市场、多语言、灰度发布与主题更新，官方承诺后续补上；目前仅桌面端。", params: "桌面端 · 首发不含第三方主题", scene: "办公 · 电商建站/AI对话改站", link: "https://www.shopify.com/news/introducing-canvas"},
     {t: "🎨", h: "黑森林实验室发布 FLUX 3 Image", d: "Black Forest Labs（FLUX 系列开发方）于当地时间 10 月 1 日推出 FLUX 3 Image，主打精确图像编辑：多轮修改时不动其他像素，可用边界框精确排版，最高输出 4K，单次最多组合 10 张参考图。现已在 OpenRouter 与 Krea 上线，官方 Tools Playground 可直接试用；商业权重已开放，开放权重版计划未来几周放出。该模型属 FLUX 3 多模态家族，此前只放出了视频与动作预测能力，图像能力是这次正式补上。", params: "已上线 · OpenRouter/Krea", scene: "模型 · 图像生成/精确编辑", link: "https://openrouter.ai/black-forest-labs"},
     {t: "🎙️", h: "Suno 发布 Speech：语音配乐一体", d: "Suno 于当地时间 10 月 1 日推出 Speech（beta），官方称这是首个把语音与原创背景音乐当作一条完整曲目生成的音频模型：输入文案、诗歌或自己写的内容，再描述想要的声音与音乐风格就能出声，可用于旁白、故事、冥想、睡前故事等。beta 已向全部用户开放（此前内测一个月），官方也承认仍存在口音漂移、戏剧化停顿过长等问题，会持续改进。", params: "公测 · 全用户开放", scene: "音频 · 配音/有声内容", link: "https://suno.com/blog/introducing-speech-beta"},
-    {t: "🗣️", h: "Tavus 发布数字人模型 Griffin", d: "Tavus（数字人视频公司）当地时间 10 月 1 日发布 Griffin，官方称这是首个通过实时「视频图灵测试」的 Human Interaction Model：全双工视频对视频，能实时看、听并自己判断何时开口，同时生成语音与画面。54 人各与其研究预览版 Griffin-Lite 视频通话 1 分钟后，有 26 人（48%）以为对面是真人，而上一代 Phoenix-4.5 只有 2.4%。单张参考图即可驱动，720p 画面以 320 毫秒分块流式输出，音频到画面的延迟平均 0.43 秒。官方称仍在做安全评估与身份披露功能，目前只对受邀测试者开放，定位在个性化视频与视频客服一类对话场景。", params: "研究预览 · 仅受邀测试者", scene: "视频 · 数字人/实时视频对话", link: "https://www.tavus.io/griffin"}
+    {t: "🗣️", h: "Tavus 发布数字人模型 Griffin", d: "Tavus（数字人视频公司）当地时间 10 月 1 日发布 Griffin，官方称这是首个通过实时「视频图灵测试」的 Human Interaction Model：全双工视频对视频，能实时看、听并自己判断何时开口，同时生成语音与画面。54 人各与其研究预览版 Griffin-Lite 视频通话 1 分钟后，有 26 人（48%）以为对面是真人，而上一代 Phoenix-4.5 只有 2.4%。单张参考图即可驱动，720p 画面以 320 毫秒分块流式输出，音频到画面的延迟平均 0.43 秒。官方称仍在做安全评估与身份披露功能，目前只对受邀测试者开放，定位在个性化视频与视频客服一类对话场景。", params: "研究预览 · 仅受邀测试者", scene: "视频 · 数字人/实时视频对话", link: "https://www.tavus.io/griffin"},
+    {t: "🔎", h: "SCM 开源：Mac 本地 AI 媒体检索", d: "SCM（Screen Memories）10 月 3 日开源（MIT 许可），是一款 macOS 本地优先的多模态媒体检索工具：把任意文件夹里的照片和视频逐帧建索引，直接用自然语言描述就能找回匹配的画面、场景、画面中的文字（OCR）和视频里的对白（Whisper 转写），推理全部在本机完成，不需要账号、不上传云端。当前版本 0.2.4，需 Apple Silicon 机型，可从 GitHub 免费下载。", params: "开源 MIT · 全离线 · 仅 macOS", scene: "效率 · 素材检索/照片视频整理", link: "https://github.com/allenv0/SCM"}
   ]
 };
 function renderHotspot(){
