@@ -598,7 +598,12 @@ const TOOLS=[
 {n:"DesignCraft",why:"开源InDesign，杂志排版纯Rust离线跑",c:"设计工具",m:["图像"],d:"同一团队(ArtCraft)出的开源InDesign平替(Apache-2.0/MIT,208★,2026-10-01建仓,纯Rust clean-room重写):做的是版式与出版——多栏正文串接、绕排引文、母版页脚、段落排版引擎与样式表,自带一本样板杂志、每一页都由它自己排版导出,打开 File→New→Sample Document 就能看;macOS/Windows/Linux原生加浏览器(WASM)四端,也能被MCP驱动。⚠️版式工具门槛比修图高,项目还很新、功能在持续补齐",u:"https://getartcraft.com/apps/designcraft",r:3,re:"开源InDesign",f:1,q:"开源免费",g:"https://github.com/storytold/designcraft",diff:3,zh:3,hot:2},
 {n:"coucou",why:"不切窗口就能批准AI干活，3600★",c:"工作流Agent",m:["Agent"],d:"MIT开源的桌面小助手(3602★,2026-09-27建仓,Swift 6原生):macOS住在刘海、Windows/Linux停在屏幕顶端,盯着你手边的AI编程会话——它读了哪些文件、改了哪几行、要你批准什么,都在那一小块里逐条显示,Allow/Deny/Always 一键回,还能直接跳到对应终端窗口;空闲自己躲起来,鼠标靠近才探头。不传遥测、不要账号,Key留在系统钥匙串。Mac/Windows/Linux都有安装包。⚠️服务对象是编程Agent,不写代码的人用不上;跳终端、音乐、额度显示等功能为macOS独占",u:"https://coucou.app",r:4,re:"刘海里的Agent",f:1,q:"开源免费",g:"https://github.com/Louis-CFM/coucou",diff:1,zh:3,hot:3},
 {n:"精酿 BrewReel",why:"写份简报，用便宜模型出一条竖版宣传片",c:"视频生成",m:["视频"],d:"Apache-2.0开源的宣传片流水线(118★,2026-09-26建仓):把产品简报交给它,模型写分镜与文案、程序在本机按配方渲染,直接出1080×1920、30fps、带配乐音效的竖版成片;自带卡片/答题/角色漫游三种配方与六个行业模板,内置广告法校验,报错会原样回喂给模型重试(最多3次)。模型接口填任意OpenAI兼容地址,README示例就是DeepSeek这类便宜档;最省事的用法是把仓库丢进Claude Code或DeepSeek Harness的skills目录,让Agent照着出片。⚠️要Node 18+与Python 3.10+、依赖Remotion,本地渲染一条要几分钟,官方自称仍是预览版、成片先当草稿",u:"https://brewreel.com",r:3,re:"简报变宣传片",f:1,q:"开源免费(自备模型Key)",g:"https://github.com/Finderchangchang/brewreel",diff:3,zh:1,hot:2},
-{n:"微信流 WeChatBridge",why:"微信聊天记录一键送进AI助手或笔记",c:"办公效率",m:["办公"],d:"MIT开源的macOS小工具(1046★,Swift 6原生,DMG已签名并公证):微信4.1.13起多选聊天记录可以「合并转发」成一份含文字/图片/视频的ZIP,但转发列表只认带Share Extension的应用——它补的就是这个入口。装完微信的转发菜单里多出十二个目标,点一下就把归档送进豆包、千问办公、WorkBuddy、DeepSeek Harness等AI助手,或送进Obsidian自动生成按聊天名组织的Markdown笔记,也能只把文件路径交给终端类应用。⚠️目前仅macOS,微信客户端版本过低用不了",u:"https://render.qmuse.pub/p/muse/2413870555736078",r:4,re:"聊天记录直送",f:1,q:"开源免费",g:"https://github.com/freestylefly/WeChatBridge",diff:1,zh:1,hot:2}
+{n:"微信流 WeChatBridge",why:"微信聊天记录一键送进AI助手或笔记",c:"办公效率",m:["办公"],d:"MIT开源的macOS小工具(1046★,Swift 6原生,DMG已签名并公证):微信4.1.13起多选聊天记录可以「合并转发」成一份含文字/图片/视频的ZIP,但转发列表只认带Share Extension的应用——它补的就是这个入口。装完微信的转发菜单里多出十二个目标,点一下就把归档送进豆包、千问办公、WorkBuddy、DeepSeek Harness等AI助手,或送进Obsidian自动生成按聊天名组织的Markdown笔记,也能只把文件路径交给终端类应用。⚠️目前仅macOS,微信客户端版本过低用不了",u:"https://render.qmuse.pub/p/muse/2413870555736078",r:4,re:"聊天记录直送",f:1,q:"开源免费",g:"https://github.com/freestylefly/WeChatBridge",diff:1,zh:1,hot:2},
+{n:"FilmCraft",why:"开源Premiere，装包即剪，AI能驱动",c:"视频编辑",m:["视频"],d:"ArtCraft团队出的开源Premiere平替(MIT/Apache-2.0双许可,770★,纯Rust从零重写,连H.264/HEVC/ProRes/AAC编解码器都是自研、仓库里没有FFmpeg):面板/工作区/快捷键照Premiere来——三点编辑、波纹/滚动/滑移/滑行/变速修剪、JKL动态修剪、254016000000tick每秒的整数时基(23.976/29.97/59.94都是精确值)、Lumetri式调色(曲线/色轮/HSL二级/暗角)、93个视频特效加约30个转场、字幕轨支持SRT/WebVTT/SCC、AAF/OMF/EDL/FCPXML交换;音频有EBU R128广播响度表与自研DSP(均衡/压缩/限幅/降噪/去嗡);导出H.264 MP4、ProRes、DNxHR、PNG序列、动画GIF。为Agent而造:约135条引擎命令,界面、CLI、TCP上的JSON控制通道与MCP server走同一套,AI能像人一样下剪、调色、混音、导出。macOS/Windows/Linux都有现成安装包(msi/dmg/AppImage,双击装,不用编译)。⚠️官网自标In development、README自认young and moving fast,HEVC与AV1只能解不能导、硬件解码目前只有macOS",u:"https://getartcraft.com/apps/filmcraft",r:4,re:"开源PR平替",f:1,q:"开源免费",g:"https://github.com/storytold/filmcraft",diff:2,zh:3,hot:3},
+{n:"BG0",why:"浏览器本地抠图，图片不上传、不限次",c:"设计工具",m:["图像"],d:"开源的浏览器端一键抠图(Apache-2.0,355★,2026-09-14建仓):打开网页拖进图片就出透明PNG,有WebGPU就用WebGPU、没有就退回WebAssembly;底层是BiRefNet分割模型,首次使用时浏览器把固定版本的ONNX模型下载并缓存到本地,之后断网也能跑。全程在浏览器内存里完成——没有账号、没有API Key、不做服务器推理、不计费也不限次数,图片和结果都不上传。开发者还能用它的npm包@bg0/browser把同一套抠图能力装进自己的网页应用。纯英文界面",u:"https://bg0.dev",r:4,re:"本地抠图不限次",f:1,q:"免费无限制",g:"https://github.com/opencoredev/bg0",diff:1,zh:3,hot:2},
+{n:"RAWmakase",why:"免费Lightroom平替，还能导入LR目录",c:"设计工具",m:["图像"],d:"开源的RAW照片显影软件(MIT,239★,2026-09-26建仓,纯Rust,非破坏性编辑):能读LibRaw支持的各家相机RAW,给的是Lightroom那套控制——白平衡与吸管取色、一键自动影调与自动白平衡、曝光与色调、阴影高光、清晰度、去朦胧、点曲线与色阶、HSL混色器、三向调色、降噪与锐化、裁剪与校正、镜头校正,导出JPEG或16bit TIFF。能导入Lightroom Classic的.lrcat目录并带上星级/旗标/色标/关键词与可兼容的调整参数(只读原目录和原片,从不改写),自带26个预设也能读你的XMP预设。改哪渲染哪,预览走GPU(Metal/Vulkan/DX12)加CPU兜底。macOS(Apple Silicon与Intel)/Linux(deb/rpm/Arch)/Windows都有安装包。⚠️个人项目、仍在活跃开发,官方说效果「接近而非完全等同」Lightroom,蒙版与修复点还在实验阶段;不支持适马Foveon、黑白机与已去马赛克的线性DNG。纯英文界面",u:"https://rawmakase.com",r:3,re:"免费RAW修图",f:1,q:"永久免费",g:"https://github.com/pch/rawmakase",diff:3,zh:3,hot:1},
+{n:"FireRedTTS3",why:"开源语音克隆，覆盖21种中国方言",c:"音频生成",m:["音频"],d:"小红书FireRed团队开源的语音生成与编辑模型(Apache-2.0,1766★):Base版做零样本音色克隆,覆盖24种语言与21种中国方言(粤语、闽南、吴语/上海、四川、河南、山东、辽宁、天津、温州等);Instruct版用一句自然语言描述就能造一个全新音色(性别/年龄/音色/情绪/语速/口音),还能按自由文本改语音——改词(增删替换)与改声(变速/变调/改音量)一个模型一起做。权重在Hugging Face与魔搭ModelScope都有(国内直连可下),pip装依赖加一条命令下载权重即可本地跑,官方还给了Gradio界面。⚠️本地跑要GPU,官方定位研究项目,商用前自行确认授权与合规",u:"https://fireredteam.github.io/demos/firered_tts_3/",r:4,re:"开源方言克隆",f:1,q:"开源免费",g:"https://github.com/FireRedTeam/FireRedTTS3",diff:3,zh:1,hot:2},
+{n:"doop",why:"开源设计画布，人和AI同屏改稿",c:"设计工具",m:["图像"],d:"Paper.design的开源替代(AGPL-3.0,811★):多人实时设计画布,人和AI Agent在同一块Canvas上一起做设计——每个Frame就是一块沙箱iframe里渲染真实HTML的画板,谁的光标在哪、谁在线、哪一帧正在被改、Agent在干什么都实时可见;内置MCP server,Claude Code等MCP客户端一条命令接上就以你的身份在画布上画,边画边streaming还能自己复查。能把网站、线上应用、GitHub仓库直接导成Frame,选中Frame右键导出PNG/JPG。自托管很简单(bun run dev零配置内嵌Postgres,或docker compose up),数据在自己机器上;不想自己跑也能用托管站doop.design。内置的Doop Agent要ANTHROPIC_API_KEY,自己接的MCP客户端不用Key。⚠️AGPL协议,二次分发注意开源义务;纯英文界面",u:"https://doop.design",r:4,re:"人机同屏设计",f:1,q:"开源免费",g:"https://github.com/kgoedecke/doop",diff:3,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -836,7 +841,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 205 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 210 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1044,6 +1049,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://coucou.app" target="_blank" rel="noopener">coucou</a> — 不切窗口就能批准AI干活，3600★ <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://brewreel.com" target="_blank" rel="noopener">精酿 BrewReel</a> — 写份简报，用便宜模型出一条竖版宣传片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://render.qmuse.pub/p/muse/2413870555736078" target="_blank" rel="noopener">微信流 WeChatBridge</a> — 微信聊天记录一键送进AI助手或笔记 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://getartcraft.com/apps/filmcraft" target="_blank" rel="noopener">FilmCraft</a> — 开源Premiere，装包即剪，AI能驱动 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://bg0.dev" target="_blank" rel="noopener">BG0</a> — 浏览器本地抠图，图片不上传、不限次 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://rawmakase.com" target="_blank" rel="noopener">RAWmakase</a> — 免费Lightroom平替，还能导入LR目录 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://fireredteam.github.io/demos/firered_tts_3/" target="_blank" rel="noopener">FireRedTTS3</a> — 开源语音克隆，覆盖21种中国方言 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://doop.design" target="_blank" rel="noopener">doop</a> — 开源设计画布，人和AI同屏改稿 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1053,7 +1063,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 205,
+ "numberOfItems": 210,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2284,6 +2294,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 205,
    "name": "微信流 WeChatBridge",
    "url": "https://render.qmuse.pub/p/muse/2413870555736078"
+  },
+  {
+   "@type": "ListItem",
+   "position": 206,
+   "name": "FilmCraft",
+   "url": "https://getartcraft.com/apps/filmcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 207,
+   "name": "BG0",
+   "url": "https://bg0.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 208,
+   "name": "RAWmakase",
+   "url": "https://rawmakase.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 209,
+   "name": "FireRedTTS3",
+   "url": "https://fireredteam.github.io/demos/firered_tts_3/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 210,
+   "name": "doop",
+   "url": "https://doop.design"
   }
  ]
 }
