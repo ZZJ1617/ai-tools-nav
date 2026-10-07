@@ -603,7 +603,12 @@ const TOOLS=[
 {n:"BG0",why:"浏览器本地抠图，图片不上传、不限次",c:"设计工具",m:["图像"],d:"开源的浏览器端一键抠图(Apache-2.0,355★,2026-09-14建仓):打开网页拖进图片就出透明PNG,有WebGPU就用WebGPU、没有就退回WebAssembly;底层是BiRefNet分割模型,首次使用时浏览器把固定版本的ONNX模型下载并缓存到本地,之后断网也能跑。全程在浏览器内存里完成——没有账号、没有API Key、不做服务器推理、不计费也不限次数,图片和结果都不上传。开发者还能用它的npm包@bg0/browser把同一套抠图能力装进自己的网页应用。纯英文界面",u:"https://bg0.dev",r:4,re:"本地抠图不限次",f:1,q:"免费无限制",g:"https://github.com/opencoredev/bg0",diff:1,zh:3,hot:2},
 {n:"RAWmakase",why:"免费Lightroom平替，还能导入LR目录",c:"设计工具",m:["图像"],d:"开源的RAW照片显影软件(MIT,239★,2026-09-26建仓,纯Rust,非破坏性编辑):能读LibRaw支持的各家相机RAW,给的是Lightroom那套控制——白平衡与吸管取色、一键自动影调与自动白平衡、曝光与色调、阴影高光、清晰度、去朦胧、点曲线与色阶、HSL混色器、三向调色、降噪与锐化、裁剪与校正、镜头校正,导出JPEG或16bit TIFF。能导入Lightroom Classic的.lrcat目录并带上星级/旗标/色标/关键词与可兼容的调整参数(只读原目录和原片,从不改写),自带26个预设也能读你的XMP预设。改哪渲染哪,预览走GPU(Metal/Vulkan/DX12)加CPU兜底。macOS(Apple Silicon与Intel)/Linux(deb/rpm/Arch)/Windows都有安装包。⚠️个人项目、仍在活跃开发,官方说效果「接近而非完全等同」Lightroom,蒙版与修复点还在实验阶段;不支持适马Foveon、黑白机与已去马赛克的线性DNG。纯英文界面",u:"https://rawmakase.com",r:3,re:"免费RAW修图",f:1,q:"永久免费",g:"https://github.com/pch/rawmakase",diff:3,zh:3,hot:1},
 {n:"FireRedTTS3",why:"开源语音克隆，覆盖21种中国方言",c:"音频生成",m:["音频"],d:"小红书FireRed团队开源的语音生成与编辑模型(Apache-2.0,1766★):Base版做零样本音色克隆,覆盖24种语言与21种中国方言(粤语、闽南、吴语/上海、四川、河南、山东、辽宁、天津、温州等);Instruct版用一句自然语言描述就能造一个全新音色(性别/年龄/音色/情绪/语速/口音),还能按自由文本改语音——改词(增删替换)与改声(变速/变调/改音量)一个模型一起做。权重在Hugging Face与魔搭ModelScope都有(国内直连可下),pip装依赖加一条命令下载权重即可本地跑,官方还给了Gradio界面。⚠️本地跑要GPU,官方定位研究项目,商用前自行确认授权与合规",u:"https://fireredteam.github.io/demos/firered_tts_3/",r:4,re:"开源方言克隆",f:1,q:"开源免费",g:"https://github.com/FireRedTeam/FireRedTTS3",diff:3,zh:1,hot:2},
-{n:"doop",why:"开源设计画布，人和AI同屏改稿",c:"设计工具",m:["图像"],d:"Paper.design的开源替代(AGPL-3.0,811★):多人实时设计画布,人和AI Agent在同一块Canvas上一起做设计——每个Frame就是一块沙箱iframe里渲染真实HTML的画板,谁的光标在哪、谁在线、哪一帧正在被改、Agent在干什么都实时可见;内置MCP server,Claude Code等MCP客户端一条命令接上就以你的身份在画布上画,边画边streaming还能自己复查。能把网站、线上应用、GitHub仓库直接导成Frame,选中Frame右键导出PNG/JPG。自托管很简单(bun run dev零配置内嵌Postgres,或docker compose up),数据在自己机器上;不想自己跑也能用托管站doop.design。内置的Doop Agent要ANTHROPIC_API_KEY,自己接的MCP客户端不用Key。⚠️AGPL协议,二次分发注意开源义务;纯英文界面",u:"https://doop.design",r:4,re:"人机同屏设计",f:1,q:"开源免费",g:"https://github.com/kgoedecke/doop",diff:3,zh:3,hot:2}
+{n:"doop",why:"开源设计画布，人和AI同屏改稿",c:"设计工具",m:["图像"],d:"Paper.design的开源替代(AGPL-3.0,811★):多人实时设计画布,人和AI Agent在同一块Canvas上一起做设计——每个Frame就是一块沙箱iframe里渲染真实HTML的画板,谁的光标在哪、谁在线、哪一帧正在被改、Agent在干什么都实时可见;内置MCP server,Claude Code等MCP客户端一条命令接上就以你的身份在画布上画,边画边streaming还能自己复查。能把网站、线上应用、GitHub仓库直接导成Frame,选中Frame右键导出PNG/JPG。自托管很简单(bun run dev零配置内嵌Postgres,或docker compose up),数据在自己机器上;不想自己跑也能用托管站doop.design。内置的Doop Agent要ANTHROPIC_API_KEY,自己接的MCP客户端不用Key。⚠️AGPL协议,二次分发注意开源义务;纯英文界面",u:"https://doop.design",r:4,re:"人机同屏设计",f:1,q:"开源免费",g:"https://github.com/kgoedecke/doop",diff:3,zh:3,hot:2},
+{n:"video-use",why:"跟Claude说话就把素材剪成片",c:"视频编辑",m:["视频"],d:"Browser Use出的开源Agent剪辑工作流(MIT,28.3k★):把原始素材丢进一个文件夹,跟Claude Code/Codex/Hermes说一句「剪成发布视频」,它先盘点素材、给出剪辑方案、等你点头,再吐出final.mp4。自动剪掉口癖(umm/uh)与废镜头、逐段调色(暖色电影/中性锐利/自定义ffmpeg链)、每个剪切点加30ms音频淡入淡出防爆音、烧字幕(默认2词大写,样式可改),还能调HyperFrames/Remotion/Manim/PIL并行的子代理生成动画覆盖层;渲染后在每个剪切边界自评分再交给你。会话记忆写进project.md,下周接着剪。需自装ffmpeg与自备ElevenLabs key做转写,英文界面",u:"https://github.com/browser-use/video-use",r:4,re:"Agent剪辑",f:1,q:"开源免费(转写BYOK)",v:1,g:"https://github.com/browser-use/video-use",diff:2,zh:3,hot:2},
+{n:"ArcReel",why:"小说剧本一条龙,成片能导进剪映",c:"AI短剧",m:["视频","Agent"],d:"开源自托管的AI视频生产工作台(AGPL-3.0,5.3k★,v0.32.0):把小说、成品剧本或商品素材变成角色一致的短视频,一条流水线走完——提取角色/场景/道具资产、出分镜、生成视频与配音,跨镜头保持一致性;Agent、文本、图像、视频、TTS各类供应商可自选,每步费用可追踪,生成结果能导出剪映草稿继续精修。Docker Compose一条命令起全栈(默认端口1241,首次启动自动生成密码),中文界面+中文文档,官方有飞书交流群。⚠️模型额度BYOK,别把1241端口直接暴露公网",u:"https://arc-reel.com",r:4,re:"中文自部署短剧台",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/ArcReel/ArcReel",diff:3,zh:1,hot:2},
+{n:"archify",why:"一句话把想法或代码库变成交互图表",c:"办公效率",m:["办公"],d:"MIT开源、79k★的Agent技能(v3.0.1,skills.sh装机13万+):跟AI助手说一句想法,或让它读一个代码库,就把需求、计划、系统架构、行程、学习路径变成一张可交互的HTML图,还能接着对话加模块、高亮某条路径、换主题;不需要仓库也能从一句话起步。支持Cursor/Claude Code/Codex CLI/OpenCode,npx skills add tt-a1i/archify -g 一行装好;官方有在线画廊与场景指南,含简体中文README。在Kimi Work插件商店里叫「Interactive Architecture Diagram」。除模型额度外不额外收费",u:"https://github.com/tt-a1i/archify",r:4,re:"一句话出交互图表",f:1,q:"开源免费",g:"https://github.com/tt-a1i/archify",diff:1,zh:1,hot:3},
+{n:"text-to-cad",why:"让AI助手直接画3D模型和工程图",c:"3D创作",m:["3D"],d:"MIT开源、18.2k★的Agent插件(今日仍在提交):给Claude Code/Codex/Cursor/Gemini/Grok装上CAD能力,在对话里生成可直接制造的3D模型,输出STEP/GLB/STL/3MF;自带可制造性检查、能出工程图纸,还能对接主流3D打印、钣金与CNC加工服务下单。底层是uv + OpenCASCADE 7.9 + build123d,要求Python 3.11+与Node 20+,全部在本机跑,官方文档站texttocad.dev有完整教程与示例。纯英文界面",u:"https://www.texttocad.dev",r:4,re:"对话出可制造3D",f:1,q:"开源免费",g:"https://github.com/earthtojake/text-to-cad",diff:2,zh:3,hot:2},
+{n:"agent-sprite-forge",why:"一张静帧生成整套游戏动作精灵图",c:"图像生成",m:["图像"],d:"MIT开源、4.3k★的Agent技能(v0.4.0,2026-10-06):先让Agent用你手上最好的图像通道生成一张主静帧并确认,再为待机/走/跑/攻击/跳/受击每个动作各出一段图生视频,然后用确定性的Python工具做抠像、关键帧对齐、循环点测量、变速重定时与HD收尾,最后打包成Godot、Aseprite或网页游戏可直接用的精灵表和动画GIF,支持透明PNG帧与地图。可装Claude Code插件,也支持Codex/Grok;不配API key就复用你已登录的CLI。纯本地跑,视频需ffmpeg 5.1+,含简体中文说明,示例均为真实产出",u:"https://github.com/0x0funky/agent-sprite-forge",r:4,re:"静帧出一整套动作",f:1,q:"开源免费",g:"https://github.com/0x0funky/agent-sprite-forge",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -841,7 +846,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 210 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 215 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1054,6 +1059,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://rawmakase.com" target="_blank" rel="noopener">RAWmakase</a> — 免费Lightroom平替，还能导入LR目录 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://fireredteam.github.io/demos/firered_tts_3/" target="_blank" rel="noopener">FireRedTTS3</a> — 开源语音克隆，覆盖21种中国方言 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://doop.design" target="_blank" rel="noopener">doop</a> — 开源设计画布，人和AI同屏改稿 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/browser-use/video-use" target="_blank" rel="noopener">video-use</a> — 跟Claude说话就把素材剪成片 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://arc-reel.com" target="_blank" rel="noopener">ArcReel</a> — 小说剧本一条龙,成片能导进剪映 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">archify</a> — 一句话把想法或代码库变成交互图表 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://www.texttocad.dev" target="_blank" rel="noopener">text-to-cad</a> — 让AI助手直接画3D模型和工程图 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/0x0funky/agent-sprite-forge" target="_blank" rel="noopener">agent-sprite-forge</a> — 一张静帧生成整套游戏动作精灵图 <span class="nb-cat">图像生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1063,7 +1073,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 210,
+ "numberOfItems": 215,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2324,6 +2334,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 210,
    "name": "doop",
    "url": "https://doop.design"
+  },
+  {
+   "@type": "ListItem",
+   "position": 211,
+   "name": "video-use",
+   "url": "https://github.com/browser-use/video-use"
+  },
+  {
+   "@type": "ListItem",
+   "position": 212,
+   "name": "ArcReel",
+   "url": "https://arc-reel.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 213,
+   "name": "archify",
+   "url": "https://github.com/tt-a1i/archify"
+  },
+  {
+   "@type": "ListItem",
+   "position": 214,
+   "name": "text-to-cad",
+   "url": "https://www.texttocad.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 215,
+   "name": "agent-sprite-forge",
+   "url": "https://github.com/0x0funky/agent-sprite-forge"
   }
  ]
 }
