@@ -355,12 +355,13 @@ function toggleTheme(){
 
 // ===== 热点（结构化） =====
 const HOTSPOT={
-  date: "10月7日 08:20更新",
+  date: "10月7日 19:20更新",
   items: [
     {t: "🍌", h: "谷歌发布 Nano Banana 2.1 图像模型", d: "谷歌 10 月 6 日发布新一代图像生成与编辑模型 Nano Banana 2.1（API 代号 gemini-nano-banana-2.1），底层基于 Gemini 3.6 Flash，在保持 Flash 级速度与成本的同时明显提升画质、提示词遵循与多轮编辑中的主体一致性：同一个人物反复修改不再变形，单次最多可融合 14 张参考图，同时保持 4 个人物角色与 10 个物体的特征。改图支持用遮罩或涂鸦圈出区域做局部修改、其余部分尽量不动；海报与信息图的文字渲染和复杂版式准确性增强，输出支持 1K/2K/4K，并修好了 1:4、4:1、1:8、8:1 宽屏与全景比例的平铺伪影。已上线 Gemini API 与 Google AI Studio，并陆续进入 Gemini 应用及 Google 面向消费者和企业用户的多项 AI 产品；被它替代的 gemini-3.1-flash-image 将于 10 月 29 日停用。", params: "已上线 · Gemini API/AI Studio", scene: "图像 · 生成/对话式修图", link: "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1?hl=zh-cn"},
     {t: "🎨", h: "黑森林实验室发布 FLUX 3 Image", d: "Black Forest Labs（FLUX 系列开发方）于当地时间 10 月 1 日推出 FLUX 3 Image，主打精确图像编辑：多轮修改时不动其他像素，可用边界框精确排版，最高输出 4K，单次最多组合 10 张参考图。现已在 OpenRouter 与 Krea 上线，官方 Tools Playground 可直接试用；商业权重已开放，开放权重版计划未来几周放出。该模型属 FLUX 3 多模态家族，此前只放出了视频与动作预测能力，图像能力是这次正式补上。", params: "已上线 · OpenRouter/Krea", scene: "模型 · 图像生成/精确编辑", link: "https://openrouter.ai/black-forest-labs"},
     {t: "🎙️", h: "Suno 发布 Speech：语音配乐一体", d: "Suno 于当地时间 10 月 1 日推出 Speech（beta），官方称这是首个把语音与原创背景音乐当作一条完整曲目生成的音频模型：输入文案、诗歌或自己写的内容，再描述想要的声音与音乐风格就能出声，可用于旁白、故事、冥想、睡前故事等。beta 已向全部用户开放（此前内测一个月），官方也承认仍存在口音漂移、戏剧化停顿过长等问题，会持续改进。", params: "公测 · 全用户开放", scene: "音频 · 配音/有声内容", link: "https://suno.com/blog/introducing-speech-beta"},
-    {t: "🗣️", h: "Tavus 发布数字人模型 Griffin", d: "Tavus（数字人视频公司）当地时间 10 月 1 日发布 Griffin，官方称这是首个通过实时「视频图灵测试」的 Human Interaction Model：全双工视频对视频，能实时看、听并自己判断何时开口，同时生成语音与画面。54 人各与其研究预览版 Griffin-Lite 视频通话 1 分钟后，有 26 人（48%）以为对面是真人，而上一代 Phoenix-4.5 只有 2.4%。单张参考图即可驱动，720p 画面以 320 毫秒分块流式输出，音频到画面的延迟平均 0.43 秒。官方称仍在做安全评估与身份披露功能，目前只对受邀测试者开放，定位在个性化视频与视频客服一类对话场景。", params: "研究预览 · 仅受邀测试者", scene: "视频 · 数字人/实时视频对话", link: "https://www.tavus.io/griffin"}
+    {t: "🗣️", h: "Tavus 发布数字人模型 Griffin", d: "Tavus（数字人视频公司）当地时间 10 月 1 日发布 Griffin，官方称这是首个通过实时「视频图灵测试」的 Human Interaction Model：全双工视频对视频，能实时看、听并自己判断何时开口，同时生成语音与画面。54 人各与其研究预览版 Griffin-Lite 视频通话 1 分钟后，有 26 人（48%）以为对面是真人，而上一代 Phoenix-4.5 只有 2.4%。单张参考图即可驱动，720p 画面以 320 毫秒分块流式输出，音频到画面的延迟平均 0.43 秒。官方称仍在做安全评估与身份披露功能，目前只对受邀测试者开放，定位在个性化视频与视频客服一类对话场景。", params: "研究预览 · 仅受邀测试者", scene: "视频 · 数字人/实时视频对话", link: "https://www.tavus.io/griffin"},
+    {t: "🗒️", h: "谷歌发布 AI Edge Foresight 会议纪要应用", d: "谷歌 10 月 6 日推出 macOS 应用 AI Edge Foresight（AI Edge 系列第三款 Mac 应用，前两款是 Gallery 与 Eloquent），主打完全离线：调用 Mac 麦克风与系统音频，把线上、线下会议的口述内容结合用户自己的笔记自动整理成纪要，还支持基于会议内容与个人知识库的实时问答。底层用端侧多模态模型 EmbeddingGemma 2，把文本、图像、视频帧与音频映射到同一向量空间，兼容 Apple 芯片 Mac，免费下载，官方定位是展示端侧多模态检索能力的实验性应用。", params: "已上线 · 免费 / 需 Apple 芯片 Mac", scene: "办公 · 离线会议纪要与问答", link: "https://developers.google.com/edge/foresight"}
   ]
 };
 function renderHotspot(){
