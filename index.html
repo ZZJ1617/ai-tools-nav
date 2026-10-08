@@ -609,7 +609,11 @@ const TOOLS=[
 {n:"ArcReel",why:"小说剧本一条龙,成片能导进剪映",c:"AI短剧",m:["视频","Agent"],d:"开源自托管的AI视频生产工作台(AGPL-3.0,5.3k★,v0.32.0):把小说、成品剧本或商品素材变成角色一致的短视频,一条流水线走完——提取角色/场景/道具资产、出分镜、生成视频与配音,跨镜头保持一致性;Agent、文本、图像、视频、TTS各类供应商可自选,每步费用可追踪,生成结果能导出剪映草稿继续精修。Docker Compose一条命令起全栈(默认端口1241,首次启动自动生成密码),中文界面+中文文档,官方有飞书交流群。⚠️模型额度BYOK,别把1241端口直接暴露公网",u:"https://arc-reel.com",r:4,re:"中文自部署短剧台",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/ArcReel/ArcReel",diff:3,zh:1,hot:2},
 {n:"archify",why:"一句话把想法或代码库变成交互图表",c:"办公效率",m:["办公"],d:"MIT开源、79k★的Agent技能(v3.0.1,skills.sh装机13万+):跟AI助手说一句想法,或让它读一个代码库,就把需求、计划、系统架构、行程、学习路径变成一张可交互的HTML图,还能接着对话加模块、高亮某条路径、换主题;不需要仓库也能从一句话起步。支持Cursor/Claude Code/Codex CLI/OpenCode,npx skills add tt-a1i/archify -g 一行装好;官方有在线画廊与场景指南,含简体中文README。在Kimi Work插件商店里叫「Interactive Architecture Diagram」。除模型额度外不额外收费",u:"https://github.com/tt-a1i/archify",r:4,re:"一句话出交互图表",f:1,q:"开源免费",g:"https://github.com/tt-a1i/archify",diff:1,zh:1,hot:3},
 {n:"text-to-cad",why:"让AI助手直接画3D模型和工程图",c:"3D创作",m:["3D"],d:"MIT开源、18.2k★的Agent插件(今日仍在提交):给Claude Code/Codex/Cursor/Gemini/Grok装上CAD能力,在对话里生成可直接制造的3D模型,输出STEP/GLB/STL/3MF;自带可制造性检查、能出工程图纸,还能对接主流3D打印、钣金与CNC加工服务下单。底层是uv + OpenCASCADE 7.9 + build123d,要求Python 3.11+与Node 20+,全部在本机跑,官方文档站texttocad.dev有完整教程与示例。纯英文界面",u:"https://www.texttocad.dev",r:4,re:"对话出可制造3D",f:1,q:"开源免费",g:"https://github.com/earthtojake/text-to-cad",diff:2,zh:3,hot:2},
-{n:"agent-sprite-forge",why:"一张静帧生成整套游戏动作精灵图",c:"图像生成",m:["图像"],d:"MIT开源、4.3k★的Agent技能(v0.4.0,2026-10-06):先让Agent用你手上最好的图像通道生成一张主静帧并确认,再为待机/走/跑/攻击/跳/受击每个动作各出一段图生视频,然后用确定性的Python工具做抠像、关键帧对齐、循环点测量、变速重定时与HD收尾,最后打包成Godot、Aseprite或网页游戏可直接用的精灵表和动画GIF,支持透明PNG帧与地图。可装Claude Code插件,也支持Codex/Grok;不配API key就复用你已登录的CLI。纯本地跑,视频需ffmpeg 5.1+,含简体中文说明,示例均为真实产出",u:"https://github.com/0x0funky/agent-sprite-forge",r:4,re:"静帧出一整套动作",f:1,q:"开源免费",g:"https://github.com/0x0funky/agent-sprite-forge",diff:2,zh:1,hot:2}
+{n:"agent-sprite-forge",why:"一张静帧生成整套游戏动作精灵图",c:"图像生成",m:["图像"],d:"MIT开源、4.3k★的Agent技能(v0.4.0,2026-10-06):先让Agent用你手上最好的图像通道生成一张主静帧并确认,再为待机/走/跑/攻击/跳/受击每个动作各出一段图生视频,然后用确定性的Python工具做抠像、关键帧对齐、循环点测量、变速重定时与HD收尾,最后打包成Godot、Aseprite或网页游戏可直接用的精灵表和动画GIF,支持透明PNG帧与地图。可装Claude Code插件,也支持Codex/Grok;不配API key就复用你已登录的CLI。纯本地跑,视频需ffmpeg 5.1+,含简体中文说明,示例均为真实产出",u:"https://github.com/0x0funky/agent-sprite-forge",r:4,re:"静帧出一整套动作",f:1,q:"开源免费",g:"https://github.com/0x0funky/agent-sprite-forge",diff:2,zh:1,hot:2},
+{n:"FreeVideo",why:"8GB显卡本地跑MiniMax H3",c:"视频生成",m:["视频"],d:"Apache-2.0开源的本地视频生成客户端(1.3k★,2026-09-13建仓,自带Video DeltaNet硬件适配):在普通消费级显卡上跑MiniMax H3,最低只要8GB显存加16GB内存,安装包会按你的显卡自动挑加速路径——Windows与macOS都有现成安装包,不用自己搭环境,官方还备了QQ群与微信群。每次生成可选轻量/标准/精细/极致四档:先出半分辨率预览,满意的再继续采;成品视频拖进ComfyUI画布能还原提示词、种子与全部参数,也能导出带生成耗时与显卡型号的分享图。RTX 3090生成5秒视频比上版快约2.3倍。中文界面+中文文档",u:"https://github.com/FlashML-org/FreeVideo",r:4,re:"8GB显卡本地跑",f:1,q:"开源免费(模型权重需下载)",g:"https://github.com/FlashML-org/FreeVideo",diff:2,zh:1,hot:2},
+{n:"huashu-art-motion",why:"35 种艺术风格，让画真的动起来",c:"视频生成",m:["视频"],d:"MIT开源的艺术动画技能包(2.2k★,2026-10-06建仓,花叔出品):让能读技能包的编程Agent把艺术风格写成会动的画——35种艺术风格(从四万年前的岩洞壁画、古埃及、马赛克一路走到8-bit与当代)、9种解说语法、8种参数化片段,连口播整片都给了参考代码;场景用代码画、角色用生成帧合成,官方样片里角色真的钻进水管、梵高的星空真的在转。npx skills add alchaincyf/huashu-art-motion 一行装好,中文说明与真实成片齐全。⚠️前提是自备一个能跑的编程Agent",u:"https://github.com/alchaincyf/huashu-art-motion",r:4,re:"35种艺术风格动效",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/alchaincyf/huashu-art-motion",diff:2,zh:1,hot:2},
+{n:"mesh-avatar-studio",why:"一张插画变会眨眼说话的头像",c:"图像生成",m:["图像","视频"],d:"MIT开源(491★,2026-10-04建仓):把一张插画变成会眨眼、张嘴说话、转头、呼吸、头发还会飘的2D网格虚拟形象。编程Agent先按自带向导把人物拆层、在放大网格上一格格标定绑定点,再打开本地编辑器拖点微调,右侧实时预览效果。自带旗袍少女Miko样例,Node 22.17+ 起 npm run dev 就能进编辑器——不用装模型、不联网、不花任何生图额度。⚠️拆层那一步必须有能跑的编程Agent;界面为英文与日文",u:"https://github.com/shinshin86/mesh-avatar-studio",r:3,re:"插画变会动头像",f:1,q:"开源免费",g:"https://github.com/shinshin86/mesh-avatar-studio",diff:3,zh:3,hot:1},
+{n:"Papermorph",why:"PDF 变成能听能点的网页书",c:"办公效率",m:["办公"],d:"MIT开源的Agent技能(562★,2026-10-03建仓):把一本PDF变成能听、能点、带动画和随堂小测的网页书——走的是PDF→书籍规划→分镜→旁白→动画与小测→网页这条正经出版流程,官方书架里可以直接玩成品,还放了一部75秒带旁白的完整演示。npx skills add DozenTwelve/Papermorph --skill papermorph --agent claude-code 装进Claude Code,把PDF丢过去并说清读者是谁就行。⚠️目前只跑 Opus 5.5 一个模型,纯英文,还没有生图、BGM 与多语言",u:"https://github.com/DozenTwelve/Papermorph",r:3,re:"PDF变动效网页书",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/DozenTwelve/Papermorph",diff:2,zh:3,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -847,7 +851,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 215 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 219 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1065,6 +1069,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/tt-a1i/archify" target="_blank" rel="noopener">archify</a> — 一句话把想法或代码库变成交互图表 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://www.texttocad.dev" target="_blank" rel="noopener">text-to-cad</a> — 让AI助手直接画3D模型和工程图 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/0x0funky/agent-sprite-forge" target="_blank" rel="noopener">agent-sprite-forge</a> — 一张静帧生成整套游戏动作精灵图 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/FlashML-org/FreeVideo" target="_blank" rel="noopener">FreeVideo</a> — 8GB显卡本地跑MiniMax H3 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/alchaincyf/huashu-art-motion" target="_blank" rel="noopener">huashu-art-motion</a> — 35 种艺术风格，让画真的动起来 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/shinshin86/mesh-avatar-studio" target="_blank" rel="noopener">mesh-avatar-studio</a> — 一张插画变会眨眼说话的头像 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/DozenTwelve/Papermorph" target="_blank" rel="noopener">Papermorph</a> — PDF 变成能听能点的网页书 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1074,7 +1082,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 215,
+ "numberOfItems": 219,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2365,6 +2373,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 215,
    "name": "agent-sprite-forge",
    "url": "https://github.com/0x0funky/agent-sprite-forge"
+  },
+  {
+   "@type": "ListItem",
+   "position": 216,
+   "name": "FreeVideo",
+   "url": "https://github.com/FlashML-org/FreeVideo"
+  },
+  {
+   "@type": "ListItem",
+   "position": 217,
+   "name": "huashu-art-motion",
+   "url": "https://github.com/alchaincyf/huashu-art-motion"
+  },
+  {
+   "@type": "ListItem",
+   "position": 218,
+   "name": "mesh-avatar-studio",
+   "url": "https://github.com/shinshin86/mesh-avatar-studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 219,
+   "name": "Papermorph",
+   "url": "https://github.com/DozenTwelve/Papermorph"
   }
  ]
 }
