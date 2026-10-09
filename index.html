@@ -615,7 +615,12 @@ const TOOLS=[
 {n:"FreeVideo",why:"8GB显卡本地跑MiniMax H3",c:"视频生成",m:["视频"],d:"Apache-2.0开源的本地视频生成客户端(1.3k★,2026-09-13建仓,自带Video DeltaNet硬件适配):在普通消费级显卡上跑MiniMax H3,最低只要8GB显存加16GB内存,安装包会按你的显卡自动挑加速路径——Windows与macOS都有现成安装包,不用自己搭环境,官方还备了QQ群与微信群。每次生成可选轻量/标准/精细/极致四档:先出半分辨率预览,满意的再继续采;成品视频拖进ComfyUI画布能还原提示词、种子与全部参数,也能导出带生成耗时与显卡型号的分享图。RTX 3090生成5秒视频比上版快约2.3倍。中文界面+中文文档",u:"https://github.com/FlashML-org/FreeVideo",r:4,re:"8GB显卡本地跑",f:1,q:"开源免费(模型权重需下载)",g:"https://github.com/FlashML-org/FreeVideo",diff:2,zh:1,hot:2},
 {n:"huashu-art-motion",why:"35 种艺术风格，让画真的动起来",c:"视频生成",m:["视频"],d:"MIT开源的艺术动画技能包(2.2k★,2026-10-06建仓,花叔出品):让能读技能包的编程Agent把艺术风格写成会动的画——35种艺术风格(从四万年前的岩洞壁画、古埃及、马赛克一路走到8-bit与当代)、9种解说语法、8种参数化片段,连口播整片都给了参考代码;场景用代码画、角色用生成帧合成,官方样片里角色真的钻进水管、梵高的星空真的在转。npx skills add alchaincyf/huashu-art-motion 一行装好,中文说明与真实成片齐全。⚠️前提是自备一个能跑的编程Agent",u:"https://github.com/alchaincyf/huashu-art-motion",r:4,re:"35种艺术风格动效",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/alchaincyf/huashu-art-motion",diff:2,zh:1,hot:2},
 {n:"mesh-avatar-studio",why:"一张插画变会眨眼说话的头像",c:"图像生成",m:["图像","视频"],d:"MIT开源(491★,2026-10-04建仓):把一张插画变成会眨眼、张嘴说话、转头、呼吸、头发还会飘的2D网格虚拟形象。编程Agent先按自带向导把人物拆层、在放大网格上一格格标定绑定点,再打开本地编辑器拖点微调,右侧实时预览效果。自带旗袍少女Miko样例,Node 22.17+ 起 npm run dev 就能进编辑器——不用装模型、不联网、不花任何生图额度。⚠️拆层那一步必须有能跑的编程Agent;界面为英文与日文",u:"https://github.com/shinshin86/mesh-avatar-studio",r:3,re:"插画变会动头像",f:1,q:"开源免费",g:"https://github.com/shinshin86/mesh-avatar-studio",diff:3,zh:3,hot:1},
-{n:"Papermorph",why:"PDF 变成能听能点的网页书",c:"办公效率",m:["办公"],d:"MIT开源的Agent技能(562★,2026-10-03建仓):把一本PDF变成能听、能点、带动画和随堂小测的网页书——走的是PDF→书籍规划→分镜→旁白→动画与小测→网页这条正经出版流程,官方书架里可以直接玩成品,还放了一部75秒带旁白的完整演示。npx skills add DozenTwelve/Papermorph --skill papermorph --agent claude-code 装进Claude Code,把PDF丢过去并说清读者是谁就行。⚠️目前只跑 Opus 5.5 一个模型,纯英文,还没有生图、BGM 与多语言",u:"https://github.com/DozenTwelve/Papermorph",r:3,re:"PDF变动效网页书",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/DozenTwelve/Papermorph",diff:2,zh:3,hot:1}
+{n:"Papermorph",why:"PDF 变成能听能点的网页书",c:"办公效率",m:["办公"],d:"MIT开源的Agent技能(562★,2026-10-03建仓):把一本PDF变成能听、能点、带动画和随堂小测的网页书——走的是PDF→书籍规划→分镜→旁白→动画与小测→网页这条正经出版流程,官方书架里可以直接玩成品,还放了一部75秒带旁白的完整演示。npx skills add DozenTwelve/Papermorph --skill papermorph --agent claude-code 装进Claude Code,把PDF丢过去并说清读者是谁就行。⚠️目前只跑 Opus 5.5 一个模型,纯英文,还没有生图、BGM 与多语言",u:"https://github.com/DozenTwelve/Papermorph",r:3,re:"PDF变动效网页书",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/DozenTwelve/Papermorph",diff:2,zh:3,hot:1},
+  {n:"LightCraft",why:"开源Lightroom，照片库加RAW显影",c:"设计工具",m:["图像"],d:"ArtCraft团队出的开源Lightroom平替(Apache-2.0/MIT,6.9k★,2026-09-30建仓,纯Rust重写,不联网不要账号):照片库与RAW显影两条腿——相册/文件夹/智能相册/堆叠/虚拟副本、星级旗标与色标、筛选栏与搜索,挑片有Compare(同步缩放)与Survey两种视图;显影面板照Lightroom来,光/颜色/效果(含暗角)、色调曲线带目标调整、颜色混合器、点颜色、颜色分级、黑白与校准;蒙版有画笔/线性/径向/明度与颜色范围,可加剪与交叉(主体与天空走的是传统算法不是AI);裁剪拉直带自动拉直、去污点修复克隆带自动取源、红眼与宠物眼;镜头畸变暗角色差校正、Upright、HDR与全景合成直接出DNG;导出JPEG/PNG/TIFF/WebP/AVIF/DNG,支持文字或图片水印与批量。macOS/Windows/Linux原生加浏览器(WASM)四端,界面有简体中文,同一套命令同时供界面、CLI、控制通道与MCP调用。⚠️官方自评功能覆盖约79%、按日常替代算60-70%:AI蒙版与AI去噪超分还没做,索尼尼康等相机的色彩是估算矩阵,经典打印/书籍/地图模块欠奉",u:"https://getartcraft.com/apps/lightcraft",r:4,re:"开源Lightroom",f:1,q:"开源免费",g:"https://github.com/storytold/lightcraft",diff:2,zh:1,hot:3},
+  {n:"VectorCraft",why:"开源Illustrator，矢量能存PDF与.ai",c:"设计工具",m:["图像"],d:"同一团队(ArtCraft)出的开源Illustrator平替(Apache-2.0/MIT,4.6k★,2026-09-30建仓,纯Rust clean-room重写,不联网不要账号):钢笔与路径工具、Pathfinder与形状生成器、渐变与图案填充、外观面板与透明度、文字带字符与段落样式并能串接文本框,支持希伯来与阿拉伯等双向排版;读写SVG、PDF、PDF兼容的.ai(PDF/X)、EPS、DXF、EMF/WMF、PSD与常见位图,也能直接打开Affinity的.afdesign/.afpub/.afphoto(只读,不写回,没支持的项会在导入时列出来)。macOS/Windows/Linux/FreeBSD原生加浏览器(WASM)四端,界面有简体中文、繁体与日文,可被MCP驱动。⚠️官方自评约69-75%的Illustrator功能:3D与材质、PS式栅格特效、变量与脚本没做,Windows与Linux的正式打包还在路上",u:"https://getartcraft.com/apps/vectorcraft",r:4,re:"开源AI平替",f:1,q:"开源免费",g:"https://github.com/storytold/vectorcraft",diff:3,zh:1,hot:2},
+  {n:"EffectCraft",why:"开源AE平替，306个特效还能MCP驱动",c:"视频编辑",m:["视频"],d:"开源After Effects平替(Apache-2.0/MIT,3.4k★,2026-10-01建仓,纯Rust重写):做动画标题、动效与合成——合成套图层(纯色/形状/文字/素材)、关键帧与曲线编辑器、306个特效、图层样式、表达式、3D相机与灯光、渲染队列;导出ProRes MOV(Proxy到4444 XQ带alpha)、HEVC/AV1的MP4、WebM(VP9带alpha)、32位EXR与PNG/TIFF序列、动画GIF、WAV/AIFF,也能导Lottie;Roto Brush可挂MobileSAM(设置里可选下载40MB)、人脸跟踪可挂MediaPipe。Windows有msi与便携zip(x64/x86/ARM64)、macOS通用包、Linux有AppImage/Flatpak/deb/rpm,浏览器里也能跑,都不用自己编译;命令行与MCP都能驱动,工程存成可读JSON。⚠️打不开.aep工程、AE插件不能跑、和AE的行为差异还没系统比对,官方自己说现在还不适合拿它做客户的活",u:"https://getartcraft.com/apps/effectcraft",r:4,re:"开源AE平替",f:1,q:"开源免费",g:"https://github.com/storytold/effectcraft",diff:3,zh:3,hot:2},
+  {n:"PdfCraft",why:"开源Acrobat，看批注填表涂黑签名",c:"办公效率",m:["办公"],d:"开源Acrobat平替(Apache-2.0/MIT,5.6k★,2026-09-30建仓,纯Rust重写):阅读与搜索、页面组织(旋转/删除/插空白页/从别的文件插页/前移后移)、合并拆分、批注、填表与自制表单(表单逻辑走沙箱JavaScript)、密码、涂黑与净化、基础数字签名、打印与无障碍检查;大页面分块渲染、放大不糊,每页单独渲染、坏文件也能修,官方在983个pdf.js测试文件上做到0崩溃、958个能编辑保存来回。命令行与MCP都能驱动,不要账号、文档不离开本机,Windows有x64/x86与ARM64包。⚠️改已有文字(尤其中文)还不稳,OCR只认拉丁字母,Office互转与PDF/A预检没做,和Acrobat的质量没做过对照",u:"https://getartcraft.com/apps/pdfcraft",r:4,re:"开源Acrobat",f:1,q:"开源免费",g:"https://github.com/storytold/pdfcraft",diff:2,zh:3,hot:2},
+  {n:"DeckCraft",why:"开源PowerPoint，能开能存真.pptx",c:"办公效率",m:["办公"],d:"开源PowerPoint平替(Apache-2.0/MIT,707★,2026-10-07建仓,纯Rust重写):母版与11种带占位符的版式、8套原创主题(配色与字体方案)、节、备注与批注;150多种预设形状带调节手柄、连接符能粘在形状上、自由曲线与合并形状(并/组合/拆分/相交/相减)、渐变/图片/图案填充与阴影发光柔边倒影;正文就地编辑带完整字体段落格式、项目符号与分栏、表格、图表、SmartArt、音视频;转场(含变形)与逐段动画、全屏放映、演讲者视图、排练计时;能打开与保存真正的.pptx,导出PDF/PNG/JPEG与大纲,未保存的活有自动恢复。200多条命令都能被CLI与MCP驱动,Windows/macOS/Linux/BSD原生加浏览器都有,Releases里有现成安装包。⚠️早期开发、正在冲第一个alpha,功能仍在补",u:"https://github.com/storytold/deckcraft",r:3,re:"开源PPT平替",f:1,q:"开源免费",g:"https://github.com/storytold/deckcraft",diff:2,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -853,7 +858,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 219 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 224 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1075,6 +1080,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/alchaincyf/huashu-art-motion" target="_blank" rel="noopener">huashu-art-motion</a> — 35 种艺术风格，让画真的动起来 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/shinshin86/mesh-avatar-studio" target="_blank" rel="noopener">mesh-avatar-studio</a> — 一张插画变会眨眼说话的头像 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/DozenTwelve/Papermorph" target="_blank" rel="noopener">Papermorph</a> — PDF 变成能听能点的网页书 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://getartcraft.com/apps/lightcraft" target="_blank" rel="noopener">LightCraft</a> — 开源Lightroom，照片库加RAW显影 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://getartcraft.com/apps/vectorcraft" target="_blank" rel="noopener">VectorCraft</a> — 开源Illustrator，矢量能存PDF与.ai <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://getartcraft.com/apps/effectcraft" target="_blank" rel="noopener">EffectCraft</a> — 开源AE平替，306个特效还能MCP驱动 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://getartcraft.com/apps/pdfcraft" target="_blank" rel="noopener">PdfCraft</a> — 开源Acrobat，看批注填表涂黑签名 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/storytold/deckcraft" target="_blank" rel="noopener">DeckCraft</a> — 开源PowerPoint，能开能存真.pptx <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1084,7 +1094,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 219,
+ "numberOfItems": 224,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2399,6 +2409,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 219,
    "name": "Papermorph",
    "url": "https://github.com/DozenTwelve/Papermorph"
+  },
+  {
+   "@type": "ListItem",
+   "position": 220,
+   "name": "LightCraft",
+   "url": "https://getartcraft.com/apps/lightcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 221,
+   "name": "VectorCraft",
+   "url": "https://getartcraft.com/apps/vectorcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 222,
+   "name": "EffectCraft",
+   "url": "https://getartcraft.com/apps/effectcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 223,
+   "name": "PdfCraft",
+   "url": "https://getartcraft.com/apps/pdfcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 224,
+   "name": "DeckCraft",
+   "url": "https://github.com/storytold/deckcraft"
   }
  ]
 }
