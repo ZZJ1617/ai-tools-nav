@@ -622,6 +622,12 @@ const TOOLS=[
   {n:"EffectCraft",why:"开源AE平替，306个特效还能MCP驱动",c:"视频编辑",m:["视频"],d:"开源After Effects平替(Apache-2.0/MIT,3.4k★,2026-10-01建仓,纯Rust重写):做动画标题、动效与合成——合成套图层(纯色/形状/文字/素材)、关键帧与曲线编辑器、306个特效、图层样式、表达式、3D相机与灯光、渲染队列;导出ProRes MOV(Proxy到4444 XQ带alpha)、HEVC/AV1的MP4、WebM(VP9带alpha)、32位EXR与PNG/TIFF序列、动画GIF、WAV/AIFF,也能导Lottie;Roto Brush可挂MobileSAM(设置里可选下载40MB)、人脸跟踪可挂MediaPipe。Windows有msi与便携zip(x64/x86/ARM64)、macOS通用包、Linux有AppImage/Flatpak/deb/rpm,浏览器里也能跑,都不用自己编译;命令行与MCP都能驱动,工程存成可读JSON。⚠️打不开.aep工程、AE插件不能跑、和AE的行为差异还没系统比对,官方自己说现在还不适合拿它做客户的活",u:"https://getartcraft.com/apps/effectcraft",r:4,re:"开源AE平替",f:1,q:"开源免费",g:"https://github.com/storytold/effectcraft",diff:3,zh:3,hot:2},
   {n:"PdfCraft",why:"开源Acrobat，看批注填表涂黑签名",c:"办公效率",m:["办公"],d:"开源Acrobat平替(Apache-2.0/MIT,5.6k★,2026-09-30建仓,纯Rust重写):阅读与搜索、页面组织(旋转/删除/插空白页/从别的文件插页/前移后移)、合并拆分、批注、填表与自制表单(表单逻辑走沙箱JavaScript)、密码、涂黑与净化、基础数字签名、打印与无障碍检查;大页面分块渲染、放大不糊,每页单独渲染、坏文件也能修,官方在983个pdf.js测试文件上做到0崩溃、958个能编辑保存来回。命令行与MCP都能驱动,不要账号、文档不离开本机,Windows有x64/x86与ARM64包。⚠️改已有文字(尤其中文)还不稳,OCR只认拉丁字母,Office互转与PDF/A预检没做,和Acrobat的质量没做过对照",u:"https://getartcraft.com/apps/pdfcraft",r:4,re:"开源Acrobat",f:1,q:"开源免费",g:"https://github.com/storytold/pdfcraft",diff:2,zh:3,hot:2},
   {n:"DeckCraft",why:"开源PowerPoint，能开能存真.pptx",c:"办公效率",m:["办公"],d:"开源PowerPoint平替(Apache-2.0/MIT,707★,2026-10-07建仓,纯Rust重写):母版与11种带占位符的版式、8套原创主题(配色与字体方案)、节、备注与批注;150多种预设形状带调节手柄、连接符能粘在形状上、自由曲线与合并形状(并/组合/拆分/相交/相减)、渐变/图片/图案填充与阴影发光柔边倒影;正文就地编辑带完整字体段落格式、项目符号与分栏、表格、图表、SmartArt、音视频;转场(含变形)与逐段动画、全屏放映、演讲者视图、排练计时;能打开与保存真正的.pptx,导出PDF/PNG/JPEG与大纲,未保存的活有自动恢复。200多条命令都能被CLI与MCP驱动,Windows/macOS/Linux/BSD原生加浏览器都有,Releases里有现成安装包。⚠️早期开发、正在冲第一个alpha,功能仍在补",u:"https://github.com/storytold/deckcraft",r:3,re:"开源PPT平替",f:1,q:"开源免费",g:"https://github.com/storytold/deckcraft",diff:2,zh:3,hot:2}
+,
+{n:"WordCraft",why:"开源Word平替，能读写真.docx",c:"办公效率",m:["办公","写作"],d:"ArtCraft团队出的开源Word平替(MIT/Apache-2.0双许可,2.6k★,2026-10-07建仓,纯Rust clean-room重写,不联网不要账号):照Word的用法重做——功能区与样式库、多级列表、表格(跨页重复表头/公式/文本↔表格)、页眉页脚与页码、目录/脚注/参考文献(APA/MLA/Chicago/IEEE)、批注与修订、邮件合并(CSV)、图片形状绕排;能直接读写.docx(存出来Word能打开)、导入Word 97-2003的.doc,导出PDF/ODT/RTF/HTML/MD/TeX;界面有简体中文,Windows/macOS/Linux/BSD原生加浏览器(WASM)四端,同一套命令同时供界面、CLI与MCP调用。⚠️2026-10-07才建仓、更新很勤,复杂文档建议先拿副本试",u:"https://github.com/storytold/wordcraft",r:4,re:"开源Word平替",f:1,q:"开源免费",g:"https://github.com/storytold/wordcraft",diff:2,zh:1,hot:2},
+{n:"GridCraft",why:"开源Excel平替，XLSX原生读写",c:"办公效率",m:["办公"],d:"同一团队(ArtCraft)出的开源Excel平替(MIT/Apache-2.0双许可,1.5k★,2026-10-07建仓,纯Rust重写):500多个函数、动态数组、LET与LAMBDA、结构化表引用、数据透视表(字段列表/日期分组/显示值为)、条件格式与色阶、迷你图与图表、排序与筛选;XLSX是原生格式,样式/主题/公式都能读写往返,也能开CSV;Windows/macOS/Linux/BSD原生加浏览器(WASM)都有现成安装包,CLI与MCP能直接读写单元格、算公式、插图表。官方自评覆盖Excel功能区与菜单命令约89%、工作表函数约93%,离第一个alpha约八成。⚠️pre-alpha,真实文件里的XLSX保真度还在修,界面英文",u:"https://github.com/storytold/gridcraft",r:3,re:"开源Excel平替",f:1,q:"开源免费",g:"https://github.com/storytold/gridcraft",diff:2,zh:3,hot:2},
+{n:"CADCraft",why:"开源AutoCAD平替，图纸存DXF",c:"3D创作",m:["3D"],d:"同一团队(ArtCraft)出的开源AutoCAD平替(MIT/Apache-2.0双许可,1.6k★,2026-10-07建仓,纯Rust重写):命令行、对象捕捉、图层、标注、填充、块与DXF图纸照AutoCAD那套来,图纸空间带视口与页面设置、能直接PLOT出PDF,官方样例画出了带中心线与剖面填充的零件图;Windows/macOS/Linux/FreeBSD原生加浏览器(WASM)都有现成安装包,CLI与MCP能驱动。⚠️官方自标early development、功能在快速补齐,界面英文",u:"https://github.com/storytold/cadcraft",r:3,re:"开源CAD平替",f:1,q:"开源免费",g:"https://github.com/storytold/cadcraft",diff:3,zh:3,hot:2},
+{n:"SoundCraft",why:"开源Pro Tools，多轨录音混音",c:"音频生成",m:["音频"],d:"同一团队(ArtCraft)出的开源Pro Tools平替(MIT/Apache-2.0双许可,1.2k★,2026-10-07建仓,纯Rust重写):一套完整的数字音频工作站——Edit窗口排布剪辑、Mix窗口带通道条/插入/发送/声像/推子与电平表、插件与自动化、MIDI钢琴卷帘、录音与导出,自带示范工程(里面每个声音都是它自己合成的);Windows/macOS/Linux/FreeBSD原生加浏览器都有现成安装包,每个动作都能被命令行或AI Agent脚本化。官方自评覆盖Pro Tools菜单命令约94%、接近首个alpha。⚠️pre-alpha,界面英文",u:"https://github.com/storytold/soundcraft",r:3,re:"开源DAW平替",f:1,q:"开源免费",g:"https://github.com/storytold/soundcraft",diff:3,zh:3,hot:1},
+{n:"lemo-opuscar",why:"43种影片风格，代码直接出片",c:"视频生成",m:["视频"],d:"MIT开源(1.7k★,2026-09-26建仓,Lemomo出品):给编程Agent当导演用的一套影片风格包——43种影片风格,每种都配一支完全用代码做出来的样片(另有OPUSCAR 98把98部最佳影片各按风格重画);每个风格都给了可复用的风格提示词,以及那支片子的镜头与导演手法,中文说明齐全,不用视频生成模型、画面全靠代码画。⚠️前提是自备一个能跑的编程Agent(官方样片由Opus 5.5驱动)",u:"https://lemomo-ai.github.io/lemo-opuscar/",r:4,re:"43种影片风格",f:1,v:1,q:"开源免费(自带Agent)",g:"https://github.com/lemomo-ai/lemo-opuscar",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -859,7 +865,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 224 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 229 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1086,6 +1092,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://getartcraft.com/apps/effectcraft" target="_blank" rel="noopener">EffectCraft</a> — 开源AE平替，306个特效还能MCP驱动 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://getartcraft.com/apps/pdfcraft" target="_blank" rel="noopener">PdfCraft</a> — 开源Acrobat，看批注填表涂黑签名 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/storytold/deckcraft" target="_blank" rel="noopener">DeckCraft</a> — 开源PowerPoint，能开能存真.pptx <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/storytold/wordcraft" target="_blank" rel="noopener">WordCraft</a> — 开源Word平替，能读写真.docx <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/storytold/gridcraft" target="_blank" rel="noopener">GridCraft</a> — 开源Excel平替，XLSX原生读写 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/storytold/cadcraft" target="_blank" rel="noopener">CADCraft</a> — 开源AutoCAD平替，图纸存DXF <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/storytold/soundcraft" target="_blank" rel="noopener">SoundCraft</a> — 开源Pro Tools，多轨录音混音 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://lemomo-ai.github.io/lemo-opuscar/" target="_blank" rel="noopener">lemo-opuscar</a> — 43种影片风格，代码直接出片 <span class="nb-cat">视频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1095,7 +1106,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 224,
+ "numberOfItems": 229,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2440,6 +2451,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 224,
    "name": "DeckCraft",
    "url": "https://github.com/storytold/deckcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 225,
+   "name": "WordCraft",
+   "url": "https://github.com/storytold/wordcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 226,
+   "name": "GridCraft",
+   "url": "https://github.com/storytold/gridcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 227,
+   "name": "CADCraft",
+   "url": "https://github.com/storytold/cadcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 228,
+   "name": "SoundCraft",
+   "url": "https://github.com/storytold/soundcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 229,
+   "name": "lemo-opuscar",
+   "url": "https://lemomo-ai.github.io/lemo-opuscar/"
   }
  ]
 }
