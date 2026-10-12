@@ -632,7 +632,12 @@ const TOOLS=[
 {n:"SolidCraft",why:"开源Fusion 360，改个尺寸模型重算",c:"3D创作",m:["3D"],d:"Apache-2.0开源(860★,2026-10-07建仓,原名SolveCraft,2026-10改名SolidCraft):纯Rust clean-room重写的参数化CAD(Autodesk Fusion 360那套)——草图能画线/矩形/圆/弧/多边形/槽/椭圆/样条/圆锥曲线与文字,构造几何、投影、修剪、圆角倒角齐全;核心是带特征时间线的参数化建模,改一个尺寸整条时间线从头重算;官方拿76个Fusion参考零件逐个体积、面积、拓扑对齐,并公开跟踪与Fusion Design工作区的命令差距。Windows/macOS/Linux/FreeBSD都有现成安装包(msi/便携zip/dmg/AppImage/deb/rpm),也能在浏览器里跑(WebGPU,没有就退WebGL2),内置MCP服务器让AI Agent直接建模、量尺寸、看渲染图,还配了一本在线手册。⚠️官方自评early、只保证简单零件可用,曲面造型与Fusion插件不在范围",u:"https://bherbruck.github.io/solidcraft/",r:3,re:"开源参数化CAD",f:1,q:"开源免费",g:"https://github.com/bherbruck/solidcraft",diff:3,zh:3,hot:2},
 {n:"ManimGX",why:"Manim换Rust内核，渲染快近百倍",c:"视频生成",m:["视频","3D"],d:"MIT开源(780★,2026-10-05建仓,Academa Labs出品):给Agent用的数学与3D动画引擎,API兼容Manim CE——写过Manim的脚本基本能直接跑,内核换成Rust+wgpu;官方在M4 Pro上拿同样五段1080p60场景实测:36.2秒的片子从启动到出MP4总共3.08秒,比ManimCE快90.6倍、比ManimGL快11.5倍、比Blender Workbench快18.7倍(场景、参数、每次跑法全部公开)。pip install manimgx 即可(macOS/Linux/Windows,Python 3.13+),字体内置、LaTeX与Typst排版不用另装;npm install manimgx 能在浏览器里用Pyodide+WebGPU跑场景、嵌进自己的网页;manimgx inspect 给Agent出分镜与2D布局检查,self.say() 能把动画对上解说词。⚠️项目很新,能力还在补,复杂场景先拿小样试",u:"https://manimgx.academa.ai",r:4,re:"Rust内核数学动画",f:1,q:"开源免费",g:"https://github.com/academa-labs/manimgx",diff:3,zh:2,hot:2},
 {n:"Mortiflix",why:"动效工作室流程，每一步等你点头",c:"视频生成",m:["视频"],d:"AGPL-3.0开源(564★,2026-10-05建仓):把AI做视频从「一句提示词拉老虎机」改成正经动效工作室——brief→脚本→风格帧→转场板→动态分镜→成片,每一关都等你确认才往下走;意见可以钉在某一帧的具体位置或视频的某一秒,下一版逐条回应并标出改了什么。干活的是你自己的Claude Code登录(你的套餐付)或你自己的Anthropic API key,它只做外面那层管线、关卡、审片室和跨会话记忆,还会把每个项目烧掉多少Claude成本算给你看;mortiflix demo 有免费全流程演示、不用Claude。⚠️目前主要在Linux上测过,Windows安装器排到2026-10-20,macOS大概率能用但没实测;旁白、音效与音乐走ElevenLabs、发布走Postiz,都要自备key",u:"https://github.com/GTKottman/mortiflix-oss",r:3,re:"分阶段审片的AI视频",f:1,q:"开源免费(自备Claude)",g:"https://github.com/GTKottman/mortiflix-oss",diff:3,zh:3,hot:2},
-{n:"Herald-OS",why:"以Hermes为界面的Agent原生系统",c:"工作流Agent",m:["Agent"],d:"MIT开源(443★,2026-10-06建仓,独立开发者Luke The Dev作品,非Nous官方、与Nous Research无关):一个围着AI Agent搭的操作系统——不用自己在菜单和文件夹里翻,直接对Hermes Agent说,它跨整台机器干活:开应用、找文件并整理、盯住正在跑的东西、记事、按日程跑例程,还会一边给你写软件;所有会改动系统的动作都过权限系统,由你放行。已发到 v0.1.0-alpha.3:Linux有安装ISO(能双系统装、可加密、Secure Boot可开)、macOS有dmg,另有ARM64的qcow2镜像与tar包,更新是整系统滚动换新版(herald-os update);底层是Hermes Agent(要单独装好并选好模型),也能当桌面应用装在现有系统里。⚠️alpha阶段、自担风险",u:"https://github.com/iamlukethedev/Herald-OS",r:3,re:"Agent原生操作系统",f:1,q:"开源免费(需自装Hermes)",g:"https://github.com/iamlukethedev/Herald-OS",diff:3,zh:3,hot:2}
+{n:"Herald-OS",why:"以Hermes为界面的Agent原生系统",c:"工作流Agent",m:["Agent"],d:"MIT开源(443★,2026-10-06建仓,独立开发者Luke The Dev作品,非Nous官方、与Nous Research无关):一个围着AI Agent搭的操作系统——不用自己在菜单和文件夹里翻,直接对Hermes Agent说,它跨整台机器干活:开应用、找文件并整理、盯住正在跑的东西、记事、按日程跑例程,还会一边给你写软件;所有会改动系统的动作都过权限系统,由你放行。已发到 v0.1.0-alpha.3:Linux有安装ISO(能双系统装、可加密、Secure Boot可开)、macOS有dmg,另有ARM64的qcow2镜像与tar包,更新是整系统滚动换新版(herald-os update);底层是Hermes Agent(要单独装好并选好模型),也能当桌面应用装在现有系统里。⚠️alpha阶段、自担风险",u:"https://github.com/iamlukethedev/Herald-OS",r:3,re:"Agent原生操作系统",f:1,q:"开源免费(需自装Hermes)",g:"https://github.com/iamlukethedev/Herald-OS",diff:3,zh:3,hot:2},
+{n:"Anatomy",why:"把抽象概念画成能动的等距机械图",c:"图像生成",m:["图像"],d:"MIT开源Agent技能(5.0k★,2026-10-08建仓):说清一个抽象概念,它就替这个概念『造一台真实可动的装置』——等距视角、几十个精密零件的SVG图,配WebGL着色器让人真能动起来(齿轮、阀、皮带按原理联动),另有明暗双主题与可360°巡看的3D模式(beta)。npx skills add wheresryan22/anatomy 一行装进Claude Code / Codex / OpenCode,零依赖(Node≥20.10)。⚠️慢是故意的:一张图要跑几分钟到20分钟;只画机器/仪器/家具,不画人",u:"https://skills.wheresryan.sh/anatomy",r:4,re:"等距讲解图技能",f:1,q:"开源免费(自带Agent)",g:"https://github.com/wheresryan22/anatomy",diff:2,zh:3,hot:2},
+{n:"Genjustsu",why:"本地把视频里的人换成新角色",c:"视频编辑",m:["视频"],d:"MIT开源(695★,TEIN出品)的本地『视频换人』工作流:先给原片做彩色深度图+SAM 3遮罩(遮罩必须逐帧人工确认),再给角色参考图,由Seedance把主体替换成新角色;人声做+3半音移调,最后把原片完整音轨原封贴回成片,先出草稿、你点头才跑1080p。本地UI跑在127.0.0.1:8770,Agent照runbook自动装环境,不用本地GPU;⚠️得自备Enhancor的Seedance key与Replicate token(按量付费),Windows走WSL2",u:"https://github.com/sirioberati/Genjustsu-Open-Source-Workflow",r:3,re:"本地视频换人",f:1,q:"开源免费(自备API key)",g:"https://github.com/sirioberati/Genjustsu-Open-Source-Workflow",diff:3,zh:3,hot:2},
+{n:"Kandinsky 6.0 Video",why:"开源权重:5秒画面连44kHz音频一起出",c:"视频生成",m:["视频","音频"],d:"MIT开源的音视频同步生成模型家族(KandinskyLab出品,278★,2026-10-06开源):Lite 3B与Pro 29B两档,文/图生视频一次给5秒带同步44kHz音频的片段,口型对得上,另有超分模型把画面拉到1920×1080;Diffusers、ComfyUI、vLLM-Omni、SGLang都已接,ComfyUI在管理器里装kandinsky6节点即可。⚠️自托管要NVIDIA显卡(建议用Pro-distill档),只想先看效果就去官方HF Space免费试",u:"https://kandinskylab.ai/models/video/",r:3,re:"音视频同步开源",f:1,v:1,q:"开源免费(需N卡/权重可下载)",g:"https://github.com/kandinskylab/kandinsky-6",diff:3,zh:3,hot:2},
+{n:"VibeOffice",why:"浏览器里开真Office文件,不注册不安装",c:"办公效率",m:["办公"],d:"Apache-2.0开源(634★)的浏览器Office三件套:文字Quire、表格Ledger、演示Lectern,直接打开并另存真实的.docx/.xlsx/.pptx/.csv/RTF/Markdown。它编辑不了的东西(VBA宏、数据透视表、SmartArt这些)原样字节写回,同事在微软Office里打开不会弹修复提示——官方拿4697个真实文件跑过开/存/撤销/恢复逐项比对。没有服务器、不用登录,文件不离开本机,Chrome或Edge里可装成应用直接双击文件打开",u:"https://vibeoffice.work",r:3,re:"浏览器Office套件",f:1,q:"开源免费",g:"https://github.com/tcchen2026/VibeOffice",diff:1,zh:3,hot:2},
+{n:"work-humanizer",why:"去AI味不改事实,盲测赢过流行工具",c:"AI写作",m:["写作"],d:"MIT开源(101★)的Agent写作技能,专治工作文本的AI腔:销售邮件、营销文案、客服回复、HR通知、律师函这类『每个字都是承诺』的东西,它只换说法、不动事实强度;稿子里缺你自己才知道的信息时,会先反问你几个问题。作者摆出了证据:12篇AI初稿让四家不同公司的模型盲评,48%的场合评委愿意直接发它的改写稿(流行的blader/humanizer 20%,一句『改得像人写』的提示词只有1%),12篇只动了18处含义(对比33/42/120),五轮测试56篇里没编造过事实。放进Agent的skills目录即用",u:"https://github.com/phuryn/work-humanizer",r:3,re:"工作写作去AI味",f:1,q:"开源免费(自带Agent)",g:"https://github.com/phuryn/work-humanizer",diff:1,zh:3,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -870,7 +875,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 234 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 239 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1107,6 +1112,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://manimgx.academa.ai" target="_blank" rel="noopener">ManimGX</a> — Manim换Rust内核，渲染快近百倍 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/GTKottman/mortiflix-oss" target="_blank" rel="noopener">Mortiflix</a> — 动效工作室流程，每一步等你点头 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/iamlukethedev/Herald-OS" target="_blank" rel="noopener">Herald-OS</a> — 以Hermes为界面的Agent原生系统 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://skills.wheresryan.sh/anatomy" target="_blank" rel="noopener">Anatomy</a> — 把抽象概念画成能动的等距机械图 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/sirioberati/Genjustsu-Open-Source-Workflow" target="_blank" rel="noopener">Genjustsu</a> — 本地把视频里的人换成新角色 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://kandinskylab.ai/models/video/" target="_blank" rel="noopener">Kandinsky 6.0 Video</a> — 开源权重:5秒画面连44kHz音频一起出 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://vibeoffice.work" target="_blank" rel="noopener">VibeOffice</a> — 浏览器里开真Office文件,不注册不安装 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/phuryn/work-humanizer" target="_blank" rel="noopener">work-humanizer</a> — 去AI味不改事实,盲测赢过流行工具 <span class="nb-cat">AI写作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1116,7 +1126,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 234,
+ "numberOfItems": 239,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2521,6 +2531,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 234,
    "name": "Herald-OS",
    "url": "https://github.com/iamlukethedev/Herald-OS"
+  },
+  {
+   "@type": "ListItem",
+   "position": 235,
+   "name": "Anatomy",
+   "url": "https://skills.wheresryan.sh/anatomy"
+  },
+  {
+   "@type": "ListItem",
+   "position": 236,
+   "name": "Genjustsu",
+   "url": "https://github.com/sirioberati/Genjustsu-Open-Source-Workflow"
+  },
+  {
+   "@type": "ListItem",
+   "position": 237,
+   "name": "Kandinsky 6.0 Video",
+   "url": "https://kandinskylab.ai/models/video/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 238,
+   "name": "VibeOffice",
+   "url": "https://vibeoffice.work"
+  },
+  {
+   "@type": "ListItem",
+   "position": 239,
+   "name": "work-humanizer",
+   "url": "https://github.com/phuryn/work-humanizer"
   }
  ]
 }
