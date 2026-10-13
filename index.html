@@ -637,7 +637,12 @@ const TOOLS=[
 {n:"Genjustsu",why:"本地把视频里的人换成新角色",c:"视频编辑",m:["视频"],d:"MIT开源(695★,TEIN出品)的本地『视频换人』工作流:先给原片做彩色深度图+SAM 3遮罩(遮罩必须逐帧人工确认),再给角色参考图,由Seedance把主体替换成新角色;人声做+3半音移调,最后把原片完整音轨原封贴回成片,先出草稿、你点头才跑1080p。本地UI跑在127.0.0.1:8770,Agent照runbook自动装环境,不用本地GPU;⚠️得自备Enhancor的Seedance key与Replicate token(按量付费),Windows走WSL2",u:"https://github.com/sirioberati/Genjustsu-Open-Source-Workflow",r:3,re:"本地视频换人",f:1,q:"开源免费(自备API key)",g:"https://github.com/sirioberati/Genjustsu-Open-Source-Workflow",diff:3,zh:3,hot:2},
 {n:"Kandinsky 6.0 Video",why:"开源权重:5秒画面连44kHz音频一起出",c:"视频生成",m:["视频","音频"],d:"MIT开源的音视频同步生成模型家族(KandinskyLab出品,278★,2026-10-06开源):Lite 3B与Pro 29B两档,文/图生视频一次给5秒带同步44kHz音频的片段,口型对得上,另有超分模型把画面拉到1920×1080;Diffusers、ComfyUI、vLLM-Omni、SGLang都已接,ComfyUI在管理器里装kandinsky6节点即可。⚠️自托管要NVIDIA显卡(建议用Pro-distill档),只想先看效果就去官方HF Space免费试",u:"https://kandinskylab.ai/models/video/",r:3,re:"音视频同步开源",f:1,v:1,q:"开源免费(需N卡/权重可下载)",g:"https://github.com/kandinskylab/kandinsky-6",diff:3,zh:3,hot:2},
 {n:"VibeOffice",why:"浏览器里开真Office文件,不注册不安装",c:"办公效率",m:["办公"],d:"Apache-2.0开源(634★)的浏览器Office三件套:文字Quire、表格Ledger、演示Lectern,直接打开并另存真实的.docx/.xlsx/.pptx/.csv/RTF/Markdown。它编辑不了的东西(VBA宏、数据透视表、SmartArt这些)原样字节写回,同事在微软Office里打开不会弹修复提示——官方拿4697个真实文件跑过开/存/撤销/恢复逐项比对。没有服务器、不用登录,文件不离开本机,Chrome或Edge里可装成应用直接双击文件打开",u:"https://vibeoffice.work",r:3,re:"浏览器Office套件",f:1,q:"开源免费",g:"https://github.com/tcchen2026/VibeOffice",diff:1,zh:3,hot:2},
-{n:"work-humanizer",why:"去AI味不改事实,盲测赢过流行工具",c:"AI写作",m:["写作"],d:"MIT开源(101★)的Agent写作技能,专治工作文本的AI腔:销售邮件、营销文案、客服回复、HR通知、律师函这类『每个字都是承诺』的东西,它只换说法、不动事实强度;稿子里缺你自己才知道的信息时,会先反问你几个问题。作者摆出了证据:12篇AI初稿让四家不同公司的模型盲评,48%的场合评委愿意直接发它的改写稿(流行的blader/humanizer 20%,一句『改得像人写』的提示词只有1%),12篇只动了18处含义(对比33/42/120),五轮测试56篇里没编造过事实。放进Agent的skills目录即用",u:"https://github.com/phuryn/work-humanizer",r:3,re:"工作写作去AI味",f:1,q:"开源免费(自带Agent)",g:"https://github.com/phuryn/work-humanizer",diff:1,zh:3,hot:1}
+{n:"work-humanizer",why:"去AI味不改事实,盲测赢过流行工具",c:"AI写作",m:["写作"],d:"MIT开源(101★)的Agent写作技能,专治工作文本的AI腔:销售邮件、营销文案、客服回复、HR通知、律师函这类『每个字都是承诺』的东西,它只换说法、不动事实强度;稿子里缺你自己才知道的信息时,会先反问你几个问题。作者摆出了证据:12篇AI初稿让四家不同公司的模型盲评,48%的场合评委愿意直接发它的改写稿(流行的blader/humanizer 20%,一句『改得像人写』的提示词只有1%),12篇只动了18处含义(对比33/42/120),五轮测试56篇里没编造过事实。放进Agent的skills目录即用",u:"https://github.com/phuryn/work-humanizer",r:3,re:"工作写作去AI味",f:1,q:"开源免费(自带Agent)",g:"https://github.com/phuryn/work-humanizer",diff:1,zh:3,hot:1},
+{n:"公众号排版 Skill",why:"Markdown 排成可直接粘进公众号的HTML",c:"AI写作",m:["写作","办公"],d:"AGPL-3.0开源的公众号排版Agent技能(3.9k★,甲木×摸鱼小李共建,2026-10-09仍在更新):把Markdown/Word/PDF长文一键排成样式全内联、文字用span leaf包裹的HTML,规避公众号会过滤的style/div/class/grid/position,粘贴过去不掉格式;6套成品主题(摸鱼绿/红白/石墨极简/留白禅意/摸鱼票据/橄榄手记),不满意可用一句话或参考图现造一套并存在本地;自动章节编号、每段标1-3个关键词下划线、从正文提炼引言卡与目录、代码块与GIF角标、作者签名去重合并,配component_lint.py与validate_gzh_html.py双关卡校验,生成带「复制」按钮的预览页点一下即进剪贴板,另按题材给了选主题的配方表。⚠️只排版不代写,要先有Markdown;宿主是能装skill的编程Agent(Claude Code/Codex/Cursor)",u:"https://github.com/isjiamu/gzh-design-skill",r:4,re:"公众号排版技能",f:1,q:"开源免费(自带Agent)",g:"https://github.com/isjiamu/gzh-design-skill",diff:2,zh:1,hot:2},
+{n:"Diagram Design",why:"图表一次出成自包含的单文件 SVG",c:"设计工具",m:["图像"],d:"MIT开源的编辑级图表Agent技能(5.35万★,官网diagramdesign.dev):让编程Agent把内容画成一张自包含的HTML+SVG示意图,40多种图表类型(流程、架构、时间线、对比等),配色按你的品牌色板走,成品能导出PNG/SVG,也能从draw.io、Mermaid、Excalidraw导入再改;作者口味很明确——不要阴影、不要Mermaid默认那套味道。npx skills add cathrynlavery/diagram-design 一行装进Claude Code/Codex/GitHub Copilot/Cursor",u:"https://diagramdesign.dev",r:4,re:"编辑级信息图技能",f:1,q:"开源免费(自带Agent)",g:"https://github.com/cathrynlavery/diagram-design",diff:2,zh:3,hot:3},
+{n:"img2threejs",why:"参考图重建成可改代码的 3D 模型",c:"3D创作",m:["3D"],d:"Apache-2.0开源(1.8万★,官网img2threejs.io):给一张参考图,让编程Agent用代码把图里的物体重建成程序化Three.js模型——不是摄影测量、不是抽网格,而是可读可改的代码,带质量闸门、天生能动,还刻意省token(官方原话是重建靠代码,不下载美术资源)。工具链只要求Python 3.10+标准库,宿主为Claude Code等编程Agent。商品图、道具图、参考图都能变成网页里能转能动的3D资产",u:"https://img2threejs.io",r:4,re:"图片转可编辑3D",f:1,q:"开源免费(自带Agent)",g:"https://github.com/img2threejs/img2threejs",diff:3,zh:3,hot:3},
+{n:"Chubby Skills",why:"抖音B站小红书素材收进本地知识库",c:"办公效率",m:["办公","写作"],d:"MIT开源的中文内容采集Agent技能集(1234★,14个Skill,已到0.14.0,2026-10-08仍在更新):把抖音/B站/小红书/公众号/X/播客的素材采进本地知识库——链接和本地文档都存成Markdown原文加附件,字幕优先转录所以不吃GPU,支持公开Feed与YouTube订阅调度、每日情报简报,还带知识库MCP server;产物是本地Markdown,写稿时能回查原文出处。核心链路只用Python 3.11+标准库,不装第三方包、不配API Key、不下模型;B站/YouTube字幕要yt-dlp,视频与播客本地转录要ffmpeg,公众号走setup.sh wechat。⚠️采集受Cookie与平台限制影响,失败有兜底路径",u:"https://github.com/chubbyguan/chubbyskills",r:3,re:"中文素材入知识库",f:1,q:"开源免费(自带Agent)",g:"https://github.com/chubbyguan/chubbyskills",diff:2,zh:1,hot:2},
+{n:"大师 PPT Skill",why:"1020 版式,导出还能改的 PPTX",c:"设计工具",m:["办公"],d:"AGPL-3.0开源的PPT Agent技能(9.4k★):把文档丢给编程Agent,出的演示稿每页都带编辑控制台——滑杆、开关、下拉换布局、调模块数量、换配色,文字点一下就地改,再一键导出成真实的、可编辑的PPTX或PDF;12套视觉主题、1020个版式、20种页面角色,自带雷达图、瀑布图、矩形树图、漏斗、热力图、桑基图、甘特图以及SWOT、波特五力、PEST、商业模式画布等分析模型版式。npx dashi-ppt-skill@latest 装(国内可用npmmirror镜像),需Node 20+,导出要本机有Chrome/Chromium/Edge,内容不上传,成品离线可开。⚠️导出引擎子包是专有组件,不能单独再分发",u:"https://github.com/chuspeeism/dashi-ppt-skill",r:4,re:"可编辑PPTX导出",f:1,q:"开源免费(自带Agent)",g:"https://github.com/chuspeeism/dashi-ppt-skill",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -875,7 +880,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 239 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 244 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1117,6 +1122,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://kandinskylab.ai/models/video/" target="_blank" rel="noopener">Kandinsky 6.0 Video</a> — 开源权重:5秒画面连44kHz音频一起出 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://vibeoffice.work" target="_blank" rel="noopener">VibeOffice</a> — 浏览器里开真Office文件,不注册不安装 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/phuryn/work-humanizer" target="_blank" rel="noopener">work-humanizer</a> — 去AI味不改事实,盲测赢过流行工具 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/isjiamu/gzh-design-skill" target="_blank" rel="noopener">公众号排版 Skill</a> — Markdown 排成可直接粘进公众号的HTML <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://diagramdesign.dev" target="_blank" rel="noopener">Diagram Design</a> — 图表一次出成自包含的单文件 SVG <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://img2threejs.io" target="_blank" rel="noopener">img2threejs</a> — 参考图重建成可改代码的 3D 模型 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/chubbyguan/chubbyskills" target="_blank" rel="noopener">Chubby Skills</a> — 抖音B站小红书素材收进本地知识库 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/chuspeeism/dashi-ppt-skill" target="_blank" rel="noopener">大师 PPT Skill</a> — 1020 版式,导出还能改的 PPTX <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1126,7 +1136,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 239,
+ "numberOfItems": 244,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2561,6 +2571,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 239,
    "name": "work-humanizer",
    "url": "https://github.com/phuryn/work-humanizer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 240,
+   "name": "公众号排版 Skill",
+   "url": "https://github.com/isjiamu/gzh-design-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 241,
+   "name": "Diagram Design",
+   "url": "https://diagramdesign.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 242,
+   "name": "img2threejs",
+   "url": "https://img2threejs.io"
+  },
+  {
+   "@type": "ListItem",
+   "position": 243,
+   "name": "Chubby Skills",
+   "url": "https://github.com/chubbyguan/chubbyskills"
+  },
+  {
+   "@type": "ListItem",
+   "position": 244,
+   "name": "大师 PPT Skill",
+   "url": "https://github.com/chuspeeism/dashi-ppt-skill"
   }
  ]
 }
