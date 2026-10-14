@@ -641,7 +641,12 @@ const TOOLS=[
 {n:"Diagram Design",why:"图表一次出成自包含的单文件 SVG",c:"设计工具",m:["图像"],d:"MIT开源的编辑级图表Agent技能(5.35万★,官网diagramdesign.dev):让编程Agent把内容画成一张自包含的HTML+SVG示意图,40多种图表类型(流程、架构、时间线、对比等),配色按你的品牌色板走,成品能导出PNG/SVG,也能从draw.io、Mermaid、Excalidraw导入再改;作者口味很明确——不要阴影、不要Mermaid默认那套味道。npx skills add cathrynlavery/diagram-design 一行装进Claude Code/Codex/GitHub Copilot/Cursor",u:"https://diagramdesign.dev",r:4,re:"编辑级信息图技能",f:1,q:"开源免费(自带Agent)",g:"https://github.com/cathrynlavery/diagram-design",diff:2,zh:3,hot:3},
 {n:"img2threejs",why:"参考图重建成可改代码的 3D 模型",c:"3D创作",m:["3D"],d:"Apache-2.0开源(1.8万★,官网img2threejs.io):给一张参考图,让编程Agent用代码把图里的物体重建成程序化Three.js模型——不是摄影测量、不是抽网格,而是可读可改的代码,带质量闸门、天生能动,还刻意省token(官方原话是重建靠代码,不下载美术资源)。工具链只要求Python 3.10+标准库,宿主为Claude Code等编程Agent。商品图、道具图、参考图都能变成网页里能转能动的3D资产",u:"https://img2threejs.io",r:4,re:"图片转可编辑3D",f:1,q:"开源免费(自带Agent)",g:"https://github.com/img2threejs/img2threejs",diff:3,zh:3,hot:3},
 {n:"Chubby Skills",why:"抖音B站小红书素材收进本地知识库",c:"办公效率",m:["办公","写作"],d:"MIT开源的中文内容采集Agent技能集(1234★,14个Skill,已到0.14.0,2026-10-08仍在更新):把抖音/B站/小红书/公众号/X/播客的素材采进本地知识库——链接和本地文档都存成Markdown原文加附件,字幕优先转录所以不吃GPU,支持公开Feed与YouTube订阅调度、每日情报简报,还带知识库MCP server;产物是本地Markdown,写稿时能回查原文出处。核心链路只用Python 3.11+标准库,不装第三方包、不配API Key、不下模型;B站/YouTube字幕要yt-dlp,视频与播客本地转录要ffmpeg,公众号走setup.sh wechat。⚠️采集受Cookie与平台限制影响,失败有兜底路径",u:"https://github.com/chubbyguan/chubbyskills",r:3,re:"中文素材入知识库",f:1,q:"开源免费(自带Agent)",g:"https://github.com/chubbyguan/chubbyskills",diff:2,zh:1,hot:2},
-{n:"大师 PPT Skill",why:"1020 版式,导出还能改的 PPTX",c:"设计工具",m:["办公"],d:"AGPL-3.0开源的PPT Agent技能(9.4k★):把文档丢给编程Agent,出的演示稿每页都带编辑控制台——滑杆、开关、下拉换布局、调模块数量、换配色,文字点一下就地改,再一键导出成真实的、可编辑的PPTX或PDF;12套视觉主题、1020个版式、20种页面角色,自带雷达图、瀑布图、矩形树图、漏斗、热力图、桑基图、甘特图以及SWOT、波特五力、PEST、商业模式画布等分析模型版式。npx dashi-ppt-skill@latest 装(国内可用npmmirror镜像),需Node 20+,导出要本机有Chrome/Chromium/Edge,内容不上传,成品离线可开。⚠️导出引擎子包是专有组件,不能单独再分发",u:"https://github.com/chuspeeism/dashi-ppt-skill",r:4,re:"可编辑PPTX导出",f:1,q:"开源免费(自带Agent)",g:"https://github.com/chuspeeism/dashi-ppt-skill",diff:2,zh:1,hot:2}
+{n:"大师 PPT Skill",why:"1020 版式,导出还能改的 PPTX",c:"设计工具",m:["办公"],d:"AGPL-3.0开源的PPT Agent技能(9.4k★):把文档丢给编程Agent,出的演示稿每页都带编辑控制台——滑杆、开关、下拉换布局、调模块数量、换配色,文字点一下就地改,再一键导出成真实的、可编辑的PPTX或PDF;12套视觉主题、1020个版式、20种页面角色,自带雷达图、瀑布图、矩形树图、漏斗、热力图、桑基图、甘特图以及SWOT、波特五力、PEST、商业模式画布等分析模型版式。npx dashi-ppt-skill@latest 装(国内可用npmmirror镜像),需Node 20+,导出要本机有Chrome/Chromium/Edge,内容不上传,成品离线可开。⚠️导出引擎子包是专有组件,不能单独再分发",u:"https://github.com/chuspeeism/dashi-ppt-skill",r:4,re:"可编辑PPTX导出",f:1,q:"开源免费(自带Agent)",g:"https://github.com/chuspeeism/dashi-ppt-skill",diff:2,zh:1,hot:2},
+{n:"Doory",why:"开源 Canva，免注册无水印还能自部署",c:"设计工具",m:["图像","办公"],d:"Attribution Assurance 许可(BSD 改，要求署名)的开源 Canva 平替(1.1k★，官网 doory.art):浏览器里做海报/社交图/故事/幻灯片/邀请函/简历/名片，从模板或空白页起手；图层、分组、蒙版、滤镜、曲线文字、吸附对齐、多页不同尺寸、动画与音效、演讲模式的第二演示窗、共享链接(可看/可评/可编辑)、实时协作与版本历史、品牌套件都在。导出 PNG/JPG/SVG/PDF(带出血与裁切标记的印刷稿)，也能出 MP4/WebM/GIF 动图；抠图模型跑在浏览器本地。官方托管站免注册，访客作品存在浏览器本地，想全自己掌控就 docker compose up 把应用+API+数据库+协作跑上自己的服务器，无 Pro 档、无水印、无广告。⚠️界面目前只有英文",u:"https://doory.art",r:4,re:"开源Canva平替",f:1,q:"免费(无订阅/无水印)",g:"https://github.com/shaongitbd/doory",diff:1,zh:3,hot:3},
+{n:"oneTake",why:"把镜头之间的边界当设计对象的动效片skill",c:"视频编辑",m:["视频","Agent"],d:"Claude Agent Skill(PolyForm 非商业许可，2.3k★，官网 onetakemotion.com):专做产品发布片、预告与功能演示，核心是「一镜到底」——把两拍之间的边界当成要设计的东西，画面上总有东西活下来并变成下一拍(提示词栏掀开就是应用窗口、条形塌成一条线射过桌面变成下一幕的网格线)，不是标题卡接淡入淡出的 PPT 式堆镜头；仓库带 11 部成片案例和 verify_promo.py 逐边界量连续性。纯代码渲染，不调用视频模型、不烧生成额度。⚠️个人与非商业免费，商用要买 onetake Pro；文档以英文为主",u:"https://onetakemotion.com",r:4,re:"一镜到底动效skill",f:1,q:"个人非商业免费",g:"https://github.com/feitangyuan/onetake",diff:3,zh:2,hot:3},
+{n:"Talorys",why:"一行命令把自己Cloudflare变成私人助理",c:"工作流Agent",m:["Agent","办公"],d:"MIT 开源的私人 AI 助理(983★):整个跑在你自己的 Cloudflare 账号里，npx create-talorys@latest 一条命令部署，没有官方服务器、数据库和账号，单用户设计、无注册无遥测，装完由你设主人密码。带流式聊天与工具调用指示、可查可改可删的长期记忆(可选语义召回，还会把「已经卖掉的车」这类过期事实归到历史)、任务/笔记/项目、定时提醒与每日摘要(跑在 Durable Object 定时器上，电脑不用常开)、Web Push 推到手机和电脑。模型走 Cloudflare Workers AI，免费额度用完后任务、笔记、提醒照样能用，也可自备模型 key。⚠️界面为英文",u:"https://github.com/rociiu/talorys",r:4,re:"自托管私人助理",f:1,q:"免费(Cloudflare免费额度)",g:"https://github.com/rociiu/talorys",diff:2,zh:3,hot:2},
+{n:"Filee",why:"按住Ctrl拖一下就转格式，全程离线",c:"办公效率",m:["办公"],d:"MIT 开源的离线文件转换器(721★，官网 filee.sh；Windows 10/11 正式版，macOS/Linux 预览):按住 Ctrl 把文件拖到光标处弹出的格式甜甜圈上松手就转好，结果落在原文件旁边，不联网、不上传、不走服务器。180+ 格式不用装 Office/Hancom/LibreOffice 也能转——图片、PDF、Word/Excel/PPT、HWP/HWPX、电子书、压缩包、字体、CAD；带资源管理器右键菜单、命令行与批量转换，另有便携版解压即用(视频音频、冷门格式可选装 FFmpeg/LibreOffice 引擎)。⚠️不是 AI 工具，是纯本地小工具",u:"https://filee.sh",r:4,re:"离线拖拽转格式",f:1,q:"开源免费",g:"https://github.com/KnifeLemon/Filee",diff:1,zh:2,hot:2},
+{n:"LiveCanvas 实况画布",why:"一句话出带封面和动画的Live图",c:"设计工具",m:["图像","视频"],d:"MIT 开源的 Codex/Claude Code skill(485★，中文作者，README 中文优先):一句话做成有封面、有动画的 Live 图——先搜索核实事实、设计分镜，再用 Remotion 渲成动画，最后出 Apple Live Photo 资源(动态封面+配套视频)，也能导 GIF/视频。自带图片、emoji、场景、时间线、图表五种素材模式，仓库附 15 张中文成片 GIF 可直接看效果(小米市值、A20 Pro 对比、全球人口、双城气温这类信息图动效)，适合社交封面、数据播报、产品对比动画。⚠️宿主要是能装 skill 的编程 Agent，需装 Node 与 Remotion 依赖",u:"https://github.com/pengchujin/livecanvas",r:3,re:"一句话做Live图",f:1,q:"开源免费",g:"https://github.com/pengchujin/livecanvas",diff:2,zh:1,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -879,7 +884,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 244 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 249 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1126,6 +1131,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://img2threejs.io" target="_blank" rel="noopener">img2threejs</a> — 参考图重建成可改代码的 3D 模型 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/chubbyguan/chubbyskills" target="_blank" rel="noopener">Chubby Skills</a> — 抖音B站小红书素材收进本地知识库 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/chuspeeism/dashi-ppt-skill" target="_blank" rel="noopener">大师 PPT Skill</a> — 1020 版式,导出还能改的 PPTX <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://doory.art" target="_blank" rel="noopener">Doory</a> — 开源 Canva，免注册无水印还能自部署 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://onetakemotion.com" target="_blank" rel="noopener">oneTake</a> — 把镜头之间的边界当设计对象的动效片skill <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/rociiu/talorys" target="_blank" rel="noopener">Talorys</a> — 一行命令把自己Cloudflare变成私人助理 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://filee.sh" target="_blank" rel="noopener">Filee</a> — 按住Ctrl拖一下就转格式，全程离线 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/pengchujin/livecanvas" target="_blank" rel="noopener">LiveCanvas 实况画布</a> — 一句话出带封面和动画的Live图 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1135,7 +1145,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 244,
+ "numberOfItems": 249,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2600,6 +2610,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 244,
    "name": "大师 PPT Skill",
    "url": "https://github.com/chuspeeism/dashi-ppt-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 245,
+   "name": "Doory",
+   "url": "https://doory.art"
+  },
+  {
+   "@type": "ListItem",
+   "position": 246,
+   "name": "oneTake",
+   "url": "https://onetakemotion.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 247,
+   "name": "Talorys",
+   "url": "https://github.com/rociiu/talorys"
+  },
+  {
+   "@type": "ListItem",
+   "position": 248,
+   "name": "Filee",
+   "url": "https://filee.sh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 249,
+   "name": "LiveCanvas 实况画布",
+   "url": "https://github.com/pengchujin/livecanvas"
   }
  ]
 }
