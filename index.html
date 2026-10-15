@@ -648,6 +648,11 @@ const TOOLS=[
 {n:"Talorys",why:"一行命令把自己Cloudflare变成私人助理",c:"工作流Agent",m:["Agent","办公"],d:"MIT 开源的私人 AI 助理(983★):整个跑在你自己的 Cloudflare 账号里，npx create-talorys@latest 一条命令部署，没有官方服务器、数据库和账号，单用户设计、无注册无遥测，装完由你设主人密码。带流式聊天与工具调用指示、可查可改可删的长期记忆(可选语义召回，还会把「已经卖掉的车」这类过期事实归到历史)、任务/笔记/项目、定时提醒与每日摘要(跑在 Durable Object 定时器上，电脑不用常开)、Web Push 推到手机和电脑。模型走 Cloudflare Workers AI，免费额度用完后任务、笔记、提醒照样能用，也可自备模型 key。⚠️界面为英文",u:"https://github.com/rociiu/talorys",r:4,re:"自托管私人助理",f:1,q:"免费(Cloudflare免费额度)",g:"https://github.com/rociiu/talorys",diff:2,zh:3,hot:2},
 {n:"Filee",why:"按住Ctrl拖一下就转格式，全程离线",c:"办公效率",m:["办公"],d:"MIT 开源的离线文件转换器(721★，官网 filee.sh；Windows 10/11 正式版，macOS/Linux 预览):按住 Ctrl 把文件拖到光标处弹出的格式甜甜圈上松手就转好，结果落在原文件旁边，不联网、不上传、不走服务器。180+ 格式不用装 Office/Hancom/LibreOffice 也能转——图片、PDF、Word/Excel/PPT、HWP/HWPX、电子书、压缩包、字体、CAD；带资源管理器右键菜单、命令行与批量转换，另有便携版解压即用(视频音频、冷门格式可选装 FFmpeg/LibreOffice 引擎)。⚠️不是 AI 工具，是纯本地小工具",u:"https://filee.sh",r:4,re:"离线拖拽转格式",f:1,q:"开源免费",g:"https://github.com/KnifeLemon/Filee",diff:1,zh:2,hot:2},
 {n:"LiveCanvas 实况画布",why:"一句话出带封面和动画的Live图",c:"设计工具",m:["图像","视频"],d:"MIT 开源的 Codex/Claude Code skill(485★，中文作者，README 中文优先):一句话做成有封面、有动画的 Live 图——先搜索核实事实、设计分镜，再用 Remotion 渲成动画，最后出 Apple Live Photo 资源(动态封面+配套视频)，也能导 GIF/视频。自带图片、emoji、场景、时间线、图表五种素材模式，仓库附 15 张中文成片 GIF 可直接看效果(小米市值、A20 Pro 对比、全球人口、双城气温这类信息图动效)，适合社交封面、数据播报、产品对比动画。⚠️宿主要是能装 skill 的编程 Agent，需装 Node 与 Remotion 依赖",u:"https://github.com/pengchujin/livecanvas",r:3,re:"一句话做Live图",f:1,q:"开源免费",g:"https://github.com/pengchujin/livecanvas",diff:2,zh:1,hot:2},
+{n:"FigCraft",why:"纯 Rust 重写 Figma，离线秒开",c:"设计工具",m:["图像"],d:"MIT/Apache-2.0 开源(1.2k★，早期 alpha)：把 Figma 搬到本地——组件与变体、自动布局、矢量网络、样式变量、原型一应俱全，纯 Rust 原生应用秒开且可离线，macOS/Windows/Linux/FreeBSD 四端安装包加网页版；界面里每个操作都是带 id 的命令，能经 MCP 让 Agent 直接改稿",u:"https://getartcraft.com/apps/figcraft",r:4,re:"开源Figma平替",f:1,q:"开源免费",g:"https://github.com/storytold/figcraft",diff:1,zh:3,hot:2},
+{n:"OpenCreator",why:"13k★ 开源工作台，视频翻译配音一站齐",c:"工作流Agent",m:["视频","音频"],d:"Apache-2.0 开源(13.2k★，原 KrillinAI)：本地运行的创作者工作台，视频下载/翻译/配音、封面与图像生成(接 GPT Image)、Seedance 视频生成、文章与小红书帖子写作、火柴人动画、自动剪辑等十件工具，另有 Agent 对话式创作与 Skills 扩展；桌面版内置 Codex CLI，需自备 ChatGPT 登录态或自己的模型 API Key",u:"https://www.open-creator.ai",r:4,re:"开源创作者工作台",f:1,q:"开源免费",g:"https://github.com/krillinai/OpenCreator",diff:2,zh:1,hot:3},
+{n:"本地短剧助手 LocalMiniDrama",why:"离线跑完整条短剧流水线，素材不出本机",c:"AI短剧",m:["视频"],d:"MIT 开源(2.1k★)：剧本→角色场景→分镜→视频合成一条龙，SQLite 加本地文件存储、素材不上云；列表精细编辑与画布批量编排双视图，生成走自备的通义/火山豆包/可灵/本地 Ollama，配 Gitee 与 AtomGit 镜像；目前只提供 Windows 安装包",u:"https://83zi.com/",r:4,re:"本地离线短剧",f:1,q:"开源免费",g:"https://github.com/xuanyustudio/LocalMiniDrama",diff:2,zh:1,hot:2},
+{n:"DigUp",why:"按意思搜本机文件，视频播客里的内容都能定位",c:"办公效率",m:["办公"],d:"MIT 开源的本地语义搜索(3.9k★)：用 Google DeepMind 的 EmbeddingGemma 2 把图片、PDF、文档、录音、视频放进同一语义空间，直接描述就能找到「视频里的斑马」「播客聊睡眠的那一分钟」并跳到对应时刻；离线索引、不限次数、无账号，Mac 版还能识别截图里的文字；⚠️中文等无空格语言只走语义匹配、精确词不做分词",u:"https://github.com/ARahim3/DigUp",r:4,re:"本地文件语义搜索",f:1,q:"开源免费",g:"https://github.com/ARahim3/DigUp",diff:1,zh:2,hot:2},
+{n:"abogen",why:"epub/PDF 一键转有声书，字幕自动对齐",c:"音频生成",m:["音频"],d:"MIT 开源的本地 TTS 工具(6.1k★)：把 epub、PDF、文本、markdown、字幕文件转成配音音频并同步产出字幕，底层用 Kokoro-82M，实测 5 秒出 1 分钟音频；模型可整套预下载后完全离线跑，Windows/Linux/macOS 都有 GUI，也支持命令行与 Docker 挂进 Audiobookshelf；中文语音需另装 misaki[zh]",u:"https://github.com/denizsafak/abogen",r:4,re:"文档转有声书",f:1,q:"开源免费",g:"https://github.com/denizsafak/abogen",diff:2,zh:2,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -885,7 +890,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 249 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 254 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1137,6 +1142,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/rociiu/talorys" target="_blank" rel="noopener">Talorys</a> — 一行命令把自己Cloudflare变成私人助理 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://filee.sh" target="_blank" rel="noopener">Filee</a> — 按住Ctrl拖一下就转格式，全程离线 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/pengchujin/livecanvas" target="_blank" rel="noopener">LiveCanvas 实况画布</a> — 一句话出带封面和动画的Live图 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://getartcraft.com/apps/figcraft" target="_blank" rel="noopener">FigCraft</a> — 纯 Rust 重写 Figma，离线秒开 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://www.open-creator.ai" target="_blank" rel="noopener">OpenCreator</a> — 13k★ 开源工作台，视频翻译配音一站齐 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://83zi.com/" target="_blank" rel="noopener">本地短剧助手 LocalMiniDrama</a> — 离线跑完整条短剧流水线，素材不出本机 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/ARahim3/DigUp" target="_blank" rel="noopener">DigUp</a> — 按意思搜本机文件，视频播客里的内容都能定位 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/denizsafak/abogen" target="_blank" rel="noopener">abogen</a> — epub/PDF 一键转有声书，字幕自动对齐 <span class="nb-cat">音频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1146,7 +1156,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 249,
+ "numberOfItems": 254,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2641,6 +2651,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 249,
    "name": "LiveCanvas 实况画布",
    "url": "https://github.com/pengchujin/livecanvas"
+  },
+  {
+   "@type": "ListItem",
+   "position": 250,
+   "name": "FigCraft",
+   "url": "https://getartcraft.com/apps/figcraft"
+  },
+  {
+   "@type": "ListItem",
+   "position": 251,
+   "name": "OpenCreator",
+   "url": "https://www.open-creator.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 252,
+   "name": "本地短剧助手 LocalMiniDrama",
+   "url": "https://83zi.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 253,
+   "name": "DigUp",
+   "url": "https://github.com/ARahim3/DigUp"
+  },
+  {
+   "@type": "ListItem",
+   "position": 254,
+   "name": "abogen",
+   "url": "https://github.com/denizsafak/abogen"
   }
  ]
 }
