@@ -651,6 +651,11 @@ const TOOLS=[
 {n:"本地短剧助手 LocalMiniDrama",why:"离线跑完整条短剧流水线，素材不出本机",c:"AI短剧",m:["视频"],d:"MIT 开源(2.1k★)：剧本→角色场景→分镜→视频合成一条龙，SQLite 加本地文件存储、素材不上云；列表精细编辑与画布批量编排双视图，生成走自备的通义/火山豆包/可灵/本地 Ollama，配 Gitee 与 AtomGit 镜像；目前只提供 Windows 安装包",u:"https://83zi.com/",r:4,re:"本地离线短剧",f:1,q:"开源免费",g:"https://github.com/xuanyustudio/LocalMiniDrama",diff:2,zh:1,hot:2},
 {n:"DigUp",why:"按意思搜本机文件，视频播客里的内容都能定位",c:"办公效率",m:["办公"],d:"MIT 开源的本地语义搜索(3.9k★)：用 Google DeepMind 的 EmbeddingGemma 2 把图片、PDF、文档、录音、视频放进同一语义空间，直接描述就能找到「视频里的斑马」「播客聊睡眠的那一分钟」并跳到对应时刻；离线索引、不限次数、无账号，Mac 版还能识别截图里的文字；⚠️中文等无空格语言只走语义匹配、精确词不做分词",u:"https://github.com/ARahim3/DigUp",r:4,re:"本地文件语义搜索",f:1,q:"开源免费",g:"https://github.com/ARahim3/DigUp",diff:1,zh:2,hot:2},
 {n:"abogen",why:"epub/PDF 一键转有声书，字幕自动对齐",c:"音频生成",m:["音频"],d:"MIT 开源的本地 TTS 工具(6.1k★)：把 epub、PDF、文本、markdown、字幕文件转成配音音频并同步产出字幕，底层用 Kokoro-82M，实测 5 秒出 1 分钟音频；模型可整套预下载后完全离线跑，Windows/Linux/macOS 都有 GUI，也支持命令行与 Docker 挂进 Audiobookshelf；中文语音需另装 misaki[zh]",u:"https://github.com/denizsafak/abogen",r:4,re:"文档转有声书",f:1,q:"开源免费",g:"https://github.com/denizsafak/abogen",diff:2,zh:2,hot:2},
+{n:"产品宣传视频制作器",why:"一句话让 AI 出 4K 宣传片，不用学剪辑",c:"视频生成",m:["视频"],d:"MIT 开源的 Agent 工作流(303★,2026-10-09 建仓,程序员鱼皮出品)：把产品名或网址丢给 Cursor / Claude Code / Codex，AI 自己调研卖点、先出几种风格样图让你挑、截 4K 真实页面、按音乐节拍卡点、生成旁白并逐句转写校验，最后交付宣传片与可在线播放的网页版；Node 18+/Python 3.9+/ffmpeg 就能跑，不填任何 key 也能用曲库配乐+纯字幕出片，填 ElevenLabs key 才有 AI 旁白与配乐",u:"https://github.com/liyupi/ai-promo-video-maker",r:4,re:"一句话出宣传片",f:1,q:"开源免费",g:"https://github.com/liyupi/ai-promo-video-maker",diff:2,zh:1,hot:2},
+{n:"Win顺 WinShun",why:"双击 Ctrl 秒搜全盘，还接管 Win+V 剪贴板",c:"办公效率",m:["办公"],d:"MIT 开源的 Windows 搜索启动器(406★,2026-10-08 建仓,仍在高频更新)：双击 Ctrl 唤出，拼音首字母秒搜文件、能进 Word/Excel/PPT/PDF 全文搜索、搜应用与系统设置、接管「打开/另存为」对话框、剪贴板历史带 OCR（图片里的字也能搜）并能代替 Win+S 任务栏搜索框，11 项合一；自带 MCP 服务可接 AI 助手，官网级安装包直接下载，不用编译",u:"https://github.com/LingCore/WinShun",r:4,re:"Windows搜索启动器",f:1,q:"开源免费",g:"https://github.com/LingCore/WinShun",diff:1,zh:1,hot:2},
+{n:"Mynah",why:"自托管实时数字人，单卡 GPU 就能跑",c:"视频生成",m:["视频","音频"],d:"Apache-2.0 的自托管实时数字人(191★,2026-10-07 建仓)：Go 实时核心 + 口型同步引擎，把 TTS 语音或 LLM 对话实时变成对着你说话的视频，走 WebRTC 推流，浏览器里能随时打断插话；带管理台、知识库、频道发布、用一段视频训练头像、声音克隆，TTS/ASR/LLM/头像引擎可替换；默认头像引擎要 4090 级 NVIDIA 显卡，轻量档可降配，完全没卡也能把每个部件换成远程接口",u:"https://honwee.github.io/mynah/",r:3,re:"自托管数字人",f:1,q:"开源免费",g:"https://github.com/honwee/mynah",diff:3,zh:1,hot:2},
+{n:"ArtCraft 启动器",why:"一个入口装齐 13 款开源创作软件",c:"办公效率",m:["办公"],d:"ArtCraft 团队的开源启动器(2.9k★,MIT/Apache-2.0,纯 Rust,桌面五端+网页)：在一个界面里安装、更新、打开全家桶 13 款应用——FilmCraft(剪辑)、PhotoCraft(修图)、DesignCraft(排版)、VectorCraft、LightCraft、PdfCraft、EffectCraft、GridCraft、WordCraft、DeckCraft、CADCraft、SoundCraft、FigCraft，按你的系统架构挑对的包；目前标 early alpha，想整套替换 Adobe 的人可以从这里一次装齐",u:"https://github.com/storytold/craft-launcher",r:4,re:"全家桶安装入口",f:1,q:"开源免费",g:"https://github.com/storytold/craft-launcher",diff:1,zh:3,hot:2},
+{n:"手绘口播 Sweety",why:"给个主题或文章，出边画边讲的有声视频",c:"视频生成",m:["视频"],d:"MIT 开源的手绘讲解视频 Skill(612★,2026-10-12 建仓,10-13 刚更 v1.2.3)：主题、文章或完整故事进去，1080p 手绘口播片出来——Agent 写口播、设计分镜、生成插画，本地脚本逐笔描线、填色、手写文字、配音对齐、导出；整篇声音先生成再排画面，避开逐页拼配音的固定空白，库内 21 种画风入口也能让模型自己设计；当前完整实测宿主是 Codex，README 用中文写得很细",u:"https://github.com/threerocks/sweety-handdraw-video",r:4,re:"手绘口播视频",f:1,q:"开源免费",g:"https://github.com/threerocks/sweety-handdraw-video",diff:2,zh:1,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -888,7 +893,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 254 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 259 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1145,6 +1150,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://83zi.com/" target="_blank" rel="noopener">本地短剧助手 LocalMiniDrama</a> — 离线跑完整条短剧流水线，素材不出本机 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/ARahim3/DigUp" target="_blank" rel="noopener">DigUp</a> — 按意思搜本机文件，视频播客里的内容都能定位 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/denizsafak/abogen" target="_blank" rel="noopener">abogen</a> — epub/PDF 一键转有声书，字幕自动对齐 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/liyupi/ai-promo-video-maker" target="_blank" rel="noopener">产品宣传视频制作器</a> — 一句话让 AI 出 4K 宣传片，不用学剪辑 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/LingCore/WinShun" target="_blank" rel="noopener">Win顺 WinShun</a> — 双击 Ctrl 秒搜全盘，还接管 Win+V 剪贴板 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://honwee.github.io/mynah/" target="_blank" rel="noopener">Mynah</a> — 自托管实时数字人，单卡 GPU 就能跑 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/storytold/craft-launcher" target="_blank" rel="noopener">ArtCraft 启动器</a> — 一个入口装齐 13 款开源创作软件 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/threerocks/sweety-handdraw-video" target="_blank" rel="noopener">手绘口播 Sweety</a> — 给个主题或文章，出边画边讲的有声视频 <span class="nb-cat">视频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1154,7 +1164,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 254,
+ "numberOfItems": 259,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2679,6 +2689,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 254,
    "name": "abogen",
    "url": "https://github.com/denizsafak/abogen"
+  },
+  {
+   "@type": "ListItem",
+   "position": 255,
+   "name": "产品宣传视频制作器",
+   "url": "https://github.com/liyupi/ai-promo-video-maker"
+  },
+  {
+   "@type": "ListItem",
+   "position": 256,
+   "name": "Win顺 WinShun",
+   "url": "https://github.com/LingCore/WinShun"
+  },
+  {
+   "@type": "ListItem",
+   "position": 257,
+   "name": "Mynah",
+   "url": "https://honwee.github.io/mynah/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 258,
+   "name": "ArtCraft 启动器",
+   "url": "https://github.com/storytold/craft-launcher"
+  },
+  {
+   "@type": "ListItem",
+   "position": 259,
+   "name": "手绘口播 Sweety",
+   "url": "https://github.com/threerocks/sweety-handdraw-video"
   }
  ]
 }
