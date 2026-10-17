@@ -657,6 +657,11 @@ const TOOLS=[
 {n:"Mynah",why:"自托管实时数字人，单卡 GPU 就能跑",c:"视频生成",m:["视频","音频"],d:"Apache-2.0 的自托管实时数字人(191★,2026-10-07 建仓)：Go 实时核心 + 口型同步引擎，把 TTS 语音或 LLM 对话实时变成对着你说话的视频，走 WebRTC 推流，浏览器里能随时打断插话；带管理台、知识库、频道发布、用一段视频训练头像、声音克隆，TTS/ASR/LLM/头像引擎可替换；默认头像引擎要 4090 级 NVIDIA 显卡，轻量档可降配，完全没卡也能把每个部件换成远程接口",u:"https://honwee.github.io/mynah/",r:3,re:"自托管数字人",f:1,q:"开源免费",g:"https://github.com/honwee/mynah",diff:3,zh:1,hot:2},
 {n:"ArtCraft 启动器",why:"一个入口装齐 13 款开源创作软件",c:"办公效率",m:["办公"],d:"ArtCraft 团队的开源启动器(2.9k★,MIT/Apache-2.0,纯 Rust,桌面五端+网页)：在一个界面里安装、更新、打开全家桶 13 款应用——FilmCraft(剪辑)、PhotoCraft(修图)、DesignCraft(排版)、VectorCraft、LightCraft、PdfCraft、EffectCraft、GridCraft、WordCraft、DeckCraft、CADCraft、SoundCraft、FigCraft，按你的系统架构挑对的包；目前标 early alpha，想整套替换 Adobe 的人可以从这里一次装齐",u:"https://github.com/storytold/craft-launcher",r:4,re:"全家桶安装入口",f:1,q:"开源免费",g:"https://github.com/storytold/craft-launcher",diff:1,zh:3,hot:2},
 {n:"手绘口播 Sweety",why:"给个主题或文章，出边画边讲的有声视频",c:"视频生成",m:["视频"],d:"MIT 开源的手绘讲解视频 Skill(612★,2026-10-12 建仓,10-13 刚更 v1.2.3)：主题、文章或完整故事进去，1080p 手绘口播片出来——Agent 写口播、设计分镜、生成插画，本地脚本逐笔描线、填色、手写文字、配音对齐、导出；整篇声音先生成再排画面，避开逐页拼配音的固定空白，库内 21 种画风入口也能让模型自己设计；当前完整实测宿主是 Codex，README 用中文写得很细",u:"https://github.com/threerocks/sweety-handdraw-video",r:4,re:"手绘口播视频",f:1,q:"开源免费",g:"https://github.com/threerocks/sweety-handdraw-video",diff:2,zh:1,hot:2},
+{n:"CozyClay",why:"AGPL开源，灰模预演片直喂视频模型",c:"3D创作",m:["视频","3D"],d:"浏览器里的开源 3D 预演工作室(803★,AGPL-3.0)：搭景、摆人偶姿势、在时间轴上画推轨设计镜头运动，导出首末帧+灰模参考片+结构化提示词+OTIO 剪辑表，直接交给可灵、Seedance 2.5、Veo、MiniMax H3 等视频模型；npx cozyclay 一条命令就在本机跑起来",u:"https://cozyclay.org",r:4,re:"浏览器3D预演",f:1,q:"开源免费",g:"https://github.com/NomaDamas/CozyClay",diff:2,zh:3,hot:2},
+{n:"归藏产品视频 Skill",why:"接原组件，软件更新顺手出宣传片",c:"视频生成",m:["视频"],d:"归藏的软件宣传片 Skill(821★,AGPL-3.0)：把代码库交给 Claude Code 或 Codex，它整理卖点、写白话文案、直接接入原产品组件与设计样式、用代码驱动动画、写配乐与动作音效，最后导出视频和能继续改的工程；横版 45–60 秒中文片一句话就能要",u:"https://github.com/op7418/guizang-product-video-skill",r:4,re:"代码出宣传片",f:1,v:1,q:"开源免费",g:"https://github.com/op7418/guizang-product-video-skill",diff:2,zh:1,hot:2},
+{n:"nanoMuse",why:"GPL全栈自托管，社区送免费额度",c:"Agent框架",m:["Agent"],d:"全栈开源的个人 Agent(1375★,GPL-3.0)：手机 App、桌面端、网页控制台和自托管 relay 全在同一个仓库，它会动手做事而不只是答问、记住你、App 关掉仍继续跑，遇到不可撤销的操作先停下来问；社区 relay 送免费模型额度，用完可填自己的 Key",u:"https://nanomuse.cn",r:4,re:"全栈开源Agent",f:1,q:"开源免费",g:"https://github.com/nano-muse/nanoMuse",diff:2,zh:1,hot:2},
+{n:"MOSS-Image",why:"Apache-2.0权重，强文字渲染版式",c:"图像生成",m:["图像"],d:"OpenMOSS 10 月 16 日开源的 5B 图像基座模型(Apache-2.0,375★)：主打高精度文字渲染与版面版式生成，官方称风格多样性与生成效率也做了优化；Base 与 SFT 两套权重在 HuggingFace 和魔搭都能下载，适合自部署做要准确出字的海报、封面",u:"http://openmoss.ai/MOSS-Image/",r:4,re:"开源图像基座",f:1,q:"开源权重",g:"https://github.com/OpenMOSS/MOSS-Image",diff:3,zh:1,hot:2},
+{n:"earshot",why:"MIT 纯CPU跑，让 Agent 听得出音效好坏",c:"音频生成",m:["音频"],d:"给编程智能体装耳朵的纯 CPU 工具(546★,MIT,2026-10-15 建仓)：把声音变成文字证据——描述音色、判断一段音频像不像你要的、在长录音里挑最佳片段、给整支片子出混音记分卡；还能用代码合成音效、靠反复听评自己改。CLI / Python / MCP 三用，本地跑不联网",u:"https://github.com/Leonxlnx/earshot",r:3,re:"给Agent装耳朵",f:1,q:"开源免费",g:"https://github.com/Leonxlnx/earshot",diff:2,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -894,7 +899,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 259 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 264 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1156,6 +1161,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://honwee.github.io/mynah/" target="_blank" rel="noopener">Mynah</a> — 自托管实时数字人，单卡 GPU 就能跑 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/storytold/craft-launcher" target="_blank" rel="noopener">ArtCraft 启动器</a> — 一个入口装齐 13 款开源创作软件 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/threerocks/sweety-handdraw-video" target="_blank" rel="noopener">手绘口播 Sweety</a> — 给个主题或文章，出边画边讲的有声视频 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://cozyclay.org" target="_blank" rel="noopener">CozyClay</a> — AGPL开源，灰模预演片直喂视频模型 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/op7418/guizang-product-video-skill" target="_blank" rel="noopener">归藏产品视频 Skill</a> — 接原组件，软件更新顺手出宣传片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://nanomuse.cn" target="_blank" rel="noopener">nanoMuse</a> — GPL全栈自托管，社区送免费额度 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="http://openmoss.ai/MOSS-Image/" target="_blank" rel="noopener">MOSS-Image</a> — Apache-2.0权重，强文字渲染版式 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">earshot</a> — MIT 纯CPU跑，让 Agent 听得出音效好坏 <span class="nb-cat">音频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1165,7 +1175,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 259,
+ "numberOfItems": 264,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2720,6 +2730,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 259,
    "name": "手绘口播 Sweety",
    "url": "https://github.com/threerocks/sweety-handdraw-video"
+  },
+  {
+   "@type": "ListItem",
+   "position": 260,
+   "name": "CozyClay",
+   "url": "https://cozyclay.org"
+  },
+  {
+   "@type": "ListItem",
+   "position": 261,
+   "name": "归藏产品视频 Skill",
+   "url": "https://github.com/op7418/guizang-product-video-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 262,
+   "name": "nanoMuse",
+   "url": "https://nanomuse.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 263,
+   "name": "MOSS-Image",
+   "url": "http://openmoss.ai/MOSS-Image/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 264,
+   "name": "earshot",
+   "url": "https://github.com/Leonxlnx/earshot"
   }
  ]
 }
