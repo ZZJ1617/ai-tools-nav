@@ -662,6 +662,12 @@ const TOOLS=[
 {n:"nanoMuse",why:"GPL全栈自托管，社区送免费额度",c:"Agent框架",m:["Agent"],d:"全栈开源的个人 Agent(1375★,GPL-3.0)：手机 App、桌面端、网页控制台和自托管 relay 全在同一个仓库，它会动手做事而不只是答问、记住你、App 关掉仍继续跑，遇到不可撤销的操作先停下来问；社区 relay 送免费模型额度，用完可填自己的 Key",u:"https://nanomuse.cn",r:4,re:"全栈开源Agent",f:1,q:"开源免费",g:"https://github.com/nano-muse/nanoMuse",diff:2,zh:1,hot:2},
 {n:"MOSS-Image",why:"Apache-2.0权重，强文字渲染版式",c:"图像生成",m:["图像"],d:"OpenMOSS 10 月 16 日开源的 5B 图像基座模型(Apache-2.0,375★)：主打高精度文字渲染与版面版式生成，官方称风格多样性与生成效率也做了优化；Base 与 SFT 两套权重在 HuggingFace 和魔搭都能下载，适合自部署做要准确出字的海报、封面",u:"http://openmoss.ai/MOSS-Image/",r:4,re:"开源图像基座",f:1,q:"开源权重",g:"https://github.com/OpenMOSS/MOSS-Image",diff:3,zh:1,hot:2},
 {n:"earshot",why:"MIT 纯CPU跑，让 Agent 听得出音效好坏",c:"音频生成",m:["音频"],d:"给编程智能体装耳朵的纯 CPU 工具(546★,MIT,2026-10-15 建仓)：把声音变成文字证据——描述音色、判断一段音频像不像你要的、在长录音里挑最佳片段、给整支片子出混音记分卡；还能用代码合成音效、靠反复听评自己改。CLI / Python / MCP 三用，本地跑不联网",u:"https://github.com/Leonxlnx/earshot",r:3,re:"给Agent装耳朵",f:1,q:"开源免费",g:"https://github.com/Leonxlnx/earshot",diff:2,zh:3,hot:2}
+,
+{n:"Indra OCR",why:"纯CPU跑OCR，49页/秒还免装PyTorch",c:"办公效率",m:["办公"],d:"Datalab 10 月开源的 CPU 版 OCR(Apache-2.0,612★)：1M 参数小模型在纯 CPU 上每秒读 49 页，官方称比 Tesseract 快 11–17 倍，把 PDF/扫描图转成 Markdown、纯文本或带坐标框、版面块标签与阅读顺序的 JSON；模型只有 18MB、走 ONNX 不需要 PyTorch，pip install indra-ocr 一行就装完，数字版 PDF 直接读自带文字层、只对缺的部分做识别。本机实测：装完跑一张自造测试图，跨行文字、邮箱、小数点全部准确成稿",u:"https://www.datalab.to",r:4,re:"纯CPU极速OCR",f:1,v:1,q:"开源免费",g:"https://github.com/datalab-to/indra",diff:1,zh:2,hot:2},
+{n:"Kokon",why:"本地Qwen改图，刷哪改哪不碰别处",c:"图像生成",m:["图像"],d:"把 Qwen-Image 2.1 装进安装包的本地改图工具(127★,AGPL-3.0)：在照片上刷一块区域，再选 Change、Remove、Replace 或 Add 并写一句要求，只有刷过的地方变、其它像素原样保留，每个版本都留底、能回退也能从任意一步分支；35MB 原生安装包，Windows/macOS/Linux 一份装完即用，不要 Python、不要 ComfyUI、不要账号，照片和提示词不出本机。NVIDIA 12GB 显存起(AMD/Intel/Apple 还是 beta)，官方实测 RTX 5070 Ti 出一张 2K 新图约 36 秒；自带 MCP server，Agent 也能调它改图",u:"https://kokon.app",r:4,re:"本地描述式改图",f:1,v:1,q:"开源免费",g:"https://github.com/GabrieleLozupone/kokon",diff:2,zh:3,hot:2},
+{n:"speech.cpp",why:"不装Python/CUDA，本地语音三合一",c:"音频生成",m:["音频"],d:"一个 C++ 可执行文件把语音三件事做全(180★,MIT)：文字转语音、录音转文字、找出哪一段有人在说话，底层跑 ggml，CPU、Metal、Vulkan 都能用；Qwen3-TTS 0.6B 在 Apple M5 上从文字到出声只要 0.029 秒，speech serve 直接提供 OpenAI 的音频接口，客户端改个 base URL 就能接上；不用装 Python 也不用装 CUDA，模型按名字自动拉 GGUF。官方给了 Windows/Linux(CPU 或 Vulkan)与 macOS Apple Silicon 的现成压缩包，免编译",u:"",r:4,re:"本地语音三合一",f:1,v:1,q:"开源免费",g:"https://github.com/nyosegawa/speech.cpp",diff:2,zh:2,hot:2},
+{n:"Showtime",why:"Agent当导演，本机渲染整支片子",c:"视频编辑",m:["视频"],d:"给编程 Agent 用的本地视频工作室(263★,MIT)：一句话说清要什么片子，Agent 就当导演排分镜、配旁白和音乐、上字幕、剪素材、按平台导出，最后在你机器上渲成成片；全程不连云端 AI、不用 API Key、素材不上传，没显卡也能跑(55 秒样片在 64 核 CPU 上渲了 2 分 23 秒)。以 Agent Skills 形式接入，Claude Code 插件两行装好，Codex/Cursor/Devin/OpenCode 都有对应装法，也能当 MCP server 用；装前备好 uv 和 Node 22+，首次下 1.4–1.8GB 本地模型与素材",u:"https://faviovazquez.github.io/showtime/",r:4,re:"Agent本地剪辑台",f:1,v:1,q:"开源免费",g:"https://github.com/FavioVazquez/showtime",diff:2,zh:3,hot:2},
+{n:"Blender Agent Skills",why:"22个技能把Blender流程交给Agent",c:"3D创作",m:["3D"],d:"把 Blender 5.2 的专业流程拆成 22 个 Agent 技能(114★,MIT)：硬表面建模、雕刻、重拓扑与 UV、PBR 材质、贴图烘焙、几何节点、角色绑定、动画、优化、导出、渲染、日夜与天气、模拟、质检，每条脚本都在真 Blender 里跑过；装进 Claude Code / Codex / Cursor / Gemini CLI / Copilot 之后，一句话让 Agent 替你搭场景、调材质。需要 Blender 5.2+，再配上 Blender MCP 就能让它在已经打开的 Blender 里直接动手",u:"",r:3,re:"Blender技能包",f:1,v:1,q:"开源免费",g:"https://github.com/EL4CTEO/blender-skills",diff:2,zh:3,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -899,7 +905,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 264 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 269 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 3.0/可灵</a> — 每天 6 次免费、国内直连，4K 出片就能用 <span class="nb-cat">视频生成</span></li>
@@ -1166,6 +1172,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://nanomuse.cn" target="_blank" rel="noopener">nanoMuse</a> — GPL全栈自托管，社区送免费额度 <span class="nb-cat">Agent框架</span></li>
       <li><a href="http://openmoss.ai/MOSS-Image/" target="_blank" rel="noopener">MOSS-Image</a> — Apache-2.0权重，强文字渲染版式 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/Leonxlnx/earshot" target="_blank" rel="noopener">earshot</a> — MIT 纯CPU跑，让 Agent 听得出音效好坏 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://www.datalab.to" target="_blank" rel="noopener">Indra OCR</a> — 纯CPU跑OCR，49页/秒还免装PyTorch <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://kokon.app" target="_blank" rel="noopener">Kokon</a> — 本地Qwen改图，刷哪改哪不碰别处 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/nyosegawa/speech.cpp" target="_blank" rel="noopener">speech.cpp</a> — 不装Python/CUDA，本地语音三合一 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://faviovazquez.github.io/showtime/" target="_blank" rel="noopener">Showtime</a> — Agent当导演，本机渲染整支片子 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/EL4CTEO/blender-skills" target="_blank" rel="noopener">Blender Agent Skills</a> — 22个技能把Blender流程交给Agent <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1175,7 +1186,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 264,
+ "numberOfItems": 269,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2760,6 +2771,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 264,
    "name": "earshot",
    "url": "https://github.com/Leonxlnx/earshot"
+  },
+  {
+   "@type": "ListItem",
+   "position": 265,
+   "name": "Indra OCR",
+   "url": "https://www.datalab.to"
+  },
+  {
+   "@type": "ListItem",
+   "position": 266,
+   "name": "Kokon",
+   "url": "https://kokon.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 267,
+   "name": "speech.cpp",
+   "url": "https://github.com/nyosegawa/speech.cpp"
+  },
+  {
+   "@type": "ListItem",
+   "position": 268,
+   "name": "Showtime",
+   "url": "https://faviovazquez.github.io/showtime/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 269,
+   "name": "Blender Agent Skills",
+   "url": "https://github.com/EL4CTEO/blender-skills"
   }
  ]
 }
