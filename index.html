@@ -666,7 +666,12 @@ const TOOLS=[
 {n:"Kokon",why:"本地Qwen改图，刷哪改哪不碰别处",c:"图像生成",m:["图像"],d:"把 Qwen-Image 2.1 装进安装包的本地改图工具(127★,AGPL-3.0)：在照片上刷一块区域，再选 Change、Remove、Replace 或 Add 并写一句要求，只有刷过的地方变、其它像素原样保留，每个版本都留底、能回退也能从任意一步分支；35MB 原生安装包，Windows/macOS/Linux 一份装完即用，不要 Python、不要 ComfyUI、不要账号，照片和提示词不出本机。NVIDIA 12GB 显存起(AMD/Intel/Apple 还是 beta)，官方实测 RTX 5070 Ti 出一张 2K 新图约 36 秒；自带 MCP server，Agent 也能调它改图",u:"https://kokon.app",r:4,re:"本地描述式改图",f:1,v:1,q:"开源免费",g:"https://github.com/GabrieleLozupone/kokon",diff:2,zh:3,hot:2},
 {n:"speech.cpp",why:"不装Python/CUDA，本地语音三合一",c:"音频生成",m:["音频"],d:"一个 C++ 可执行文件把语音三件事做全(180★,MIT)：文字转语音、录音转文字、找出哪一段有人在说话，底层跑 ggml，CPU、Metal、Vulkan 都能用；Qwen3-TTS 0.6B 在 Apple M5 上从文字到出声只要 0.029 秒，speech serve 直接提供 OpenAI 的音频接口，客户端改个 base URL 就能接上；不用装 Python 也不用装 CUDA，模型按名字自动拉 GGUF。官方给了 Windows/Linux(CPU 或 Vulkan)与 macOS Apple Silicon 的现成压缩包，免编译",u:"",r:4,re:"本地语音三合一",f:1,v:1,q:"开源免费",g:"https://github.com/nyosegawa/speech.cpp",diff:2,zh:2,hot:2},
 {n:"Showtime",why:"Agent当导演，本机渲染整支片子",c:"视频编辑",m:["视频"],d:"给编程 Agent 用的本地视频工作室(263★,MIT)：一句话说清要什么片子，Agent 就当导演排分镜、配旁白和音乐、上字幕、剪素材、按平台导出，最后在你机器上渲成成片；全程不连云端 AI、不用 API Key、素材不上传，没显卡也能跑(55 秒样片在 64 核 CPU 上渲了 2 分 23 秒)。以 Agent Skills 形式接入，Claude Code 插件两行装好，Codex/Cursor/Devin/OpenCode 都有对应装法，也能当 MCP server 用；装前备好 uv 和 Node 22+，首次下 1.4–1.8GB 本地模型与素材",u:"https://faviovazquez.github.io/showtime/",r:4,re:"Agent本地剪辑台",f:1,v:1,q:"开源免费",g:"https://github.com/FavioVazquez/showtime",diff:2,zh:3,hot:2},
-{n:"Blender Agent Skills",why:"22个技能把Blender流程交给Agent",c:"3D创作",m:["3D"],d:"把 Blender 5.2 的专业流程拆成 22 个 Agent 技能(258★,MIT)：硬表面建模、雕刻、重拓扑与 UV、PBR 材质、贴图烘焙、几何节点、角色绑定、动画、优化、导出、渲染、日夜与天气、模拟、质检，每条脚本都在真 Blender 里跑过；装进 Claude Code / Codex / Cursor / Gemini CLI / Copilot 之后，一句话让 Agent 替你搭场景、调材质。需要 Blender 5.2+，再配上 Blender MCP 就能让它在已经打开的 Blender 里直接动手",u:"",r:3,re:"Blender技能包",f:1,v:1,q:"开源免费",g:"https://github.com/EL4CTEO/blender-skills",diff:2,zh:3,hot:1}
+{n:"Blender Agent Skills",why:"22个技能把Blender流程交给Agent",c:"3D创作",m:["3D"],d:"把 Blender 5.2 的专业流程拆成 22 个 Agent 技能(258★,MIT)：硬表面建模、雕刻、重拓扑与 UV、PBR 材质、贴图烘焙、几何节点、角色绑定、动画、优化、导出、渲染、日夜与天气、模拟、质检，每条脚本都在真 Blender 里跑过；装进 Claude Code / Codex / Cursor / Gemini CLI / Copilot 之后，一句话让 Agent 替你搭场景、调材质。需要 Blender 5.2+，再配上 Blender MCP 就能让它在已经打开的 Blender 里直接动手",u:"",r:3,re:"Blender技能包",f:1,v:1,q:"开源免费",g:"https://github.com/EL4CTEO/blender-skills",diff:2,zh:3,hot:1},
+{n:"Concat",why:"本地剪片，无水印不要账号",c:"视频编辑",m:["视频"],d:"AGPL-3.0开源的本地视频编辑器(9.3k★)，CapCut平替：自动字幕、本地TTS与声音克隆、抠像、关键帧、100种特效、4K 60导出，macOS/Windows/Linux/Android都有安装包，素材不出本机；内置MCP服务器，能让Claude等Agent直接动时间线",u:"https://concat.standalones.org",r:4,re:"本地剪辑平替",f:1,q:"开源免费",g:"https://github.com/jub0t/Concat",diff:1,zh:1,hot:3},
+{n:"SRT白板动画",why:"字幕驱动，笔迹按讲解顺序画",c:"视频生成",m:["视频"],d:"MIT开源的Agent技能(4.6k★)：把SRT字幕按25-35秒拆场景，先出分镜与线稿，再按字幕事件给每个元素排绘制顺序，笔尖连续落墨后逐块上色，导出暖米黄纸张底的白板手绘MP4；带浏览器预览台可调区域、时序与字幕关联",u:"",r:3,re:"字幕转手绘动画",f:1,q:"开源免费(需Python环境)",g:"https://github.com/geeklee/srt-whiteboard-animation",diff:2,zh:1,hot:2},
+{n:"写作蒸馏器",why:"把文风拆成文档，越写越像",c:"AI写作",m:["写作"],d:"MIT开源的Agent技能(2.5k★)：丢一批完整文章进去，按语言、结构、选题、素材、认知框架、视觉排版六层拆成可复用的Writing DNA文档；之后写作前先读这套文档，复刻就不靠运气，中英文产物分开处理",u:"https://moxt.ai/zh-CN/hub?view=skill&id=writing-dna-skill",r:3,re:"风格可复用",f:1,q:"开源免费",g:"https://github.com/larashero3-dotcom/writing-dna-skill",diff:2,zh:1,hot:2},
+{n:"audio.cpp",why:"110+音频模型，一个引擎本地跑",c:"音频生成",m:["音频"],d:"Apache-2.0开源的C++音频推理引擎(3.6k★)，基于ggml：一个CLI/Server/WebUI跑110+模型族190+变体，TTS、声音克隆、变声、ASR、说话人分离、VAD、对齐全覆盖，Windows/Linux/macOS与纯CPU都能跑，CUDA部分路径比Python快1.8-8倍",u:"",r:4,re:"一个引擎跑百模",f:1,q:"开源免费",g:"https://github.com/0xShug0/audio.cpp",diff:3,zh:3,hot:3},
+{n:"AID Studio",why:"剧本到成片一条画布，可自部署",c:"AI短剧",m:["视频"],d:"MIT开源可自部署的AI短剧/漫剧平台(1k★)：剧本、角色与场景资产、智能分镜、图片与视频生成、配音、成片预览串在同一张工作流画布上，支持多模型接入；Docker或systemd部署，自带用户、任务与在线升级管理",u:"https://www.aidstudio.com.cn/",r:3,re:"短剧全流程自部署",f:1,q:"开源免费(需自配模型Key)",g:"https://github.com/gzxx-2025/aid-studio",diff:3,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -904,7 +909,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 269 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 274 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1176,6 +1181,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/nyosegawa/speech.cpp" target="_blank" rel="noopener">speech.cpp</a> — 不装Python/CUDA，本地语音三合一 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://faviovazquez.github.io/showtime/" target="_blank" rel="noopener">Showtime</a> — Agent当导演，本机渲染整支片子 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://github.com/EL4CTEO/blender-skills" target="_blank" rel="noopener">Blender Agent Skills</a> — 22个技能把Blender流程交给Agent <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://concat.standalones.org" target="_blank" rel="noopener">Concat</a> — 本地剪片，无水印不要账号 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/geeklee/srt-whiteboard-animation" target="_blank" rel="noopener">SRT白板动画</a> — 字幕驱动，笔迹按讲解顺序画 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://moxt.ai/zh-CN/hub?view=skill&amp;id=writing-dna-skill" target="_blank" rel="noopener">写作蒸馏器</a> — 把文风拆成文档，越写越像 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/0xShug0/audio.cpp" target="_blank" rel="noopener">audio.cpp</a> — 110+音频模型，一个引擎本地跑 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://www.aidstudio.com.cn/" target="_blank" rel="noopener">AID Studio</a> — 剧本到成片一条画布，可自部署 <span class="nb-cat">AI短剧</span></li>
     </ul>
   </section>
 </noscript>
@@ -1185,7 +1195,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 269,
+ "numberOfItems": 274,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2800,6 +2810,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 269,
    "name": "Blender Agent Skills",
    "url": "https://github.com/EL4CTEO/blender-skills"
+  },
+  {
+   "@type": "ListItem",
+   "position": 270,
+   "name": "Concat",
+   "url": "https://concat.standalones.org"
+  },
+  {
+   "@type": "ListItem",
+   "position": 271,
+   "name": "SRT白板动画",
+   "url": "https://github.com/geeklee/srt-whiteboard-animation"
+  },
+  {
+   "@type": "ListItem",
+   "position": 272,
+   "name": "写作蒸馏器",
+   "url": "https://moxt.ai/zh-CN/hub?view=skill&id=writing-dna-skill"
+  },
+  {
+   "@type": "ListItem",
+   "position": 273,
+   "name": "audio.cpp",
+   "url": "https://github.com/0xShug0/audio.cpp"
+  },
+  {
+   "@type": "ListItem",
+   "position": 274,
+   "name": "AID Studio",
+   "url": "https://www.aidstudio.com.cn/"
   }
  ]
 }
