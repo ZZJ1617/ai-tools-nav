@@ -670,7 +670,10 @@ const TOOLS=[
 {n:"SRT白板动画",why:"字幕驱动，笔迹按讲解顺序画",c:"视频生成",m:["视频"],d:"MIT开源的Agent技能(4.6k★)：把SRT字幕按25-35秒拆场景，先出分镜与线稿，再按字幕事件给每个元素排绘制顺序，笔尖连续落墨后逐块上色，导出暖米黄纸张底的白板手绘MP4；带浏览器预览台可调区域、时序与字幕关联",u:"",r:3,re:"字幕转手绘动画",f:1,q:"开源免费(需Python环境)",g:"https://github.com/geeklee/srt-whiteboard-animation",diff:2,zh:1,hot:2},
 {n:"写作蒸馏器",why:"把文风拆成文档，越写越像",c:"AI写作",m:["写作"],d:"MIT开源的Agent技能(2.5k★)：丢一批完整文章进去，按语言、结构、选题、素材、认知框架、视觉排版六层拆成可复用的Writing DNA文档；之后写作前先读这套文档，复刻就不靠运气，中英文产物分开处理",u:"https://moxt.ai/zh-CN/hub?view=skill&id=writing-dna-skill",r:3,re:"风格可复用",f:1,q:"开源免费",g:"https://github.com/larashero3-dotcom/writing-dna-skill",diff:2,zh:1,hot:2},
 {n:"audio.cpp",why:"110+音频模型，一个引擎本地跑",c:"音频生成",m:["音频"],d:"Apache-2.0开源的C++音频推理引擎(3.6k★)，基于ggml：一个CLI/Server/WebUI跑110+模型族190+变体，TTS、声音克隆、变声、ASR、说话人分离、VAD、对齐全覆盖，Windows/Linux/macOS与纯CPU都能跑，CUDA部分路径比Python快1.8-8倍",u:"",r:4,re:"一个引擎跑百模",f:1,q:"开源免费",g:"https://github.com/0xShug0/audio.cpp",diff:3,zh:3,hot:3},
-{n:"AID Studio",why:"剧本到成片一条画布，可自部署",c:"AI短剧",m:["视频"],d:"MIT开源可自部署的AI短剧/漫剧平台(1k★)：剧本、角色与场景资产、智能分镜、图片与视频生成、配音、成片预览串在同一张工作流画布上，支持多模型接入；Docker或systemd部署，自带用户、任务与在线升级管理",u:"https://www.aidstudio.com.cn/",r:3,re:"短剧全流程自部署",f:1,q:"开源免费(需自配模型Key)",g:"https://github.com/gzxx-2025/aid-studio",diff:3,zh:1,hot:2}
+{n:"AID Studio",why:"剧本到成片一条画布，可自部署",c:"AI短剧",m:["视频"],d:"MIT开源可自部署的AI短剧/漫剧平台(1k★)：剧本、角色与场景资产、智能分镜、图片与视频生成、配音、成片预览串在同一张工作流画布上，支持多模型接入；Docker或systemd部署，自带用户、任务与在线升级管理",u:"https://www.aidstudio.com.cn/",r:3,re:"短剧全流程自部署",f:1,q:"开源免费(需自配模型Key)",g:"https://github.com/gzxx-2025/aid-studio",diff:3,zh:1,hot:2},
+{n:"PPT Master",why:"真原生PPTX，形状图表能接着改",c:"办公效率",m:["办公"],d:"MIT开源的AI做PPT工作流(64k★)：在Claude Code/Codex等任意Agent里丢进PDF、Word或一句主题，它先把论点拆开、定结构再设计，导出的是原生DrawingML的.pptx——母版、形状、数据图表都还是PowerPoint里能点开继续改的对象，也能给做好的稿子补原生转场、动画与旁白；只装Python 3.10+，成稿在本机生成，不锁平台也不锁模型",u:"https://github.com/hugohe3/ppt-master",r:4,re:"原生可编辑最深",f:1,q:"开源免费",g:"https://github.com/hugohe3/ppt-master",diff:2,zh:1,hot:3},
+{n:"KittenTTS",why:"25MB模型，纯CPU实时出声",c:"音频生成",m:["音频"],d:"Apache-2.0开源TTS库(16k★)：旗舰KittenTTS 2是1.7B的1-bit语音模型，给5秒音频就能零微调克隆音色，带情绪与事件标签控制，47个内置音色、20种语言含中文；另有15M-80M的ONNX小模型，int8版只有25MB，无显卡也能实时合成，pip install kittenml 即用，官方另提供免费API",u:"https://kittenml.com",r:4,re:"小到能在CPU跑",f:1,q:"开源免费+免费API",g:"https://github.com/KittenML/KittenTTS",diff:2,zh:2,hot:3},
+{n:"Orca",why:"一句提示并行跑5个Agent比稿",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent编排桌面端(99k★)，macOS/Windows/Linux齐全：同一句提示分发给Codex、Claude Code、OpenCode、Pi，各自在独立git worktree里干活，结果并排比较后合并胜出那一份；内置Ghostty级终端分屏、PR与issue面板、SSH远程worktree，手机端也能盯着Agent跑完没，用自己的订阅不额外收费",u:"https://onorca.dev",r:5,re:"并行比稿真省事",f:1,q:"开源免费(自备Agent订阅)",g:"https://github.com/stablyai/orca",diff:2,zh:2,hot:3}
 ];
 
 // ===== 已停服工具归档 =====
@@ -908,7 +911,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 274 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 277 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1185,6 +1188,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://moxt.ai/zh-CN/hub?view=skill&amp;id=writing-dna-skill" target="_blank" rel="noopener">写作蒸馏器</a> — 把文风拆成文档，越写越像 <span class="nb-cat">AI写作</span></li>
       <li><a href="https://github.com/0xShug0/audio.cpp" target="_blank" rel="noopener">audio.cpp</a> — 110+音频模型，一个引擎本地跑 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://www.aidstudio.com.cn/" target="_blank" rel="noopener">AID Studio</a> — 剧本到成片一条画布，可自部署 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">PPT Master</a> — 真原生PPTX，形状图表能接着改 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://kittenml.com" target="_blank" rel="noopener">KittenTTS</a> — 25MB模型，纯CPU实时出声 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://onorca.dev" target="_blank" rel="noopener">Orca</a> — 一句提示并行跑5个Agent比稿 <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -1194,7 +1200,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 274,
+ "numberOfItems": 277,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2839,6 +2845,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 274,
    "name": "AID Studio",
    "url": "https://www.aidstudio.com.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 275,
+   "name": "PPT Master",
+   "url": "https://github.com/hugohe3/ppt-master"
+  },
+  {
+   "@type": "ListItem",
+   "position": 276,
+   "name": "KittenTTS",
+   "url": "https://kittenml.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 277,
+   "name": "Orca",
+   "url": "https://onorca.dev"
   }
  ]
 }
