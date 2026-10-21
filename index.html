@@ -671,7 +671,12 @@ const TOOLS=[
 {n:"AID Studio",why:"剧本到成片一条画布，可自部署",c:"AI短剧",m:["视频"],d:"MIT开源可自部署的AI短剧/漫剧平台(1k★)：剧本、角色与场景资产、智能分镜、图片与视频生成、配音、成片预览串在同一张工作流画布上，支持多模型接入；Docker或systemd部署，自带用户、任务与在线升级管理",u:"https://www.aidstudio.com.cn/",r:3,re:"短剧全流程自部署",f:1,q:"开源免费(需自配模型Key)",g:"https://github.com/gzxx-2025/aid-studio",diff:3,zh:1,hot:2},
 {n:"PPT Master",why:"真原生PPTX，形状图表能接着改",c:"办公效率",m:["办公"],d:"MIT开源的AI做PPT工作流(64k★)：在Claude Code/Codex等任意Agent里丢进PDF、Word或一句主题，它先把论点拆开、定结构再设计，导出的是原生DrawingML的.pptx——母版、形状、数据图表都还是PowerPoint里能点开继续改的对象，也能给做好的稿子补原生转场、动画与旁白；只装Python 3.10+，成稿在本机生成，不锁平台也不锁模型",u:"https://github.com/hugohe3/ppt-master",r:4,re:"原生可编辑最深",f:1,q:"开源免费",g:"https://github.com/hugohe3/ppt-master",diff:2,zh:1,hot:3},
 {n:"KittenTTS",why:"25MB模型，纯CPU实时出声",c:"音频生成",m:["音频"],d:"Apache-2.0开源TTS库(16k★)：旗舰KittenTTS 2是1.7B的1-bit语音模型，给5秒音频就能零微调克隆音色，带情绪与事件标签控制，47个内置音色、20种语言含中文；另有15M-80M的ONNX小模型，int8版只有25MB，无显卡也能实时合成，pip install kittenml 即用，官方另提供免费API",u:"https://kittenml.com",r:4,re:"小到能在CPU跑",f:1,q:"开源免费+免费API",g:"https://github.com/KittenML/KittenTTS",diff:2,zh:2,hot:3},
-{n:"Orca",why:"一句提示并行跑5个Agent比稿",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent编排桌面端(99k★)，macOS/Windows/Linux齐全：同一句提示分发给Codex、Claude Code、OpenCode、Pi，各自在独立git worktree里干活，结果并排比较后合并胜出那一份；内置Ghostty级终端分屏、PR与issue面板、SSH远程worktree，手机端也能盯着Agent跑完没，用自己的订阅不额外收费",u:"https://onorca.dev",r:5,re:"并行比稿真省事",f:1,q:"开源免费(自备Agent订阅)",g:"https://github.com/stablyai/orca",diff:2,zh:2,hot:3}
+{n:"Orca",why:"一句提示并行跑5个Agent比稿",c:"工作流Agent",m:["Agent"],d:"MIT开源的Agent编排桌面端(99k★)，macOS/Windows/Linux齐全：同一句提示分发给Codex、Claude Code、OpenCode、Pi，各自在独立git worktree里干活，结果并排比较后合并胜出那一份；内置Ghostty级终端分屏、PR与issue面板、SSH远程worktree，手机端也能盯着Agent跑完没，用自己的订阅不额外收费",u:"https://onorca.dev",r:5,re:"并行比稿真省事",f:1,q:"开源免费(自备Agent订阅)",g:"https://github.com/stablyai/orca",diff:2,zh:2,hot:3},
+{n:"萝卜PPT",why:"旧PPT按参考图换风格，一个字不改",c:"办公效率",m:["办公"],d:"MIT开源的PPT Agent技能(397★,v2.8.2,2026-10-08建仓且每天在更新)：丢一篇文章或一份旧PPT进去，先写结论式标题与口播备注，再排版、配图、加动画；最实用的是「照参考图美化」——给一张风格图和一份朴素的.pptx，文字一个不改地换进统一的配色、版式、图标与插画，内置14套风格，同一份原稿换张参考图就是另一套样子。产出是原生.pptx：文字是文本框、表格是真表格、图表是PowerPoint原生图表，双击能改数据，PowerPoint/WPS/Keynote都打得开。装法是对Claude Code/Codex/Gemini CLI/Cursor说一句「帮我安装这个skill：仓库地址」",u:"https://github.com/zhouwei713/luobo-ppt",r:4,re:"旧稿换皮不改字",f:1,q:"开源免费",g:"https://github.com/zhouwei713/luobo-ppt",diff:2,zh:1,hot:2},
+{n:"OpenSubs",why:"浏览器里出字幕，视频不上传",c:"视频编辑",m:["视频"],d:"AGPL-3.0开源的字幕工具(116★，对标VEED/Kapwing的自动字幕)：视频一个字节都不外传——网页版把语音模型下到浏览器里用WASM跑，模型首次从HuggingFace取一次就缓存，产品本身没有上传接口，素材泄露不是「保证不会」而是做不到；自动断句、按读速限行、样式预设，最后生成ASS烧进画面，翻译可选本机或云端。四种用法同一套Rust引擎：网页版零安装、Chrome/Edge/Firefox扩展能给任意标签页里正在播的视频挂实时字幕、桌面版处理长文件(mac/win/linux)、还有CLI给脚本和批量任务用。界面英文",u:"https://opensubs.app",r:4,re:"视频不出本机",f:1,q:"开源免费",g:"https://github.com/open-subs/opensubs",diff:1,zh:3,hot:1},
+{n:"视频转课堂笔记",why:"不花一分钱把长视频变成笔记",c:"办公效率",m:["办公","写作"],d:"MIT开源的Agent技能(142★)：把B站链接/BV号/b23短链、抖音分享口令、YouTube与Shorts、小红书视频笔记丢给Claude Code或Codex，先抓官方字幕(秒出、零成本)，没字幕才用faster-whisper在本机CPU转写(国内走hf-mirror镜像)，不调任何付费API；再按时间戳抽关键帧，自动标出黑屏/空屏/模糊帧交给Agent视觉复核，最后套课堂笔记模板输出Markdown——小节结构、术语加粗、真实代码引用、知识地图、概念卡片、自测题，文末附可回看跳转的时间索引。抖音与小红书都免登录，只需Python 3.10+",u:"https://github.com/lucky-Luor/bilibili-douyin-notes",r:4,re:"长视频变笔记",f:1,q:"开源免费",g:"https://github.com/lucky-Luor/bilibili-douyin-notes",diff:2,zh:1,hot:2},
+{n:"Vibe 知识短片",why:"先出30秒样片，确认再做全片",c:"视频生成",m:["视频"],d:"MIT开源的Agent技能(493★,2026-10-06建仓)：把抖音爆火的「Vibe知识大赏」类短片拆成两套可复用的画风——「夜曲」讲底层难懂的知识，「寓言」把心理与行为逻辑直接演给观众看。把文案或选题交给它，先定画风、写字幕稿、排分镜表、建代码工程，用Canvas和JavaScript把每一帧画出来，驱动本机Chrome逐帧截图、ffmpeg压成视频再配音效；出全片前先给约30秒样片让你确认，BGM自己加。⚠️要本机Chrome+ffmpeg+playwright，开源字体需先跑脚本下载；仓库里的示例成片字幕与画面取自已发布的他人短片，只能学习对照，不能当自己作品发",u:"https://github.com/HeyChengC/vibe-knowledge-film",r:3,re:"两套爆款画风",f:1,q:"开源免费",g:"https://github.com/HeyChengC/vibe-knowledge-film",diff:3,zh:1,hot:2},
+{n:"Blender AI MCP Pro",why:"21个场景工具，还能分工审阅",c:"3D创作",m:["3D","Agent"],d:"MIT开源的Blender插件(962★,2026-10-15建仓)：在Blender里开一个可视化聊天工作台，AI先读场景里的物体结构再动手——21个场景工具负责建模、改材质、搜资产、截视口图、查Blender API与导出；模型自选，OpenAI/Claude/Gemini/OpenRouter/Ollama以及自建的OpenAI兼容端点都能接。任务大时可配「经理-执行-审阅」三层Agent链，按顺序执行保证场景改动不乱，审阅打回给一次修正机会。内置MCP服务器，OpenCode等支持Streamable HTTP的客户端也能连。⚠️官方安装包只给Windows x64+Blender 4.2以上，模型key要自己带",u:"https://github.com/LiCinCan/blender-ai-mcp-addon",r:3,re:"会读场景再动手",f:1,q:"开源免费(BYOK)",g:"https://github.com/LiCinCan/blender-ai-mcp-addon",diff:2,zh:1,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -909,7 +914,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 277 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 282 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1189,6 +1194,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/hugohe3/ppt-master" target="_blank" rel="noopener">PPT Master</a> — 真原生PPTX，形状图表能接着改 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://kittenml.com" target="_blank" rel="noopener">KittenTTS</a> — 25MB模型，纯CPU实时出声 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://onorca.dev" target="_blank" rel="noopener">Orca</a> — 一句提示并行跑5个Agent比稿 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://github.com/zhouwei713/luobo-ppt" target="_blank" rel="noopener">萝卜PPT</a> — 旧PPT按参考图换风格，一个字不改 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://opensubs.app" target="_blank" rel="noopener">OpenSubs</a> — 浏览器里出字幕，视频不上传 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/lucky-Luor/bilibili-douyin-notes" target="_blank" rel="noopener">视频转课堂笔记</a> — 不花一分钱把长视频变成笔记 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/HeyChengC/vibe-knowledge-film" target="_blank" rel="noopener">Vibe 知识短片</a> — 先出30秒样片，确认再做全片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/LiCinCan/blender-ai-mcp-addon" target="_blank" rel="noopener">Blender AI MCP Pro</a> — 21个场景工具，还能分工审阅 <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1198,7 +1208,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 277,
+ "numberOfItems": 282,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2861,6 +2871,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 277,
    "name": "Orca",
    "url": "https://onorca.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 278,
+   "name": "萝卜PPT",
+   "url": "https://github.com/zhouwei713/luobo-ppt"
+  },
+  {
+   "@type": "ListItem",
+   "position": 279,
+   "name": "OpenSubs",
+   "url": "https://opensubs.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 280,
+   "name": "视频转课堂笔记",
+   "url": "https://github.com/lucky-Luor/bilibili-douyin-notes"
+  },
+  {
+   "@type": "ListItem",
+   "position": 281,
+   "name": "Vibe 知识短片",
+   "url": "https://github.com/HeyChengC/vibe-knowledge-film"
+  },
+  {
+   "@type": "ListItem",
+   "position": 282,
+   "name": "Blender AI MCP Pro",
+   "url": "https://github.com/LiCinCan/blender-ai-mcp-addon"
   }
  ]
 }
