@@ -676,6 +676,10 @@ const TOOLS=[
 {n:"视频转课堂笔记",why:"不花一分钱把长视频变成笔记",c:"办公效率",m:["办公","写作"],d:"MIT开源的Agent技能(142★)：把B站链接/BV号/b23短链、抖音分享口令、YouTube与Shorts、小红书视频笔记丢给Claude Code或Codex，先抓官方字幕(秒出、零成本)，没字幕才用faster-whisper在本机CPU转写(国内走hf-mirror镜像)，不调任何付费API；再按时间戳抽关键帧，自动标出黑屏/空屏/模糊帧交给Agent视觉复核，最后套课堂笔记模板输出Markdown——小节结构、术语加粗、真实代码引用、知识地图、概念卡片、自测题，文末附可回看跳转的时间索引。抖音与小红书都免登录，只需Python 3.10+",u:"https://github.com/lucky-Luor/bilibili-douyin-notes",r:4,re:"长视频变笔记",f:1,q:"开源免费",g:"https://github.com/lucky-Luor/bilibili-douyin-notes",diff:2,zh:1,hot:2},
 {n:"Vibe 知识短片",why:"先出30秒样片，确认再做全片",c:"视频生成",m:["视频"],d:"MIT开源的Agent技能(493★,2026-10-06建仓)：把抖音爆火的「Vibe知识大赏」类短片拆成两套可复用的画风——「夜曲」讲底层难懂的知识，「寓言」把心理与行为逻辑直接演给观众看。把文案或选题交给它，先定画风、写字幕稿、排分镜表、建代码工程，用Canvas和JavaScript把每一帧画出来，驱动本机Chrome逐帧截图、ffmpeg压成视频再配音效；出全片前先给约30秒样片让你确认，BGM自己加。⚠️要本机Chrome+ffmpeg+playwright，开源字体需先跑脚本下载；仓库里的示例成片字幕与画面取自已发布的他人短片，只能学习对照，不能当自己作品发",u:"https://github.com/HeyChengC/vibe-knowledge-film",r:3,re:"两套爆款画风",f:1,q:"开源免费",g:"https://github.com/HeyChengC/vibe-knowledge-film",diff:3,zh:1,hot:2},
 {n:"Blender AI MCP Pro",why:"21个场景工具，还能分工审阅",c:"3D创作",m:["3D","Agent"],d:"MIT开源的Blender插件(962★,2026-10-15建仓)：在Blender里开一个可视化聊天工作台，AI先读场景里的物体结构再动手——21个场景工具负责建模、改材质、搜资产、截视口图、查Blender API与导出；模型自选，OpenAI/Claude/Gemini/OpenRouter/Ollama以及自建的OpenAI兼容端点都能接。任务大时可配「经理-执行-审阅」三层Agent链，按顺序执行保证场景改动不乱，审阅打回给一次修正机会。内置MCP服务器，OpenCode等支持Streamable HTTP的客户端也能连。⚠️官方安装包只给Windows x64+Blender 4.2以上，模型key要自己带",u:"https://github.com/LiCinCan/blender-ai-mcp-addon",r:3,re:"会读场景再动手",f:1,q:"开源免费(BYOK)",g:"https://github.com/LiCinCan/blender-ai-mcp-addon",diff:2,zh:1,hot:2},
+{n:"OpenFilm",why:"片子本身就是网页，改到满意为止",c:"视频生成",m:["视频"],d:"MIT开源的AI视频Agent(2k★,2026-10-04建仓，每天还在更新)：把Codex/Claude Code这类编码Agent直接变成导演——整部片子写在一个film.html里，每个镜头是一张网页，用frame(t)函数画出任意时刻的画面，three.js、WebGL、canvas、SVG、CSS、视频都能用，不用学Remotion那套框架。Studio是本地浏览器里的真编辑器，时间轴上挪位置、裁镜头、改文字与颜色，片子边生成边看。装法一条npx skills add openfilm/openfilm(需Node 22.2+与ffmpeg)，也可下macOS/Windows桌面版(自带ffmpeg和无头浏览器)。⚠️配音、配乐、生图、生视频得自己接ElevenLabs/OpenAI/Google/fal的key，纯剪辑渲染不需要账号",u:"https://openfilm.dev",r:4,re:"片子即网页",f:1,q:"开源免费(BYOK)",g:"https://github.com/openfilm/openfilm",diff:3,zh:2,hot:2},
+{n:"AssetFurnace",why:"一张图直出带骨骼的GLB角色",c:"3D创作",m:["3D"],d:"Apache-2.0开源的图生3D流水线(912★,2026-08-02建仓，原名Image to 3D Lab)：给一张图或一句描述，先出图、再建模型、减面清理、自动绑骨骼、套21套走路跑步跳舞蹈动作，最后导出GLB，Godot/Unity/Unreal/Blender/three.js都能直接用。背后可选Pixal3D、TRELLIS.2、Hunyuan3D三个本地模型，Apple Silicon、NVIDIA、AMD(ROCm)都能跑，文件不上传也没有积分。Pixel Match会把原图真实像素贴回模型，衣服上的字和logo在5000面下也认得清；Prop sheets能把一张图拆成9个带LOD的独立道具。⚠️吃本地显卡、首次下模型占空间不小，界面只有英文",u:"https://assetfurnace.com",r:4,re:"图直出可动模型",f:1,q:"开源免费",g:"https://github.com/Bingeljell/image-to-3dlab",diff:3,zh:3,hot:2},
+{n:"Audio Studio MCP",why:"本机Stable Audio 3出BGM不用API费",c:"音频生成",m:["音频"],d:"MIT开源的MCP音频服务器(438★,2026-10-18建仓)：在Claude Code、Claude Desktop、Cursor等任意MCP客户端里用一句人话要背景音乐或音效，模型在本机用Stable Audio 3生成，不上云、不要Key、不按次收费。生成完能整段改风格、只重做某一段时间、延长轨道，再自动做无缝循环、淡入淡出、LUFS响度归一，导出48kHz WAV/OGG/FLAC，每个文件配一份写清提示词和随机种子的json。内置官方提示词格式，说「像一扇吱呀作响的门」它就懂该怎么写。⚠️只支持Apple Silicon(MLX)与Windows NVIDIA显卡(PyTorch)，Linux和A卡跑不了",u:"https://kanaworksai-hue.github.io/audio-studio-mcp/",r:4,re:"本地出BGM与音效",f:1,q:"开源免费",g:"https://github.com/kanaworksai-hue/audio-studio-mcp",diff:3,zh:1,hot:2},
+{n:"拉片笔记",why:"电影拆成泳道时间轴和情绪曲线",c:"办公效率",m:["办公","写作"],d:"MIT开源的本地拉片工具(733★，中文原生)：导入一部影片，按1秒一帧抽帧、自动配字幕，打成给AI的分析包(ZIP或国内模型能吃的散文件版)，AI返回结果导回来就有了剧情泳道时间轴、结构树和观众情绪曲线。段落可以单独打小包深拆到镜头级，笔记里任何时间点点一下就跳回播放器，「播放本段」到段落结束自动停，真正边播边记，最后导出Markdown、剧本正文或分享长图。影片和笔记全在本机，不绑定任何AI，填自己的DeepSeek/Kimi/通义key也能直连分析；不想装软件有在线试用版，只少本地转码和自动搜字幕",u:"https://bkingfilm.github.io/lapian-notes/",r:4,re:"拉片笔记自动成型",f:1,q:"开源免费",g:"https://github.com/bkingfilm/lapian-notes",diff:2,zh:1,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -913,7 +917,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 282 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 286 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1198,6 +1202,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/lucky-Luor/bilibili-douyin-notes" target="_blank" rel="noopener">视频转课堂笔记</a> — 不花一分钱把长视频变成笔记 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/HeyChengC/vibe-knowledge-film" target="_blank" rel="noopener">Vibe 知识短片</a> — 先出30秒样片，确认再做全片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/LiCinCan/blender-ai-mcp-addon" target="_blank" rel="noopener">Blender AI MCP Pro</a> — 21个场景工具，还能分工审阅 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://openfilm.dev" target="_blank" rel="noopener">OpenFilm</a> — 片子本身就是网页，改到满意为止 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://assetfurnace.com" target="_blank" rel="noopener">AssetFurnace</a> — 一张图直出带骨骼的GLB角色 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://kanaworksai-hue.github.io/audio-studio-mcp/" target="_blank" rel="noopener">Audio Studio MCP</a> — 本机Stable Audio 3出BGM不用API费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://bkingfilm.github.io/lapian-notes/" target="_blank" rel="noopener">拉片笔记</a> — 电影拆成泳道时间轴和情绪曲线 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1207,7 +1215,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 282,
+ "numberOfItems": 286,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2900,6 +2908,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 282,
    "name": "Blender AI MCP Pro",
    "url": "https://github.com/LiCinCan/blender-ai-mcp-addon"
+  },
+  {
+   "@type": "ListItem",
+   "position": 283,
+   "name": "OpenFilm",
+   "url": "https://openfilm.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 284,
+   "name": "AssetFurnace",
+   "url": "https://assetfurnace.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 285,
+   "name": "Audio Studio MCP",
+   "url": "https://kanaworksai-hue.github.io/audio-studio-mcp/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 286,
+   "name": "拉片笔记",
+   "url": "https://bkingfilm.github.io/lapian-notes/"
   }
  ]
 }
