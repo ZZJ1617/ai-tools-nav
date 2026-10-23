@@ -355,11 +355,12 @@ function toggleTheme(){
 
 // ===== 热点（结构化） =====
 const HOTSPOT={
-  date: "10月22日 19:05更新",
+  date: "10月23日 08:20更新",
   items: [
     {t: "🎬", h: "fal 发布 FLUX 3 Max 视频模型", d: "fal Research 与 Black Forest Labs 10 月 19 日发布后训练视频模型 FLUX 3 Max：在 Artificial Analysis 图生视频榜拿到 1,139 分，与 Seedance 2.5 并列第一，生成 10 秒 720/768p 视频约 12 秒，官方称比 Seedance 2.5 快至 22 倍、是同级质量里最快也最便宜的模型；支持文生视频与图生视频，可直接在 fal 平台按次调用，也可通过 Black Forest Labs 控制台与 API 使用，11 月 7 日前 fal 上降价 75%。", params: "已上线 · fal 平台按次调用（11/7 前 75% 折扣）", scene: "视频 · 图生视频/文生视频", link: "https://fal.ai/flux-3-max"},
     {t: "🎨", h: "Coco Labs 发布设计模型 Vyb", d: "Coco Labs 10 月 20 日发布首个 AI 设计模型 Vyb：不直接吐一张扁平图，而是从品牌官网抓起 logo、字体、精确十六进制色值与产品原图，把标题、图形、照片分别建成独立图层——文字仍是可编辑文本、图形仍是矢量、产品照片按原分辨率嵌入且不被重画，所以只改标题不用整图重生成。官方在 145 款 Google 字体的像素重叠 IoU 测试里拿到 90.3%，对比中最强图像模型为 76.0%，该测试上限为 94.4%；成品可导出 Figma 且图层结构完整保留，方便设计师接着手改。联合创始人 Anusha Ramesh 此前在 Google 负责首批图像与视频生成模型。官网目前为申请制早期访问，加入等待名单送 10 美元生成额度。", params: "内测申请制 · 官网等名单送 $10 额度", scene: "设计 · 品牌资产分层出图/Figma 可编辑", link: "https://cocolabs.ai/vyb"},
-    {t: "🦆", h: "腾讯内测 AI 互动社区「懂了鸭」", d: "腾讯 10 月 19 日起被曝内测的 AI 互动内容社区「懂了鸭」，官网 dongleya.qq.com 与微信小程序已上线，目前向亲子用户与一线教师开放小范围测试。核心载体是「奇妙卡」：家长、教师或知识创作者用自然语言或语音描述想法，就能让内置智能体生成可拖拽、可模拟、可操作的 3D 演示、动态课件、互动绘本、轻量游戏或记忆卡，无需编程；社区里既能浏览他人作品，也能二次改编。首页按学前到高中四个学段、健康/语言/数学/科学/艺术/信息科技六大学科组织内容。可选模型列表里有 DeepSeek-V4.1-Flash、DeepSeek V4 Pro、混元 Hy3、Hy4 preview、MiniMax M3、Kimi K3、GLM-5.3 等，按任务类型路由。与字节豆包爱学主打拍照答疑、批改错题不同，懂了鸭的重心是让教师和家长自己做互动学习材料。", params: "内测中 · 官网与微信小程序小范围测试", scene: "办公 · 3D 演示/动态课件/互动绘本", link: "https://dongleya.qq.com"}
+    {t: "🦆", h: "腾讯内测 AI 互动社区「懂了鸭」", d: "腾讯 10 月 19 日起被曝内测的 AI 互动内容社区「懂了鸭」，官网 dongleya.qq.com 与微信小程序已上线，目前向亲子用户与一线教师开放小范围测试。核心载体是「奇妙卡」：家长、教师或知识创作者用自然语言或语音描述想法，就能让内置智能体生成可拖拽、可模拟、可操作的 3D 演示、动态课件、互动绘本、轻量游戏或记忆卡，无需编程；社区里既能浏览他人作品，也能二次改编。首页按学前到高中四个学段、健康/语言/数学/科学/艺术/信息科技六大学科组织内容。可选模型列表里有 DeepSeek-V4.1-Flash、DeepSeek V4 Pro、混元 Hy3、Hy4 preview、MiniMax M3、Kimi K3、GLM-5.3 等，按任务类型路由。与字节豆包爱学主打拍照答疑、批改错题不同，懂了鸭的重心是让教师和家长自己做互动学习材料。", params: "内测中 · 官网与微信小程序小范围测试", scene: "办公 · 3D 演示/动态课件/互动绘本", link: "https://dongleya.qq.com"},
+    {t: "🎨", h: "Canva 发布首款自研图像模型 Craft", d: "Canva 10 月 22 日发布首个自研图像生成模型 Craft，与 Google、OpenAI、字节、Meta 的同类模型正面竞争：训练数据不是照片而是平台数百万张人工设计的模板（海报、社媒图、信息图、字体排版密集的版式），所以它按两阶段干活——规划器先定好空间关系、相对比例、视觉层级和文字内容，渲染器再按方案画出最高 2K、超过 30 种宽高比的图，文字在生成前已确定拼写，改单个元素时其余区域不动。官方称 Craft 让 Canva Research 成为 DesignArena 全球图像生成榜第二、仅次于 OpenAI。目前全体 Canva 用户可从 Dream Lab 标签页直接使用，同时通过 Canva API 开放，并将经 Canva 的 MCP 接入 ChatGPT 与 Gemini；Craft-fast 与 Craft-ultrafast 两个更快版本在计划中。", params: "已上线 · 全体用户 Dream Lab 可用 + Canva API", scene: "设计 · 海报/社媒图/信息图 文字清晰可编辑", link: "https://www.canva.com/newsroom/news/canva-craft/"},
   ]
 };
 function renderHotspot(){
