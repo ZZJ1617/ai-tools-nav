@@ -681,6 +681,10 @@ const TOOLS=[
 {n:"AssetFurnace",why:"一张图直出带骨骼的GLB角色",c:"3D创作",m:["3D"],d:"Apache-2.0开源的图生3D流水线(912★,2026-08-02建仓，原名Image to 3D Lab)：给一张图或一句描述，先出图、再建模型、减面清理、自动绑骨骼、套21套走路跑步跳舞蹈动作，最后导出GLB，Godot/Unity/Unreal/Blender/three.js都能直接用。背后可选Pixal3D、TRELLIS.2、Hunyuan3D三个本地模型，Apple Silicon、NVIDIA、AMD(ROCm)都能跑，文件不上传也没有积分。Pixel Match会把原图真实像素贴回模型，衣服上的字和logo在5000面下也认得清；Prop sheets能把一张图拆成9个带LOD的独立道具。⚠️吃本地显卡、首次下模型占空间不小，界面只有英文",u:"https://assetfurnace.com",r:4,re:"图直出可动模型",f:1,q:"开源免费",g:"https://github.com/Bingeljell/image-to-3dlab",diff:3,zh:3,hot:2},
 {n:"Audio Studio MCP",why:"本机Stable Audio 3出BGM不用API费",c:"音频生成",m:["音频"],d:"MIT开源的MCP音频服务器(438★,2026-10-18建仓)：在Claude Code、Claude Desktop、Cursor等任意MCP客户端里用一句人话要背景音乐或音效，模型在本机用Stable Audio 3生成，不上云、不要Key、不按次收费。生成完能整段改风格、只重做某一段时间、延长轨道，再自动做无缝循环、淡入淡出、LUFS响度归一，导出48kHz WAV/OGG/FLAC，每个文件配一份写清提示词和随机种子的json。内置官方提示词格式，说「像一扇吱呀作响的门」它就懂该怎么写。⚠️只支持Apple Silicon(MLX)与Windows NVIDIA显卡(PyTorch)，Linux和A卡跑不了",u:"https://kanaworksai-hue.github.io/audio-studio-mcp/",r:4,re:"本地出BGM与音效",f:1,q:"开源免费",g:"https://github.com/kanaworksai-hue/audio-studio-mcp",diff:3,zh:1,hot:2},
 {n:"拉片笔记",why:"电影拆成泳道时间轴和情绪曲线",c:"办公效率",m:["办公","写作"],d:"MIT开源的本地拉片工具(733★，中文原生)：导入一部影片，按1秒一帧抽帧、自动配字幕，打成给AI的分析包(ZIP或国内模型能吃的散文件版)，AI返回结果导回来就有了剧情泳道时间轴、结构树和观众情绪曲线。段落可以单独打小包深拆到镜头级，笔记里任何时间点点一下就跳回播放器，「播放本段」到段落结束自动停，真正边播边记，最后导出Markdown、剧本正文或分享长图。影片和笔记全在本机，不绑定任何AI，填自己的DeepSeek/Kimi/通义key也能直连分析；不想装软件有在线试用版，只少本地转码和自动搜字幕",u:"https://bkingfilm.github.io/lapian-notes/",r:4,re:"拉片笔记自动成型",f:1,q:"开源免费",g:"https://github.com/bkingfilm/lapian-notes",diff:2,zh:1,hot:2},
+{n:"Lanshu 数字人讲解片",why:"一张授权肖像，做出带字幕的口播片",c:"视频生成",m:["视频"],d:"MIT开源的 Agent 技能(2.8k★,2026-08-20建仓,作者岚叔,中英双README)：两条路线都从一句主题或一份成稿开始。数字人路线要一张本人有授权的清晰肖像,串起锁稿、整段配音、数字人出镜、对口型、字幕与关键词动效、剪辑与质检,默认出9:16竖屏;风格路线不露脸,把每句旁白在画面上演出来,12种风格(编辑纸感、科技HUD、笔记本手绘、立体书、纸雕漫画、3D一镜到底、制图板、黑板、黏土小镇,加推演/案卷/小剧场三种叙事)默认16:9。每个阶段都得靠 check_state.py 验过证据(preflight、ASR、时间轴、成片可解码)才准进下一步,交付含母版、分享文案、联系表和交付报告。⚠️数字人路线要自备配音、数字人视频与对口型能力(云CLI/API/本地模型);风格路线用 MINIMAX_API_KEY 出配音和词级时间戳,也可以换成自己录的旁白",u:"https://github.com/cclank/lanshu-create-ai-presenter-video",r:4,re:"带质检的数字人片",f:1,q:"开源免费(BYOK)",g:"https://github.com/cclank/lanshu-create-ai-presenter-video",diff:2,zh:1,hot:2},
+{n:"Motion2MixamoRig",why:"视频里的动作，直接搬到Mixamo角色",c:"3D创作",m:["3D"],d:"Apache-2.0开源的动捕重定向工具(1560★,2026-08-29建仓,今天还在提交)：给一段单人全身入镜的视频或一张全身照,先用 GVHMR 把真人动作提成3D骨架,再重定向到 Mixamo 绑好的角色上,输出 mixamo_character.glb,Blender/Unity 拖进去就能用;只给照片则取出静态姿势。装了 Blender 4.2+ 扩展版后在 N 面板点几下就能跑,不写代码;命令行走 m2mr,换角色时加 --skeleton 复用已提好的骨架,几秒出结果。每次运行自检自穿插(手插进头那种),写 diagnostics.json,加 --visualize 生成原片对照的诊断页。⚠️要先自己下 SMPL-X(免费注册)和一个 Mixamo 角色(Adobe 账号),首次运行自动拉约5GB权重,CPU 上30秒片子要8-15分钟,仓库自标实验版0.1.7",u:"https://github.com/MaxLiu22/Motion2MixamoRig",r:4,re:"动作搬到Mixamo角色",f:1,q:"开源免费",g:"https://github.com/MaxLiu22/Motion2MixamoRig",diff:3,zh:1,hot:2},
+{n:"Impeccable",why:"给AI补设计常识，62条规则查丑",c:"设计工具",m:["图像"],d:"Apache-2.0开源的设计技能(8.5万★,官网impeccable.style)：专治AI做出来的页面那股SaaS模板味。先把产品事实写进 PRODUCT.md,再按24条命令逐项改——shape 先规划界面、critique 评审层级与情绪、audit 查无障碍与响应式、polish 收尾、distill 减负、animate/bolder/quieter 调语气,还能开 live 模式在浏览器里对着元素实时迭代。自带62条确定性检测规则,命令行和浏览器扩展不用模型、不用key 就能把 Inter 字体、紫蓝渐变、卡片套卡片、彩色底上放灰字这些毛病揪出来。npx impeccable install 能认出 Claude Code、Codex、Cursor、Gemini CLI、Hermes Agent 等宿主,装完重载即可",u:"https://impeccable.style",r:4,re:"治AI页面模板味",f:1,q:"开源免费",g:"https://github.com/pbakaus/impeccable",diff:2,zh:3,hot:3},
+{n:"StemKit",why:"本地把一首歌拆五轨，单轨导WAV",c:"音频生成",m:["音频"],d:"MIT开源的本地分轨工具(1115★,2026-08-24建仓,最新 v0.2.0)：搜 YouTube 或粘链接,勾要拆的乐器(人声、鼓、贝斯、吉他、钢琴等),分离全在本机跑;界面左边视频、右边每轨一条推子,边放边静音/独奏/调音量,一键切卡拉OK、清唱、鼓+贝斯预设,任意单轨或全部导 WAV。安装包 macOS(Apple Silicon 与 Intel)、Windows、Linux 都有,ffmpeg 已内置;首次启动自建 Python 环境并下约2GB分离引擎,之后全程离线,不要账号不要key,MPS/CUDA/ROCm/CPU 都能跑。⚠️CPU 分离慢,可选加装 Mel-Band Roformer 人声增强(+913MB)",u:"https://github.com/danielravina/stemkit",r:4,re:"本机拆人声和伴奏",f:1,q:"开源免费",g:"https://github.com/danielravina/stemkit",diff:1,zh:3,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -918,7 +922,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 286 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 290 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1207,6 +1211,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://assetfurnace.com" target="_blank" rel="noopener">AssetFurnace</a> — 一张图直出带骨骼的GLB角色 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://kanaworksai-hue.github.io/audio-studio-mcp/" target="_blank" rel="noopener">Audio Studio MCP</a> — 本机Stable Audio 3出BGM不用API费 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://bkingfilm.github.io/lapian-notes/" target="_blank" rel="noopener">拉片笔记</a> — 电影拆成泳道时间轴和情绪曲线 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/cclank/lanshu-create-ai-presenter-video" target="_blank" rel="noopener">Lanshu 数字人讲解片</a> — 一张授权肖像，做出带字幕的口播片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/MaxLiu22/Motion2MixamoRig" target="_blank" rel="noopener">Motion2MixamoRig</a> — 视频里的动作，直接搬到Mixamo角色 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://impeccable.style" target="_blank" rel="noopener">Impeccable</a> — 给AI补设计常识，62条规则查丑 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/danielravina/stemkit" target="_blank" rel="noopener">StemKit</a> — 本地把一首歌拆五轨，单轨导WAV <span class="nb-cat">音频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1216,7 +1224,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 286,
+ "numberOfItems": 290,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2933,6 +2941,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 286,
    "name": "拉片笔记",
    "url": "https://bkingfilm.github.io/lapian-notes/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 287,
+   "name": "Lanshu 数字人讲解片",
+   "url": "https://github.com/cclank/lanshu-create-ai-presenter-video"
+  },
+  {
+   "@type": "ListItem",
+   "position": 288,
+   "name": "Motion2MixamoRig",
+   "url": "https://github.com/MaxLiu22/Motion2MixamoRig"
+  },
+  {
+   "@type": "ListItem",
+   "position": 289,
+   "name": "Impeccable",
+   "url": "https://impeccable.style"
+  },
+  {
+   "@type": "ListItem",
+   "position": 290,
+   "name": "StemKit",
+   "url": "https://github.com/danielravina/stemkit"
   }
  ]
 }
