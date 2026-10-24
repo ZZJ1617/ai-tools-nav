@@ -686,6 +686,10 @@ const TOOLS=[
 {n:"Motion2MixamoRig",why:"视频里的动作，直接搬到Mixamo角色",c:"3D创作",m:["3D"],d:"Apache-2.0开源的动捕重定向工具(1560★,2026-08-29建仓,今天还在提交)：给一段单人全身入镜的视频或一张全身照,先用 GVHMR 把真人动作提成3D骨架,再重定向到 Mixamo 绑好的角色上,输出 mixamo_character.glb,Blender/Unity 拖进去就能用;只给照片则取出静态姿势。装了 Blender 4.2+ 扩展版后在 N 面板点几下就能跑,不写代码;命令行走 m2mr,换角色时加 --skeleton 复用已提好的骨架,几秒出结果。每次运行自检自穿插(手插进头那种),写 diagnostics.json,加 --visualize 生成原片对照的诊断页。⚠️要先自己下 SMPL-X(免费注册)和一个 Mixamo 角色(Adobe 账号),首次运行自动拉约5GB权重,CPU 上30秒片子要8-15分钟,仓库自标实验版0.1.7",u:"https://github.com/MaxLiu22/Motion2MixamoRig",r:4,re:"动作搬到Mixamo角色",f:1,q:"开源免费",g:"https://github.com/MaxLiu22/Motion2MixamoRig",diff:3,zh:1,hot:2},
 {n:"Impeccable",why:"给AI补设计常识，62条规则查丑",c:"设计工具",m:["图像"],d:"Apache-2.0开源的设计技能(8.5万★,官网impeccable.style)：专治AI做出来的页面那股SaaS模板味。先把产品事实写进 PRODUCT.md,再按24条命令逐项改——shape 先规划界面、critique 评审层级与情绪、audit 查无障碍与响应式、polish 收尾、distill 减负、animate/bolder/quieter 调语气,还能开 live 模式在浏览器里对着元素实时迭代。自带62条确定性检测规则,命令行和浏览器扩展不用模型、不用key 就能把 Inter 字体、紫蓝渐变、卡片套卡片、彩色底上放灰字这些毛病揪出来。npx impeccable install 能认出 Claude Code、Codex、Cursor、Gemini CLI、Hermes Agent 等宿主,装完重载即可",u:"https://impeccable.style",r:4,re:"治AI页面模板味",f:1,q:"开源免费",g:"https://github.com/pbakaus/impeccable",diff:2,zh:3,hot:3},
 {n:"StemKit",why:"本地把一首歌拆五轨，单轨导WAV",c:"音频生成",m:["音频"],d:"MIT开源的本地分轨工具(1115★,2026-08-24建仓,最新 v0.2.0)：搜 YouTube 或粘链接,勾要拆的乐器(人声、鼓、贝斯、吉他、钢琴等),分离全在本机跑;界面左边视频、右边每轨一条推子,边放边静音/独奏/调音量,一键切卡拉OK、清唱、鼓+贝斯预设,任意单轨或全部导 WAV。安装包 macOS(Apple Silicon 与 Intel)、Windows、Linux 都有,ffmpeg 已内置;首次启动自建 Python 环境并下约2GB分离引擎,之后全程离线,不要账号不要key,MPS/CUDA/ROCm/CPU 都能跑。⚠️CPU 分离慢,可选加装 Mel-Band Roformer 人声增强(+913MB)",u:"https://github.com/danielravina/stemkit",r:4,re:"本机拆人声和伴奏",f:1,q:"开源免费",g:"https://github.com/danielravina/stemkit",diff:1,zh:3,hot:2},
+{n:"BeatDesign",why:"开源版Higgsfield，画布直通时间线",c:"视频编辑",m:["视频","图像"],d:"Apache-2.0开源的本地创作台(256★,2026-08-20建仓,官网beatapi.io/design)：把无限画布和剪辑器放进同一个项目。画布上摆图片、视频、音频、文字节点，连线分支比稿，生成结果自动进项目素材库；拖到时间线就能裁、切、挪、波纹删除，叠图、SRT字幕样式、选中区间AI重做都在，导出走浏览器WebCodecs直接出H.264/AAC的MP4，不用装系统FFmpeg。内置30个本地MCP工具(源码版38个)，Claude Code、Codex、Cursor、Hermes连上改的是你看得见的同一个项目；界面中英日三语。⚠️导入、编排、剪辑、预览、导出全免费且不用key，但真出图出视频要填BeatAPI的key按量付费；只支持macOS和Windows的Chrome，没有桌面安装包，得自己Node 22+pnpm起服务",u:"https://beatapi.io/design",r:4,re:"画布直通剪辑",f:1,q:"开源免费(生成需API key)",g:"https://github.com/BeatAPI/BeatDesign",diff:2,zh:1,hot:2,v:1},
+{n:"Folivox",why:"一整本书，本地渲染成有声书",c:"音频生成",m:["音频"],d:"Apache-2.0开源的本地有声书工具(104★,2026-10-11建仓,作者自标早期开发)：丢进EPUB、FB2、DOCX、PDF或TXT，选个声音按一下就渲染，输出带章节、封面和元数据的m4b或mp3，几小时的书一次跑完。默认用本地CosyVoice 3，声音可以是内置公版旁白库、自己录的一段样本，也能为这本书现造一个；全程不上传、不要账号、不按字符收费。网页工作室有49种界面语言，命令行folivox render book.fb2直接出；NAS上给了docker-compose(含NVIDIA GPU版)。⚠️首次要下约6GB声音模型加1.6GB质检模型，CPU能跑但慢；想换ElevenLabs、OpenAI、Gemini、Fish得自己贴key",u:"https://vatavale.github.io/folivox/",r:3,re:"书直接变有声书",f:1,q:"开源免费",g:"https://github.com/vatavale/folivox",diff:2,zh:1,hot:1,v:0},
+{n:"手写模拟器",why:"文字变手写信，连写错涂改都像",c:"图像生成",m:["图像"],d:"MIT开源的中文原生手写生成器(186★,2026-08-07建仓)：一段文字配一款手写字体、一张信纸背景，按书写习惯排版，再叠加字距、行距、字号、笔画位移、笔画旋转的随机扰动，每页每个字都不一样。错字率0到30%可调，写错的划掉后在右上方小一号重写，涂改有线、双线、斜线、叉号四种；能导入PDF或Word当底图，试卷、表格、实验报告直接在框里填，框选区域才手写，手写体和打印体还能混排，导出PNG或300DPI的PDF。GUI和命令行双入口，另有Rust+Tauri版。⚠️仓库不带字体，得自己放一份手写.ttf/.otf(商用字体注意授权)；要Python 3.12以上和uv装依赖",u:"https://github.com/bamboostrip/Handwriting-simulator",r:4,re:"手写信以假乱真",f:1,q:"开源免费",g:"https://github.com/bamboostrip/Handwriting-simulator",diff:2,zh:1,hot:1,v:0},
+{n:"Procedura",why:"一句话长出能改参数的真3D模型",c:"3D创作",m:["3D"],d:"MIT开源的3D建模agent(421★,2026-08-27建仓,10-20上了MCP版)：给一句话或一张参考图，它一个零件一个零件地建，边建边检查形状再修，然后加材质，最后导出final.scad(能在OpenSCAD里继续改参数)、final.obj网格、带材质的PBR版本；有活动部件的还出USD和URDF，附运动测试结果。跑在Codex或Claude Code里，直接吃当前会话的模型，不用另买API key，也能走自己的模型key批量跑或开网页版。⚠️安装脚本只支持Linux x86_64，会顺手装Bun、OpenSCAD、Blender；复杂模型要跑几小时，物理检查得另装Isaac Sim，界面纯英文",u:"https://spatiaos.github.io/projects/procedura/",r:4,re:"可编辑参数化3D",f:1,q:"开源免费",g:"https://github.com/SpatiaOS/Procedura",diff:3,zh:3,hot:2,v:1},
 ];
 
 // ===== 已停服工具归档 =====
@@ -923,7 +927,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 290 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 294 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1216,6 +1220,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/MaxLiu22/Motion2MixamoRig" target="_blank" rel="noopener">Motion2MixamoRig</a> — 视频里的动作，直接搬到Mixamo角色 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://impeccable.style" target="_blank" rel="noopener">Impeccable</a> — 给AI补设计常识，62条规则查丑 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/danielravina/stemkit" target="_blank" rel="noopener">StemKit</a> — 本地把一首歌拆五轨，单轨导WAV <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://beatapi.io/design" target="_blank" rel="noopener">BeatDesign</a> — 开源版Higgsfield，画布直通时间线 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://vatavale.github.io/folivox/" target="_blank" rel="noopener">Folivox</a> — 一整本书，本地渲染成有声书 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/bamboostrip/Handwriting-simulator" target="_blank" rel="noopener">手写模拟器</a> — 文字变手写信，连写错涂改都像 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://spatiaos.github.io/projects/procedura/" target="_blank" rel="noopener">Procedura</a> — 一句话长出能改参数的真3D模型 <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1225,7 +1233,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 290,
+ "numberOfItems": 294,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2966,6 +2974,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 290,
    "name": "StemKit",
    "url": "https://github.com/danielravina/stemkit"
+  },
+  {
+   "@type": "ListItem",
+   "position": 291,
+   "name": "BeatDesign",
+   "url": "https://beatapi.io/design"
+  },
+  {
+   "@type": "ListItem",
+   "position": 292,
+   "name": "Folivox",
+   "url": "https://vatavale.github.io/folivox/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 293,
+   "name": "手写模拟器",
+   "url": "https://github.com/bamboostrip/Handwriting-simulator"
+  },
+  {
+   "@type": "ListItem",
+   "position": 294,
+   "name": "Procedura",
+   "url": "https://spatiaos.github.io/projects/procedura/"
   }
  ]
 }
