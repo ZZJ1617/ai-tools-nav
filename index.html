@@ -690,6 +690,9 @@ const TOOLS=[
 {n:"Folivox",why:"一整本书，本地渲染成有声书",c:"音频生成",m:["音频"],d:"Apache-2.0开源的本地有声书工具(104★,2026-10-11建仓,作者自标早期开发)：丢进EPUB、FB2、DOCX、PDF或TXT，选个声音按一下就渲染，输出带章节、封面和元数据的m4b或mp3，几小时的书一次跑完。默认用本地CosyVoice 3，声音可以是内置公版旁白库、自己录的一段样本，也能为这本书现造一个；全程不上传、不要账号、不按字符收费。网页工作室有49种界面语言，命令行folivox render book.fb2直接出；NAS上给了docker-compose(含NVIDIA GPU版)。⚠️首次要下约6GB声音模型加1.6GB质检模型，CPU能跑但慢；想换ElevenLabs、OpenAI、Gemini、Fish得自己贴key",u:"https://vatavale.github.io/folivox/",r:3,re:"书直接变有声书",f:1,q:"开源免费",g:"https://github.com/vatavale/folivox",diff:2,zh:1,hot:1,v:0},
 {n:"手写模拟器",why:"文字变手写信，连写错涂改都像",c:"图像生成",m:["图像"],d:"MIT开源的中文原生手写生成器(186★,2026-08-07建仓)：一段文字配一款手写字体、一张信纸背景，按书写习惯排版，再叠加字距、行距、字号、笔画位移、笔画旋转的随机扰动，每页每个字都不一样。错字率0到30%可调，写错的划掉后在右上方小一号重写，涂改有线、双线、斜线、叉号四种；能导入PDF或Word当底图，试卷、表格、实验报告直接在框里填，框选区域才手写，手写体和打印体还能混排，导出PNG或300DPI的PDF。GUI和命令行双入口，另有Rust+Tauri版。⚠️仓库不带字体，得自己放一份手写.ttf/.otf(商用字体注意授权)；要Python 3.12以上和uv装依赖",u:"https://github.com/bamboostrip/Handwriting-simulator",r:4,re:"手写信以假乱真",f:1,q:"开源免费",g:"https://github.com/bamboostrip/Handwriting-simulator",diff:2,zh:1,hot:1,v:0},
 {n:"Procedura",why:"一句话长出能改参数的真3D模型",c:"3D创作",m:["3D"],d:"MIT开源的3D建模agent(421★,2026-08-27建仓,10-20上了MCP版)：给一句话或一张参考图，它一个零件一个零件地建，边建边检查形状再修，然后加材质，最后导出final.scad(能在OpenSCAD里继续改参数)、final.obj网格、带材质的PBR版本；有活动部件的还出USD和URDF，附运动测试结果。跑在Codex或Claude Code里，直接吃当前会话的模型，不用另买API key，也能走自己的模型key批量跑或开网页版。⚠️安装脚本只支持Linux x86_64，会顺手装Bun、OpenSCAD、Blender；复杂模型要跑几小时，物理检查得另装Isaac Sim，界面纯英文",u:"https://spatiaos.github.io/projects/procedura/",r:4,re:"可编辑参数化3D",f:1,q:"开源免费",g:"https://github.com/SpatiaOS/Procedura",diff:3,zh:3,hot:2,v:1},
+{n:"Ming-3.0-tts",why:"开源 TTS 中文音色最多，克隆不收费",c:"音频生成",m:["音频"],d:"蚂蚁百灵开源的语音合成模型：0.5B 稠密 + 7.9B MoE 两版，Artificial Analysis 2026-10 榜单开源权重第一、读音准确率全场第一（93.2%），内置 100+ 中文音色，能克隆、能按文字描述造音色，还带 14 种笑声叹气等副语言标签，支持川话粤语，MIT 可商用",u:"https://nomorecoding.github.io/Ming-3.0-tts/",r:5,re:"开源TTS榜第一",f:1,q:"开源免费",g:"https://github.com/inclusionAI/Ming-3.0-tts",diff:3,zh:1,hot:2,v:1},
+{n:"Ely Office",why:"Office 全家桶纯离线，装完即用",c:"办公效率",m:["办公"],d:"Rust+GPUI 重写的离线办公套件：文档、表格、演示、PDF、邮件、Git、Markdown 七个独立应用，Win/macOS/Linux 安装包现成不用编译，无账号不连云，文件就放你自己文件夹里；现为 v0.1.11 早期版",u:"https://office.elygpui.com",r:4,re:"离线Office全家桶",f:1,q:"开源免费",g:"https://github.com/ELY-Open-Source/ElyOffice",diff:2,zh:2,hot:2},
+{n:"TextFold",why:"长文五级折叠，可逐层放大回原文",c:"办公效率",m:["办公"],d:"把论文、网页、PDF/Word/PPT/EPUB 折成五级详略（原文→关键句→要点→一行→主题卡），想看细节就往回放一层，公式与图表跟原文对照；能直连 Zotero 书库和 Obsidian，模型用你已有的，Apache-2.0",u:"https://chenxiachan.github.io/textfold/",r:4,re:"五级折叠长文",f:1,q:"开源免费",g:"https://github.com/chenxiachan/textfold",diff:2,zh:1,hot:2},
 ];
 
 // ===== 已停服工具归档 =====
@@ -927,7 +930,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 294 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 297 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1224,6 +1227,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://vatavale.github.io/folivox/" target="_blank" rel="noopener">Folivox</a> — 一整本书，本地渲染成有声书 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/bamboostrip/Handwriting-simulator" target="_blank" rel="noopener">手写模拟器</a> — 文字变手写信，连写错涂改都像 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://spatiaos.github.io/projects/procedura/" target="_blank" rel="noopener">Procedura</a> — 一句话长出能改参数的真3D模型 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://nomorecoding.github.io/Ming-3.0-tts/" target="_blank" rel="noopener">Ming-3.0-tts</a> — 开源 TTS 中文音色最多，克隆不收费 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://office.elygpui.com" target="_blank" rel="noopener">Ely Office</a> — Office 全家桶纯离线，装完即用 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://chenxiachan.github.io/textfold/" target="_blank" rel="noopener">TextFold</a> — 长文五级折叠，可逐层放大回原文 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1233,7 +1239,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 294,
+ "numberOfItems": 297,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -2998,6 +3004,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 294,
    "name": "Procedura",
    "url": "https://spatiaos.github.io/projects/procedura/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 295,
+   "name": "Ming-3.0-tts",
+   "url": "https://nomorecoding.github.io/Ming-3.0-tts/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 296,
+   "name": "Ely Office",
+   "url": "https://office.elygpui.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 297,
+   "name": "TextFold",
+   "url": "https://chenxiachan.github.io/textfold/"
   }
  ]
 }
