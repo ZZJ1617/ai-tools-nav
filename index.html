@@ -355,7 +355,7 @@ function toggleTheme(){
 
 // ===== 热点（结构化） =====
 const HOTSPOT={
-  date: "10月25日 19:05更新",
+  date: "10月26日 08:15更新",
   items: [
     {t: "🎬", h: "fal 发布 FLUX 3 Max 视频模型", d: "fal Research 与 Black Forest Labs 10 月 19 日发布后训练视频模型 FLUX 3 Max：在 Artificial Analysis 图生视频榜拿到 1,139 分，与 Seedance 2.5 并列第一，生成 10 秒 720/768p 视频约 12 秒，官方称比 Seedance 2.5 快至 22 倍、是同级质量里最快也最便宜的模型；支持文生视频与图生视频，可直接在 fal 平台按次调用，也可通过 Black Forest Labs 控制台与 API 使用，11 月 7 日前 fal 上降价 75%。", params: "已上线 · fal 平台按次调用（11/7 前 75% 折扣）", scene: "视频 · 图生视频/文生视频", link: "https://fal.ai/flux-3-max"},
     {t: "🎨", h: "Coco Labs 发布设计模型 Vyb", d: "Coco Labs 10 月 20 日发布首个 AI 设计模型 Vyb：不直接吐一张扁平图，而是从品牌官网抓起 logo、字体、精确十六进制色值与产品原图，把标题、图形、照片分别建成独立图层——文字仍是可编辑文本、图形仍是矢量、产品照片按原分辨率嵌入且不被重画，所以只改标题不用整图重生成。官方在 145 款 Google 字体的像素重叠 IoU 测试里拿到 90.3%，对比中最强图像模型为 76.0%，该测试上限为 94.4%；成品可导出 Figma 且图层结构完整保留，方便设计师接着手改。联合创始人 Anusha Ramesh 此前在 Google 负责首批图像与视频生成模型。官网目前为申请制早期访问，加入等待名单送 10 美元生成额度。", params: "内测申请制 · 官网等名单送 $10 额度", scene: "设计 · 品牌资产分层出图/Figma 可编辑", link: "https://cocolabs.ai/vyb"},
@@ -523,7 +523,7 @@ const TOOLS=[
   {n:"OOOSplat",why:"装包即用，环绕拍一圈就出 3D",c:"3D创作",m:["3D"],d:"开源(Apache-2.0)本地桌面应用(2.0k★):环绕拍一段视频或一堆照片丢进去,自动完成画面准备、相机重建、训练与PLY发布,一键出3D高斯泼溅,可预览、拖Transform微调再导出;安装包自带FFmpeg/COLMAP/Brush,不用自己配环境,全程本机算,素材不上传",u:"https://github.com/ooolabdev/ooosplat",r:4,re:"装包即用不上传",f:1,q:"开源免费",g:"https://github.com/ooolabdev/ooosplat",diff:2,zh:1,hot:2},
   {n:"Easel",why:"热榜→选题→七个平台一键发",c:"工作流Agent",m:["Agent"],d:"浙大+北大开源的社媒运营智能体(Apache-2.0,3856★):先聚合热榜、行业新闻与竞品动态定选题,再出标题Hook、分镜脚本和内容日历,113个技能直接产出图文/短视频/海报;小红书、抖音、快手、知乎、B站、视频号、公众号七个平台支持登录适配发布,数据再读回写进账号画像,越用越贴",u:"https://github.com/ZJU-REAL/Easel",r:4,re:"七个平台一键发",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/ZJU-REAL/Easel",diff:3,zh:1,hot:3},
   {n:"Banana Slides",why:"一句话改 PPT，开源原生应用",c:"办公效率",m:["办公"],d:"开源(AGPL-3.0)原生AI PPT应用(1.56万★):一句话、大纲、文档或一张模板图都能出整套幻灯片,支持口头指令改指定区域,一键导出可编辑PPTX和视频;内置豆包、通义、DeepSeek、智谱、Kimi、MiniMax、商汤等国内模型配置位,可Docker自部署,官网在线Demo可先试",u:"https://bananaslides.online",r:4,re:"口令改PPT",f:1,q:"开源免费(生成BYOK)",g:"https://github.com/Anionex/banana-slides",diff:2,zh:1,hot:3},
-  {n:"Video Gen Client",why:"Seedance/可灵/MiniMax 一处调",c:"视频生成",m:["视频"],d:"MIT开源的异步Python客户端(551★):把字节Seedance 2.5、快手可灵3.0、MiniMax H3、阿里万相3.0四家国产视频模型收进同一套接口,支持文生/图生视频、轮询任务与下载MP4,自带CLI、本机网页UI和MCP服务端(不用装Node);软件免费,四家模型各按自家API计费",u:"https://github.com/letorig/video-generator-client",r:4,re:"四家国产模型一处调",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/letorig/video-generator-client",diff:3,zh:3,hot:2},
+  {n:"Video Gen Client",why:"Seedance/可灵/MiniMax 一处调",c:"视频生成",m:["视频"],d:"MIT开源的异步Python客户端:把字节Seedance 2.5、快手可灵3.0、MiniMax H3、阿里万相3.0四家国产视频模型收进同一套接口,支持文生/图生视频、轮询任务与下载MP4,自带CLI、本机网页UI和MCP服务端(不用装Node);软件免费,四家模型各按自家API计费",u:"https://github.com/parusdead/video-generator-client",r:4,re:"四家国产模型一处调",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/parusdead/video-generator-client",diff:3,zh:3,hot:2},
   {n:"PawWork 爪爪",why:"开发者模式加载即用，选中页面直接改",c:"工作流Agent",m:["Agent"],d:"MIT开源的Chrome侧边栏Agent扩展(2.4k★):把已登录的Chrome当一台可编程电脑,选中页面元素直接改、在标签页里跑脚本,会话里留表格与文档产物;无构建步骤,开发者模式加载即用,Key只存本机,可填国产OpenAI兼容端点",u:"https://github.com/Player-YN/BrowserKitten",r:4,re:"选中页面直接改",f:1,q:"开源免费(模型BYOK)",g:"https://github.com/Player-YN/BrowserKitten",diff:1,zh:3,hot:2},
   {n:"anydoc",why:"六种文档一键变干净 Markdown",c:"办公效率",m:["办公"],d:"Firecrawl开源的Rust文档转换库(2.3万★,MIT):Word/PPT/Excel/PDF/EPUB/CSV统一转成干净Markdown,毫秒级、输出格式一致,自托管有CLI/npm/Python/WASM四个入口,浏览器Demo本地转换不上传,也能当Agent技能让AI直接读你丢来的文档",u:"https://firecrawl.github.io/anydoc/",r:5,re:"文档转MD喂AI",f:1,q:"开源免费",g:"https://github.com/firecrawl/anydoc",diff:1,zh:3,hot:3},
   {n:"video-ai-talking",why:"真人视频自动对口型，接口可走国内",c:"视频编辑",m:["视频"],d:"MIT开源的本机真人口播工具(455★):丢一段真人出镜视频、写好台词,先走火山引擎或阿里百炼配音,再交给百炼VideoRetalk对口型,FFmpeg合成竖屏MP4;台词可让DeepSeek代写,Key只存浏览器,素材和成片都留在本机,全链路国产无境外模型",u:"https://github.com/yizhi-chengzi/video-ai-talking",r:4,re:"真人口播自动对口型",f:1,q:"开源免费(接口BYOK)",g:"https://github.com/yizhi-chengzi/video-ai-talking",diff:2,zh:1,hot:2},
@@ -646,7 +646,7 @@ const TOOLS=[
 {n:"LiveCanvas 实况画布",why:"一句话出带封面和动画的Live图",c:"设计工具",m:["图像","视频"],d:"MIT 开源的 Codex/Claude Code skill(485★，中文作者，README 中文优先):一句话做成有封面、有动画的 Live 图——先搜索核实事实、设计分镜，再用 Remotion 渲成动画，最后出 Apple Live Photo 资源(动态封面+配套视频)，也能导 GIF/视频。自带图片、emoji、场景、时间线、图表五种素材模式，仓库附 15 张中文成片 GIF 可直接看效果(小米市值、A20 Pro 对比、全球人口、双城气温这类信息图动效)，适合社交封面、数据播报、产品对比动画。⚠️宿主要是能装 skill 的编程 Agent，需装 Node 与 Remotion 依赖",u:"https://github.com/pengchujin/livecanvas",r:3,re:"一句话做Live图",f:1,q:"开源免费",g:"https://github.com/pengchujin/livecanvas",diff:2,zh:1,hot:2},
 {n:"FigCraft",why:"纯 Rust 重写 Figma，离线秒开",c:"设计工具",m:["图像"],d:"MIT/Apache-2.0 开源(2.7k★，早期 alpha)：把 Figma 搬到本地——组件与变体、自动布局、矢量网络、样式变量、原型一应俱全，纯 Rust 原生应用秒开且可离线，macOS/Windows/Linux/FreeBSD 四端安装包加网页版；界面里每个操作都是带 id 的命令，能经 MCP 让 Agent 直接改稿",u:"https://getartcraft.com/apps/figcraft",r:4,re:"开源Figma平替",f:1,q:"开源免费",g:"https://github.com/storytold/figcraft",diff:1,zh:3,hot:2},
 {n:"OpenCreator",why:"13.7k★ 开源工作台，视频翻译配音一站齐",c:"工作流Agent",m:["视频","音频"],d:"Apache-2.0 开源(13.2k★，原 KrillinAI)：本地运行的创作者工作台，视频下载/翻译/配音、封面与图像生成(接 GPT Image)、Seedance 视频生成、文章与小红书帖子写作、火柴人动画、自动剪辑等十件工具，另有 Agent 对话式创作与 Skills 扩展；桌面版内置 Codex CLI，需自备 ChatGPT 登录态或自己的模型 API Key",u:"https://www.open-creator.ai",r:4,re:"开源创作者工作台",f:1,q:"开源免费",g:"https://github.com/krillinai/OpenCreator",diff:2,zh:1,hot:3},
-{n:"本地短剧助手 LocalMiniDrama",why:"离线跑完整条短剧流水线，素材不出本机",c:"AI短剧",m:["视频"],d:"MIT 开源(2.1k★)：剧本→角色场景→分镜→视频合成一条龙，SQLite 加本地文件存储、素材不上云；列表精细编辑与画布批量编排双视图，生成走自备的通义/火山豆包/可灵/本地 Ollama，配 Gitee 与 AtomGit 镜像；目前只提供 Windows 安装包",u:"https://83zi.com/",r:4,re:"本地离线短剧",f:1,q:"开源免费",g:"https://github.com/xuanyustudio/LocalMiniDrama",diff:2,zh:1,hot:2},
+{n:"本地短剧助手 LocalMiniDrama",why:"离线跑完整条短剧流水线，素材不出本机",c:"AI短剧",m:["视频"],d:"MIT 开源(2.1k★)：剧本→角色场景→分镜→视频合成一条龙，SQLite 加本地文件存储、素材不上云；列表精细编辑与画布批量编排双视图，生成走自备的通义/火山豆包/可灵/本地 Ollama，配 Gitee 与 AtomGit 镜像；目前只提供 Windows 安装包",u:"https://github.com/xuanyustudio/LocalMiniDrama",r:4,re:"本地离线短剧",f:1,q:"开源免费",g:"https://github.com/xuanyustudio/LocalMiniDrama",diff:2,zh:1,hot:2},
 {n:"DigUp",why:"按意思搜本机文件，视频播客里的内容都能定位",c:"办公效率",m:["办公"],d:"MIT 开源的本地语义搜索(4.9k★)：用 Google DeepMind 的 EmbeddingGemma 2 把图片、PDF、文档、录音、视频放进同一语义空间，直接描述就能找到「视频里的斑马」「播客聊睡眠的那一分钟」并跳到对应时刻；离线索引、不限次数、无账号，Mac 版还能识别截图里的文字；⚠️中文等无空格语言只走语义匹配、精确词不做分词",u:"https://github.com/ARahim3/DigUp",r:4,re:"本地文件语义搜索",f:1,q:"开源免费",g:"https://github.com/ARahim3/DigUp",diff:1,zh:2,hot:2},
 {n:"abogen",why:"epub/PDF 一键转有声书，字幕自动对齐",c:"音频生成",m:["音频"],d:"MIT 开源的本地 TTS 工具(6.1k★)：把 epub、PDF、文本、markdown、字幕文件转成配音音频并同步产出字幕，底层用 Kokoro-82M，实测 5 秒出 1 分钟音频；模型可整套预下载后完全离线跑，Windows/Linux/macOS 都有 GUI，也支持命令行与 Docker 挂进 Audiobookshelf；中文语音需另装 misaki[zh]",u:"https://github.com/denizsafak/abogen",r:4,re:"文档转有声书",f:1,q:"开源免费",g:"https://github.com/denizsafak/abogen",diff:2,zh:2,hot:2},
 {n:"产品宣传视频制作器",why:"一句话让 AI 出 4K 宣传片，不用学剪辑",c:"视频生成",m:["视频"],d:"MIT 开源的 Agent 工作流(303★,2026-10-09 建仓,程序员鱼皮出品)：把产品名或网址丢给 Cursor / Claude Code / Codex，AI 自己调研卖点、先出几种风格样图让你挑、截 4K 真实页面、按音乐节拍卡点、生成旁白并逐句转写校验，最后交付宣传片与可在线播放的网页版；Node 18+/Python 3.9+/ffmpeg 就能跑，不填任何 key 也能用曲库配乐+纯字幕出片，填 ElevenLabs key 才有 AI 旁白与配乐",u:"https://github.com/liyupi/ai-promo-video-maker",r:4,re:"一句话出宣传片",f:1,q:"开源免费",g:"https://github.com/liyupi/ai-promo-video-maker",diff:2,zh:1,hot:2},
@@ -1063,7 +1063,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/ooolabdev/ooosplat" target="_blank" rel="noopener">OOOSplat</a> — 装包即用，环绕拍一圈就出 3D <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/ZJU-REAL/Easel" target="_blank" rel="noopener">Easel</a> — 热榜→选题→七个平台一键发 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://bananaslides.online" target="_blank" rel="noopener">Banana Slides</a> — 一句话改 PPT，开源原生应用 <span class="nb-cat">办公效率</span></li>
-      <li><a href="https://github.com/letorig/video-generator-client" target="_blank" rel="noopener">Video Gen Client</a> — Seedance/可灵/MiniMax 一处调 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/parusdead/video-generator-client" target="_blank" rel="noopener">Video Gen Client</a> — Seedance/可灵/MiniMax 一处调 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/Player-YN/BrowserKitten" target="_blank" rel="noopener">PawWork 爪爪</a> — 开发者模式加载即用，选中页面直接改 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://firecrawl.github.io/anydoc/" target="_blank" rel="noopener">anydoc</a> — 六种文档一键变干净 Markdown <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/yizhi-chengzi/video-ai-talking" target="_blank" rel="noopener">video-ai-talking</a> — 真人视频自动对口型，接口可走国内 <span class="nb-cat">视频编辑</span></li>
@@ -1184,7 +1184,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/pengchujin/livecanvas" target="_blank" rel="noopener">LiveCanvas 实况画布</a> — 一句话出带封面和动画的Live图 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://getartcraft.com/apps/figcraft" target="_blank" rel="noopener">FigCraft</a> — 纯 Rust 重写 Figma，离线秒开 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://www.open-creator.ai" target="_blank" rel="noopener">OpenCreator</a> — 13.7k★ 开源工作台，视频翻译配音一站齐 <span class="nb-cat">工作流Agent</span></li>
-      <li><a href="https://83zi.com/" target="_blank" rel="noopener">本地短剧助手 LocalMiniDrama</a> — 离线跑完整条短剧流水线，素材不出本机 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/xuanyustudio/LocalMiniDrama" target="_blank" rel="noopener">本地短剧助手 LocalMiniDrama</a> — 离线跑完整条短剧流水线，素材不出本机 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/ARahim3/DigUp" target="_blank" rel="noopener">DigUp</a> — 按意思搜本机文件，视频播客里的内容都能定位 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/denizsafak/abogen" target="_blank" rel="noopener">abogen</a> — epub/PDF 一键转有声书，字幕自动对齐 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/liyupi/ai-promo-video-maker" target="_blank" rel="noopener">产品宣传视频制作器</a> — 一句话让 AI 出 4K 宣传片，不用学剪辑 <span class="nb-cat">视频生成</span></li>
@@ -2025,7 +2025,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "@type": "ListItem",
    "position": 131,
    "name": "Video Gen Client",
-   "url": "https://github.com/letorig/video-generator-client"
+   "url": "https://github.com/parusdead/video-generator-client"
   },
   {
    "@type": "ListItem",
@@ -2751,7 +2751,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "@type": "ListItem",
    "position": 252,
    "name": "本地短剧助手 LocalMiniDrama",
-   "url": "https://83zi.com/"
+   "url": "https://github.com/xuanyustudio/LocalMiniDrama"
   },
   {
    "@type": "ListItem",
