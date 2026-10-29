@@ -704,6 +704,11 @@ const TOOLS=[
 {n:"Dimensional Drawing",why:"1.3k★，把 UI 组件画成苹果式规格图",c:"设计工具",m:["图像"],d:"MIT 开源的规格图技能(1.3k★，2026-10 新发)：给一个组件源码或截图，产出一页黑白技术图——内边距、间距、圆角、图层和它在视口里的位置全部用标线量出来标注，走的是苹果给配件厂画尺寸图那套；只用灰阶、靠线宽区分结构、不画文案所以改字不会失真。附带动效版，能把这张图做成约 10 秒的拆解动画，没有 Claude 也能走 Playwright + ffmpeg。",u:"https://github.com/enesozturk/dimensional-drawing",r:4,re:"组件规格图",f:1,q:"开源免费",g:"https://github.com/enesozturk/dimensional-drawing",diff:2,zh:3,hot:2},
 {n:"Digital Human Koubo",why:"1.2k★，一张照片一句话出口播片",c:"视频生成",m:["视频"],d:"MIT 开源的数字人口播技能(1.2k★，2026-10 新发，有完整中文文档)：给一张人像和一句话，自动写口播稿、对口型、修音、上字幕再做片，内置 5 种剪辑风格和 48 个音色，Remotion 4 合成竖版或横版。作者实测一条 27 秒带货短片花 482 个 Renoise 积分——代码免费，生成走 Renoise MCP 按积分付费，不是白嫖。",u:"https://github.com/andyhuo520/digital-human-koubo",r:4,re:"一张图出口播",f:1,q:"开源免费(生成走积分)",diff:2,zh:1,hot:2},
 {n:"Ian XHS Carousel",why:"275★ MIT，文章一键排成小红书图文",c:"设计工具",m:["图像"],d:"MIT 开源的小红书图文技能(275★，2026-10 新发，中文优先)：把一篇文章、案例或笔记排成一组 3:4 的 1080×1440 轮播图，先出一张分镜表确认每页讲什么、用哪个母版，确认后才排版出图；20 个母版覆盖封面、步骤、清单、对比、数据、指标和截图标注，浅色深色各一套，最后给你每页 PNG、一张总览图和能自己改字的 HTML 源文件。",u:"https://github.com/helloianneo/ian-xhs-carousel",r:4,re:"文章转图文",f:1,q:"开源免费",g:"https://github.com/helloianneo/ian-xhs-carousel",diff:1,zh:1,hot:1},
+  {n:"huashu-motion",why:"指着画面改，配乐本机合成",c:"视频生成",m:["视频","Agent"],d:"MIT 开源的发布片技能(1.9k★，2026-10 新发，花叔出品)：跟 Agent 说「给我的产品做支 30 秒发布片」，它先读产品出三个方向的关键帧让你挑，再写节奏单、写片、自己按 ABC 记谱法作曲，最后打开浏览器里的编辑器——在画面上点一下、写句要改什么，它带着时间点和元素位置只改那一处，每版都留着能撤回。一支片子就是一个 index.html(GSAP/Canvas/Three.js)，不调视频生成模型，配乐在本机用采样合成、不走收费接口；能导 MP4、透明 MOV、WebM、GIF，或出一个带播放器和源码的分享页。⚠️ 要 Node 22+、本机 Chrome 和 FFmpeg，作者目前只在 macOS 实测；画面全是代码画的，出不了真人和实拍。",u:"https://github.com/alchaincyf/huashu-motion",r:4,re:"点画面就改",f:1,q:"开源免费",g:"https://github.com/alchaincyf/huashu-motion",diff:2,zh:1,hot:2},
+  {n:"Null Motion",why:"成片和草稿逐帧对着看",c:"视频编辑",m:["视频"],d:"MIT 开源的动效片拆解器(1.2k★，2026-09 建仓)：上下对照看一支动效广告是怎么长出来的——上面成片循环播，下面每一段(Hook/Reveal/App/尾卡)配一版黑白 HyperFrames 草稿，播放头和橙色描边跟着成片逐帧走；点 Download 能把整段拆解导成一个 MP4(用 Chrome/Edge 的 WebCodecs)。npm start 就跑，不装依赖、不要 API Key、不要账号，仓库自带三个样例。⚠️ 这是本地免费的预览版，带暂停切点、字幕和 YouTube/Twitch 片段的是另一个托管产品 Null Studio，不在这个仓库里。",u:"https://www.nullmotion.com/",r:4,re:"动效片拆解",f:1,q:"开源免费",g:"https://github.com/blixvip/NullMotion",diff:1,zh:3,hot:1},
+  {n:"发布前审",why:"说清哪句踩线，给能用的改法",c:"AI写作",m:["写作","办公"],d:"MIT 开源的发布前审稿技能(798★，中文原生，只要 Python 3.10+)：发抖音、小红书、视频号之前先过一遍稿子——先词面预检定位候选，再结合语境判定违不违规(「月入过万」写在个人经历里没事，绑着卖课链接就违规)，给出哪句必改和能直接替换的改法，改完自动复检，还附挂购物车/营销标注/报备的平台检查单。42 条规则全部锚定《广告法》、网信办与卫健委文件、平台规则中心，80+ 条原文引文可点开查证；判定尺度用 38 篇平台实际放行的口播稿校准过，平均每篇只出 0.8 个词面候选。你在这台电脑上说一句「以后盯着对赌承诺这个词」，它记进本地 data/ 规则库下次自动生效，全是纯文本、不上传。⚠️ 不承诺过审，也不给谐音拆字那类绕审技巧(官方早已澄清，谐音反而会被单独盯上)；平台暂时只有抖音/小红书/视频号。",u:"https://github.com/yuwen-cool/yuwen-publish-precheck",r:4,re:"发布前查踩线",f:1,q:"开源免费",g:"https://github.com/yuwen-cool/yuwen-publish-precheck",diff:1,zh:1,hot:2},
+  {n:"catbus 猫巴士",why:"一套命令通11平台，同一种JSON",c:"工作流Agent",m:["Agent","办公"],d:"MIT 开源的平台命令行工具(538★，2026-09 建仓，只要 Node 22+)：同一套命令通小红书、抖音、TikTok、B站、快手、微博、闲鱼、淘宝、京东、X、12306——搜索、详情、评论、用户、推荐流、下载、发布、私信都用 item/search/like 这套统一动词，300+ 条命令输出同一种 JSON，上一条的结果能直接喂给下一条，报错里带下一步该敲什么。stdout 只有 JSON、退出码稳定，自带 Agent 技能与 llms.txt，npx skills add cv-cat/catbus 就能装进 Claude Code / Cursor / Codex；登录态按平台×端×账号隔离在 ~/.catbus/，不收集不上传、没有遥测。⚠️ 装完得自己扫码或导 cookie 登录各平台账号；发布这类操作必须显式加 -y 才执行。",u:"https://github.com/cv-cat/catbus",r:4,re:"一套命令通11平台",f:1,q:"开源免费",g:"https://github.com/cv-cat/catbus",diff:1,zh:1,hot:2},
+  {n:"MarkCard Studio",why:"Markdown直接排成卡片和PDF",c:"设计工具",m:["图像","办公"],d:"GPL-3.0 开源的本地 Markdown 排版工具(313★，Tauri 桌面端，Win/Mac/Linux)：左边写 Markdown，右边直接看到卡片——按二级标题、自定义分隔符、字数或智能分页自动切页，16 套主题从瑞士网格、包豪斯到苹果备忘录、报纸、赛博、Y2K、蓝图、Riso；预设小红书 3:4、抖音 9:16、微博 6:7 和方图，表格、任务清单、KaTeX 公式、Mermaid 图、可交互 ECharts 图表和代码高亮都能渲染。导出整页 PNG/JPG、多页 PDF，或拼成一整张长图；文档、图片、设置和成品全部留在本机，深色模式、撤销重做、页面重排都有，界面中英双语。⚠️ 还是 0.1.x 活跃开发版，接口和文档行为可能会变；它只做排版，不生成文案也不生图。",u:"https://markcard.woollypix.cn/",r:4,re:"Markdown排卡片",f:1,q:"开源免费",g:"https://github.com/pangxiaobin/MarkCardStudio",diff:1,zh:1,hot:1},
 ];
 
 // ===== 已停服工具归档 =====
@@ -941,7 +946,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 308 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 313 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1252,6 +1257,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/enesozturk/dimensional-drawing" target="_blank" rel="noopener">Dimensional Drawing</a> — 1.3k★，把 UI 组件画成苹果式规格图 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/andyhuo520/digital-human-koubo" target="_blank" rel="noopener">Digital Human Koubo</a> — 1.2k★，一张照片一句话出口播片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/helloianneo/ian-xhs-carousel" target="_blank" rel="noopener">Ian XHS Carousel</a> — 275★ MIT，文章一键排成小红书图文 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/alchaincyf/huashu-motion" target="_blank" rel="noopener">huashu-motion</a> — 指着画面改，配乐本机合成 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.nullmotion.com/" target="_blank" rel="noopener">Null Motion</a> — 成片和草稿逐帧对着看 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/yuwen-cool/yuwen-publish-precheck" target="_blank" rel="noopener">发布前审</a> — 说清哪句踩线，给能用的改法 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/cv-cat/catbus" target="_blank" rel="noopener">catbus 猫巴士</a> — 一套命令通11平台，同一种JSON <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://markcard.woollypix.cn/" target="_blank" rel="noopener">MarkCard Studio</a> — Markdown直接排成卡片和PDF <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1261,7 +1271,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 308,
+ "numberOfItems": 313,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3110,6 +3120,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 308,
    "name": "Ian XHS Carousel",
    "url": "https://github.com/helloianneo/ian-xhs-carousel"
+  },
+  {
+   "@type": "ListItem",
+   "position": 309,
+   "name": "huashu-motion",
+   "url": "https://github.com/alchaincyf/huashu-motion"
+  },
+  {
+   "@type": "ListItem",
+   "position": 310,
+   "name": "Null Motion",
+   "url": "https://www.nullmotion.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 311,
+   "name": "发布前审",
+   "url": "https://github.com/yuwen-cool/yuwen-publish-precheck"
+  },
+  {
+   "@type": "ListItem",
+   "position": 312,
+   "name": "catbus 猫巴士",
+   "url": "https://github.com/cv-cat/catbus"
+  },
+  {
+   "@type": "ListItem",
+   "position": 313,
+   "name": "MarkCard Studio",
+   "url": "https://markcard.woollypix.cn/"
   }
  ]
 }
