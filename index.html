@@ -709,6 +709,11 @@ const TOOLS=[
   {n:"发布前审",why:"说清哪句踩线，给能用的改法",c:"AI写作",m:["写作","办公"],d:"MIT 开源的发布前审稿技能(798★，中文原生，只要 Python 3.10+)：发抖音、小红书、视频号之前先过一遍稿子——先词面预检定位候选，再结合语境判定违不违规(「月入过万」写在个人经历里没事，绑着卖课链接就违规)，给出哪句必改和能直接替换的改法，改完自动复检，还附挂购物车/营销标注/报备的平台检查单。42 条规则全部锚定《广告法》、网信办与卫健委文件、平台规则中心，80+ 条原文引文可点开查证；判定尺度用 38 篇平台实际放行的口播稿校准过，平均每篇只出 0.8 个词面候选。你在这台电脑上说一句「以后盯着对赌承诺这个词」，它记进本地 data/ 规则库下次自动生效，全是纯文本、不上传。⚠️ 不承诺过审，也不给谐音拆字那类绕审技巧(官方早已澄清，谐音反而会被单独盯上)；平台暂时只有抖音/小红书/视频号。",u:"https://github.com/yuwen-cool/yuwen-publish-precheck",r:4,re:"发布前查踩线",f:1,q:"开源免费",g:"https://github.com/yuwen-cool/yuwen-publish-precheck",diff:1,zh:1,hot:2},
   {n:"catbus 猫巴士",why:"一套命令通11平台，同一种JSON",c:"工作流Agent",m:["Agent","办公"],d:"MIT 开源的平台命令行工具(538★，2026-09 建仓，只要 Node 22+)：同一套命令通小红书、抖音、TikTok、B站、快手、微博、闲鱼、淘宝、京东、X、12306——搜索、详情、评论、用户、推荐流、下载、发布、私信都用 item/search/like 这套统一动词，300+ 条命令输出同一种 JSON，上一条的结果能直接喂给下一条，报错里带下一步该敲什么。stdout 只有 JSON、退出码稳定，自带 Agent 技能与 llms.txt，npx skills add cv-cat/catbus 就能装进 Claude Code / Cursor / Codex；登录态按平台×端×账号隔离在 ~/.catbus/，不收集不上传、没有遥测。⚠️ 装完得自己扫码或导 cookie 登录各平台账号；发布这类操作必须显式加 -y 才执行。",u:"https://github.com/cv-cat/catbus",r:4,re:"一套命令通11平台",f:1,q:"开源免费",g:"https://github.com/cv-cat/catbus",diff:1,zh:1,hot:2},
   {n:"MarkCard Studio",why:"Markdown直接排成卡片和PDF",c:"设计工具",m:["图像","办公"],d:"GPL-3.0 开源的本地 Markdown 排版工具(313★，Tauri 桌面端，Win/Mac/Linux)：左边写 Markdown，右边直接看到卡片——按二级标题、自定义分隔符、字数或智能分页自动切页，16 套主题从瑞士网格、包豪斯到苹果备忘录、报纸、赛博、Y2K、蓝图、Riso；预设小红书 3:4、抖音 9:16、微博 6:7 和方图，表格、任务清单、KaTeX 公式、Mermaid 图、可交互 ECharts 图表和代码高亮都能渲染。导出整页 PNG/JPG、多页 PDF，或拼成一整张长图；文档、图片、设置和成品全部留在本机，深色模式、撤销重做、页面重排都有，界面中英双语。⚠️ 还是 0.1.x 活跃开发版，接口和文档行为可能会变；它只做排版，不生成文案也不生图。",u:"https://markcard.woollypix.cn/",r:4,re:"Markdown排卡片",f:1,q:"开源免费",g:"https://github.com/pangxiaobin/MarkCardStudio",diff:1,zh:1,hot:1},
+  {n:"Framefields",why:"一个npm包替掉三套桌面软件",c:"视频编辑",m:["视频"],d:"Apache-2.0 开源的代码出片引擎(500★，2026-10 建仓，仍标 beta)：一个 npm 包就装下 PS 式合成与 VFX、AE 式排版动效、Blender 式三维场景与机位，靠 Dawn/WebGPU/Metal/Vulkan 直接在显卡上出帧——不开 Chromium、不截图，逐帧可复现，还带音频 BeatGrid。用法是让编码 Agent 写 TypeScript、看抽帧网格、无头导出硬件编码 MP4；npx skills add gatewai-dev/framefields 可装进 Claude Code / Cursor / Codex / Hermes。⚠️ 要 Node 22+ 和一块能跑 WebGPU 的卡，界面文档英文。",u:"https://framefields.dev",r:4,re:"裸GPU渲帧",f:1,q:"开源免费",g:"https://github.com/gatewai-dev/framefields",diff:3,zh:3,hot:2},
+  {n:"anymove",why:"一条AI视频给任意生物做动捕",c:"3D创作",m:["3D","视频"],d:"Apache-2.0 开源的动捕方案(435★，2026-10-27 建仓，作者 patch.gg)：让视频模型在一个画面里同时拍生物的正视图与侧视图，再用 DINOv2 训练的关节读取器在两视图里找齐每个关节(单只生物 2200 个随机姿势、单卡 20 分钟，平均误差从 40px 降到 6px)，把两个视图当墙立起来三角定位，逐帧把骨架贴到点上，导出 24fps GLB——龙、八脚蜘蛛、带翅膀尾巴的都行，一条 5 秒素材约 0.26 美元，读关节到出 GLB 不到一分钟，不需要手调。⚠️ 要 NVIDIA 显卡(训读取器约 24GB，只做读取与拟合要求低)、Blender 5.x 和 fal key，README 英文。",u:"https://github.com/Patch-gg/anymove",r:4,re:"视频直接转动捕",f:1,q:"开源免费(BYOK fal)",g:"https://github.com/patch-gg/anymove",diff:3,zh:3,hot:2},
+  {n:"open-yoki",why:"一台服务器，主播自己开播下播",c:"视频生成",m:["视频"],d:"MIT 开源的 AI 主播系统(464★，2026-10 建仓，中文文档)：一台服务器就够——无头 Chrome 实时画出 16:9 画面(形象、字幕、行情面板、感谢礼物、歌与音效)，ffmpeg 用 RTMP 推到币安广场直播后台或任何能收 RTMP 的地方，也带自己的网页直播间。她读弹幕几秒内回话(快模型默认走 OpenRouter 的 DeepSeek)、会先垫一句「嗯嗯」「啊这」，记得常来的人、写日记、按时间表自己开播下播，可选「一颗心」长期住在 Markdown 文件夹里攒心情与人设，还能自己发动态。⚠️ 不含原作者的脸、声音、人设、歌单，形象与音色要自己准备，语言/语音与发帖都要自配 key；无交易钱包功能。",u:"https://github.com/jacke-pp/open-yoki",r:4,re:"自己开播的主播",f:1,q:"开源免费(BYOK)",g:"https://github.com/jacke-pp/open-yoki",diff:3,zh:1,hot:2},
+  {n:"Doca",why:"资料在自己服务器上，AI读的也是它",c:"办公效率",m:["办公"],d:"MIT 开源的文档管理与知识库(465★，2026-10 建仓，中英双语)：富文本、Markdown、在线表格、幻灯片、无限画布五种格式在一个工作台里，知识库目录、权限、文档历史、评论协同、分享链接、回收站都齐。个人 AI 助手只在你有权限的文档与文件里工作，能读 PDF/Office 附件、生成与编辑图片、分析网页材料(需自己配可用模型)；Chrome/Edge 插件一键收录网页并保留来源，另有 MCP 服务让 Codex 之类外部 AI 调用已授权的工具。Docker 一条命令私有化部署，单机 SQLite、多副本走 PostgreSQL+Redis，登录支持密码/OIDC/Google/GitHub/微信/QQ。",u:"https://i.smartdoca.cc",r:4,re:"自托管知识库",f:1,q:"开源免费(BYOK)",g:"https://github.com/workhold/doca",diff:2,zh:1,hot:1},
+  {n:"Dioramas",why:"3D场景就是落地页本身",c:"3D创作",m:["3D","图像"],d:"MIT 开源的电影感三维网站框架(823★，2026-09-30 建仓)：页面本身就是那个 3D 场景——一件超细的物件、真实光、编排好的机位，加一处能上手摸的交互，仓库自带 20 个完整实例站。资产不是手工建模：Nano Banana 2 先出白底产品图，Meshy 7.1 图生 3D 成 60k–250k 面的 PBR 模型(可绑定可动画)，脚本再焊点、压网格、转 WebP，25MB 原件压到 3–8MB。引擎是薄薄一层 three.js，装了 N8AO 环境光遮蔽、mip 链泛光、AgX 色调映射、体积聚光、平面反射与 GSAP 滚动编排；每个实例都有一页 brief，交给编码 Agent 照着做。⚠️ 生成素材要自备 fal key(一个带贴图模型约 1.2 美元)，纯当框架用免费。",u:"https://github.com/blendi-remade/dioramas",r:4,re:"3D即页面",f:1,q:"开源免费(BYOK fal)",g:"https://github.com/blendi-remade/dioramas",diff:3,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -946,7 +951,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 313 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 318 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1262,6 +1267,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/yuwen-cool/yuwen-publish-precheck" target="_blank" rel="noopener">发布前审</a> — 说清哪句踩线，给能用的改法 <span class="nb-cat">AI写作</span></li>
       <li><a href="https://github.com/cv-cat/catbus" target="_blank" rel="noopener">catbus 猫巴士</a> — 一套命令通11平台，同一种JSON <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://markcard.woollypix.cn/" target="_blank" rel="noopener">MarkCard Studio</a> — Markdown直接排成卡片和PDF <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://framefields.dev" target="_blank" rel="noopener">Framefields</a> — 一个npm包替掉三套桌面软件 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/Patch-gg/anymove" target="_blank" rel="noopener">anymove</a> — 一条AI视频给任意生物做动捕 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/jacke-pp/open-yoki" target="_blank" rel="noopener">open-yoki</a> — 一台服务器，主播自己开播下播 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://i.smartdoca.cc" target="_blank" rel="noopener">Doca</a> — 资料在自己服务器上，AI读的也是它 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/blendi-remade/dioramas" target="_blank" rel="noopener">Dioramas</a> — 3D场景就是落地页本身 <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1271,7 +1281,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 313,
+ "numberOfItems": 318,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3150,6 +3160,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 313,
    "name": "MarkCard Studio",
    "url": "https://markcard.woollypix.cn/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 314,
+   "name": "Framefields",
+   "url": "https://framefields.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 315,
+   "name": "anymove",
+   "url": "https://github.com/Patch-gg/anymove"
+  },
+  {
+   "@type": "ListItem",
+   "position": 316,
+   "name": "open-yoki",
+   "url": "https://github.com/jacke-pp/open-yoki"
+  },
+  {
+   "@type": "ListItem",
+   "position": 317,
+   "name": "Doca",
+   "url": "https://i.smartdoca.cc"
+  },
+  {
+   "@type": "ListItem",
+   "position": 318,
+   "name": "Dioramas",
+   "url": "https://github.com/blendi-remade/dioramas"
   }
  ]
 }
