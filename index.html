@@ -714,7 +714,11 @@ const TOOLS=[
   {n:"anymove",why:"一条AI视频给任意生物做动捕",c:"3D创作",m:["3D","视频"],d:"Apache-2.0 开源的动捕方案(435★，2026-10-27 建仓，作者 patch.gg)：让视频模型在一个画面里同时拍生物的正视图与侧视图，再用 DINOv2 训练的关节读取器在两视图里找齐每个关节(单只生物 2200 个随机姿势、单卡 20 分钟，平均误差从 40px 降到 6px)，把两个视图当墙立起来三角定位，逐帧把骨架贴到点上，导出 24fps GLB——龙、八脚蜘蛛、带翅膀尾巴的都行，一条 5 秒素材约 0.26 美元，读关节到出 GLB 不到一分钟，不需要手调。⚠️ 要 NVIDIA 显卡(训读取器约 24GB，只做读取与拟合要求低)、Blender 5.x 和 fal key，README 英文。",u:"https://github.com/Patch-gg/anymove",r:4,re:"视频直接转动捕",f:1,q:"开源免费(BYOK fal)",g:"https://github.com/patch-gg/anymove",diff:3,zh:3,hot:2},
   {n:"open-yoki",why:"一台服务器，主播自己开播下播",c:"视频生成",m:["视频"],d:"MIT 开源的 AI 主播系统(464★，2026-10 建仓，中文文档)：一台服务器就够——无头 Chrome 实时画出 16:9 画面(形象、字幕、行情面板、感谢礼物、歌与音效)，ffmpeg 用 RTMP 推到币安广场直播后台或任何能收 RTMP 的地方，也带自己的网页直播间。她读弹幕几秒内回话(快模型默认走 OpenRouter 的 DeepSeek)、会先垫一句「嗯嗯」「啊这」，记得常来的人、写日记、按时间表自己开播下播，可选「一颗心」长期住在 Markdown 文件夹里攒心情与人设，还能自己发动态。⚠️ 不含原作者的脸、声音、人设、歌单，形象与音色要自己准备，语言/语音与发帖都要自配 key；无交易钱包功能。",u:"https://github.com/jacke-pp/open-yoki",r:4,re:"自己开播的主播",f:1,q:"开源免费(BYOK)",g:"https://github.com/jacke-pp/open-yoki",diff:3,zh:1,hot:2},
   {n:"Doca",why:"资料在自己服务器上，AI读的也是它",c:"办公效率",m:["办公"],d:"MIT 开源的文档管理与知识库(465★，2026-10 建仓，中英双语)：富文本、Markdown、在线表格、幻灯片、无限画布五种格式在一个工作台里，知识库目录、权限、文档历史、评论协同、分享链接、回收站都齐。个人 AI 助手只在你有权限的文档与文件里工作，能读 PDF/Office 附件、生成与编辑图片、分析网页材料(需自己配可用模型)；Chrome/Edge 插件一键收录网页并保留来源，另有 MCP 服务让 Codex 之类外部 AI 调用已授权的工具。Docker 一条命令私有化部署，单机 SQLite、多副本走 PostgreSQL+Redis，登录支持密码/OIDC/Google/GitHub/微信/QQ。",u:"https://i.smartdoca.cc",r:4,re:"自托管知识库",f:1,q:"开源免费(BYOK)",g:"https://github.com/workhold/doca",diff:2,zh:1,hot:1},
-  {n:"Dioramas",why:"3D场景就是落地页本身",c:"3D创作",m:["3D","图像"],d:"MIT 开源的电影感三维网站框架(823★，2026-09-30 建仓)：页面本身就是那个 3D 场景——一件超细的物件、真实光、编排好的机位，加一处能上手摸的交互，仓库自带 20 个完整实例站。资产不是手工建模：Nano Banana 2 先出白底产品图，Meshy 7.1 图生 3D 成 60k–250k 面的 PBR 模型(可绑定可动画)，脚本再焊点、压网格、转 WebP，25MB 原件压到 3–8MB。引擎是薄薄一层 three.js，装了 N8AO 环境光遮蔽、mip 链泛光、AgX 色调映射、体积聚光、平面反射与 GSAP 滚动编排；每个实例都有一页 brief，交给编码 Agent 照着做。⚠️ 生成素材要自备 fal key(一个带贴图模型约 1.2 美元)，纯当框架用免费。",u:"https://github.com/blendi-remade/dioramas",r:4,re:"3D即页面",f:1,q:"开源免费(BYOK fal)",g:"https://github.com/blendi-remade/dioramas",diff:3,zh:3,hot:2}
+  {n:"Dioramas",why:"3D场景就是落地页本身",c:"3D创作",m:["3D","图像"],d:"MIT 开源的电影感三维网站框架(823★，2026-09-30 建仓)：页面本身就是那个 3D 场景——一件超细的物件、真实光、编排好的机位，加一处能上手摸的交互，仓库自带 20 个完整实例站。资产不是手工建模：Nano Banana 2 先出白底产品图，Meshy 7.1 图生 3D 成 60k–250k 面的 PBR 模型(可绑定可动画)，脚本再焊点、压网格、转 WebP，25MB 原件压到 3–8MB。引擎是薄薄一层 three.js，装了 N8AO 环境光遮蔽、mip 链泛光、AgX 色调映射、体积聚光、平面反射与 GSAP 滚动编排；每个实例都有一页 brief，交给编码 Agent 照着做。⚠️ 生成素材要自备 fal key(一个带贴图模型约 1.2 美元)，纯当框架用免费。",u:"https://github.com/blendi-remade/dioramas",r:4,re:"3D即页面",f:1,q:"开源免费(BYOK fal)",g:"https://github.com/blendi-remade/dioramas",diff:3,zh:3,hot:2},
+  {n:"Pika H3 Flex",why:"六步采样，15 秒片自带立体声",c:"视频生成",m:["视频"],d:"Pika 10-29 放出的开放权重视频模型(255★)，底座是 MiniMax-H3 后训练：采样步数从 50 压到 6，本地原生 480p/768p、5–15 秒整数时长、11 种画幅，视频与立体声一起出；两个适配器分别吃文本+首尾帧(FL2VA)与参考素材(Ref2VA)——最多 9 图 3 视频 3 段音频共 12 个参考文件，可拿参考做运镜与动作迁移。1080p/2K/4K 走 Pika 托管 API(11-02 进创作端)。⚠️ 本地跑要 Python 3.12+NVIDIA 卡，官方只在单张 H100 80GB 上测过，底模加适配器约 215GB 下载。",u:"https://github.com/Pika-Labs/Pika-H3-Flex",r:4,re:"开放权重带声",f:1,v:1,q:"权重免费(自部署需 H100)",g:"https://github.com/Pika-Labs/Pika-H3-Flex",diff:3,zh:3,hot:2},
+  {n:"html-explainer",why:"HTML 写画面，本机渲 4K60 成片",c:"视频生成",m:["视频"],d:"MIT 开源的讲解视频技能(236★,v2.0.7)：丢一个主题，Agent 走调研→解说词→配音→字幕节拍→编排风格写画面→渲染→自检→封面，最后交一条真 MP4，全本地跑、核心链路不花按次费用。画面用可 seek 的 HTML/CSS/GSAP 写，不抽卡；字幕时间来自配音的字级时间戳(edge-tts 取 WordBoundary)，改解说词全片自动重排。配音可选 edge-tts(免费免 key)或火山引擎语音合成 2.0(音质更好、需 key)；画质帧率分 draft/balanced/final/master 五档，最高 4K60 带快门运动模糊与多进程并行。要 Python 3.9+、Node 18+。",u:"https://github.com/OneMoh/html-explainer",r:4,re:"本地零按次计费",f:1,q:"开源免费(本地渲染)",g:"https://github.com/OneMoh/html-explainer",diff:2,zh:1,hot:2},
+  {n:"Maya Workflow Kit",why:"Maya 那套手感原样搬进 Blender",c:"3D创作",m:["3D"],d:"GPL-3.0 开源的 Blender 扩展(441★,支持 Blender 5.0–5.2，今天仍在提交)：给从 Maya 转过来的人把整套操作补回来——Space 呼出 hotbox 与标记菜单、Channel Box 与 Attribute Editor、菜单组、工具架与选项窗、Maya 式视图导航与选择，连 Freeze Transformations、Delete History、组、厘米单位、pCube1 这类场景概念都对上。装完默认不改变任何东西，面板上一个 Maya|Blender 开关随时切回原生键位。官网有安装包与半分钟演示片。",u:"https://github.com/5hyuns/maya-workflow-kit-for-blender",r:4,re:"Maya 手感移植",f:1,q:"开源免费",g:"https://github.com/5hyuns/maya-workflow-kit-for-blender",diff:1,zh:3,hot:2},
+  {n:"Context Attachment Manager",why:"长图对话按需召回，单次省 77%",c:"工作流Agent",m:["Agent","图像"],d:"MIT 开源的 Codex / Claude Code 图片上下文管理器(642★)：做长图任务时对话里塞满参考图(角色定妆、分镜关键帧)，它把图挂成可检索的旁路库——模型自己决定这次要哪几张，旧图逐张灰掉不再重复上传，官方示例同一请求从 7.5MB 降到 1.7MB；还能按你描述的画面特征搜回之前做过的图，比如打一句「最好的那张脸」就找回那张特写。Windows/macOS/Linux 都有，中英日三语说明。",u:"https://github.com/chipfighter/context-attachment-manager",r:3,re:"图片上下文瘦身",f:1,q:"开源免费",g:"https://github.com/chipfighter/context-attachment-manager",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -952,7 +956,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 318 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 322 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1273,6 +1277,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/jacke-pp/open-yoki" target="_blank" rel="noopener">open-yoki</a> — 一台服务器，主播自己开播下播 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://i.smartdoca.cc" target="_blank" rel="noopener">Doca</a> — 资料在自己服务器上，AI读的也是它 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/blendi-remade/dioramas" target="_blank" rel="noopener">Dioramas</a> — 3D场景就是落地页本身 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/Pika-Labs/Pika-H3-Flex" target="_blank" rel="noopener">Pika H3 Flex</a> — 六步采样，15 秒片自带立体声 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/OneMoh/html-explainer" target="_blank" rel="noopener">html-explainer</a> — HTML 写画面，本机渲 4K60 成片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/5hyuns/maya-workflow-kit-for-blender" target="_blank" rel="noopener">Maya Workflow Kit</a> — Maya 那套手感原样搬进 Blender <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/chipfighter/context-attachment-manager" target="_blank" rel="noopener">Context Attachment Manager</a> — 长图对话按需召回，单次省 77% <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -1282,7 +1290,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 318,
+ "numberOfItems": 322,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3191,6 +3199,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 318,
    "name": "Dioramas",
    "url": "https://github.com/blendi-remade/dioramas"
+  },
+  {
+   "@type": "ListItem",
+   "position": 319,
+   "name": "Pika H3 Flex",
+   "url": "https://github.com/Pika-Labs/Pika-H3-Flex"
+  },
+  {
+   "@type": "ListItem",
+   "position": 320,
+   "name": "html-explainer",
+   "url": "https://github.com/OneMoh/html-explainer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 321,
+   "name": "Maya Workflow Kit",
+   "url": "https://github.com/5hyuns/maya-workflow-kit-for-blender"
+  },
+  {
+   "@type": "ListItem",
+   "position": 322,
+   "name": "Context Attachment Manager",
+   "url": "https://github.com/chipfighter/context-attachment-manager"
   }
  ]
 }
