@@ -719,7 +719,12 @@ const TOOLS=[
   {n:"html-explainer",why:"HTML 写画面，本机渲 4K60 成片",c:"视频生成",m:["视频"],d:"MIT 开源的讲解视频技能(236★,v2.0.7)：丢一个主题，Agent 走调研→解说词→配音→字幕节拍→编排风格写画面→渲染→自检→封面，最后交一条真 MP4，全本地跑、核心链路不花按次费用。画面用可 seek 的 HTML/CSS/GSAP 写，不抽卡；字幕时间来自配音的字级时间戳(edge-tts 取 WordBoundary)，改解说词全片自动重排。配音可选 edge-tts(免费免 key)或火山引擎语音合成 2.0(音质更好、需 key)；画质帧率分 draft/balanced/final/master 五档，最高 4K60 带快门运动模糊与多进程并行。要 Python 3.9+、Node 18+。",u:"https://github.com/OneMoh/html-explainer",r:4,re:"本地零按次计费",f:1,q:"开源免费(本地渲染)",g:"https://github.com/OneMoh/html-explainer",diff:2,zh:1,hot:2},
   {n:"Maya Workflow Kit",why:"Maya 那套手感原样搬进 Blender",c:"3D创作",m:["3D"],d:"GPL-3.0 开源的 Blender 扩展(441★,支持 Blender 5.0–5.2，今天仍在提交)：给从 Maya 转过来的人把整套操作补回来——Space 呼出 hotbox 与标记菜单、Channel Box 与 Attribute Editor、菜单组、工具架与选项窗、Maya 式视图导航与选择，连 Freeze Transformations、Delete History、组、厘米单位、pCube1 这类场景概念都对上。装完默认不改变任何东西，面板上一个 Maya|Blender 开关随时切回原生键位。官网有安装包与半分钟演示片。",u:"https://github.com/5hyuns/maya-workflow-kit-for-blender",r:4,re:"Maya 手感移植",f:1,q:"开源免费",g:"https://github.com/5hyuns/maya-workflow-kit-for-blender",diff:1,zh:3,hot:2},
   {n:"Context Attachment Manager",why:"长图对话按需召回，单次省 77%",c:"工作流Agent",m:["Agent","图像"],d:"MIT 开源的 Codex / Claude Code 图片上下文管理器(642★)：做长图任务时对话里塞满参考图(角色定妆、分镜关键帧)，它把图挂成可检索的旁路库——模型自己决定这次要哪几张，旧图逐张灰掉不再重复上传，官方示例同一请求从 7.5MB 降到 1.7MB；还能按你描述的画面特征搜回之前做过的图，比如打一句「最好的那张脸」就找回那张特写。Windows/macOS/Linux 都有，中英日三语说明。",u:"https://github.com/chipfighter/context-attachment-manager",r:3,re:"图片上下文瘦身",f:1,q:"开源免费",g:"https://github.com/chipfighter/context-attachment-manager",diff:2,zh:1,hot:2}
-];
+,
+  {n:"pixelfx",why:"244 个像素特效全是可读代码",c:"设计工具",m:["图像"],d:"MIT 开源的像素特效库(2151★，10/30 发布两天冲上两千星)：244 个火焰/爆炸/水系/冰/闪电/UI/拾取物特效，每一个都是一小段可读可直接改的代码，不是贴图序列。浏览器里能直接放、改色、镜像，导出雪碧图后可塞进 Godot/Unity/GameMaker/Defold/LÖVE/Bevy；带人物的招式是演练出来的——起手、出手、命中定格、收招，对方要挨打，12 套招式能串成连击。另附一个 Claude Code skill，按像素老手「起草→渲染→看→修」的流程帮你做新的。",u:"https://patch-gg.github.io/pixelfx/",r:4,re:"像素特效代码化",f:1,q:"开源免费",g:"https://github.com/patch-gg/pixelfx",diff:1,zh:2,hot:2},
+  {n:"Openjutsu",why:"本地跑换人换装，素材不出机器",c:"视频生成",m:["视频"],d:"MIT 开源的视频换角工具(964★)：丢一段视频加一张人物照片，按 Generate 就把片子里主角换成你的角色，也能换发型、换衣服、抹掉某个物件、把人挪到别处，机位、剪辑、动作、音轨全保留。整条链路跑在自有显卡上的开放权重——MiniMax H3 出画面、SAM 3.1 跟人、Qwen3-VL 8B 读图与分镜，外面是 Next.js 包一层 ComfyUI 工作流。官方在 RTX 4060 Ti 16G + 64G 内存上测过，H3 int8 从内存流式加载，需 ComfyUI 0.41.2 以上。",u:"https://github.com/D3voz/openjutsu",r:4,re:"本地换人换装",f:1,q:"开源免费(自备显卡)",g:"https://github.com/D3voz/openjutsu",diff:3,zh:2,hot:2},
+  {n:"Story Studio 故事工坊",why:"选题到剪映草稿一条龙",c:"AI短剧",m:["视频","写作"],d:"MIT 开源的口播短视频 Skill(601★)：一句需求走完选题→黄金钩子→口播稿→配音→字幕对齐→分镜配图→剪映草稿，交出来是可二次编辑的剪映专业版工程(pyJianYingDraft 生成)，不是一段死视频。内置 370+ 篇高赞对标文案和两套写作 DNA(历史叙事/真实人物故事)，三套配图画风各带参考图库防跨镜头画风漂移。配音走豆包语音大模型(需在火山控制台自取 key，支持加密存储或环境变量)，也能丢一段自己录的 MP3；本地 Coli(sherpa-onnx) 出字级时间戳对齐，不按字数猜时长。",u:"https://github.com/konlu/story-studio",r:4,re:"剪映工程直出",f:1,q:"开源免费(配音需豆包 Key)",g:"https://github.com/konlu/story-studio",diff:2,zh:1,hot:2},
+  {n:"HairDeck",why:"一张图出带骨骼的头发卡",c:"3D创作",m:["3D"],d:"Apache-2.0 开源的头发建模模型(清华/CMU/港中文，525★，论文 arXiv 2610.40599)：给一张角色图，直接生成整套 stylized 头发卡——每张卡片单独成 token、成套扩散生成，保留单卡几何与 UV；同时为头发生成 spring-bone 骨链并带蒙皮，可导出 GLB，或挂到头像上存成 VRM 直接进 Unity / 虚拟主播软件。权重放在 Hugging Face，官方另有在线 Demo，不装环境就能先试。",u:"https://hyzcluster.github.io/HairDeck/",r:4,re:"头发卡带骨骼",f:1,q:"免费(在线 Demo)",g:"https://github.com/hyz317/HairDeck",diff:3,zh:2,hot:1},
+  {n:"unslop",why:"把一眼假的 AI 界面改成设计稿",c:"设计工具",m:["图像"],d:"CC-BY-4.0 的 Claude Code / Codex 技能(三天 4253★)：先揪出 AI 味——紫色渐变、发光、emoji 标签、喊口号的文案、忽大忽小的间距，再按你的产品定一个方向，一屏一屏像设计师做红线批注那样改。Next.js/React/Vue/Svelte/Tailwind 或纯 HTML 都吃得下，dashboard、App、落地页都行，手上只有一条线上链接也能改。还能顺手录一段改动过程的 story video 发出去(要 Playwright + ffmpeg)。",u:"https://github.com/heydamir/unslop",r:4,re:"AI 界面去味",f:1,q:"开源免费",g:"https://github.com/heydamir/unslop",diff:1,zh:2,hot:3}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -956,7 +961,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 322 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 343 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1281,6 +1286,21 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/OneMoh/html-explainer" target="_blank" rel="noopener">html-explainer</a> — HTML 写画面，本机渲 4K60 成片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/5hyuns/maya-workflow-kit-for-blender" target="_blank" rel="noopener">Maya Workflow Kit</a> — Maya 那套手感原样搬进 Blender <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/chipfighter/context-attachment-manager" target="_blank" rel="noopener">Context Attachment Manager</a> — 长图对话按需召回，单次省 77% <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://patch-gg.github.io/pixelfx/" target="_blank" rel="noopener">pixelfx</a> — 244 个像素特效全是可读代码 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/D3voz/openjutsu" target="_blank" rel="noopener">Openjutsu</a> — 本地跑换人换装，素材不出机器 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/konlu/story-studio" target="_blank" rel="noopener">Story Studio 故事工坊</a> — 选题到剪映草稿一条龙 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://hyzcluster.github.io/HairDeck/" target="_blank" rel="noopener">HairDeck</a> — 一张图出带骨骼的头发卡 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/heydamir/unslop" target="_blank" rel="noopener">unslop</a> — 把一眼假的 AI 界面改成设计稿 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/" target="_blank" rel="noopener">JoyAI-Echo</a> — 京东开源5分钟长视频生成框架 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://felo.ai" target="_blank" rel="noopener">Felo AI Designer</a> — 8+模型集成，30秒出稿 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://mew.design/zh" target="_blank" rel="noopener">Mew Design</a> — 自然语言驱动的免费AI设计生成器 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://vibbit.ai/zh-CN" target="_blank" rel="noopener">Vibbit</a> — AI Agent + 57个工具短视频平台 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://felo.ai" target="_blank" rel="noopener">Felo Video</a> — 文档/网页转视频，10分钟出片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.colossyan.com" target="_blank" rel="noopener">Colossyan Cora</a> — 企业培训视频Agent · 14天试用后$27/月 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://pai.utopaistudios.com" target="_blank" rel="noopener">Utopai PAI 2.0</a> — AI叙事视频平台 · 仅限订阅，无免费层 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://shao-music-ai.github.io/Shao/" target="_blank" rel="noopener">Shao</a> — 央音×清华开源AI歌曲生成，文本/歌词→完整人声+编曲歌曲 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://kunyunkeji.cn" target="_blank" rel="noopener">昆云AI短剧</a> — 一站式AI短剧生成，傻瓜式操作，剧本/上传→角色/分镜/视频→一键合成 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/csyqlz/vozeb" target="_blank" rel="noopener">VOZEB</a> — 开源AI创作工作台，无限画布+MCP操控+AI Agent，Docker一键部署 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1290,7 +1310,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 322,
+ "numberOfItems": 343,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3223,6 +3243,96 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 322,
    "name": "Context Attachment Manager",
    "url": "https://github.com/chipfighter/context-attachment-manager"
+  },
+  {
+   "@type": "ListItem",
+   "position": 323,
+   "name": "pixelfx",
+   "url": "https://patch-gg.github.io/pixelfx/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 324,
+   "name": "Openjutsu",
+   "url": "https://github.com/D3voz/openjutsu"
+  },
+  {
+   "@type": "ListItem",
+   "position": 325,
+   "name": "Story Studio 故事工坊",
+   "url": "https://github.com/konlu/story-studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 326,
+   "name": "HairDeck",
+   "url": "https://hyzcluster.github.io/HairDeck/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 327,
+   "name": "unslop",
+   "url": "https://github.com/heydamir/unslop"
+  },
+  {
+   "@type": "ListItem",
+   "position": 332,
+   "name": "JoyAI-Echo",
+   "url": "https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 333,
+   "name": "Felo AI Designer",
+   "url": "https://felo.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 334,
+   "name": "Mew Design",
+   "url": "https://mew.design/zh"
+  },
+  {
+   "@type": "ListItem",
+   "position": 335,
+   "name": "Vibbit",
+   "url": "https://vibbit.ai/zh-CN"
+  },
+  {
+   "@type": "ListItem",
+   "position": 337,
+   "name": "Felo Video",
+   "url": "https://felo.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 338,
+   "name": "Colossyan Cora",
+   "url": "https://www.colossyan.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 339,
+   "name": "Utopai PAI 2.0",
+   "url": "https://pai.utopaistudios.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 341,
+   "name": "Shao",
+   "url": "https://shao-music-ai.github.io/Shao/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 342,
+   "name": "昆云AI短剧",
+   "url": "https://kunyunkeji.cn"
+  },
+  {
+   "@type": "ListItem",
+   "position": 343,
+   "name": "VOZEB",
+   "url": "https://github.com/csyqlz/vozeb"
   }
  ]
 }
