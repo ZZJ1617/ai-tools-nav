@@ -726,7 +726,10 @@ const TOOLS=[
   {n:"AI 漫剧 Skills",why:"21 个题材模板，粘贴就能开工",c:"AI短剧",m:["视频","写作"],d:"MIT 的漫剧流程模板库(386★)：21 个题材各一份 SKILL.md，玄幻修仙、宫斗、宅斗、都市逆袭、悬疑刑侦这些都在里面，一个题材一个文件。发一句故事点子，它按阶段给企划案、人物道具场景的出图提示词、分集剧本、分镜与视频提示词，最后给封面和发布文案；默认 30 集、每集约 4 分钟竖屏，可以在点子里改。零依赖，整段复制进 DeepSeek 聊天框就能跑，装技能的塞进 ~/.claude/skills/。作者在 WorkBuddy 实测通过，另有几个题材只做过安装校验。",u:"https://github.com/zhanghao123vip/ai-manju-skills",r:4,re:"21 题材漫剧模板",f:1,q:"开源免费",g:"https://github.com/zhanghao123vip/ai-manju-skills",diff:1,zh:1,hot:2},
   {n:"Reveric 幻界",why:"一部作品从小说写到成片",c:"AI短剧",m:["视频","写作"],d:"AGPL-3.0 的本地优先桌面工作台(546★，2026-10-22 建仓)：一部作品从小说一路写到成片——章节扩写与设定库、人物关系图谱、剧本改编、无限画布铺分镜、3D 导演台摆机位与运镜、6 轨剪辑台导出，智能体自己检索整部作品并在各个模块里动手。作品数据存本机 SQLite，模型 BYOK，文本可接 DeepSeek / Claude / Gemini 或自建网关，图像视频可接 Seedream、万相、海螺、可灵。macOS 与 Windows 有安装包，安卓有 apk 用来随行阅读与记灵感。",u:"https://reveric.app/",r:4,re:"桌面端小说到成片",f:1,q:"客户端免费(模型自备 key)",g:"https://github.com/looplj/reveric",diff:2,zh:1,hot:2},
   {n:"OpenFill",why:"GIMP 里免费做生成式填充",c:"图像生成",m:["图像"],d:"Apache-2.0 的 GIMP 3 生成式填充插件(208★，beta)：选中一块区域打一句描述就能填，也能抹掉画面里的物体、往外扩画布、纯文字出图，结果单独落一个图层、带柔边蒙版，接着画或者直接删都行。后端接本机 ComfyUI，编辑器打开时它在后台悄悄跑、关掉就退，不用开浏览器也不另起一个 App；选中即蒙版，手感跟 Photoshop 的生成式填充一致。作者在 8GB 显存的 N 卡笔记本上跑通，AMD 显卡和 Mac 的 PhotoCraft 版也有验证。",u:"https://github.com/beckettharriman/openfill",r:3,re:"GIMP 生成式填充",f:1,q:"开源免费(自备显卡)",g:"https://github.com/beckettharriman/openfill",diff:3,zh:3,hot:1},
-  {n:"阿杜的 AI 剪辑 Skill",why:".motion 模板，出片还能继续改",c:"视频编辑",m:["视频"],d:"MIT 的动效模板包(683★)：模板是 MotionGit 的 .motion 开放格式——一段动画的代码、布局、时间轴、转场、音效编排和可替换的内容位全在一个文件里，不是提示词也不是参考视频。把 .motion 发给 Codex / Claude Code 这类助手，再给口播文案和素材，它按你的内容排镜头、换素材、出预览，导出 MP4 与可编辑工程，同一套风格能一期一期接着用。作者主页有 44 套免费模板，覆盖图文口播、图解、分屏等 6 类风格，横屏竖屏都有。",u:"https://motiongit.com/@adunext",r:4,re:".motion 可再编辑",f:1,q:"开源免费",g:"https://github.com/adunext/adu-motion-video",diff:1,zh:1,hot:2}];
+  {n:"阿杜的 AI 剪辑 Skill",why:".motion 模板，出片还能继续改",c:"视频编辑",m:["视频"],d:"MIT 的动效模板包(683★)：模板是 MotionGit 的 .motion 开放格式——一段动画的代码、布局、时间轴、转场、音效编排和可替换的内容位全在一个文件里，不是提示词也不是参考视频。把 .motion 发给 Codex / Claude Code 这类助手，再给口播文案和素材，它按你的内容排镜头、换素材、出预览，导出 MP4 与可编辑工程，同一套风格能一期一期接着用。作者主页有 44 套免费模板，覆盖图文口播、图解、分屏等 6 类风格，横屏竖屏都有。",u:"https://motiongit.com/@adunext",r:4,re:".motion 可再编辑",f:1,q:"开源免费",g:"https://github.com/adunext/adu-motion-video",diff:1,zh:1,hot:2},
+  {n:"SculptForge",why:"GPL-3.0雕刻软件，内置AI不要Key",c:"3D创作",m:["3D"],d:"GPL-3.0 的开源 ZBrush 平替(478★，2026-10-21 建仓，现 v0.8)：笔刷、对称、遮罩、面组与 ZBrush 式修饰键的手感都在，体素重网格、ZRemesher 式自动四边面重拓扑、Project All 细节回贴、自动 UV 加 1K-8K 贴图绘制、雕刻层当混合形状用；能导 Unreal、FBX/GLB/USD 和 GoZ 兼容文件。AI 是内置且免费的一档：说一句话让 Brush Lab 造笔刷，草图或文字直接出可雕模型，不要账号不要 Key，也能改接 Claude/fal/Meshy 或全本地跑。Windows/macOS/Linux 都有原生包，启动即用、可离线。",u:"https://sculptforge.app/",r:4,re:"开源ZBrush平替",f:1,q:"开源免费",g:"https://github.com/islandmed/SculptForge",diff:3,zh:3,hot:2},
+  {n:"ComfyArt",why:"自己ComfyUI里的设计画布，能导PPTX",c:"设计工具",m:["图像","办公"],d:"MIT 开源的设计画布(433★，2026-10-13 建仓)：整个仓库丢进 ComfyUI/custom_nodes 再 pip install 就能用，dist 已编译好不用构建。无限画布(tldraw+React)带画板/图层/自动布局/钢笔与布尔运算、图文混排与图片填充，出图、出视频、出音频、出 3D 全走你自己机器上的模型；设计 Agent 直接在画布上按批注改稿，成品可导 PNG/JPG/PDF 和可编辑 PPTX。不登录、不耗积分、素材不出本机；没显卡可自备 COMFY_API_KEY 转 Comfy 云端。",u:"https://comfyart.org/",r:4,re:"ComfyUI 上的设计台",f:1,q:"开源免费",g:"https://github.com/jtydhr88/ComfyArt",diff:3,zh:1,hot:2},
+  {n:"MG Styles 15",why:"15支10秒动效成片，提示词源码全给",c:"设计工具",m:["视频"],d:"MIT 的动效风格库(2970★)：15 种 MG 风格各一支 10 秒成片，画面全是代码画的——SVG、Canvas、WebGL、Three.js，一支走 Blender，配乐音效由 audio.py 用 103 个实录乐器采样合成，不调任何生图生视频模型。每支都附风格说明、完整提示词和全部源码，线上一次看完 15 支，挑一个把提示词丢给 Claude/Codex 就能改出自己的版本，适合做产品短视频的开场与转场。",u:"https://vincentwei1021.github.io/mg-styles-15/",r:3,re:"风格库带源码",f:1,q:"开源免费",g:"https://github.com/Vincentwei1021/mg-styles-15",diff:2,zh:1,hot:2}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -964,7 +967,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 331 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 334 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1298,6 +1301,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://reveric.app/" target="_blank" rel="noopener">Reveric 幻界</a> — 一部作品从小说写到成片 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/beckettharriman/openfill" target="_blank" rel="noopener">OpenFill</a> — GIMP 里免费做生成式填充 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://motiongit.com/@adunext" target="_blank" rel="noopener">阿杜的 AI 剪辑 Skill</a> — .motion 模板，出片还能继续改 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://sculptforge.app/" target="_blank" rel="noopener">SculptForge</a> — GPL-3.0雕刻软件，内置AI不要Key <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://comfyart.org/" target="_blank" rel="noopener">ComfyArt</a> — 自己ComfyUI里的设计画布，能导PPTX <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://vincentwei1021.github.io/mg-styles-15/" target="_blank" rel="noopener">MG Styles 15</a> — 15支10秒动效成片，提示词源码全给 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1307,7 +1313,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 331,
+ "numberOfItems": 334,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3294,6 +3300,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 331,
    "name": "阿杜的 AI 剪辑 Skill",
    "url": "https://motiongit.com/@adunext"
+  },
+  {
+   "@type": "ListItem",
+   "position": 332,
+   "name": "SculptForge",
+   "url": "https://sculptforge.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 333,
+   "name": "ComfyArt",
+   "url": "https://comfyart.org/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 334,
+   "name": "MG Styles 15",
+   "url": "https://vincentwei1021.github.io/mg-styles-15/"
   }
  ]
 }
