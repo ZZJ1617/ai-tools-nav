@@ -65,6 +65,13 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink2);line-heig
 .gallery-nav-link{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;color:var(--ink2);
   text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .18s,border-color .18s}
 .gallery-nav-link:hover{color:var(--ink);border-color:var(--ink3)}
+.deals-cta{margin-top:16px}
+.deals-cta a{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+  letter-spacing:.02em;text-decoration:none;padding:8px 14px;border:1px solid var(--slate);
+  border-radius:var(--r);background:var(--slate);color:var(--slate-ink);font-weight:700;
+  transition:transform .16s ease, box-shadow .16s ease}
+.deals-cta a:hover{transform:translateY(-1px);box-shadow:0 2px 0 rgba(20,20,15,.12)}
+.deals-cta .arrow{font-weight:400}
 .theme-btn{font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;padding:7px 13px;border-radius:var(--r);
   background:transparent;border:1px solid var(--line);color:var(--ink2);cursor:pointer;transition:color .18s,border-color .18s}
 .theme-btn:hover{color:var(--ink);border-color:var(--ink3)}
@@ -267,6 +274,7 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
 
 <div class="theme-bar container">
   <a href="gallery.html" class="gallery-nav-link">🎨 AI灵感画廊</a>
+  <a href="deals.html" class="gallery-nav-link">🆓 AI羊毛</a>
   <button class="theme-btn" onclick="toggleTheme()" id="themeBtn" aria-label="切换明暗主题">🌙 暗色</button>
 </div>
 
@@ -275,6 +283,7 @@ footer .qr-cap{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color
   <h1>AI创作工具导航</h1>
   <p class="sub">每日精选的 AI 创作器材库 —— 视频生成 · 图像生成 · 设计工具 · 3D创作 · 音频 · 办公 · Agent，一站找齐。</p>
   <p class="meta">每日更新 · 支持「仅看免费 / 仅看开源」筛选 · 大类与细分两级联动</p>
+  <p class="deals-cta"><a href="deals.html">🆓 AI 羊毛 · 每天更新的免费额度与限时福利 <span class="arrow" aria-hidden="true">→</span></a></p>
   <span id="toolCount" hidden></span>
 </header>
 
