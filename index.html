@@ -743,7 +743,10 @@ const TOOLS=[
   {n:"ComfyArt",why:"自己ComfyUI里的设计画布，能导PPTX",c:"设计工具",m:["图像","办公"],d:"MIT 开源的设计画布(433★，2026-10-13 建仓)：整个仓库丢进 ComfyUI/custom_nodes 再 pip install 就能用，dist 已编译好不用构建。无限画布(tldraw+React)带画板/图层/自动布局/钢笔与布尔运算、图文混排与图片填充，出图、出视频、出音频、出 3D 全走你自己机器上的模型；设计 Agent 直接在画布上按批注改稿，成品可导 PNG/JPG/PDF 和可编辑 PPTX。不登录、不耗积分、素材不出本机；没显卡可自备 COMFY_API_KEY 转 Comfy 云端。",u:"https://comfyart.org/",r:4,re:"ComfyUI 上的设计台",f:1,q:"开源免费",g:"https://github.com/jtydhr88/ComfyArt",diff:3,zh:1,hot:2},
   {n:"MG Styles 15",why:"15支10秒动效成片，提示词源码全给",c:"设计工具",m:["视频"],d:"MIT 的动效风格库(2970★)：15 种 MG 风格各一支 10 秒成片，画面全是代码画的——SVG、Canvas、WebGL、Three.js，一支走 Blender，配乐音效由 audio.py 用 103 个实录乐器采样合成，不调任何生图生视频模型。每支都附风格说明、完整提示词和全部源码，线上一次看完 15 支，挑一个把提示词丢给 Claude/Codex 就能改出自己的版本，适合做产品短视频的开场与转场。",u:"https://vincentwei1021.github.io/mg-styles-15/",r:3,re:"风格库带源码",f:1,q:"开源免费",g:"https://github.com/Vincentwei1021/mg-styles-15",diff:2,zh:1,hot:2},
   {n:"ViMax",why:"HKUDS出品1.28万★，小说直出分集视频",c:"AI短剧",m:["视频"],d:"MIT 开源、1.28万★的智能体视频创作框架(HKUDS 出品，现 v1.2.0)：Idea2Video 把一句点子扩成故事、角色、剧本、分镜、镜头再出片；Script2Video 按你写好的剧本控多场景多镜头；Novel2Video 把长篇小说压缩改编成分集；AutoCameo 用一张照片把本人或宠物放进故事并保持长相一致。参考图、首帧、机位连续性和成片组装在一套流程里串起来，镜头与素材可并发生成；v1.2 起有 Web UI(命名项目、Agent 对话、分镜预览、渲染检查点、供应商设置、深色模式)和 TUI，两者共用同一套 session，断点能续跑。⚠️ 模型全自带 key：聊天走 OpenRouter，出图接 Nano Banana 或 GPT Image 2，出视频接 Veo 或 Seedance 2.0 Fast；uv sync 装完后改 YAML，Web UI 另需 Node 18+。",u:"https://github.com/HKUDS/ViMax",r:4,re:"1.28万★导演Agent",f:1,q:"开源免费(BYOK)",g:"https://github.com/HKUDS/ViMax",diff:3,zh:1,hot:2},
-  {n:"Simon 不露脸视频 Skills",why:"MIT，调查长片与白板讲解都有真成片",c:"短视频创作",m:["视频","写作"],d:"MIT 的不露脸视频 skill 合集(518★，2026-09-20 建仓，作者自己的 SimonTalk 账号已出 80 多期)：两支 skill 分工明确——investigation-video 做 10 分钟以上横屏商业/消费调查长片，事实链、真实新闻原片与证据截图拼贴、Remotion 合成、闪避配乐、八平台发布文案；whiteboard-video 做 2 分钟上下手绘白板边画边讲，Excalidraw 风格逐笔动画、生图贴纸、真 Logo、烧录字幕、横竖封面。公共工序 video-common 管事实核查与来源台账、封面验收、成片验收、合规自查，每个镜头左下角标来源和日期。按 Claude Code skill 格式写，Codex 这类能读写文件跑命令的智能体同样能用；品牌是占位值，改一处配置换成自己的。",u:"https://github.com/trustfuture/simon-skills",r:4,re:"调查长片+白板讲解",f:1,q:"开源免费",g:"https://github.com/trustfuture/simon-skills",diff:2,zh:1,hot:1}];
+  {n:"Simon 不露脸视频 Skills",why:"MIT，调查长片与白板讲解都有真成片",c:"短视频创作",m:["视频","写作"],d:"MIT 的不露脸视频 skill 合集(518★，2026-09-20 建仓，作者自己的 SimonTalk 账号已出 80 多期)：两支 skill 分工明确——investigation-video 做 10 分钟以上横屏商业/消费调查长片，事实链、真实新闻原片与证据截图拼贴、Remotion 合成、闪避配乐、八平台发布文案；whiteboard-video 做 2 分钟上下手绘白板边画边讲，Excalidraw 风格逐笔动画、生图贴纸、真 Logo、烧录字幕、横竖封面。公共工序 video-common 管事实核查与来源台账、封面验收、成片验收、合规自查，每个镜头左下角标来源和日期。按 Claude Code skill 格式写，Codex 这类能读写文件跑命令的智能体同样能用；品牌是占位值，改一处配置换成自己的。",u:"https://github.com/trustfuture/simon-skills",r:4,re:"调查长片+白板讲解",f:1,q:"开源免费",g:"https://github.com/trustfuture/simon-skills",diff:2,zh:1,hot:1},
+{n:"短剧 Skills 精选",why:"三轮盲测排出名次，装哪个不用猜",c:"AI短剧",m:["视频","写作"],d:"CC0 开源的短剧 Skill 目录(1833★，站 shortdramaskills.com)：收了 83 个短剧/漫剧 skill 与 16 个开源平台，按选题、剧本、全剧骨架、分镜、角色资产、视频提示词分类；作者用 Opus 与 GPT 双评审各写三次做了三轮盲测，把每轮前几名与它们的短板都列出来，装之前就知道选谁。大多是标准 SKILL.md，千问/豆包/OpenClaw/Claude Code/Codex 都能装",u:"https://shortdramaskills.com",r:4,re:"三轮盲测目录",f:1,q:"开源免费",g:"https://github.com/UnderleveledBuilder/awesome-short-drama-skills",diff:1,zh:1,hot:2},
+{n:"rea-video",why:"逐镜判实拍还是AI，附复刻方案",c:"视频编辑",m:["视频"],d:"Apache-2.0 开源的视频逆向拆解 CLI(1769★)：给一支片，逐镜头判是实拍/AI生成/3D/代码动效，反推每镜提示词、给字幕起止时间(可导 SRT/ASS)、花字颜色描边、剪辑点与配乐 BPM，最后出一份 report.html 和「哪些要拍、哪些要生成、哪些要写代码」的复刻方案；装进 Claude Code/Codex 用，需 ffmpeg 与 Python 3.10+",u:"https://github.com/JuneYaooo/rea-video",r:4,re:"逐镜逆向拆解",f:1,q:"开源免费",g:"https://github.com/JuneYaooo/rea-video",diff:2,zh:1,hot:2},
+{n:"知了 Cicada",why:"Mac 端本机识别免 Key，开会听播双语字幕",c:"办公效率",m:["办公","音频"],d:"Apache-2.0 开源的实时字幕与同传工具(1425★)：直接读系统声音，不往会里塞机器人，Zoom/飞书/腾讯会议/X Spaces/YouTube 直播都能出双语字幕并边听边写结构化纪要；Mac 版全在本机识别、不填 key 也能用，Windows/Linux/Android 需自备 Ling 或 OpenRouter 等 key，四端共用同一套会议记录格式",u:"https://cicada.indaloop.app",r:4,re:"实时双语同传",f:1,q:"开源免费(Mac 免 Key)",g:"https://github.com/wquguru/cicada",diff:2,zh:1,hot:2}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -981,7 +984,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 336 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 339 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1320,6 +1323,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://vincentwei1021.github.io/mg-styles-15/" target="_blank" rel="noopener">MG Styles 15</a> — 15支10秒动效成片，提示词源码全给 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/HKUDS/ViMax" target="_blank" rel="noopener">ViMax</a> — HKUDS出品1.28万★，小说直出分集视频 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://github.com/trustfuture/simon-skills" target="_blank" rel="noopener">Simon 不露脸视频 Skills</a> — MIT，调查长片与白板讲解都有真成片 <span class="nb-cat">短视频创作</span></li>
+      <li><a href="https://shortdramaskills.com" target="_blank" rel="noopener">短剧 Skills 精选</a> — 三轮盲测排出名次，装哪个不用猜 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/JuneYaooo/rea-video" target="_blank" rel="noopener">rea-video</a> — 逐镜判实拍还是AI，附复刻方案 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://cicada.indaloop.app" target="_blank" rel="noopener">知了 Cicada</a> — Mac 端本机识别免 Key，开会听播双语字幕 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1329,7 +1335,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 336,
+ "numberOfItems": 339,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3346,6 +3352,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 336,
    "name": "Simon 不露脸视频 Skills",
    "url": "https://github.com/trustfuture/simon-skills"
+  },
+  {
+   "@type": "ListItem",
+   "position": 337,
+   "name": "短剧 Skills 精选",
+   "url": "https://shortdramaskills.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 338,
+   "name": "rea-video",
+   "url": "https://github.com/JuneYaooo/rea-video"
+  },
+  {
+   "@type": "ListItem",
+   "position": 339,
+   "name": "知了 Cicada",
+   "url": "https://cicada.indaloop.app"
   }
  ]
 }
