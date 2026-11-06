@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 羊毛 · 每天更新的免费额度与限时福利 | 赛博上片指南</title>
+<meta name="description" content="每天更新的 AI 羊毛清单：大模型 API 免费额度、会员试用、每日积分、限时活动。每条都附官方来源与核实日期，领不到的不写。">
+<link rel="canonical" href="https://zzj1617.github.io/ai-tools-nav/deals.html">
+<style>
+:root{
+  --paper:#F6F6F3; --surface:#FFFFFF; --ink:#14140F; --ink2:#585550; --ink3:#93908A;
+  --line:rgba(20,20,15,.13); --line2:rgba(20,20,15,.07);
+  --slate:#F2C200; --slate-ink:#1A1A14; --free:#1B7F4B;
+  --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Courier New",monospace;
+  --r:4px;
+}
+@media (prefers-color-scheme: dark){
+  :root{--paper:#111110; --surface:#1A1A18; --ink:#EDEBE4; --ink2:#A6A29A; --ink3:#6C6861;
+        --line:rgba(255,255,255,.13); --line2:rgba(255,255,255,.07); --free:#4CC38A;}
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink2);line-height:1.6;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+.mono{font-family:var(--mono)}
+
+/* 顶栏 */
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 24px;
+  max-width:1100px;margin:0 auto}
+.back-link{font-family:var(--mono);font-size:12.5px;color:var(--ink2);text-decoration:none;
+  border-bottom:1px solid var(--line);padding-bottom:1px}
+.back-link:hover{color:var(--ink)}
+.stamp{font-family:var(--mono);font-size:11.5px;color:var(--ink3);letter-spacing:.04em}
+
+/* 页头 */
+header{padding:26px 0 22px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.eyebrow .mark{display:inline-block;width:13px;height:13px;vertical-align:-2px;margin-right:9px;
+  border-radius:2px;background:var(--slate)}
+h1{font-size:34px;line-height:1.25;color:var(--ink);margin:10px 0 8px;letter-spacing:-.01em}
+.sub{max-width:64ch;font-size:15px}
+.rules{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.rule{font-family:var(--mono);font-size:11.5px;padding:4px 9px;border:1px solid var(--line);border-radius:var(--r);color:var(--ink3)}
+
+/* 筛选 */
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding:20px 0 4px}
+.chip{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--line);
+  border-radius:var(--r);background:transparent;color:var(--ink2);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--slate);border-color:var(--slate);color:var(--slate-ink);font-weight:700}
+
+/* 卡片 */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;padding:18px 0 40px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:10px}
+.card-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.card h2{font-size:17px;color:var(--ink);line-height:1.3}
+.cat{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 7px;border-radius:2px;background:var(--slate);color:var(--slate-ink);white-space:nowrap;font-weight:700}
+.what{font-size:14.5px;color:var(--ink);font-weight:600;line-height:1.5}
+.how{font-size:13.5px;color:var(--ink2)}
+.how b{font-family:var(--mono);font-size:11px;color:var(--ink3);font-weight:400;letter-spacing:.04em;display:block;margin-bottom:3px}
+.meta-row{display:flex;flex-wrap:wrap;gap:12px;font-family:var(--mono);font-size:11.5px;color:var(--ink3);
+  border-top:1px solid var(--line2);padding-top:10px;margin-top:auto}
+.meta-row .ok{color:var(--free)}
+.meta-row a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line)}
+.meta-row a:hover{color:var(--ink);border-color:var(--ink3)}
+.empty{padding:40px 0;color:var(--ink3);font-family:var(--mono);font-size:13px}
+
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:12.5px;color:var(--ink3)}
+footer p+p{margin-top:6px}
+footer a{color:var(--ink2)}
+@media (max-width:560px){
+  h1{font-size:26px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-link" href="./">← 返回 AI 创作工具导航</a>
+  <span class="stamp">每天更新 · 只收能兑现的</span>
+</div>
+
+<header class="container">
+  <p class="eyebrow"><span class="mark"></span>赛博上片指南 · AI Free Stuff Watch</p>
+  <h1>🆓 AI 羊毛</h1>
+  <p class="sub">大模型 API 免费额度、会员试用、每日积分、限时活动。每条都写到「怎么领」和「什么时候过期」，并附官方来源——<b>领不到的不写，过期了就下架</b>。</p>
+  <div class="rules">
+    <span class="rule">✅ 每条附官方链接</span>
+    <span class="rule">✅ 标注核实日期</span>
+    <span class="rule">⛔ 不收「转发抽奖」类</span>
+    <span class="rule">⛔ 不收需要绑卡的「免费」</span>
+  </div>
+  <p class="stamp" id="updated" style="margin-top:12px"></p>
+</header>
+
+<main class="container">
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer class="container">
+  <p>数据由「AI 羊毛官」每天巡检更新，核实不到的一律不下发。发现失效或漏掉的羊毛，欢迎在公众号「赛博上片指南」后台留言。</p>
+  <p>官方链接失效或活动调整以各平台页面为准 · <a href="./">回到工具导航</a></p>
+</footer>
+
+<script>
+/* ===== 羊毛数据（AI 羊毛官每天更新这一块；字段：n=名称 cat=分类 what=什么羊毛 how=怎么领 until=有效期 url=官方链接 src=来源 checked=核实日期） ===== */
+const DEALS=[
+  {n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送 100 万 Token，90 天内有效",
+   how:"注册阿里云 → 开通百炼 → 控制台里逐个开通模型，每个模型各自独立额度，额度不能跨模型合并",
+   until:"注册后 90 天",url:"https://help.aliyun.com/zh/model-studio/new-free-quota",src:"阿里云官方帮助中心",checked:"2026-11-06"},
+  {n:"智谱 BigModel",cat:"API额度",what:"新用户注册送 2000 万 Tokens，新模型可先免费试",
+   how:"手机号注册开放平台 → 控制台创建 API Key → 免费额度直接可用，另有免费试用专区",
+   until:"额度用完为止",url:"https://bigmodel.cn/pricing",src:"智谱官方定价页",checked:"2026-11-06"},
+  {n:"OpenRouter 免费模型",cat:"API额度",what:"当前 16 个 :free 路由，最长 100 万上下文，按量 0 元",
+   how:"注册 → 建 Key → 模型名带 :free 直接调；有速率限制，适合小量测试和跑 demo",
+   until:"随平台调整",url:"https://openrouter.ai/models?max_price=0",src:"OpenRouter 官方模型接口（实时查得）",checked:"2026-11-06"},
+  {n:"豆包工作",cat:"会员试用",what:"桌面端下载登录，免费领 30 天订阅权益",
+   how:"下载豆包工作桌面端 → 登录 → 按页面提示领取；已付费用户会员时长顺延",
+   until:"活动期内",url:"https://www.doubao.com/work/docs/zh-cn/articles/672868468340-personal-subscription",src:"豆包官方帮助中心",checked:"2026-11-06"},
+  {n:"即梦 Dreamina",cat:"每日积分",what:"每天登录送积分（当日有效，次日零点清零）；图片 4.0 有 4K 限时免费",
+   how:"打开即梦 → 登录 → 每日积分自动到账，当天用完不累积",
+   until:"每日重置",url:"https://jimeng.jianying.com",src:"即梦官网",checked:"2026-11-06"},
+  {n:"awesome-free-llm-api",cat:"长期免费",what:"社区维护的免费大模型 API 清单：469 个模型里 20 个零价路由，持续更新",
+   how:"打开仓库按需挑模型，每条都带申请入口和限制说明",
+   until:"长期维护",url:"https://github.com/peter123023/awesome-free-llm-api",src:"GitHub 仓库（最近核实 2026-10-24）",checked:"2026-11-06"},
+  {n:"腾讯混元 Hy4（WorkBuddy / CodeBuddy 限免）",cat:"限时活动",what:"11-04 至 11-15 23:59，WorkBuddy / CodeBuddy 里调用 Hy4 倍率 0.00x 不扣积分；Hy3 纯语言任务同步延长到同日",
+   how:"装 WorkBuddy（或 CodeBuddy）→ 模型列表选 Hy4（写作选 Hy4 300K High）→ 确认倍率 0.00x；元宝 App 切模型也能用。注意：每日一桶免费额度，用完等次日或用积分；任务里出图/出视频会切别的模型照常扣积分",until:"11-15 23:59",url:"https://cloud.tencent.com/developer/article/2776227",
+   src:"腾讯云开发者社区（官方）",checked:"2026-11-06"},
+  {n:"腾讯云 TokenHub 新人体验包",cat:"API额度",what:"每个主账号每个模型可领一次：主流语言模型 50 万~100 万 Tokens；Hy4 按量另打 5 折（至 12-31）",
+   how:"登录腾讯云 → 大模型服务平台 TokenHub → 模型广场逐个领取（或按官方文档指引）；不可转让/叠加/兑换现金",until:"2026-12-31",url:"https://cloud.tencent.com/document/product/1823/130053",
+   src:"腾讯云官方文档",checked:"2026-11-06"},
+  {n:"阿里云百炼 双11",cat:"API额度",what:"新用户 7000 万 Token（限华北 2 北京、sk- 开头 Key）+ 全模型低至 4.5 折",
+   how:"注册阿里云 → 开通百炼 → 按活动页申领；注意额度卡地域，换区调用等于零；新客判定很严（历史从未买过包年包月）",until:"活动期内",url:"https://developer.aliyun.com/article/1777584",
+   src:"阿里云开发者社区（官方）",checked:"2026-11-06"},
+  {n:"SkyProduction 天工工作台 双11",cat:"限时活动",what:"11-03 00:00～11-11 24:00，Seedance 2.5、Wan 3.0、可灵 4.0、MiniMax H3 等热门视频模型限时 0 积分；年包会员可解锁 MiniMax H3 最长 60 天",
+   how:"打开 SkyProduction（天工工作台）→ 双11 活动入口 → 选带 0 积分标记的模型生成；Seedance 2.5 另报低至 0.16 元/秒",until:"11-11 24:00",url:"https://www.163.com/dy/article/LATJUD2G05566TBX.html",
+   src:"官方活动报道（网易/搜狐同源，未见独立官网页）",checked:"2026-11-05"},
+  {n:"讯飞星火 Spark-X2.6",cat:"限时活动",what:"10 亿 Token 免费额度，一人限领一次，领取后 31 天内有效，仅限 Spark-X2.6 这一个模型",
+   how:"讯飞星火开放平台注册/登录 → 进活动页领取 → 拿 Key 调 spark-x2.6；⚠️ 领取时把「自动续扣」勾选框去掉，试用包最容易藏在这里",until:"领取后 31 天",url:"https://xinghuo.xfyun.cn/",
+   src:"讯飞星火开放平台 + 多方实测一致",checked:"2026-11-06"},
+  {n:"商汤 SenseNova Token Plan",cat:"会员试用",what:"公测期完全免费：Free 档 ¥0/月、限时放量，含 SenseNova 6.8 Flash 等模型",
+   how:"注册 SenseNova 平台 → 控制台建 API Key → 直接用免费档；付费档位尚未上线",until:"公测期内",url:"https://www.sensenova.cn/token-plan",
+   src:"商汤官方 Token Plan 页",checked:"2026-11-06"},
+  {n:"火山方舟 Managed Agents 新人额度包",cat:"API额度",what:"首次开通 Managed Agents 送 30 小时 Agent 运行时 + 500 次 web_search 调用，每账号一次，有效期 2 年",
+   how:"登录火山引擎 → 开通火山方舟 Managed Agents → 额度自动进账户；到「费用中心 - 资源包」看剩余，调用时优先扣免费额度，注意数据有小时级延迟",
+   until:"赠送后 2 年",url:"https://www.volcengine.com/docs/82379/1099320",src:"火山方舟官方模型价格文档（Managed Agents 章节）",checked:"2026-11-06"},
+  {n:"百度千帆 新用户代金券",cat:"API额度",what:"新用户实名认证后送 20 元代金券，全平台无门槛使用，有效期一个月",
+   how:"注册百度智能云 → 完成实名认证 → 千帆大模型平台领券；券按面额抵扣，用超了要自己充，别只盯「免费」两个字",
+   until:"领取后 1 个月",url:"https://cloud.baidu.com/doc/qianfan/s/4m8l6j0v9",src:"百度智能云千帆官方文档",checked:"2026-11-06"}
+];
+
+const CATS=["全部","API额度","会员试用","每日积分","限时活动","长期免费"];
+let activeCat="全部";
+
+function renderFilters(){
+  document.getElementById("filters").innerHTML = CATS.map(c=>{
+    const n = c==="全部" ? DEALS.length : DEALS.filter(d=>d.cat===c).length;
+    if(c!=="全部" && n===0) return "";
+    return `<button class="chip" aria-pressed="${c===activeCat}" data-cat="${c}">${c} · ${n}</button>`;
+  }).join("");
+  document.querySelectorAll(".chip").forEach(b=>b.onclick=()=>{activeCat=b.dataset.cat;render();});
+}
+
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}
+
+function render(){
+  renderFilters();
+  const list = activeCat==="全部" ? DEALS : DEALS.filter(d=>d.cat===activeCat);
+  const g = document.getElementById("grid");
+  if(!list.length){ g.innerHTML = '<p class="empty">这个分类暂时没有持续有效的羊毛。</p>'; return; }
+  g.innerHTML = list.map(d=>`
+    <article class="card">
+      <div class="card-top"><h2>${esc(d.n)}</h2><span class="cat">${esc(d.cat)}</span></div>
+      <p class="what">${esc(d.what)}</p>
+      <p class="how"><b>怎么领</b>${esc(d.how)}</p>
+      <div class="meta-row">
+        <span>⏳ ${esc(d.until)}</span>
+        <span class="ok">✔ 核实 ${esc(d.checked)}</span>
+        <a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.src)} ↗</a>
+      </div>
+    </article>`).join("");
+  const newest = DEALS.map(d=>d.checked).sort().pop() || "";
+  document.getElementById("updated").textContent = `最后更新 ${newest} · 共 ${DEALS.length} 条在架`;
+}
+
+render();
+</script>
+</body>
+</html>
