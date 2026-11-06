@@ -137,8 +137,8 @@ const DEALS=[
    how:"注册阿里云 → 开通百炼 → 按活动页申领；注意额度卡地域，换区调用等于零；新客判定很严（历史从未买过包年包月）",until:"活动期内",url:"https://developer.aliyun.com/article/1777584",
    src:"阿里云开发者社区（官方）",checked:"2026-11-06"},
   {n:"SkyProduction 天工工作台 双11",cat:"限时活动",what:"11-03 00:00～11-11 24:00，Seedance 2.5、Wan 3.0、可灵 4.0、MiniMax H3 等热门视频模型限时 0 积分；年包会员可解锁 MiniMax H3 最长 60 天",
-   how:"打开 SkyProduction（天工工作台）→ 双11 活动入口 → 选带 0 积分标记的模型生成；Seedance 2.5 另报低至 0.16 元/秒",until:"11-11 24:00",url:"https://www.163.com/dy/article/LATJUD2G05566TBX.html",
-   src:"官方活动报道（网易/搜狐同源，未见独立官网页）",checked:"2026-11-05"},
+   how:"打开 SkyProduction（天工工作台）→ 双11 活动入口 → 选带 0 积分标记的模型生成；Seedance 2.5 另报低至 0.16 元/秒",until:"11-11 24:00",url:"https://www.sohu.com/a/1098117308_161795",
+   src:"搜狐/网易同源活动报道（2026-11-07 复核仍有余量；官网为 SPA 未单列活动页）",checked:"2026-11-07"},
   {n:"讯飞星火 Spark-X2.6",cat:"限时活动",what:"10 亿 Token 免费额度，一人限领一次，领取后 31 天内有效，仅限 Spark-X2.6 这一个模型",
    how:"讯飞星火开放平台注册/登录 → 进活动页领取 → 拿 Key 调 spark-x2.6；⚠️ 领取时把「自动续扣」勾选框去掉，试用包最容易藏在这里",until:"领取后 31 天",url:"https://xinghuo.xfyun.cn/",
    src:"讯飞星火开放平台 + 多方实测一致",checked:"2026-11-06"},
@@ -159,7 +159,15 @@ const DEALS=[
    src:"小米官网文档 + 智东西报道",checked:"2026-11-05"},
   {n:"蚂蚁百灵 Ling-3.2-flash",cat:"限时活动",what:"原生多模态文本模型，Open API 限时优惠中（上线初期低价/限免，官方未公布恢复后的确切费率）",
    how:"到 ant-ling.com 或在 chat.ant-ling.com 直接体验；兼容 OpenAI + Anthropic 双协议，换 Base URL 即可接入",until:"官方未明示",url:"https://www.ant-ling.com",
-   src:"蚂蚁百灵官方站点",checked:"2026-11-05"}
+   src:"蚂蚁百灵官方站点",checked:"2026-11-05"},
+  {n:"魔搭 ModelScope API-Inference",cat:"长期免费",what:"注册即免费用 Qwen / DeepSeek / GLM 等开源模型，OpenAI 兼容接口，不是试用金而是日常免费额度",
+   how:"注册魔搭 → 绑阿里云账号并完成实名 → 「我的 Token」取 Access Token → base_url 填 https://api-inference.modelscope.cn/v1/ 直接调",
+   until:"长期（每日调用次数上限见官方用量限制文档）",url:"https://www.modelscope.cn/docs/model-service/API-Inference/intro",
+   src:"魔搭官方 API-Inference 文档（原文写明对注册用户免费）",checked:"2026-11-07"},
+  {n:"硅基流动免费模型档",cat:"长期免费",what:"价格表里标「免费」的模型真不收钱：Hunyuan-MT-7B 翻译、Xing4.0-29B、PaddleOCR-VL-1.5 识别、BGE 向量与重排、SenseVoice 语音",
+   how:"注册硅基流动 → 控制台建 API Key → OpenAI 兼容接口只调标「免费」的模型；付费模型照常按量扣费，别混用",
+   until:"长期（随平台调整）",url:"https://siliconflow.cn/pricing",
+   src:"硅基流动官方价格页（免费档逐条实查）",checked:"2026-11-07"}
 
 ];
 
