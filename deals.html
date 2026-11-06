@@ -150,7 +150,17 @@ const DEALS=[
    until:"赠送后 2 年",url:"https://www.volcengine.com/docs/82379/1099320",src:"火山方舟官方模型价格文档（Managed Agents 章节）",checked:"2026-11-06"},
   {n:"百度千帆 新用户代金券",cat:"API额度",what:"新用户实名认证后送 20 元代金券，全平台无门槛使用，有效期一个月",
    how:"注册百度智能云 → 完成实名认证 → 千帆大模型平台领券；券按面额抵扣，用超了要自己充，别只盯「免费」两个字",
-   until:"领取后 1 个月",url:"https://cloud.baidu.com/doc/qianfan/s/4m8l6j0v9",src:"百度智能云千帆官方文档",checked:"2026-11-06"}
+   until:"领取后 1 个月",url:"https://cloud.baidu.com/doc/qianfan/s/4m8l6j0v9",src:"百度智能云千帆官方文档",checked:"2026-11-06"},
+  {n:"智谱 ZCode 每日额度",cat:"每日积分",what:"每天可领 3 亿 GLM-5.3-Flash Token；19:00 开领，23:00 至次日 9:00 才能用（白天用不了）",
+   how:"下载 ZCode 客户端（zcode.z.ai，Win/Mac/Linux）→ 登录后在客户端内领取当日额度 → 夜间时段使用；周末另有大额包，但三笔额度三套规则，别按截图大字误读",until:"每日重置",url:"https://zcode.z.ai",
+   src:"智谱官方 ZCode 客户端 + 多方实测一致",checked:"2026-11-05"},
+  {n:"小米 MiMo Claw",cat:"每日积分",what:"免费用户每天约 4 小时云端体验时长，跑的是 MiMo-V2.5-Pro；打通 WPS，能做文档/表格/PPT/调研",
+   how:"打开 MiMo Studio 官网 → Xiaomi MiMo Claw → 登录即用，每天额度自动刷新；订阅 TokenPlan 可解锁更长时长（首促 14.9 元/月）",until:"每天刷新",url:"https://mimo.mi.com/docs/zh-CN/news/latest/mimoclaw",
+   src:"小米官网文档 + 智东西报道",checked:"2026-11-05"},
+  {n:"蚂蚁百灵 Ling-3.2-flash",cat:"限时活动",what:"原生多模态文本模型，Open API 限时优惠中（上线初期低价/限免，官方未公布恢复后的确切费率）",
+   how:"到 ant-ling.com 或在 chat.ant-ling.com 直接体验；兼容 OpenAI + Anthropic 双协议，换 Base URL 即可接入",until:"官方未明示",url:"https://www.ant-ling.com",
+   src:"蚂蚁百灵官方站点",checked:"2026-11-05"}
+
 ];
 
 const CATS=["全部","API额度","会员试用","每日积分","限时活动","长期免费"];
