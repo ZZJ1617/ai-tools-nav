@@ -748,7 +748,10 @@ const TOOLS=[
 {n:"Claude Animated Shorts",why:"含20部爆款拆解、38张参考帧",c:"AI短剧",m:["视频"],d:"MIT 开源的 Claude 技能(1955★)：装上就能出 55-70 秒竖屏动画短剧，2D 角色放进 3D 小镇，墨线描边、移轴虚化、滑轨运镜、进行曲配乐与音效全用 three.js + Remotion 在本机渲染，不烧视频模型的钱；附《The Bridge That Fell for a Song》整片源码、20 部参考短片拆解报告与 1200 帧对照表，需 Node + Python3 + ffmpeg",u:"https://github.com/mromidev/claude-animated-shorts",r:4,re:"本机渲染短剧",f:1,q:"开源免费",g:"https://github.com/mromidev/claude-animated-shorts",diff:3,zh:3,hot:2},
 {n:"editonny",why:"口播粗剪一句话说清，渲染全本地",c:"视频编辑",m:["视频"],d:"MIT 开源的剪口播技能(771★)：把视频丢给 Claude Code 或 Codex，用说话的方式让它掐掉停顿和口误、自动上字幕、修音频、改画幅，还能把讲到的段落变成动效场景；转写和渲染都在自己电脑上跑，素材不上传",u:"https://github.com/soumatheusgomes/editonny",r:4,re:"对话式剪口播",f:1,q:"开源免费",g:"https://github.com/soumatheusgomes/editonny",diff:2,zh:3,hot:2},
 {n:"Rossark Motion",why:"教 Agent 做动画而不是生硬补间",c:"视频编辑",m:["视频"],d:"MIT 开源的动效技能(725★)：把画好的 SVG、插画、图标接进 Claude Code / Codex，变成 60fps 动画——角色会呼吸、眨眼、换重心、演小动作，不是一张图补间到另一张；附角色/植物/布料/火/烟/水/机械/图表模板与 React Native、SwiftUI 版，一条 npx 命令装",u:"https://github.com/rossark0/rossark-motion-skill",r:4,re:"SVG转活体动画",f:1,q:"开源免费",g:"https://github.com/rossark0/rossark-motion-skill",diff:3,zh:3,hot:1},
-{n:"AI 姿势参考图库",why:"姿势配深度图，可直接喂 ControlNet",c:"图像生成",m:["图像"],d:"中文版 AI 角色参考工作台(MIT，6211★)：1439 组素体姿势每组配一张深度图，加 3224 套服装、1499 位人像，共 12022 张高清样例，全中文检索；纯静态零依赖可离线跑，带 ComfyUI 自定义节点与五家生图接口直连，找姿势不用再翻墙刷外网站点",u:"https://ai-pose-gallery.anhao.app",r:4,re:"姿势库带深度图",f:1,q:"开源免费",g:"https://github.com/anhao/ai-pose-gallery-zh",diff:1,zh:1,hot:2}];
+{n:"AI 姿势参考图库",why:"姿势配深度图，可直接喂 ControlNet",c:"图像生成",m:["图像"],d:"中文版 AI 角色参考工作台(MIT，6211★)：1439 组素体姿势每组配一张深度图，加 3224 套服装、1499 位人像，共 12022 张高清样例，全中文检索；纯静态零依赖可离线跑，带 ComfyUI 自定义节点与五家生图接口直连，找姿势不用再翻墙刷外网站点",u:"https://ai-pose-gallery.anhao.app",r:4,re:"姿势库带深度图",f:1,q:"开源免费",g:"https://github.com/anhao/ai-pose-gallery-zh",diff:1,zh:1,hot:2},
+{n:"MoneyPrinterTurbo",why:"给个主题就出竖屏成片，四种入口",c:"视频生成",m:["视频"],d:"MIT 开源的一站式短视频生成器(140K★)：给主题或关键词，自动写脚本、配音、找素材、上字幕、配 BGM 合成 1080p 成片，竖屏/横屏/方形都有；WebUI、API、CLI 与 Agent Skill 四种入口，能批量出片并一键发 TikTok/YouTube Shorts。配音可用免 Key 的 Edge TTS，素材走 Pexels/Pixabay，脚本模型自己填 DeepSeek 等",u:"https://github.com/harry0703/MoneyPrinterTurbo",r:5,re:"140K星 一站成片",f:1,q:"开源免费(自备模型 Key)",g:"https://github.com/harry0703/MoneyPrinterTurbo",diff:2,zh:1,hot:3},,
+{n:"Open Generative AI",why:"600+模型收进一套界面，可自部署",c:"图像生成",m:["图像","视频"],d:"MIT 开源的 AI 图像/视频工作台(32.9K★)：14 个工作室、600+ 模型(Flux、可灵、Sora、Veo 等)收进同一套界面，出图、出片、音频、对口型、工作流都能做，支持自部署与白标成自家产品；生成走 MuAPI 网关，需自备 Key 按量付费，没有免费额度",u:"https://github.com/Anil-matcha/Open-Generative-AI",r:3,re:"600+模型聚合",g:"https://github.com/Anil-matcha/Open-Generative-AI",diff:2,zh:2,hot:2}
+];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -986,7 +989,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 343 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 345 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1332,6 +1335,8 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/soumatheusgomes/editonny" target="_blank" rel="noopener">editonny</a> — 口播粗剪一句话说清，渲染全本地 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://github.com/rossark0/rossark-motion-skill" target="_blank" rel="noopener">Rossark Motion</a> — 教 Agent 做动画而不是生硬补间 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://ai-pose-gallery.anhao.app" target="_blank" rel="noopener">AI 姿势参考图库</a> — 姿势配深度图，可直接喂 ControlNet <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener">MoneyPrinterTurbo</a> — 给个主题就出竖屏成片，四种入口 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/Anil-matcha/Open-Generative-AI" target="_blank" rel="noopener">Open Generative AI</a> — 600+模型收进一套界面，可自部署 <span class="nb-cat">图像生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1341,7 +1346,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 343,
+ "numberOfItems": 345,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3400,6 +3405,18 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 343,
    "name": "AI 姿势参考图库",
    "url": "https://ai-pose-gallery.anhao.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 344,
+   "name": "MoneyPrinterTurbo",
+   "url": "https://github.com/harry0703/MoneyPrinterTurbo"
+  },
+  {
+   "@type": "ListItem",
+   "position": 345,
+   "name": "Open Generative AI",
+   "url": "https://github.com/Anil-matcha/Open-Generative-AI"
   }
  ]
 }
