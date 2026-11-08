@@ -749,8 +749,13 @@ const TOOLS=[
 {n:"editonny",why:"口播粗剪一句话说清，渲染全本地",c:"视频编辑",m:["视频"],d:"MIT 开源的剪口播技能(771★)：把视频丢给 Claude Code 或 Codex，用说话的方式让它掐掉停顿和口误、自动上字幕、修音频、改画幅，还能把讲到的段落变成动效场景；转写和渲染都在自己电脑上跑，素材不上传",u:"https://github.com/soumatheusgomes/editonny",r:4,re:"对话式剪口播",f:1,q:"开源免费",g:"https://github.com/soumatheusgomes/editonny",diff:2,zh:3,hot:2},
 {n:"Rossark Motion",why:"教 Agent 做动画而不是生硬补间",c:"视频编辑",m:["视频"],d:"MIT 开源的动效技能(725★)：把画好的 SVG、插画、图标接进 Claude Code / Codex，变成 60fps 动画——角色会呼吸、眨眼、换重心、演小动作，不是一张图补间到另一张；附角色/植物/布料/火/烟/水/机械/图表模板与 React Native、SwiftUI 版，一条 npx 命令装",u:"https://github.com/rossark0/rossark-motion-skill",r:4,re:"SVG转活体动画",f:1,q:"开源免费",g:"https://github.com/rossark0/rossark-motion-skill",diff:3,zh:3,hot:1},
 {n:"AI 姿势参考图库",why:"姿势配深度图，可直接喂 ControlNet",c:"图像生成",m:["图像"],d:"中文版 AI 角色参考工作台(MIT，6211★)：1439 组素体姿势每组配一张深度图，加 3224 套服装、1499 位人像，共 12022 张高清样例，全中文检索；纯静态零依赖可离线跑，带 ComfyUI 自定义节点与五家生图接口直连，找姿势不用再翻墙刷外网站点",u:"https://ai-pose-gallery.anhao.app",r:4,re:"姿势库带深度图",f:1,q:"开源免费",g:"https://github.com/anhao/ai-pose-gallery-zh",diff:1,zh:1,hot:2},
-{n:"MoneyPrinterTurbo",why:"给个主题就出竖屏成片，四种入口",c:"视频生成",m:["视频"],d:"MIT 开源的一站式短视频生成器(140K★)：给主题或关键词，自动写脚本、配音、找素材、上字幕、配 BGM 合成 1080p 成片，竖屏/横屏/方形都有；WebUI、API、CLI 与 Agent Skill 四种入口，能批量出片并一键发 TikTok/YouTube Shorts。配音可用免 Key 的 Edge TTS，素材走 Pexels/Pixabay，脚本模型自己填 DeepSeek 等",u:"https://github.com/harry0703/MoneyPrinterTurbo",r:5,re:"140K星 一站成片",f:1,q:"开源免费(自备模型 Key)",g:"https://github.com/harry0703/MoneyPrinterTurbo",diff:2,zh:1,hot:3},,
-{n:"Open Generative AI",why:"600+模型收进一套界面，可自部署",c:"图像生成",m:["图像","视频"],d:"MIT 开源的 AI 图像/视频工作台(32.9K★)：14 个工作室、600+ 模型(Flux、可灵、Sora、Veo 等)收进同一套界面，出图、出片、音频、对口型、工作流都能做，支持自部署与白标成自家产品；生成走 MuAPI 网关，需自备 Key 按量付费，没有免费额度",u:"https://github.com/Anil-matcha/Open-Generative-AI",r:3,re:"600+模型聚合",g:"https://github.com/Anil-matcha/Open-Generative-AI",diff:2,zh:2,hot:2}
+{n:"MoneyPrinterTurbo",why:"给个主题就出竖屏成片，四种入口",c:"视频生成",m:["视频"],d:"MIT 开源的一站式短视频生成器(140K★)：给主题或关键词，自动写脚本、配音、找素材、上字幕、配 BGM 合成 1080p 成片，竖屏/横屏/方形都有；WebUI、API、CLI 与 Agent Skill 四种入口，能批量出片并一键发 TikTok/YouTube Shorts。配音可用免 Key 的 Edge TTS，素材走 Pexels/Pixabay，脚本模型自己填 DeepSeek 等",u:"https://github.com/harry0703/MoneyPrinterTurbo",r:5,re:"140K星 一站成片",f:1,q:"开源免费(自备模型 Key)",g:"https://github.com/harry0703/MoneyPrinterTurbo",diff:2,zh:1,hot:3},
+{n:"Open Generative AI",why:"600+模型收进一套界面，可自部署",c:"图像生成",m:["图像","视频"],d:"MIT 开源的 AI 图像/视频工作台(32.9K★)：14 个工作室、600+ 模型(Flux、可灵、Sora、Veo 等)收进同一套界面，出图、出片、音频、对口型、工作流都能做，支持自部署与白标成自家产品；生成走 MuAPI 网关，需自备 Key 按量付费，没有免费额度",u:"https://github.com/Anil-matcha/Open-Generative-AI",r:3,re:"600+模型聚合",g:"https://github.com/Anil-matcha/Open-Generative-AI",diff:2,zh:2,hot:2},
+{n:"EAC design world",why:"152套设计体系+导出剪映草稿",c:"视频编辑",m:["视频"],d:"AGPL-3.0 的本地视频制作与设计工作台(955★)：给 DeepSeek Harness 做插件，也能独立打开。多轨时间线剪辑、参数化调色、卡点变速与数字运镜，内建 152 套设计体系、517 个模板条目与 150 个 Shotcraft 动效镜头；网页/桌面录制、旁白配乐字幕到 H.264 全在本地产出，成品可导出剪映草稿、Premiere/达芬奇 FCP7 XML、SRT 与 LUT 交给人工续剪。需 Node 22+ 与 FFmpeg 7+",u:"https://github.com/Ebony-Vinyl/EAC-design-world",r:4,re:"本地出片不烧额度",f:1,q:"开源免费",g:"https://github.com/Ebony-Vinyl/EAC-design-world",diff:3,zh:1,hot:2},
+{n:"cinecode",why:"MIT开源，一句话出成品MP4",c:"视频生成",m:["视频"],d:"MIT 开源的「代码电影」技能包(1346★)：装进 Claude Code 或 Cursor，你给一句创意，Agent 写剧本、用 three.js 逐帧搭画面、设计声音，最后直出 MP4，短片、长视频、广告、科普、MV 都能做。内置真实光影 3D、2D 动画、颜料、水墨、黏土、像素等风格板，先看前两场再决定；配音可选自己的 Gemini 免费额度或 ElevenLabs，不必买订阅。有简体中文文档",u:"https://github.com/sarpstar/cinecode",r:4,re:"代码出片直给MP4",f:1,q:"开源免费(需 Agent 客户端)",g:"https://github.com/sarpstar/cinecode",diff:2,zh:1,hot:2},
+{n:"公文写作 Skills",why:"22种文书，一键国标红头排版",c:"AI写作",m:["写作","办公"],d:"面向机关与国企文字岗的中文公文技能包(482★)：22 种文书全覆盖，先跑「防编造」体检(数字、人名、引用逐条核)，再按 GB/T 9704 一键排成国标红头 docx，附 AI 腔清理与保密提示。装进 Claude Code / Codex / Cursor，或直接把提示词贴给网页模型，内网离线也能用。许可为 PolyForm NC，个人与非商业使用免费",u:"https://duyunzhoudyz.github.io/dyz-gongwen-skills/",r:4,re:"国标红头一键排",f:1,q:"个人非商用免费",diff:1,zh:1,hot:2},
+{n:"MotionSites Web Builder",why:"40个获奖网页范例+50段素材",c:"设计工具",m:["图像","办公"],d:"免费 Claude 技能(MIT，1826★)：让 Claude 按获奖级网页的路子建落地页，而不是千篇一律的 AI 排版。内含 40 个高赞设计范例、50+ 段电影感 hero 视频与 30 个透明 3D 素材、55 套带代码的技法(视频无缝循环、液态玻璃、逐字模糊标题、鼠标刷视频、真 3D 模型)，另带截图自查与评分表，建完自己找错改到过线；也能只输出给 Lovable/Bolt/v0 的提示词",u:"https://motionsites.ai/",r:4,re:"范例素材都配齐",f:1,q:"免费技能(40范例+素材)",g:"https://github.com/Motionsites-AI/claude-skill",diff:2,zh:3,hot:2}
+
 ];
 
 // ===== 已停服工具归档 =====
@@ -989,7 +994,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 345 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 349 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1337,6 +1342,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://ai-pose-gallery.anhao.app" target="_blank" rel="noopener">AI 姿势参考图库</a> — 姿势配深度图，可直接喂 ControlNet <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener">MoneyPrinterTurbo</a> — 给个主题就出竖屏成片，四种入口 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://github.com/Anil-matcha/Open-Generative-AI" target="_blank" rel="noopener">Open Generative AI</a> — 600+模型收进一套界面，可自部署 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/Ebony-Vinyl/EAC-design-world" target="_blank" rel="noopener">EAC design world</a> — 152套设计体系+导出剪映草稿 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/sarpstar/cinecode" target="_blank" rel="noopener">cinecode</a> — MIT开源，一句话出成品MP4 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://duyunzhoudyz.github.io/dyz-gongwen-skills/" target="_blank" rel="noopener">公文写作 Skills</a> — 22种文书，一键国标红头排版 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://motionsites.ai/" target="_blank" rel="noopener">MotionSites Web Builder</a> — 40个获奖网页范例+50段素材 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1346,7 +1355,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 345,
+ "numberOfItems": 349,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3417,6 +3426,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 345,
    "name": "Open Generative AI",
    "url": "https://github.com/Anil-matcha/Open-Generative-AI"
+  },
+  {
+   "@type": "ListItem",
+   "position": 346,
+   "name": "EAC design world",
+   "url": "https://github.com/Ebony-Vinyl/EAC-design-world"
+  },
+  {
+   "@type": "ListItem",
+   "position": 347,
+   "name": "cinecode",
+   "url": "https://github.com/sarpstar/cinecode"
+  },
+  {
+   "@type": "ListItem",
+   "position": 348,
+   "name": "公文写作 Skills",
+   "url": "https://duyunzhoudyz.github.io/dyz-gongwen-skills/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 349,
+   "name": "MotionSites Web Builder",
+   "url": "https://motionsites.ai/"
   }
  ]
 }
