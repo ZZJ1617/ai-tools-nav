@@ -1,5 +1,7 @@
+*.bak
+*.bak*
+*.bak2*
+*-draft.html
 gallery-draft.html
 index-draft.html
-*-draft.html
-*.bak
-*.bak2*
+*.orig
