@@ -759,7 +759,11 @@ const TOOLS=[
 {n:"Agent Autoloop",why:"人走开 Agent 还接着干，卡住才找你拍板",c:"工作流Agent",m:["Agent"],d:"MIT 开源的任务中台(4.2k★，中文文档)：把 Claude Code、Codex 这类命令行 Agent 从「守着终端」改成后台自跑——事件来了自动派活，Agent 遇阻就退场等你、不占进程不烧 Token，需要拍板时把卡片推到飞书/钉钉/企微/Slack/Discord，回一句它接着干完，看进度敲一行命令。零外部依赖，一条命令装到 Windows/macOS/Linux，不用云服务器、不开公网端口；任何能收提示词、打印最后一条回复的 CLI 都能接进来",u:"https://github.com/KKKKhazix/agent-autoloop",r:4,re:"Agent后台自跑",f:1,q:"开源免费",g:"https://github.com/KKKKhazix/agent-autoloop",diff:2,zh:1,hot:2},
 {n:"Soundbox",why:"音效配乐配音克隆全在本机，断网也能出片",c:"音频生成",m:["音频"],d:"MIT 开源的本地音频工作站(153★，ElevenLabs 与 Suno 的开源替代)：说一句出音效与环境声、给词出带唱歌曲、克隆音色后按剧本逐句分配，多轨时间线可加效果、MIDI 与混音，还能扩写、翻唱、拆轨。4 个模型开箱即用，另有 61 个可在模型页开启，每个下载前先显示许可证与显存需求。装完不要账号不要积分、断网可用，素材都存本机；自带 24 个工具的 MCP 服务，Claude Code、Cursor 可代劳",u:"https://hamsanders.github.io/soundbox/",r:4,re:"本地音频工作站",f:1,q:"开源免费",g:"https://github.com/HamSanders/soundbox",diff:2,zh:3,hot:2},
 {n:"Effigy",why:"一张图直出带骨骼、能进引擎的 3D 模型",c:"3D创作",m:["3D"],d:"MIT 开源的 3D 资产生成器(254★，Windows 11)：一句描述或一张概念图，本机出游戏能直接用的角色与道具，自动清理、重拓扑、贴图、绑骨骼、做动作再导出，另有 2D 精灵与纹理绘制/放大工作区，全流程离线。参考机 RTX 5080 Laptop 16G 显存，12G 可跑 Fast 链，AMD RX 9070 也支持；官方 16 张角色绑定测试里 12 张无需手改。⚠️门槛较高，老卡需自行重编 CUDA 内核",u:"https://github.com/SifuInTheShell/Effigy",r:3,re:"本机出带骨骼模型",f:1,q:"开源免费",g:"https://github.com/SifuInTheShell/Effigy",diff:3,zh:3,hot:1},
-{n:"OpenCinema",why:"分镜到剪辑一块画布，Agent 能接着做",c:"视频生成",m:["视频"],d:"MIT 开源的本地优先 AI 视频工作室(204★，0.4.0 开发中)：一块画布把分镜、素材、3D 预演、生成、剪辑串起来，你手做的每一步 Agent 都能用同一套工具接着做(MCP 接 Claude Code/Codex)。生成后端可换——云端 API、本地服务、已有 ComfyUI 工作流都接同一个生成节点；断线或重启后不重复提交付费请求，成片过 FFprobe 校验才算完成。目前界面中文、源码构建限 macOS/Linux，Windows 暂不支持",u:"https://opencinema.site",r:3,re:"Agent 驱动的剪辑台",f:1,q:"开源免费(自备模型Key)",g:"https://github.com/junjamrk/OpenCinema",diff:3,zh:1,hot:1}
+{n:"OpenCinema",why:"分镜到剪辑一块画布，Agent 能接着做",c:"视频生成",m:["视频"],d:"MIT 开源的本地优先 AI 视频工作室(204★，0.4.0 开发中)：一块画布把分镜、素材、3D 预演、生成、剪辑串起来，你手做的每一步 Agent 都能用同一套工具接着做(MCP 接 Claude Code/Codex)。生成后端可换——云端 API、本地服务、已有 ComfyUI 工作流都接同一个生成节点；断线或重启后不重复提交付费请求，成片过 FFprobe 校验才算完成。目前界面中文、源码构建限 macOS/Linux，Windows 暂不支持",u:"https://opencinema.site",r:3,re:"Agent 驱动的剪辑台",f:1,q:"开源免费(自备模型Key)",g:"https://github.com/junjamrk/OpenCinema",diff:3,zh:1,hot:1},
+{n:"raea",why:"React 写片子，本机 GPU 渲得比播得快",c:"视频生成",m:["视频","3D"],d:"Render Anything Engine：视频、动效、3D、游戏都用 React+TS 写，Claude Code 直接调用，本机 GPU 渲染，macOS/Linux/Windows 三端，引擎免费无需账号",u:"https://raea.io",r:3,re:"本地实时渲染",f:1,q:"引擎免费(FSL许可)",g:"https://github.com/shinyobjectz/raea",diff:3,zh:3,hot:2},
+{n:"LivLiv Player",why:"30KB 播放器，网页里唇形同步说话",c:"3D创作",m:["3D","视频"],d:"开源 2.5D 网页角色播放器：内置 21 个角色，支持麦克风/音频唇形同步与摄像头面部追踪，兼容 LivLiv/VRM/PNGTuber，核心约 30KB 无依赖",u:"https://livliv-dev.github.io/player/",r:3,re:"轻量网页角色",f:1,q:"开源免费(Apache-2.0)",g:"https://github.com/livliv-dev/player",diff:2,zh:2,hot:1},
+{n:"拍片哥女装",why:"2727 套服装参考图，选款能直接用",c:"图像生成",m:["图像"],d:"AI 服装参考图集：2727 套人物不入镜的服装图（写实 1407+动漫 1320），中英双语检索，另附 1499 位 AI 模特库与可自建后端的换装试穿",u:"https://paipiange.github.io/nvzhuang/",r:3,re:"服装图库+试穿",f:1,q:"图库免费，换装需自备Key",g:"https://github.com/paipiange/nvzhuang",diff:1,zh:1,hot:2},
+{n:"Craft Anything",why:"纯本地拆解任意软件，还给出复刻步骤",c:"Agent框架",m:["Agent"],d:"ArtCraft 团队开源的纯 Rust 应用（桌面端+CLI+MCP）：把任意软件拆成有证据支撑的实现说明，再一步步带你复刻，模型后端自带 Key",u:"https://getartcraft.com/apps/craft-anything",r:3,re:"拆软件给复刻路径",f:1,q:"开源免费(Apache-2.0/MIT)",g:"https://github.com/storytold/craft-anything",diff:2,zh:3,hot:3}
 
 ];
 
@@ -1000,7 +1004,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 353 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 357 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1356,6 +1360,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://hamsanders.github.io/soundbox/" target="_blank" rel="noopener">Soundbox</a> — 音效配乐配音克隆全在本机，断网也能出片 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://github.com/SifuInTheShell/Effigy" target="_blank" rel="noopener">Effigy</a> — 一张图直出带骨骼、能进引擎的 3D 模型 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://opencinema.site" target="_blank" rel="noopener">OpenCinema</a> — 分镜到剪辑一块画布，Agent 能接着做 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://raea.io" target="_blank" rel="noopener">raea</a> — React 写片子，本机 GPU 渲得比播得快 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://livliv-dev.github.io/player/" target="_blank" rel="noopener">LivLiv Player</a> — 30KB 播放器，网页里唇形同步说话 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://paipiange.github.io/nvzhuang/" target="_blank" rel="noopener">拍片哥女装</a> — 2727 套服装参考图，选款能直接用 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://getartcraft.com/apps/craft-anything" target="_blank" rel="noopener">Craft Anything</a> — 纯本地拆解任意软件，还给出复刻步骤 <span class="nb-cat">Agent框架</span></li>
     </ul>
   </section>
 </noscript>
@@ -1365,7 +1373,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 353,
+ "numberOfItems": 357,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3484,6 +3492,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 353,
    "name": "OpenCinema",
    "url": "https://opencinema.site"
+  },
+  {
+   "@type": "ListItem",
+   "position": 354,
+   "name": "raea",
+   "url": "https://raea.io"
+  },
+  {
+   "@type": "ListItem",
+   "position": 355,
+   "name": "LivLiv Player",
+   "url": "https://livliv-dev.github.io/player/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 356,
+   "name": "拍片哥女装",
+   "url": "https://paipiange.github.io/nvzhuang/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 357,
+   "name": "Craft Anything",
+   "url": "https://getartcraft.com/apps/craft-anything"
   }
  ]
 }
