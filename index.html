@@ -763,7 +763,11 @@ const TOOLS=[
 {n:"raea",why:"React 写片子，本机 GPU 渲得比播得快",c:"视频生成",m:["视频","3D"],d:"Render Anything Engine：视频、动效、3D、游戏都用 React+TS 写，Claude Code 直接调用，本机 GPU 渲染，macOS/Linux/Windows 三端，引擎免费无需账号",u:"https://raea.io",r:3,re:"本地实时渲染",f:1,q:"引擎免费(FSL许可)",g:"https://github.com/shinyobjectz/raea",diff:3,zh:3,hot:2},
 {n:"LivLiv Player",why:"30KB 播放器，网页里唇形同步说话",c:"3D创作",m:["3D","视频"],d:"开源 2.5D 网页角色播放器：内置 21 个角色，支持麦克风/音频唇形同步与摄像头面部追踪，兼容 LivLiv/VRM/PNGTuber，核心约 30KB 无依赖",u:"https://livliv-dev.github.io/player/",r:3,re:"轻量网页角色",f:1,q:"开源免费(Apache-2.0)",g:"https://github.com/livliv-dev/player",diff:2,zh:2,hot:1},
 {n:"拍片哥女装",why:"2727 套服装参考图，选款能直接用",c:"图像生成",m:["图像"],d:"AI 服装参考图集：2727 套人物不入镜的服装图（写实 1407+动漫 1320），中英双语检索，另附 1499 位 AI 模特库与可自建后端的换装试穿",u:"https://paipiange.github.io/nvzhuang/",r:3,re:"服装图库+试穿",f:1,q:"图库免费，换装需自备Key",g:"https://github.com/paipiange/nvzhuang",diff:1,zh:1,hot:2},
-{n:"Craft Anything",why:"纯本地拆解任意软件，还给出复刻步骤",c:"Agent框架",m:["Agent"],d:"ArtCraft 团队开源的纯 Rust 应用（桌面端+CLI+MCP）：把任意软件拆成有证据支撑的实现说明，再一步步带你复刻，模型后端自带 Key",u:"https://getartcraft.com/apps/craft-anything",r:3,re:"拆软件给复刻路径",f:1,q:"开源免费(Apache-2.0/MIT)",g:"https://github.com/storytold/craft-anything",diff:2,zh:3,hot:3}
+{n:"Craft Anything",why:"纯本地拆解任意软件，还给出复刻步骤",c:"Agent框架",m:["Agent"],d:"ArtCraft 团队开源的纯 Rust 应用（桌面端+CLI+MCP）：把任意软件拆成有证据支撑的实现说明，再一步步带你复刻，模型后端自带 Key",u:"https://getartcraft.com/apps/craft-anything",r:3,re:"拆软件给复刻路径",f:1,q:"开源免费(Apache-2.0/MIT)",g:"https://github.com/storytold/craft-anything",diff:2,zh:3,hot:3},
+{n:"Wanaka Studio",why:"免代码生成可玩3D游戏并一键发链接",c:"3D创作",m:["3D"],d:"AI 原生 3D 游戏引擎：一句话让引擎内 agent 搭出可玩的 3D 游戏，可视化编辑器与 agent 双向同步，自带角色绑定、联机与一键发链接",u:"https://wanaka.app/",r:4,re:"AI建3D游戏",f:1,q:"每天60积分(需代理)",v:1,diff:2,zh:3,hot:2},
+{n:"zCAD",why:"生成带尺寸约束的可编辑CAD并导STEP",c:"3D创作",m:["3D"],d:"浏览器里的 AI 参数化 CAD：描述功能与接口即生成带尺寸、几何约束与装配配合的可编辑实体，接着出 2D 工程图、BOM 并导出 STEP",u:"https://zcad.ai/",r:4,re:"真参数化建模",f:1,q:"AI免费版每月200积分",v:1,diff:3,zh:3,hot:2},
+{n:"UseIt Studio",why:"产出带刀模印刷文件而非一张平面图",c:"设计工具",m:["图像"],d:"面向实体印刷品的 AI 设计工作室：一句话做贴纸、礼盒、立牌、贺卡，自动加 3mm 出血与刀模白墨层，分层可改，导出 .ai 与印刷 PDF",u:"https://useit.im/",r:4,re:"设计能落地印",v:1,diff:1,zh:3,hot:1},
+{n:"Lottie AI",why:"提示词出矢量动画而非渲染好的视频",c:"设计工具",m:["图像","视频"],d:"用一句话生成可编辑的 Lottie 矢量动效：颜色、速度、对象都能单独调，可加 hover/点击交互，导出 dotLottie/JSON/GIF/MP4，适合 UI 加载态与图标动效",u:"https://lottiefiles.com/ai",r:3,re:"矢量可二次改",v:1,diff:1,zh:2,hot:1}
 
 ];
 
@@ -1004,7 +1008,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 357 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 361 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1364,6 +1368,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://livliv-dev.github.io/player/" target="_blank" rel="noopener">LivLiv Player</a> — 30KB 播放器，网页里唇形同步说话 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://paipiange.github.io/nvzhuang/" target="_blank" rel="noopener">拍片哥女装</a> — 2727 套服装参考图，选款能直接用 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://getartcraft.com/apps/craft-anything" target="_blank" rel="noopener">Craft Anything</a> — 纯本地拆解任意软件，还给出复刻步骤 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://wanaka.app/" target="_blank" rel="noopener">Wanaka Studio</a> — 免代码生成可玩3D游戏并一键发链接 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://zcad.ai/" target="_blank" rel="noopener">zCAD</a> — 生成带尺寸约束的可编辑CAD并导STEP <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://useit.im/" target="_blank" rel="noopener">UseIt Studio</a> — 产出带刀模印刷文件而非一张平面图 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://lottiefiles.com/ai" target="_blank" rel="noopener">Lottie AI</a> — 提示词出矢量动画而非渲染好的视频 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1373,7 +1381,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 357,
+ "numberOfItems": 361,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3516,6 +3524,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 357,
    "name": "Craft Anything",
    "url": "https://getartcraft.com/apps/craft-anything"
+  },
+  {
+   "@type": "ListItem",
+   "position": 358,
+   "name": "Wanaka Studio",
+   "url": "https://wanaka.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 359,
+   "name": "zCAD",
+   "url": "https://zcad.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 360,
+   "name": "UseIt Studio",
+   "url": "https://useit.im/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 361,
+   "name": "Lottie AI",
+   "url": "https://lottiefiles.com/ai"
   }
  ]
 }
