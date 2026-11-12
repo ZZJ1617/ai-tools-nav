@@ -115,9 +115,9 @@ const DEALS=[
 {n:"智谱 BigModel",cat:"API额度",what:"新用户注册送 2000 万 Tokens，新模型可先免费试",
    how:"手机号注册开放平台 → 控制台创建 API Key → 免费额度直接可用，另有免费试用专区",
    until:"额度用完为止",url:"https://bigmodel.cn/pricing",src:"智谱官方定价页",checked:"2026-11-06"},
-{n:"OpenRouter 免费模型",cat:"API额度",what:"当前 16 个 :free 路由，最长 100 万上下文，按量 0 元",
+{n:"OpenRouter 免费模型",cat:"API额度",what:"当前 17 个 :free 路由，最长 100 万上下文，按量 0 元",
    how:"注册 → 建 Key → 模型名带 :free 直接调；有速率限制，适合小量测试和跑 demo",
-   until:"随平台调整",url:"https://openrouter.ai/models?max_price=0",src:"OpenRouter 官方模型接口（实时查得）",checked:"2026-11-06"},
+   until:"随平台调整",url:"https://openrouter.ai/models?max_price=0",src:"OpenRouter 官方模型接口（实时查得）",checked:"2026-11-13"},
 {n:"豆包工作",cat:"会员试用",what:"桌面端下载登录，免费领 30 天订阅权益",
    how:"下载豆包工作桌面端 → 登录 → 按页面提示领取；已付费用户会员时长顺延",
    until:"活动期内",url:"https://www.doubao.com/work/docs/zh-cn/articles/672868468340-personal-subscription",src:"豆包官方帮助中心",checked:"2026-11-06"},
@@ -215,7 +215,15 @@ const DEALS=[
    src:"阿里云官方文档 + 第一财经报道",checked:"2026-11-12"},
   {n:"蚂蚁百灵 Ling-3.2-flash",cat:"限时活动",what:"原生多模态文本模型（560B 总参 / 25B 激活、100 万上下文），官方定价页写明上线前两周 API 限时全免；之后输入 0.30 / 输出 0.90 美元每百万词元",
    how:"注册蚂蚁百灵/百炼平台 → 绑定支付宝 → 创建令牌，base_url 填 api.ant-ling.com/v1，模型名 Ling-3.2-flash（OpenAI / Anthropic 协议都能接）；也可以直接去 chat.ant-ling.com 网页体验",until:"上线前两周（11-06 起，约至 11-20）",url:"https://www.ant-ling.com",
-   src:"蚂蚁百灵官方定价页 + 多家媒体报道一致",checked:"2026-11-12"}
+   src:"蚂蚁百灵官方定价页 + 多家媒体报道一致",checked:"2026-11-12"},
+  {n:"腾讯云 元宝搜索",cat:"API额度",what:"腾讯把元宝 App 背后的联网搜索对外开放，每个腾讯云账号每自然月 2000 次免费调用；11-30 前在控制台活动专区填邀请码可涨到当月 6000 次",
+   how:"腾讯云完成实名认证 → 开通元宝搜索并创建 API Key → 控制台活动专区填邀请码；MCP 地址 api.wsa.cloud.tencent.com/Mcp（请求头带 Bearer 你的 Key），也可直接调 API 或装 SkillHub 的 Skill，三种接入共用同一份额度",
+   until:"每月刷新（11-30 前参加活动当月为 6000 次）",url:"https://cloud.tencent.com/product/wsa",
+   src:"腾讯云开发者社区官方公告（2026-10-20）+ 元宝搜索计费/FAQ 文档",checked:"2026-11-13"},
+  {n:"腾讯 EdgeOne Makers 内置模型",cat:"API额度",what:"免费版账号每月自动发 50 万 token 内置模型额度，可调 DeepSeek V4 Pro / V4.1 Flash、Kimi K2.6、MiniMax M3、混元 Hy3，注册不绑卡",
+   how:"注册 EdgeOne Makers → 控制台 Models 页创建 Models API Key → base_url 换成 Makers 网关、模型名带 @makers/ 前缀（如 @makers/deepseek-v4-pro），兼容 OpenAI / Anthropic SDK，额度同账号所有项目共享",
+   until:"每月刷新（商业化后配额可能调整）",url:"https://pages.edgeone.ai/zh/document/limits-and-quotas",
+   src:"EdgeOne 官方文档「限制与配额」「Models 说明」（写明 50 万 token/月）",checked:"2026-11-13"}
 
 ];
 
