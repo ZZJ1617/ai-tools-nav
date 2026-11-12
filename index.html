@@ -769,7 +769,12 @@ const TOOLS=[
 {n:"UseIt Studio",why:"产出带刀模印刷文件而非一张平面图",c:"设计工具",m:["图像"],d:"面向实体印刷品的 AI 设计工作室：一句话做贴纸、礼盒、立牌、贺卡，自动加 3mm 出血与刀模白墨层，分层可改，导出 .ai 与印刷 PDF",u:"https://useit.im/",r:4,re:"设计能落地印",v:1,diff:1,zh:3,hot:1},
 {n:"Lottie AI",why:"提示词出矢量动画而非渲染好的视频",c:"设计工具",m:["图像","视频"],d:"用一句话生成可编辑的 Lottie 矢量动效：颜色、速度、对象都能单独调，可加 hover/点击交互，导出 dotLottie/JSON/GIF/MP4，适合 UI 加载态与图标动效",u:"https://lottiefiles.com/ai",r:3,re:"矢量可二次改",v:1,diff:1,zh:2,hot:1}
 
-];
+,
+{n:"BaoCut",why:"Agent改、你审片，成片始终能改",c:"视频编辑",m:["视频"],d:"面向 Agent 的开源剪辑器（桌面端）：Claude Code/Codex/Cursor 一句话完成转录、双语字幕、翻译配音、去口癖与切片，结果落在可继续拖动的多轨时间线上，导出 MP4/SRT",u:"https://baocut.com/",r:4,re:"指令剪片可续改",f:1,q:"免费(社区许可,无授权费)",g:"https://github.com/JimLiu/baocut",diff:2,zh:1,hot:2},
+{n:"JoyAI-Video-Edit",why:"京东开源，720P 实时流式改视频",c:"视频编辑",m:["视频"],d:"京东开源的实时指令式视频编辑系统（Apache-2.0）：给实时流或上传视频加一句指令，边到帧边改不等整段生成，720×1248 实测 30FPS，附 HF 权重与在线 Demo",u:"https://github.com/jd-opensource/JoyAI-Video-Edit",r:4,re:"流式边到边改",f:1,q:"开源免费(Apache-2.0)含权重",g:"https://github.com/jd-opensource/JoyAI-Video-Edit",diff:3,zh:2,hot:2},
+{n:"Codex Slides",why:"复用codex登录，免Key出整套PPT",c:"办公效率",m:["办公"],d:"跑在 Codex 里的开源幻灯片工作室（MIT）：一句需求或一个仓库直接出整套页，45 套模板+73 种社区风格并行渲染，4-5 分钟出 10+ 页，导出 PPTX/PDF 不额外配 Key",u:"https://github.com/nexu-io/codex-slides",r:4,re:"免Key出整套deck",f:1,q:"开源免费(MIT),复用codex登录",g:"https://github.com/nexu-io/codex-slides",diff:2,zh:2,hot:2},
+{n:"dsh-image-gen",why:"500+ 提示词，聊天窗口里批量出图",c:"图像生成",m:["图像"],d:"DeepSeek Harness 里的作图插件（Apache-2.0，npm 安装）：一条消息批量生成几十张图，支持草图改图、GIF 动图、多模型对比与 ComfyUI 工作流，内置 500+ Prompt 灵感库",u:"https://github.com/shanliuling/dsh-image-gen",r:4,re:"对话里批量出图",f:1,q:"开源免费·订阅号免Key",g:"https://github.com/shanliuling/dsh-image-gen",diff:1,zh:1,hot:2},
+{n:"户型图设计器",why:"一张户型图，出可改的 2D/3D 装修网页",c:"设计工具",m:["3D","图像"],d:"给 Agent 用的装修设计 Skill：上传一张户型图加一句话，还原成可 2D/3D 直接拖改的装修设计器网页，单文件 HTML 离线可用，不需要账号",u:"https://github.com/ZWD11/house-plan-designer",r:3,re:"户型转可改设计",f:1,q:"开源免费(MIT)",g:"https://github.com/ZWD11/house-plan-designer",diff:2,zh:1,hot:1}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -1008,7 +1013,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 361 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 366 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1372,6 +1377,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://zcad.ai/" target="_blank" rel="noopener">zCAD</a> — 生成带尺寸约束的可编辑CAD并导STEP <span class="nb-cat">3D创作</span></li>
       <li><a href="https://useit.im/" target="_blank" rel="noopener">UseIt Studio</a> — 产出带刀模印刷文件而非一张平面图 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://lottiefiles.com/ai" target="_blank" rel="noopener">Lottie AI</a> — 提示词出矢量动画而非渲染好的视频 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://baocut.com/" target="_blank" rel="noopener">BaoCut</a> — Agent改、你审片，成片始终能改 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/jd-opensource/JoyAI-Video-Edit" target="_blank" rel="noopener">JoyAI-Video-Edit</a> — 京东开源，720P 实时流式改视频 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/nexu-io/codex-slides" target="_blank" rel="noopener">Codex Slides</a> — 复用codex登录，免Key出整套PPT <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/shanliuling/dsh-image-gen" target="_blank" rel="noopener">dsh-image-gen</a> — 500+ 提示词，聊天窗口里批量出图 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/ZWD11/house-plan-designer" target="_blank" rel="noopener">户型图设计器</a> — 一张户型图，出可改的 2D/3D 装修网页 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1381,7 +1391,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 361,
+ "numberOfItems": 366,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3548,6 +3558,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 361,
    "name": "Lottie AI",
    "url": "https://lottiefiles.com/ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 362,
+   "name": "BaoCut",
+   "url": "https://baocut.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 363,
+   "name": "JoyAI-Video-Edit",
+   "url": "https://github.com/jd-opensource/JoyAI-Video-Edit"
+  },
+  {
+   "@type": "ListItem",
+   "position": 364,
+   "name": "Codex Slides",
+   "url": "https://github.com/nexu-io/codex-slides"
+  },
+  {
+   "@type": "ListItem",
+   "position": 365,
+   "name": "dsh-image-gen",
+   "url": "https://github.com/shanliuling/dsh-image-gen"
+  },
+  {
+   "@type": "ListItem",
+   "position": 366,
+   "name": "户型图设计器",
+   "url": "https://github.com/ZWD11/house-plan-designer"
   }
  ]
 }
