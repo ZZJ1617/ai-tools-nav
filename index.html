@@ -773,7 +773,11 @@ const TOOLS=[
 {n:"JoyAI-Video-Edit",why:"京东开源，720P 实时流式改视频",c:"视频编辑",m:["视频"],d:"京东开源的实时指令式视频编辑系统（Apache-2.0）：给实时流或上传视频加一句指令，边到帧边改不等整段生成，720×1248 实测 30FPS，附 HF 权重与在线 Demo",u:"https://github.com/jd-opensource/JoyAI-Video-Edit",r:4,re:"流式边到边改",f:1,q:"开源免费(Apache-2.0)含权重",g:"https://github.com/jd-opensource/JoyAI-Video-Edit",diff:3,zh:2,hot:2},
 {n:"Codex Slides",why:"复用codex登录，免Key出整套PPT",c:"办公效率",m:["办公"],d:"跑在 Codex 里的开源幻灯片工作室（MIT）：一句需求或一个仓库直接出整套页，45 套模板+73 种社区风格并行渲染，4-5 分钟出 10+ 页，导出 PPTX/PDF 不额外配 Key",u:"https://github.com/nexu-io/codex-slides",r:4,re:"免Key出整套deck",f:1,q:"开源免费(MIT),复用codex登录",g:"https://github.com/nexu-io/codex-slides",diff:2,zh:2,hot:2},
 {n:"dsh-image-gen",why:"500+ 提示词，聊天窗口里批量出图",c:"图像生成",m:["图像"],d:"DeepSeek Harness 里的作图插件（Apache-2.0，npm 安装）：一条消息批量生成几十张图，支持草图改图、GIF 动图、多模型对比与 ComfyUI 工作流，内置 500+ Prompt 灵感库",u:"https://github.com/shanliuling/dsh-image-gen",r:4,re:"对话里批量出图",f:1,q:"开源免费·订阅号免Key",g:"https://github.com/shanliuling/dsh-image-gen",diff:1,zh:1,hot:2},
-{n:"户型图设计器",why:"一张户型图，出可改的 2D/3D 装修网页",c:"设计工具",m:["3D","图像"],d:"给 Agent 用的装修设计 Skill：上传一张户型图加一句话，还原成可 2D/3D 直接拖改的装修设计器网页，单文件 HTML 离线可用，不需要账号",u:"https://github.com/ZWD11/house-plan-designer",r:3,re:"户型转可改设计",f:1,q:"开源免费(MIT)",g:"https://github.com/ZWD11/house-plan-designer",diff:2,zh:1,hot:1}];
+{n:"户型图设计器",why:"一张户型图，出可改的 2D/3D 装修网页",c:"设计工具",m:["3D","图像"],d:"给 Agent 用的装修设计 Skill：上传一张户型图加一句话，还原成可 2D/3D 直接拖改的装修设计器网页，单文件 HTML 离线可用，不需要账号",u:"https://github.com/ZWD11/house-plan-designer",r:3,re:"户型转可改设计",f:1,q:"开源免费(MIT)",g:"https://github.com/ZWD11/house-plan-designer",diff:2,zh:1,hot:1},
+{n:"Frametell 帧言",why:"先批分镜再出片，手改不重绘不烧token",c:"视频生成",m:["视频"],d:"AGPL-3.0 的讲解视频导演 agent（506★，2026-10-10 建仓，有中文 README）：给一句话或丢进 PDF、文档、PPT、图片，它先出分镜让你确认，再写旁白、配音、逐页画版面并自检，最后出带字幕的 1080P 成片，内置暖故事/学习/黑板/白板/暗科技五种风格；成片能在时间轴上手动挪位置、改字改色、调出场早晚，手改是叠在影片上的一层、不重绘也不再烧 token，每次保存都是 git 版本可回滚。全程本机跑，模型可接 DeepSeek/Claude/OpenAI/OpenRouter 或任意兼容接口，配音用火山引擎 TTS 或 ElevenLabs。⚠️ 目前只出 macOS（Apple 芯片）安装包，Windows/Intel Mac 要从源码跑，本机还得有 Chrome 用来渲页面",u:"https://frametell.ai",r:4,re:"分镜先审再出片",f:1,v:1,q:"开源免费(BYOK)",g:"https://github.com/sitor-ai/frametell",diff:2,zh:1,hot:2},
+{n:"Papilot",why:"圈 PDF 写批注，agent 回去改 tex 源码",c:"AI写作",m:["写作"],d:"MIT 的 AI LaTeX 编辑器（251★，2026-10-26 建仓）：论文、书稿、幻灯片不用再读写 .tex——直接在排好版的 PDF 页面上框住某句、某个公式或某张图，写一句批注，agent 自己回源码里改，结果以「接受/拒绝/评论」三种方式浮在版面上给你看；文件就是本机普通文件，每步改动进 Git，多人协作走 pull/push，冲突也能让 agent 去解。后端可接 Codex、Claude Code、Cursor、DeepSeek、Qwen、Kimi、GLM 一批 agent，macOS/Linux/Windows 都有包",u:"https://papilot.ai",r:4,re:"PDF 上直接改",f:1,v:1,q:"开源免费",g:"https://github.com/PapilotAI/papilot",diff:2,zh:1,hot:1},
+{n:"赛博小雅直播版",why:"弹幕进来就变动作，直播全链路开源",c:"视频生成",m:["视频","音频"],d:"AGPL-3.0 的开源数字人直播整套（880★）：舞台页（数字人画面＋实时字幕＋快捷动作/点播面板）＋本地桥＋弹幕采集器（抖音/B站/YouTube/视频号），观众弹幕进来就翻译成指令让数字人真的做出动作，台词由 LLM 现写、本机 TTS 出声。⚠️ 仓库只给软件、不含人物形象/克隆音色/动作库/任何 Key，需自备 Windows 10/11＋NVIDIA ≥8G、Vidu API（渲染按秒 1 积分）、一个 LLM Key 和 OmniVoice 一类 TTS，从零跑到能播约 1 小时；macOS 用户走 mac 分支",u:"https://github.com/cyber-xiaoya/cyber-xiaoya-live",r:3,re:"弹幕驱动数字人",f:1,v:1,q:"开源免费(渲染按秒计费)",g:"https://github.com/cyber-xiaoya/cyber-xiaoya-live",diff:3,zh:1,hot:2},
+{n:"Content Studio 设计智能体",why:"35 个 skills，一句话出品牌图与短片",c:"设计工具",m:["办公","图像"],d:"LangChain 自家设计团队在跑的设计 agent，已开源（Apache-2.0，617★，2026-10-18 建仓）：丢一句需求和文件，它先读路由 skill 从 35 个流程里挑对路，再产出品牌一致的成品——从改尺寸的广告图、图表、幻灯到 40 秒讲解短片；幻灯片是 HTML、影片是动画时间轴，所以「改一版」等于改代码再渲染，不是重新赌一次抽卡，每个 Slack 线程配一台带 Chrome/FFmpeg 的沙箱。⚠️ 团队部署要有 LangSmith Managed Deep Agents＋Slack＋模型 Key，个人可以本地无 Key 试跑；仓库有简体中文 README，界面仍偏英文",u:"https://github.com/langchain-ai/design-agent",r:4,re:"品牌一致产出",f:1,v:1,q:"开源免费(BYOK)",g:"https://github.com/langchain-ai/design-agent",diff:3,zh:2,hot:2}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -1012,7 +1016,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 366 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 370 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1381,6 +1385,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/nexu-io/codex-slides" target="_blank" rel="noopener">Codex Slides</a> — 复用codex登录，免Key出整套PPT <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/shanliuling/dsh-image-gen" target="_blank" rel="noopener">dsh-image-gen</a> — 500+ 提示词，聊天窗口里批量出图 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/ZWD11/house-plan-designer" target="_blank" rel="noopener">户型图设计器</a> — 一张户型图，出可改的 2D/3D 装修网页 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://frametell.ai" target="_blank" rel="noopener">Frametell 帧言</a> — 先批分镜再出片，手改不重绘不烧token <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://papilot.ai" target="_blank" rel="noopener">Papilot</a> — 圈 PDF 写批注，agent 回去改 tex 源码 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://github.com/cyber-xiaoya/cyber-xiaoya-live" target="_blank" rel="noopener">赛博小雅直播版</a> — 弹幕进来就变动作，直播全链路开源 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/langchain-ai/design-agent" target="_blank" rel="noopener">Content Studio 设计智能体</a> — 35 个 skills，一句话出品牌图与短片 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1390,7 +1398,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 366,
+ "numberOfItems": 370,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3587,6 +3595,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 366,
    "name": "户型图设计器",
    "url": "https://github.com/ZWD11/house-plan-designer"
+  },
+  {
+   "@type": "ListItem",
+   "position": 367,
+   "name": "Frametell 帧言",
+   "url": "https://frametell.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 368,
+   "name": "Papilot",
+   "url": "https://papilot.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 369,
+   "name": "赛博小雅直播版",
+   "url": "https://github.com/cyber-xiaoya/cyber-xiaoya-live"
+  },
+  {
+   "@type": "ListItem",
+   "position": 370,
+   "name": "Content Studio 设计智能体",
+   "url": "https://github.com/langchain-ai/design-agent"
   }
  ]
 }
