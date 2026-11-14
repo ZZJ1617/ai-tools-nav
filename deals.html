@@ -133,9 +133,6 @@ const DEALS=[
 {n:"腾讯云 TokenHub 新人体验包",cat:"API额度",what:"每个主账号每个模型可领一次：主流语言模型 50 万~100 万 Tokens；Hy4 按量另打 5 折（至 12-31）",
    how:"登录腾讯云 → 大模型服务平台 TokenHub → 模型广场逐个领取（或按官方文档指引）；不可转让/叠加/兑换现金",until:"2026-12-31",url:"https://cloud.tencent.com/document/product/1823/130053",
    src:"腾讯云官方文档",checked:"2026-11-06"},
-{n:"阿里云百炼 双11",cat:"API额度",what:"新用户 7000 万 Token（限华北 2 北京、sk- 开头 Key）+ 全模型低至 4.5 折",
-   how:"注册阿里云 → 开通百炼 → 按活动页申领；注意额度卡地域，换区调用等于零；新客判定很严（历史从未买过包年包月）",until:"活动期内",url:"https://developer.aliyun.com/article/1777584",
-   src:"阿里云开发者社区（官方）",checked:"2026-11-06"},
 {n:"讯飞星火 Spark-X2.6",cat:"限时活动",what:"10 亿 Token 免费额度，一人限领一次，领取后 31 天内有效，仅限 Spark-X2.6 这一个模型",
    how:"讯飞星火开放平台注册/登录 → 进活动页领取 → 拿 Key 调 spark-x2.6；⚠️ 领取时把「自动续扣」勾选框去掉，试用包最容易藏在这里",until:"领取后 31 天",url:"https://xinghuo.xfyun.cn/",
    src:"讯飞星火开放平台 + 多方实测一致",checked:"2026-11-06"},
@@ -215,7 +212,7 @@ const DEALS=[
    src:"阿里云官方文档 + 第一财经报道",checked:"2026-11-12"},
   {n:"蚂蚁百灵 Ling-3.2-flash",cat:"限时活动",what:"原生多模态文本模型（560B 总参 / 25B 激活、100 万上下文），官方定价页写明上线前两周 API 限时全免；之后输入 0.30 / 输出 0.90 美元每百万词元",
    how:"注册蚂蚁百灵/百炼平台 → 绑定支付宝 → 创建令牌，base_url 填 api.ant-ling.com/v1，模型名 Ling-3.2-flash（OpenAI / Anthropic 协议都能接）；也可以直接去 chat.ant-ling.com 网页体验",until:"上线前两周（11-06 起，约至 11-20）",url:"https://www.ant-ling.com",
-   src:"蚂蚁百灵官方定价页 + 多家媒体报道一致",checked:"2026-11-14"},
+   src:"蚂蚁百灵官方定价页 + 多家媒体报道一致（11-15 官网仍挂 Ling-3.2-flash 限时优惠）",checked:"2026-11-15"},
   {n:"腾讯云 元宝搜索",cat:"API额度",what:"腾讯把元宝 App 背后的联网搜索对外开放，每个腾讯云账号每自然月 2000 次免费调用；11-30 前在控制台活动专区填邀请码可涨到当月 6000 次",
    how:"腾讯云完成实名认证 → 开通元宝搜索并创建 API Key → 控制台活动专区填邀请码；MCP 地址 api.wsa.cloud.tencent.com/Mcp（请求头带 Bearer 你的 Key），也可直接调 API 或装 SkillHub 的 Skill，三种接入共用同一份额度",
    until:"每月刷新（11-30 前参加活动当月为 6000 次）",url:"https://cloud.tencent.com/product/wsa",
@@ -223,7 +220,11 @@ const DEALS=[
   {n:"腾讯 EdgeOne Makers 内置模型",cat:"API额度",what:"免费版账号每月自动发 50 万 token 内置模型额度，可调 DeepSeek V4 Pro / V4.1 Flash、Kimi K2.6、MiniMax M3、混元 Hy3，注册不绑卡",
    how:"注册 EdgeOne Makers → 控制台 Models 页创建 Models API Key → base_url 换成 Makers 网关、模型名带 @makers/ 前缀（如 @makers/deepseek-v4-pro），兼容 OpenAI / Anthropic SDK，额度同账号所有项目共享",
    until:"每月刷新（商业化后配额可能调整）",url:"https://pages.edgeone.ai/zh/document/limits-and-quotas",
-   src:"EdgeOne 官方文档「限制与配额」「Models 说明」（写明 50 万 token/月）",checked:"2026-11-13"}
+   src:"EdgeOne 官方文档「限制与配额」「Models 说明」（写明 50 万 token/月）",checked:"2026-11-13"},
+{n:"华为云码道 CodeArts",cat:"会员试用",what:"个人版新用户注册登录送 4000 积分，0 元体验版每月再送 500 积分，活动期每日签到还能领 100~200 积分",
+   how:"注册华为云账号 → 下载码道客户端（AI IDE、VS Code / JetBrains 插件任选）→ 首次登录自动到账 4000 积分；每日签到积分在同端活动卡里领，2026-11-06 起个人订阅免实名",
+   until:"长期（赠送积分随官方活动调整）",url:"https://codearts.huaweicloud.com/pricing.html",
+   src:"华为云码道官方定价页（个人版新用户送 4,000 积分）+ 官方更新日志（10-29 多端每日签到领积分）",checked:"2026-11-15"}
 
 ];
 
