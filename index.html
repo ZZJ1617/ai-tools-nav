@@ -781,7 +781,11 @@ const TOOLS=[
 {n:"Content Studio 设计智能体",why:"35 个 skills，一句话出品牌图与短片",c:"设计工具",m:["办公","图像"],d:"LangChain 自家设计团队在跑的设计 agent，已开源（Apache-2.0，617★，2026-10-18 建仓）：丢一句需求和文件，它先读路由 skill 从 35 个流程里挑对路，再产出品牌一致的成品——从改尺寸的广告图、图表、幻灯到 40 秒讲解短片；幻灯片是 HTML、影片是动画时间轴，所以「改一版」等于改代码再渲染，不是重新赌一次抽卡，每个 Slack 线程配一台带 Chrome/FFmpeg 的沙箱。⚠️ 团队部署要有 LangSmith Managed Deep Agents＋Slack＋模型 Key，个人可以本地无 Key 试跑；仓库有简体中文 README，界面仍偏英文",u:"https://github.com/langchain-ai/design-agent",r:4,re:"品牌一致产出",f:1,v:1,q:"开源免费(BYOK)",g:"https://github.com/langchain-ai/design-agent",diff:3,zh:2,hot:2},{n:"书童 Pagekin",why:"免费开源，稿子存本地，模型自配",c:"AI写作",m:["写作"],d:"GPL-3.0 开源的本地小说写作软件（2.6k★，原名 AI Novel Writer，1.4.0 版，Windows/macOS 安装包）：从设定、章节蓝图到正文、审稿、逐段比较修订一路走完一章，也能拆解参考小说仿写、导入原稿续写或按要求改写；软件本身不带模型，接自己的 API Key 或用 Ollama 跑本地，作品只存本机",u:"https://www.orz.md/ai-novel-writer/",r:4,re:"本地长篇写作",f:1,q:"开源免费(BYOK)",g:"https://github.com/EthanYoQ/Pagekin",diff:1,zh:1,hot:2},
 {n:"OpenFic",why:"给长篇小说配 Agent，设定伏笔不丢",c:"AI写作",m:["写作"],d:"Apache-2.0 开源的跨平台小说创作工具（1.3k★，Python，2026-11 仍在更新）：重心是让 Agent 参与而不是一键生成——世界观、角色、伏笔、章节设定长期存在本地，可自定义 Prompt、Agent 与工作流去适配自己的写法；pip install openfic 或装 Release 里的桌面版，模型接自己的 Key（OpenAI/Claude/Gemini/DeepSeek 都行）",u:"https://github.com/syrizelink/OpenFic",r:4,re:"长篇设定管理",f:1,q:"开源免费(BYOK)",g:"https://github.com/syrizelink/OpenFic",diff:2,zh:1,hot:2},
 {n:"open-artifacts",why:"本地跑 Claude Design，出可编辑画板",c:"设计工具",m:["图像","办公"],d:"宝玉把 claude.ai 的 Artifact 类型搬到本地 Agent（6.4k★，原名 baoyu-design，MIT 自研部分，2026-11 改名）：装成 Cursor / Claude Code / Codex / DeepSeek Harness 的 skill，就能在本机生成可编辑的幻灯片、设计画板、设计系统、数据看板、10-30 秒动态短片与白板，每种都配本地编辑器，可导出 PDF/HTML/PNG/PPTX；不上传云端、不另订阅",u:"https://github.com/JimLiu/open-artifacts",r:4,re:"本地Artifact编辑器",f:1,v:1,q:"开源免费",g:"https://github.com/JimLiu/open-artifacts",diff:2,zh:1,hot:2},
-{n:"Freefield",why:"开源版 Higgsfield，120 个特效预设",c:"视频生成",m:["视频","图像"],d:"MIT 开源的「开源版 Higgsfield」（1.3k★）：把电影感运镜、换脸、换装、重打光、日夜转换、对口型等 120 个创意应用，全用开源权重模型重搭在 ComfyUI 上——每个应用是一个文件夹加一份工作流清单，自带示例和显卡占用表；可以放自己的 ComfyUI 跑，也能一键跑在 Modal 上按 GPU 时长付费，不吃订阅、不锁平台",u:"https://github.com/neuregex/freefield",r:4,re:"开源特效预设库",f:1,v:1,q:"开源免费(算力自付)",g:"https://github.com/neuregex/freefield",diff:3,zh:3,hot:2}
+{n:"Freefield",why:"开源版 Higgsfield，120 个特效预设",c:"视频生成",m:["视频","图像"],d:"MIT 开源的「开源版 Higgsfield」（1.3k★）：把电影感运镜、换脸、换装、重打光、日夜转换、对口型等 120 个创意应用，全用开源权重模型重搭在 ComfyUI 上——每个应用是一个文件夹加一份工作流清单，自带示例和显卡占用表；可以放自己的 ComfyUI 跑，也能一键跑在 Modal 上按 GPU 时长付费，不吃订阅、不锁平台",u:"https://github.com/neuregex/freefield",r:4,re:"开源特效预设库",f:1,v:1,q:"开源免费(算力自付)",g:"https://github.com/neuregex/freefield",diff:3,zh:3,hot:2},
+{n:"article2media",why:"一篇文章一键变公众号排版+口播片",c:"AI写作",m:["写作","视频"],d:"MIT 开源的一组 Claude Code / Codex Skill（343★，2026-11-08 建仓，中文原生）：把一篇文章或一条视频做成能直接发的东西——公众号排版、小红书 3:4 图文卡片、手机长图、竖屏口播短视频，另有封面多版、金句图、白板论证图与黑白漫画。10 个能力各自能单用也能串起来：抓取 X 长文/网页/公众号/本地 Markdown，抖音、YouTube、B 站链接先转逐字稿，再改写、翻译、排版出图；口播视频用随包的 6 款本地音色配音、上逐字字幕；每种产出都自动验收，不合格直接报错。⚠️ 只要 Node.js 22 与 Chrome、零 npm 依赖，但渲染全在本机跑，公众号排版最终还得手动粘进编辑器微调",u:"https://github.com/threerocks/article2media",r:4,re:"一篇多平台复用",f:1,q:"开源免费(改写需模型Key)",g:"https://github.com/threerocks/article2media",diff:2,zh:1,hot:2},
+{n:"sand3d",why:"3D 模型写成几百token的Python",c:"3D创作",m:["3D"],d:"Apache-2.0 开源的 Python 3D 建模库（2k★，2026-11-03 建仓，有官网与文档站）：不靠硬编码坐标，而是用「轮廓、实体、编辑、框架、关节、装配」几个动词把物体写成一段短程序，跑在 Blender 的 bpy 上——模型写清的是「这东西怎么做出来的」，几百 token 就能出一件，人和 LLM 都读得懂、改得动，产物可进版本管理。适合让 agent 批量产出参数化零件、家具、机械结构，而不是赌一次性生成的网格。⚠️ 装它等于装 Blender 环境，纯编程无图形界面，做有机造型/雕塑仍得回传统建模工具",u:"https://sandflow.ai/sand3d/",r:4,re:"程序化3D资产",f:1,q:"开源免费",g:"https://github.com/Sandflow-ai/sand3d",diff:3,zh:2,hot:2},
+{n:"ai-video-marker",why:"中文视频全流程，附可跑像素片源",c:"视频生成",m:["视频"],d:"MIT 开源的中文 AI 视频制作工作流（537★，2026-10-25 建仓）：不是又一个生成模型，而是把「创意→分镜→素材→动画→配乐→导出」拆成 9 条内容流程、9 项角色职责与 10 项技能，配 18 个开场文案和 3 个能直接跑的像素动画场景。克隆下来装 requirements 就能出 36 秒机器人短片（720×1280、24fps，不要 API Key、不要私有素材），Pillow 画图 + ffmpeg 编码；看完演示再拿自己的题材让 AI 按同一路线改写分镜与代表段。⚠️ 实跑只在 macOS 通过，Windows/Linux 未实测；它是流程与素材库，成片质感取决于你接的 AI 与后期",u:"https://github.com/Lanqiao-Luca/ai-video-marker",r:3,re:"中文流程模板",f:1,q:"开源免费",g:"https://github.com/Lanqiao-Luca/ai-video-marker",diff:2,zh:1,hot:1},
+{n:"Hikaku",why:"本机识别AI图与视频，不上传图片",c:"工作流Agent",m:["办公"],d:"Apache-2.0 开源的浏览器扩展（394★，Chrome/Edge 116+ 与 Firefox 140+）：边刷网页边给 AI 生成的图片和视频打标，并说明它凭哪条线索判断——元数据、合成纹路、物理上不合理的光影细节。模型全在本机跑，图片不出设备，装上即用、不用注册也不收费。拿来做素材溯源、核查买家秀与新闻配图、给自家内容反向自查都行。⚠️ 判定是概率不是结论，经过压缩或二次截图容易漏判，重要场合仍需人工复核；判定理由偏英文",u:"https://hikaku.io",r:4,re:"本机判定AI图",f:1,q:"开源免费",g:"https://github.com/hikaku-io/hikaku-extension",diff:1,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1021,7 +1025,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 374 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 378 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1398,6 +1402,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/syrizelink/OpenFic" target="_blank" rel="noopener">OpenFic</a> — 给长篇小说配 Agent，设定伏笔不丢 <span class="nb-cat">AI写作</span></li>
       <li><a href="https://github.com/JimLiu/open-artifacts" target="_blank" rel="noopener">open-artifacts</a> — 本地跑 Claude Design，出可编辑画板 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/neuregex/freefield" target="_blank" rel="noopener">Freefield</a> — 开源版 Higgsfield，120 个特效预设 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://github.com/threerocks/article2media" target="_blank" rel="noopener">article2media</a> — 一篇文章一键变公众号排版+口播片 <span class="nb-cat">AI写作</span></li>
+      <li><a href="https://sandflow.ai/sand3d/" target="_blank" rel="noopener">sand3d</a> — 3D 模型写成几百token的Python <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/Lanqiao-Luca/ai-video-marker" target="_blank" rel="noopener">ai-video-marker</a> — 中文视频全流程，附可跑像素片源 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://hikaku.io" target="_blank" rel="noopener">Hikaku</a> — 本机识别AI图与视频，不上传图片 <span class="nb-cat">工作流Agent</span></li>
     </ul>
   </section>
 </noscript>
@@ -1407,7 +1415,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 374,
+ "numberOfItems": 378,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3652,6 +3660,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 374,
    "name": "Freefield",
    "url": "https://github.com/neuregex/freefield"
+  },
+  {
+   "@type": "ListItem",
+   "position": 375,
+   "name": "article2media",
+   "url": "https://github.com/threerocks/article2media"
+  },
+  {
+   "@type": "ListItem",
+   "position": 376,
+   "name": "sand3d",
+   "url": "https://sandflow.ai/sand3d/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 377,
+   "name": "ai-video-marker",
+   "url": "https://github.com/Lanqiao-Luca/ai-video-marker"
+  },
+  {
+   "@type": "ListItem",
+   "position": 378,
+   "name": "Hikaku",
+   "url": "https://hikaku.io"
   }
  ]
 }
