@@ -784,6 +784,11 @@ const TOOLS=[
 {n:"sand3d",why:"3D 模型写成几百token的Python",c:"3D创作",m:["3D"],d:"Apache-2.0 开源的 Python 3D 建模库（2.1k★，2026-11-03 建仓，有官网与文档站）：不靠硬编码坐标，而是用「轮廓、实体、编辑、框架、关节、装配」几个动词把物体写成一段短程序，跑在 Blender 的 bpy 上——模型写清的是「这东西怎么做出来的」，几百 token 就能出一件，人和 LLM 都读得懂、改得动，产物可进版本管理。适合让 agent 批量产出参数化零件、家具、机械结构，而不是赌一次性生成的网格。⚠️ 装它等于装 Blender 环境，纯编程无图形界面，做有机造型/雕塑仍得回传统建模工具",u:"https://sandflow.ai/sand3d/",r:4,re:"程序化3D资产",f:1,q:"开源免费",g:"https://github.com/Sandflow-ai/sand3d",diff:3,zh:2,hot:2},
 {n:"ai-video-marker",why:"中文视频全流程，附可跑像素片源",c:"视频生成",m:["视频"],d:"MIT 开源的中文 AI 视频制作工作流（541★，2026-10-25 建仓）：不是又一个生成模型，而是把「创意→分镜→素材→动画→配乐→导出」拆成 9 条内容流程、9 项角色职责与 10 项技能，配 18 个开场文案和 3 个能直接跑的像素动画场景。克隆下来装 requirements 就能出 36 秒机器人短片（720×1280、24fps，不要 API Key、不要私有素材），Pillow 画图 + ffmpeg 编码；看完演示再拿自己的题材让 AI 按同一路线改写分镜与代表段。⚠️ 实跑只在 macOS 通过，Windows/Linux 未实测；它是流程与素材库，成片质感取决于你接的 AI 与后期",u:"https://github.com/Lanqiao-Luca/ai-video-marker",r:3,re:"中文流程模板",f:1,q:"开源免费",g:"https://github.com/Lanqiao-Luca/ai-video-marker",diff:2,zh:1,hot:1},
 {n:"Hikaku",why:"本机识别AI图与视频，不上传图片",c:"工作流Agent",m:["办公"],d:"Apache-2.0 开源的浏览器扩展（397★，Chrome/Edge 116+ 与 Firefox 140+）：边刷网页边给 AI 生成的图片和视频打标，并说明它凭哪条线索判断——元数据、合成纹路、物理上不合理的光影细节。模型全在本机跑，图片不出设备，装上即用、不用注册也不收费。拿来做素材溯源、核查买家秀与新闻配图、给自家内容反向自查都行。⚠️ 判定是概率不是结论，经过压缩或二次截图容易漏判，重要场合仍需人工复核；判定理由偏英文",u:"https://hikaku.io",r:4,re:"本机判定AI图",f:1,q:"开源免费",g:"https://github.com/hikaku-io/hikaku-extension",diff:1,zh:3,hot:2}
+
+,{n:"Upscayl",why:"52K星，本机放大4倍不传图",c:"设计工具",m:["图像"],d:"AGPL 开源的老照片/低清图放大工具（52.7K★）：Windows/macOS/Linux 装完即用，内置 Real-ESRGAN 等多个模型，最高 4 倍放大并顺手降噪锐化，全程在本机显卡上跑，图片不上传、不收费、无水印。批量拖一整个文件夹也行，拿来做封面图救清晰度、老素材修复、把截图提到可印刷尺寸都合适。界面目前只有英文，模型第一次使用要下载",u:"https://upscayl.org",r:4,re:"本机放大4倍",f:1,q:"开源免费",g:"https://github.com/upscayl/upscayl",diff:1,zh:3,hot:2}
+,{n:"Ultimate Vocal Remover",why:"27K星，一键拆人声和伴奏",c:"音频处理",m:["音频"],d:"MIT 开源的本地人声/伴奏分离工具，俗称 UVR5（27.2K★）：导入整首歌，选 MDX-Net、VR、Demucs 等模型，就能把 vocals 和 instrumental 拆成两条轨，还能进一步分出鼓与贝斯。全程离线跑在自己电脑上，音频不上传、没有次数限制。做翻唱伴奏、提取采样、给短视频找纯音乐垫底都用得上。官方称 UVR6 重建版即将发布，当前装 v5.6 即可；界面英文，模型首次使用要下载",u:"https://ultimatevocalremover.com",r:4,re:"离线拆人声伴奏",f:1,q:"开源免费",g:"https://github.com/Anjok07/ultimatevocalremovergui",diff:2,zh:3,hot:2}
+,{n:"OpenMausBot",why:"24K星，把AI订阅变成团队",c:"Agent框架",m:["Agent"],d:"Apache-2.0 开源的本地多 Agent 工作台（24K★，Grok Bot 的开源替代）：每个「联系人」就是一个真跑在你机器上的 Claude/Codex Agent，各自有独立人格、模型、云电脑和连接的应用，像聊天一样派活，关键动作等你点确认。用你已有的订阅额度跑，不额外买平台；macOS/Windows/Linux 都有安装包。适合一个人同时挂几条工作流——写稿、查资料、改代码各一个「同事」",u:"https://www.openmausbot.com",r:4,re:"聊天式多Agent",f:1,q:"开源免费",g:"https://github.com/milind-soni/OpenMausBot",diff:2,zh:3,hot:2}
+,{n:"Penpot",why:"62K星，可自托管的Figma替代",c:"设计工具",m:["图像"],d:"MPL-2.0 开源的设计协作平台（62.4K★），Figma 的自托管替代：矢量编辑、组件与设计令牌、原型交互都有，设计稿能导出成代码可用的标注；官方支持 AI 工作流与 MCP Server 接入，能把设计系统接进 AI 编码链路。个人与小团队永久免费，也能自己部署到内网。中文界面可用（zh_CN/zh_Hant）",u:"https://penpot.app",r:4,re:"开源Figma替代",f:1,q:"开源免费",g:"https://github.com/penpot/penpot",diff:2,zh:2,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1024,7 +1029,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 376 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 380 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1403,6 +1408,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://sandflow.ai/sand3d/" target="_blank" rel="noopener">sand3d</a> — 3D 模型写成几百token的Python <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/Lanqiao-Luca/ai-video-marker" target="_blank" rel="noopener">ai-video-marker</a> — 中文视频全流程，附可跑像素片源 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://hikaku.io" target="_blank" rel="noopener">Hikaku</a> — 本机识别AI图与视频，不上传图片 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://upscayl.org" target="_blank" rel="noopener">Upscayl</a> — 52K星，本机放大4倍不传图 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://ultimatevocalremover.com" target="_blank" rel="noopener">Ultimate Vocal Remover</a> — 27K星，一键拆人声和伴奏 <span class="nb-cat">音频处理</span></li>
+      <li><a href="https://www.openmausbot.com" target="_blank" rel="noopener">OpenMausBot</a> — 24K星，把AI订阅变成团队 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://penpot.app" target="_blank" rel="noopener">Penpot</a> — 62K星，可自托管的Figma替代 <span class="nb-cat">设计工具</span></li>
     </ul>
   </section>
 </noscript>
@@ -1412,7 +1421,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 376,
+ "numberOfItems": 380,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3669,6 +3678,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 376,
    "name": "Hikaku",
    "url": "https://hikaku.io"
+  },
+  {
+   "@type": "ListItem",
+   "position": 377,
+   "name": "Upscayl",
+   "url": "https://upscayl.org"
+  },
+  {
+   "@type": "ListItem",
+   "position": 378,
+   "name": "Ultimate Vocal Remover",
+   "url": "https://ultimatevocalremover.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 379,
+   "name": "OpenMausBot",
+   "url": "https://www.openmausbot.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 380,
+   "name": "Penpot",
+   "url": "https://penpot.app"
   }
  ]
 }
