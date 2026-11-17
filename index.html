@@ -789,6 +789,10 @@ const TOOLS=[
 ,{n:"Ultimate Vocal Remover",why:"27K星，一键拆人声和伴奏",c:"音频处理",m:["音频"],d:"MIT 开源的本地人声/伴奏分离工具，俗称 UVR5（27.2K★）：导入整首歌，选 MDX-Net、VR、Demucs 等模型，就能把 vocals 和 instrumental 拆成两条轨，还能进一步分出鼓与贝斯。全程离线跑在自己电脑上，音频不上传、没有次数限制。做翻唱伴奏、提取采样、给短视频找纯音乐垫底都用得上。官方称 UVR6 重建版即将发布，当前装 v5.6 即可；界面英文，模型首次使用要下载",u:"https://ultimatevocalremover.com",r:4,re:"离线拆人声伴奏",f:1,q:"开源免费",g:"https://github.com/Anjok07/ultimatevocalremovergui",diff:2,zh:3,hot:2}
 ,{n:"OpenMausBot",why:"24K星，把AI订阅变成团队",c:"Agent框架",m:["Agent"],d:"Apache-2.0 开源的本地多 Agent 工作台（24K★，Grok Bot 的开源替代）：每个「联系人」就是一个真跑在你机器上的 Claude/Codex Agent，各自有独立人格、模型、云电脑和连接的应用，像聊天一样派活，关键动作等你点确认。用你已有的订阅额度跑，不额外买平台；macOS/Windows/Linux 都有安装包。适合一个人同时挂几条工作流——写稿、查资料、改代码各一个「同事」",u:"https://www.openmausbot.com",r:4,re:"聊天式多Agent",f:1,q:"开源免费",g:"https://github.com/milind-soni/OpenMausBot",diff:2,zh:3,hot:2}
 ,{n:"Penpot",why:"62K星，可自托管的Figma替代",c:"设计工具",m:["图像"],d:"MPL-2.0 开源的设计协作平台（62.4K★），Figma 的自托管替代：矢量编辑、组件与设计令牌、原型交互都有，设计稿能导出成代码可用的标注；官方支持 AI 工作流与 MCP Server 接入，能把设计系统接进 AI 编码链路。个人与小团队永久免费，也能自己部署到内网。中文界面可用（zh_CN/zh_Hant）",u:"https://penpot.app",r:4,re:"开源Figma替代",f:1,q:"开源免费",g:"https://github.com/penpot/penpot",diff:2,zh:2,hot:2}
+,{n:"51 Video Effects",why:"51个特效口令，拖片进Claude就出",c:"视频编辑",m:["视频"],d:"MIT 免费的视频特效技能包（1K★）：装进 Claude Code 后，把口播片拖进对话，输入 /effects orbit、spotlight、reject-stamp 这类口令，它先抽几帧确认人脸位置、避开挡脸，再做人脸跟踪跟随、背后图层、大字幕、贴纸进度条等 51 种竖屏特效，原声不动直接渲染 mp4，还能一个视频叠多个特效。首次运行自己装 ffmpeg 和 Python，不用配模型 Key、不耗额度；特效名全英文",u:"https://github.com/Vibha-Ramprakash/claude-video-effects",r:4,re:"免Key竖屏特效",f:1,q:"永久免费",g:"https://github.com/Vibha-Ramprakash/claude-video-effects",diff:2,zh:3,hot:2}
+,{n:"Ghost Editor",why:"MIT开源，原片直出成品reel",c:"视频编辑",m:["视频"],d:"MIT 开源的口播剪片技能（593★）：把两三分钟的原始口播丢给 Claude Code，说一句「剪成 Clean OS 风格」，它自己挑掉每条台词里最好的那一遍、删口误和长停顿，再上字幕、音效和 B-roll，先给你一页「每刀一帧」的确认页，点头后才渲染成 30 秒竖屏成品，30 多套风格可选。渲染在 Mac 上跑；B-roll 画面校验要一个免费 Gemini Key（可跳过），预置风格不填也能用",u:"https://github.com/kurbaitaev/ghost-editor",r:4,re:"原片直出reel",f:1,q:"开源免费",g:"https://github.com/kurbaitaev/ghost-editor",diff:3,zh:3,hot:2}
+,{n:"kk-mix 批量混剪",why:"文件夹进文件夹出，整批出片",c:"视频编辑",m:["视频"],d:"MIT 开源的 Windows 批量视频处理工具（504★）：不搞时间线，指向文件夹选一个动作就整批出片——交叉拼接（5 个文件夹各 20 条，一次出 20 条互不重复的视频）、批量加标题/水印、裁 9:16、压码率、固定时长切条、分屏合并、画中画，20 种转场加配乐淡入淡出，全程本机 FFmpeg。中英双语界面，可打成内嵌 FFmpeg 的便携版免装环境；配音拼接功能要另接自建 Index-TTS 服务",u:"https://github.com/jaikydota/kk-mix",r:4,re:"整文件夹批量剪",f:1,q:"开源免费",g:"https://github.com/jaikydota/kk-mix",diff:1,zh:1,hot:2}
+,{n:"Andee",why:"6K星，让AI直接操作手机App",c:"Agent框架",m:["Agent"],d:"Apache-2.0 开源的设备级 Agent（6.1K★）：一个 APK 装进 Android 8.1+ 手机（或 macOS 14+ 桌面端），给个悬浮窗和无障碍权限，它就照你说的像人一样点按任意 App——发消息、查订单、走流程，不用等各家开放接口、不用 Root、不用刷机。模型自带任意 Key 即可，记忆和密码只留本机；官方另有一键在线打包，新账号送体验额度。中英双语界面、有中文 README",u:"https://heyandee.com",r:4,re:"直接操作手机App",f:1,q:"开源免费，模型自备",g:"https://github.com/kuafuai/andee",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1029,7 +1033,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 380 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 384 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1412,6 +1416,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://ultimatevocalremover.com" target="_blank" rel="noopener">Ultimate Vocal Remover</a> — 27K星，一键拆人声和伴奏 <span class="nb-cat">音频处理</span></li>
       <li><a href="https://www.openmausbot.com" target="_blank" rel="noopener">OpenMausBot</a> — 24K星，把AI订阅变成团队 <span class="nb-cat">Agent框架</span></li>
       <li><a href="https://penpot.app" target="_blank" rel="noopener">Penpot</a> — 62K星，可自托管的Figma替代 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/Vibha-Ramprakash/claude-video-effects" target="_blank" rel="noopener">51 Video Effects</a> — 51个特效口令，拖片进Claude就出 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/kurbaitaev/ghost-editor" target="_blank" rel="noopener">Ghost Editor</a> — MIT开源，原片直出成品reel <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/jaikydota/kk-mix" target="_blank" rel="noopener">kk-mix 批量混剪</a> — 文件夹进文件夹出，整批出片 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://heyandee.com" target="_blank" rel="noopener">Andee</a> — 6K星，让AI直接操作手机App <span class="nb-cat">Agent框架</span></li>
     </ul>
   </section>
 </noscript>
@@ -1421,7 +1429,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 380,
+ "numberOfItems": 384,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3702,6 +3710,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 380,
    "name": "Penpot",
    "url": "https://penpot.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 381,
+   "name": "51 Video Effects",
+   "url": "https://github.com/Vibha-Ramprakash/claude-video-effects"
+  },
+  {
+   "@type": "ListItem",
+   "position": 382,
+   "name": "Ghost Editor",
+   "url": "https://github.com/kurbaitaev/ghost-editor"
+  },
+  {
+   "@type": "ListItem",
+   "position": 383,
+   "name": "kk-mix 批量混剪",
+   "url": "https://github.com/jaikydota/kk-mix"
+  },
+  {
+   "@type": "ListItem",
+   "position": 384,
+   "name": "Andee",
+   "url": "https://heyandee.com"
   }
  ]
 }
