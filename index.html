@@ -792,6 +792,10 @@ const TOOLS=[
 ,{n:"Ghost Editor",why:"MIT开源，原片直出成品reel",c:"视频编辑",m:["视频"],d:"MIT 开源的口播剪片技能（593★）：把两三分钟的原始口播丢给 Claude Code，说一句「剪成 Clean OS 风格」，它自己挑掉每条台词里最好的那一遍、删口误和长停顿，再上字幕、音效和 B-roll，先给你一页「每刀一帧」的确认页，点头后才渲染成 30 秒竖屏成品，30 多套风格可选。渲染在 Mac 上跑；B-roll 画面校验要一个免费 Gemini Key（可跳过），预置风格不填也能用",u:"https://github.com/kurbaitaev/ghost-editor",r:4,re:"原片直出reel",f:1,q:"开源免费",g:"https://github.com/kurbaitaev/ghost-editor",diff:3,zh:3,hot:2}
 ,{n:"kk-mix 批量混剪",why:"文件夹进文件夹出，整批出片",c:"视频编辑",m:["视频"],d:"MIT 开源的 Windows 批量视频处理工具（504★）：不搞时间线，指向文件夹选一个动作就整批出片——交叉拼接（5 个文件夹各 20 条，一次出 20 条互不重复的视频）、批量加标题/水印、裁 9:16、压码率、固定时长切条、分屏合并、画中画，20 种转场加配乐淡入淡出，全程本机 FFmpeg。中英双语界面，可打成内嵌 FFmpeg 的便携版免装环境；配音拼接功能要另接自建 Index-TTS 服务",u:"https://github.com/jaikydota/kk-mix",r:4,re:"整文件夹批量剪",f:1,q:"开源免费",g:"https://github.com/jaikydota/kk-mix",diff:1,zh:1,hot:2}
 ,{n:"Andee",why:"6K星，让AI直接操作手机App",c:"Agent框架",m:["Agent"],d:"Apache-2.0 开源的设备级 Agent（6.1K★）：一个 APK 装进 Android 8.1+ 手机（或 macOS 14+ 桌面端），给个悬浮窗和无障碍权限，它就照你说的像人一样点按任意 App——发消息、查订单、走流程，不用等各家开放接口、不用 Root、不用刷机。模型自带任意 Key 即可，记忆和密码只留本机；官方另有一键在线打包，新账号送体验额度。中英双语界面、有中文 README",u:"https://heyandee.com",r:4,re:"直接操作手机App",f:1,q:"开源免费，模型自备",g:"https://github.com/kuafuai/andee",diff:2,zh:1,hot:2}
+,{n:"dsh-superagent",why:"听 GitHub 派活，自己干完开 PR",c:"Agent框架",m:["Agent"],d:"DeepSeek 团队开源的研究原型（MIT，23.8k★）：作为 DeepSeek Harness 的插件挂在一个仓库上，监听 GitHub（可选飞书），有人派活就自己开工作项、在独立会话和目录里做完，回到原对话里交 PR 或结论，另有一个面板列出要人拍板的事。仓库自述是研究代码、非官方产品，风格与工程实践可能不一致，用前先读代码；模型走 Harness 侧配置",u:"https://github.com/deepseek-ai/dsh-superagent-prototype",r:4,re:"官方团队原型",f:1,q:"开源免费",g:"https://github.com/deepseek-ai/dsh-superagent-prototype",diff:3,zh:2,hot:3}
+,{n:"AnyModelBot",why:"机器人跑本机，微信飞书直接找它",c:"Agent框架",m:["Agent"],d:"MIT 开源的本地优先机器人团队（4.6k★）：装在自己电脑（Win/macOS/Linux，也可 Docker），给每个机器人定人设、换模型（GPT/Claude/Gemini/DeepSeek/Kimi/GLM 等 70+），它能读写工作区、跑命令、操作电脑，从 App 里或微信、飞书直接对话，带记忆和待办。App 本身免费开源，模型走 Modelflare 按量付费，注册送 $1 额度；官方说明电脑关机即离线，要 7×24 得用 Docker",u:"https://anymodel.bot/",r:4,re:"本地机器人团队",f:1,q:"注册送 $1 额度（模型按量付费）",g:"https://github.com/modelflare-ai/AnyModelBot",diff:2,zh:1,hot:2}
+,{n:"Idol",why:"一张图出 3D 高斯，8GB 显存能跑",c:"3D创作",m:["3D"],d:"Speridlabs 开源的单图转 3D 高斯模型（Apache-2.0，1.2k★）：0.66B 参数，吃一张照片、渲染图或模型生成图，自动抠背景居中，连照片没拍到的侧面一起补，输出 3.3 万到 105 万高斯点云；RTX 5090 上 26 万点约 14 秒，8GB 显存即可，权重与训练数据都在 Hugging Face，Space 上有 90 多个例子能换成自己的图试",u:"https://speridlabs.com/research/idol",r:4,re:"单图出3DGS",f:1,q:"HF Space 免费试用",g:"https://github.com/speridlabs/idol-sdk",diff:3,zh:3,hot:2,v:1}
+,{n:"PeakCut",why:"直播还在播，就切出竖屏高光",c:"视频编辑",m:["视频"],d:"MIT 开源自托管的长视频/直播切片（985★）：贴 YouTube/Twitch/Kick 链接或上传文件，转写后让 AI 挑能留住陌生人的片段，裁 9:16、加逐词字幕和开头钩子，可连账号直接发；直播时录成滚动缓冲，按响度、聊天活跃度和转写实时切，多频道按创作者分工作区、各有设置和日志。自己填 AI Key，跑在自己电脑或服务器，素材不过第三方",u:"https://github.com/haziqahmedqasmi/PeakCut",r:4,re:"直播实时切片",f:1,q:"开源免费（BYOK）",g:"https://github.com/haziqahmedqasmi/PeakCut",diff:2,zh:3,hot:2,v:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1032,7 +1036,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 384 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 388 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1419,6 +1423,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://github.com/kurbaitaev/ghost-editor" target="_blank" rel="noopener">Ghost Editor</a> — MIT开源，原片直出成品reel <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://github.com/jaikydota/kk-mix" target="_blank" rel="noopener">kk-mix 批量混剪</a> — 文件夹进文件夹出，整批出片 <span class="nb-cat">视频编辑</span></li>
       <li><a href="https://heyandee.com" target="_blank" rel="noopener">Andee</a> — 6K星，让AI直接操作手机App <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/deepseek-ai/dsh-superagent-prototype" target="_blank" rel="noopener">dsh-superagent</a> — 听 GitHub 派活，自己干完开 PR <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://anymodel.bot/" target="_blank" rel="noopener">AnyModelBot</a> — 机器人跑本机，微信飞书直接找它 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://speridlabs.com/research/idol" target="_blank" rel="noopener">Idol</a> — 一张图出 3D 高斯，8GB 显存能跑 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/haziqahmedqasmi/PeakCut" target="_blank" rel="noopener">PeakCut</a> — 直播还在播，就切出竖屏高光 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -1428,7 +1436,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 384,
+ "numberOfItems": 388,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3733,6 +3741,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 384,
    "name": "Andee",
    "url": "https://heyandee.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 385,
+   "name": "dsh-superagent",
+   "url": "https://github.com/deepseek-ai/dsh-superagent-prototype"
+  },
+  {
+   "@type": "ListItem",
+   "position": 386,
+   "name": "AnyModelBot",
+   "url": "https://anymodel.bot/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 387,
+   "name": "Idol",
+   "url": "https://speridlabs.com/research/idol"
+  },
+  {
+   "@type": "ListItem",
+   "position": 388,
+   "name": "PeakCut",
+   "url": "https://github.com/haziqahmedqasmi/PeakCut"
   }
  ]
 }
