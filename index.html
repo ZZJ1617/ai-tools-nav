@@ -797,6 +797,11 @@ const TOOLS=[
 ,{n:"AnyModelBot",why:"机器人跑本机，微信飞书直接找它",c:"Agent框架",m:["Agent"],d:"MIT 开源的本地优先机器人团队（4.6k★）：装在自己电脑（Win/macOS/Linux，也可 Docker），给每个机器人定人设、换模型（GPT/Claude/Gemini/DeepSeek/Kimi/GLM 等 70+），它能读写工作区、跑命令、操作电脑，从 App 里或微信、飞书直接对话，带记忆和待办。App 本身免费开源，模型走 Modelflare 按量付费，注册送 $1 额度；官方说明电脑关机即离线，要 7×24 得用 Docker",u:"https://anymodel.bot/",r:4,re:"本地机器人团队",f:1,q:"注册送 $1 额度（模型按量付费）",g:"https://github.com/modelflare-ai/AnyModelBot",diff:2,zh:1,hot:2}
 ,{n:"Idol",why:"一张图出 3D 高斯，8GB 显存能跑",c:"3D创作",m:["3D"],d:"Speridlabs 开源的单图转 3D 高斯模型（Apache-2.0，1.2k★）：0.66B 参数，吃一张照片、渲染图或模型生成图，自动抠背景居中，连照片没拍到的侧面一起补，输出 3.3 万到 105 万高斯点云；RTX 5090 上 26 万点约 14 秒，8GB 显存即可，权重与训练数据都在 Hugging Face，Space 上有 90 多个例子能换成自己的图试",u:"https://speridlabs.com/research/idol",r:4,re:"单图出3DGS",f:1,q:"HF Space 免费试用",g:"https://github.com/speridlabs/idol-sdk",diff:3,zh:3,hot:2,v:1}
 ,{n:"PeakCut",why:"直播还在播，就切出竖屏高光",c:"视频编辑",m:["视频"],d:"MIT 开源自托管的长视频/直播切片（985★）：贴 YouTube/Twitch/Kick 链接或上传文件，转写后让 AI 挑能留住陌生人的片段，裁 9:16、加逐词字幕和开头钩子，可连账号直接发；直播时录成滚动缓冲，按响度、聊天活跃度和转写实时切，多频道按创作者分工作区、各有设置和日志。自己填 AI Key，跑在自己电脑或服务器，素材不过第三方",u:"https://github.com/haziqahmedqasmi/PeakCut",r:4,re:"直播实时切片",f:1,q:"开源免费（BYOK）",g:"https://github.com/haziqahmedqasmi/PeakCut",diff:2,zh:3,hot:2,v:1}
+,{n:"连镜",why:"小说剧本自动拆分镜，画布连成片",c:"AI短剧",m:["视频"],d:"MIT 开源的 AI 视觉创作平台（254★）：导入剧本或小说，自动拆出角色和分镜，在无限画布上把图片、视频、音频节点连成生成流程；账号、积分、模型渠道、用量记录和操作审计都在后台，Docker 一条命令部署给团队用。模型接入做成插件（内置二十多个协议，也能上传自己的），渠道密钥加密存放只写不可读，画布 Agent 单独跑不持密钥。官方有在线体验站可先摸一遍",u:"https://canvas.vbing.site",r:4,re:"可多人自托管",f:1,q:"开源+自部署（模型自备）",g:"https://github.com/zaylora/video-canvas",diff:2,zh:1,hot:2}
+,{n:"flow-mcp",why:"拿 Google 账号每天 50 积分喂 Flow",c:"视频生成",m:["视频","Agent"],d:"源码公开的 MCP 小程序（691★）：在本机开一个专用 Chrome，用你已登录的 Google 会话去点 Flow 的真实按钮，Claude、Codex 或它自带的控制面板下指令就能出片，不装浏览器扩展、不走按次计费的视频 API。Flow 每个 Google 账号每天 50 积分，有付费 Google AI 计划还能下 1080p；配音可选 Google AI Studio 免费 key，字幕用 whisper.cpp 本地出。只支持 Mac 和 Windows（Windows 未充分实机验证），跑的时候电脑不能休眠",u:"https://github.com/GTAI-1/flow-mcp",r:3,re:"吃Flow免费额度",f:1,q:"Flow 每天 50 积分（Google 账号）",g:"https://github.com/GTAI-1/flow-mcp",diff:3,zh:3,hot:2,v:1}
+,{n:"SoduWork",why:"几套 Agent 引擎，一个工作台派活签收",c:"Agent框架",m:["Agent"],d:"MIT 开源自托管的工作引擎（3.8k★）：把 Pi、OpenCode、DeepSeek Harness、Qwen Code、Kimi Code、Codex 等多个 harness 和多个 agent 放进同一个工作台，一条请求要到提需求的人签收才算完，不是聊完就散。macOS/Linux 跑 start.sh --desktop，Windows 有 start.cmd，带中文文档和在线 demo，模型用自己的",u:"https://www.soduwork.ai",r:4,re:"多harness统一",f:1,q:"开源免费（模型自备）",g:"https://github.com/mdiri-ai/SoduWork",diff:3,zh:1,hot:3}
+,{n:"Speech Studio",why:"装完就能离线克隆声音朗读",c:"音频生成",m:["音频"],d:"本地离线的语音工作室（315★）：Rust 加原生 C++ 引擎写的应用，Windows、macOS 苹果芯片、Linux 都有安装包，模型和运行时由程序自己一键下载，不用装 Python。内置六套引擎（Higgs Audio v3、Fish Audio Drama 3、Audio8、Supertonic 3、Qwen3-TTS 等），能克隆声音、按角色换引擎，录好的音也能转文字并分出说话人，还自带 OpenAI 兼容接口给别的工具调用。对俄语最讲究，中文走 Qwen3-TTS；NVIDIA 显卡体验最好",u:"https://github.com/timoncool/speech-studio",r:3,re:"原生离线TTS",f:1,q:"免费（本地离线，不限额）",g:"https://github.com/timoncool/speech-studio",diff:2,zh:1,hot:1}
+,{n:"SOMA",why:"跟 Agent 对话，改的是真 CAD 代码",c:"3D创作",m:["3D"],d:"GPL-3.0 的桌面 CAD（494★）：你说要做什么，接进来的 coding agent 用 Python 的 CadQuery 把模型写成代码，SOMA 每次改动都重建 3D 视图，你可以量尺寸、指着不对的地方继续让 agent 改，每一版都有 Git 记录。适合外壳、支架、转接件这类小零件，官网页有 Mac、Windows、Linux 安装包和视频教程，agent 用你自己的 Claude Code、Codex 之类",u:"https://somacad.app",r:3,re:"Agent写CAD",f:1,q:"开源免费（Agent 模型自备）",g:"https://github.com/Kai-Jungsthoefel/SOMA",diff:3,zh:2,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1037,7 +1042,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 388 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 393 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1428,6 +1433,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://anymodel.bot/" target="_blank" rel="noopener">AnyModelBot</a> — 机器人跑本机，微信飞书直接找它 <span class="nb-cat">Agent框架</span></li>
       <li><a href="https://speridlabs.com/research/idol" target="_blank" rel="noopener">Idol</a> — 一张图出 3D 高斯，8GB 显存能跑 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/haziqahmedqasmi/PeakCut" target="_blank" rel="noopener">PeakCut</a> — 直播还在播，就切出竖屏高光 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://canvas.vbing.site" target="_blank" rel="noopener">连镜</a> — 小说剧本自动拆分镜，画布连成片 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://github.com/GTAI-1/flow-mcp" target="_blank" rel="noopener">flow-mcp</a> — 拿 Google 账号每天 50 积分喂 Flow <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://www.soduwork.ai" target="_blank" rel="noopener">SoduWork</a> — 几套 Agent 引擎，一个工作台派活签收 <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/timoncool/speech-studio" target="_blank" rel="noopener">Speech Studio</a> — 装完就能离线克隆声音朗读 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://somacad.app" target="_blank" rel="noopener">SOMA</a> — 跟 Agent 对话，改的是真 CAD 代码 <span class="nb-cat">3D创作</span></li>
     </ul>
   </section>
 </noscript>
@@ -1437,7 +1447,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 388,
+ "numberOfItems": 393,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3766,6 +3776,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 388,
    "name": "PeakCut",
    "url": "https://github.com/haziqahmedqasmi/PeakCut"
+  },
+  {
+   "@type": "ListItem",
+   "position": 389,
+   "name": "连镜",
+   "url": "https://canvas.vbing.site"
+  },
+  {
+   "@type": "ListItem",
+   "position": 390,
+   "name": "flow-mcp",
+   "url": "https://github.com/GTAI-1/flow-mcp"
+  },
+  {
+   "@type": "ListItem",
+   "position": 391,
+   "name": "SoduWork",
+   "url": "https://www.soduwork.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 392,
+   "name": "Speech Studio",
+   "url": "https://github.com/timoncool/speech-studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 393,
+   "name": "SOMA",
+   "url": "https://somacad.app"
   }
  ]
 }
