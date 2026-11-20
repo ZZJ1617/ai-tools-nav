@@ -801,6 +801,11 @@ const TOOLS=[
 ,{n:"SoduWork",why:"几套 Agent 引擎，一个工作台派活签收",c:"Agent框架",m:["Agent"],d:"MIT 开源自托管的工作引擎（3.8k★）：把 Pi、OpenCode、DeepSeek Harness、Qwen Code、Kimi Code、Codex 等多个 harness 和多个 agent 放进同一个工作台，一条请求要到提需求的人签收才算完，不是聊完就散。macOS/Linux 跑 start.sh --desktop，Windows 有 start.cmd，带中文文档和在线 demo，模型用自己的",u:"https://www.soduwork.ai",r:4,re:"多harness统一",f:1,q:"开源免费（模型自备）",g:"https://github.com/mdiri-ai/SoduWork",diff:3,zh:1,hot:3}
 ,{n:"Speech Studio",why:"装完就能离线克隆声音朗读",c:"音频生成",m:["音频"],d:"本地离线的语音工作室（315★）：Rust 加原生 C++ 引擎写的应用，Windows、macOS 苹果芯片、Linux 都有安装包，模型和运行时由程序自己一键下载，不用装 Python。内置六套引擎（Higgs Audio v3、Fish Audio Drama 3、Audio8、Supertonic 3、Qwen3-TTS 等），能克隆声音、按角色换引擎，录好的音也能转文字并分出说话人，还自带 OpenAI 兼容接口给别的工具调用。对俄语最讲究，中文走 Qwen3-TTS；NVIDIA 显卡体验最好",u:"https://github.com/timoncool/speech-studio",r:3,re:"原生离线TTS",f:1,q:"免费（本地离线，不限额）",g:"https://github.com/timoncool/speech-studio",diff:2,zh:1,hot:1}
 ,{n:"SOMA",why:"跟 Agent 对话，改的是真 CAD 代码",c:"3D创作",m:["3D"],d:"GPL-3.0 的桌面 CAD（494★）：你说要做什么，接进来的 coding agent 用 Python 的 CadQuery 把模型写成代码，SOMA 每次改动都重建 3D 视图，你可以量尺寸、指着不对的地方继续让 agent 改，每一版都有 Git 记录。适合外壳、支架、转接件这类小零件，官网页有 Mac、Windows、Linux 安装包和视频教程，agent 用你自己的 Claude Code、Codex 之类",u:"https://somacad.app",r:3,re:"Agent写CAD",f:1,q:"开源免费（Agent 模型自备）",g:"https://github.com/Kai-Jungsthoefel/SOMA",diff:3,zh:2,hot:1}
+,{n:"NeonClipping",why:"贴个链接就出 9:16 切片，全程本地",c:"视频编辑",m:["视频"],d:"MIT 开源的本地切片工具（985★，11-19 发布）：贴 YouTube、Twitch、Kick 链接或自己的 MP4，先只下音频，按响度突变、抬嗓、关键词和画面动作挑高光，再让本地 Ollama 写标题和钩子，最后只下载选中的那几段、烧字幕输出 1080×1920。不登录不上传，作者实测 85 分钟直播 97 秒出 3 条片",u:"https://iamajmeena.github.io/neonclipping/",r:4,re:"本地极速切片",f:1,q:"开源免费（本地跑，不限额）",g:"https://github.com/iamajmeena/neonclipping",diff:2,zh:3,hot:2}
+,{n:"Scarlet",why:"用嘴改剪辑点，只重渲染改动那几秒",c:"视频编辑",m:["视频"],d:"MIT 开源的桌面剪辑器（439★，11-13 发布，Mac/Windows/Linux 都有安装包）：接上自己的 Claude Code 或 Codex，用打字、按 V 说话、在画面上圈画的方式改剪辑单，Scarlet 只重渲染受影响的那几秒，随时 A/B 试听两版，原素材不动、每版改动都有记录。口播、访谈、播客、屏幕演示这类对话素材最省事",u:"https://github.com/Forward-Future/scarlet",r:3,re:"对话式剪辑",f:1,q:"开源免费（Agent 模型自备）",g:"https://github.com/Forward-Future/scarlet",diff:2,zh:3,hot:2}
+,{n:"麦田 Maitian",why:"一期内容发六个平台，数据自动回填大屏",c:"办公效率",m:["办公"],d:"MIT 开源的自媒体工作台（1.7k★）：把一期视频排进分发日历，到点由 Chrome 插件分批填好 B站、抖音、小红书、视频号、YouTube、X、Instagram 的文案与封面（国内四家只填不发，最后一下自己点），发完自动回填链接；播放、互动、粉丝每天采，手机看大屏、飞书群推卡片，还能接自己的站点算哪一期带来注册和收入。不存平台密码，跑在一台常开的 Mac 上",u:"https://maitian.mdldm.club",r:4,re:"分发复盘闭环",f:1,q:"开源免费（自托管）",g:"https://github.com/CzzzzzzJ/mdldm-maitian",diff:2,zh:1,hot:3}
+,{n:"Ink Studio",why:"写 JS 就能捏出会动会碎的像素 3D",c:"3D创作",m:["3D"],d:"MIT 开源的 JavaScript 3D 工具包（794★）：把有符号距离场捏成实体、烘焙成像素风高斯泼溅，再让它动、反应、碎裂、生长，并记住发生过什么。内置几何、材质、灯光、动画、角色控制、粒子、物理和程序化生成，场景用 JS 或 JSON 写，CLI 在 CPU 上直接渲图，也能放进浏览器用 WebGL 2 实时画，支持导入网格、导出 GLB",u:"https://github.com/siliconjungle/shapeshift-labs-ink-studio",r:3,re:"像素高斯泼溅",f:1,q:"开源免费（MIT）",g:"https://github.com/siliconjungle/shapeshift-labs-ink-studio",diff:3,zh:3,hot:2}
+,{n:"Parallax",why:"图/视频/声音一间屋，agent 自己接活",c:"图像生成",m:["图像","视频","音频"],d:"MIT 开源的本地多模态工作室（227★，11-13 发布）：图片、视频、配音、音乐四个 studio，加社区流、素材库、积分和一个会自己排活的 agent，数据库就一个 SQLite 文件，npm run dev 就能把整站点通，没配 key 时每个模型回内置样片。真出片要自己填一个网关 key，39 个模型在生成前就标好价",u:"https://github.com/nickvasilescu/parallax",r:3,re:"一套Studio全模态",f:1,q:"开源免费（出片需自配网关key）",g:"https://github.com/nickvasilescu/parallax",diff:2,zh:3,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1041,7 +1046,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 393 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 398 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1437,6 +1442,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://www.soduwork.ai" target="_blank" rel="noopener">SoduWork</a> — 几套 Agent 引擎，一个工作台派活签收 <span class="nb-cat">Agent框架</span></li>
       <li><a href="https://github.com/timoncool/speech-studio" target="_blank" rel="noopener">Speech Studio</a> — 装完就能离线克隆声音朗读 <span class="nb-cat">音频生成</span></li>
       <li><a href="https://somacad.app" target="_blank" rel="noopener">SOMA</a> — 跟 Agent 对话，改的是真 CAD 代码 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://iamajmeena.github.io/neonclipping/" target="_blank" rel="noopener">NeonClipping</a> — 贴个链接就出 9:16 切片，全程本地 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/Forward-Future/scarlet" target="_blank" rel="noopener">Scarlet</a> — 用嘴改剪辑点，只重渲染改动那几秒 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://maitian.mdldm.club" target="_blank" rel="noopener">麦田 Maitian</a> — 一期内容发六个平台，数据自动回填大屏 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://github.com/siliconjungle/shapeshift-labs-ink-studio" target="_blank" rel="noopener">Ink Studio</a> — 写 JS 就能捏出会动会碎的像素 3D <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/nickvasilescu/parallax" target="_blank" rel="noopener">Parallax</a> — 图/视频/声音一间屋，agent 自己接活 <span class="nb-cat">图像生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1446,7 +1456,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 393,
+ "numberOfItems": 398,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3805,6 +3815,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 393,
    "name": "SOMA",
    "url": "https://somacad.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 394,
+   "name": "NeonClipping",
+   "url": "https://iamajmeena.github.io/neonclipping/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 395,
+   "name": "Scarlet",
+   "url": "https://github.com/Forward-Future/scarlet"
+  },
+  {
+   "@type": "ListItem",
+   "position": 396,
+   "name": "麦田 Maitian",
+   "url": "https://maitian.mdldm.club"
+  },
+  {
+   "@type": "ListItem",
+   "position": 397,
+   "name": "Ink Studio",
+   "url": "https://github.com/siliconjungle/shapeshift-labs-ink-studio"
+  },
+  {
+   "@type": "ListItem",
+   "position": 398,
+   "name": "Parallax",
+   "url": "https://github.com/nickvasilescu/parallax"
   }
  ]
 }
