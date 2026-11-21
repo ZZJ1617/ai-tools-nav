@@ -805,7 +805,10 @@ const TOOLS=[
 ,{n:"麦田 Maitian",why:"一期内容发六个平台，数据自动回填大屏",c:"办公效率",m:["办公"],d:"MIT 开源的自媒体工作台（1.7k★）：把一期视频排进分发日历，到点由 Chrome 插件分批填好 B站、抖音、小红书、视频号、YouTube、X、Instagram 的文案与封面（国内四家只填不发，最后一下自己点），发完自动回填链接；播放、互动、粉丝每天采，手机看大屏、飞书群推卡片，还能接自己的站点算哪一期带来注册和收入。不存平台密码，跑在一台常开的 Mac 上",u:"https://maitian.mdldm.club",r:4,re:"分发复盘闭环",f:1,q:"开源免费（自托管）",g:"https://github.com/CzzzzzzJ/mdldm-maitian",diff:2,zh:1,hot:3}
 ,{n:"Ink Studio",why:"写 JS 就能捏出会动会碎的像素 3D",c:"3D创作",m:["3D"],d:"MIT 开源的 JavaScript 3D 工具包（794★）：把有符号距离场捏成实体、烘焙成像素风高斯泼溅，再让它动、反应、碎裂、生长，并记住发生过什么。内置几何、材质、灯光、动画、角色控制、粒子、物理和程序化生成，场景用 JS 或 JSON 写，CLI 在 CPU 上直接渲图，也能放进浏览器用 WebGL 2 实时画，支持导入网格、导出 GLB",u:"https://github.com/siliconjungle/shapeshift-labs-ink-studio",r:3,re:"像素高斯泼溅",f:1,q:"开源免费（MIT）",g:"https://github.com/siliconjungle/shapeshift-labs-ink-studio",diff:3,zh:3,hot:2}
 ,{n:"Parallax",why:"图/视频/声音一间屋，agent 自己接活",c:"图像生成",m:["图像","视频","音频"],d:"MIT 开源的本地多模态工作室（227★，11-13 发布）：图片、视频、配音、音乐四个 studio，加社区流、素材库、积分和一个会自己排活的 agent，数据库就一个 SQLite 文件，npm run dev 就能把整站点通，没配 key 时每个模型回内置样片。真出片要自己填一个网关 key，39 个模型在生成前就标好价",u:"https://github.com/nickvasilescu/parallax",r:3,re:"一套Studio全模态",f:1,q:"开源免费（出片需自配网关key）",g:"https://github.com/nickvasilescu/parallax",diff:2,zh:3,hot:1}
-];
+
+,{n:"Yogurt",why:"开完会纪要在本机生成",c:"办公效率",m:["办公"],d:"MIT 开源的本地会议纪要（2.8k★，Windows/Mac/Linux 都有安装包）：不往会议里派机器人，直接录麦克风和系统声音，在本机用 whisper.cpp 转写（99 种语言，中途换语言也跟得住），按 Zoom/Teams/Meet 的发言人分开记名，再让本地模型归纳要点、跨会议问答。装好模型后可完全离线，不用注册账号",u:"https://yogurt.so",r:3,re:"本地无bot纪要",f:1,q:"开源免费（本地跑，不限额）",g:"https://github.com/FrigadeHQ/yogurt",diff:1,zh:2,hot:2}
+,{n:"MR Office",why:"浏览器里的Office，编辑器全开源",c:"办公效率",m:["办公"],d:"AGPL-3.0 开源的在线办公编辑器（1.4k★）：Word、Excel、PowerPoint、PDF、手写、代码六套编辑器都在这套源码里，浏览器打开就能用，可自建也可嵌进自己的产品。⚠️ 开源的是编辑器本体，读写 .docx/.xlsx/.pptx 真文件走官方托管（免费额度 localhost 每月 1000 次会话、自有域名 100 次）",u:"https://mroffice.ai",r:3,re:"开源在线办公",f:1,q:"开源免费（编辑器；托管嵌入有免费额度）",g:"https://github.com/XinaTian/MROffice",diff:2,zh:2,hot:2}
+,{n:"Quiet.md",why:"Rust原生笔记，百万字不卡",c:"办公效率",m:["办公","写作"],d:"MIT 开源的本地笔记（2.4k★，Mac/Windows/Linux 安装包）：界面由 Rust 加 GPUI 直接画，没有 Electron/WebView，百万字文档里打字、删除、滚动 P95 仍在 6ms 内。笔记就是一个普通文件夹、一篇一个文件按标题命名，能用 Git/iCloud 同步；富文本采用飞书 DocxXML 格式，和飞书文档互导不丢结构",u:"https://quiet.md",r:3,re:"原生极速笔记",f:1,q:"开源免费（本地，不限额）",g:"https://github.com/s1dashu/quiet-md",diff:1,zh:2,hot:2}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -1045,7 +1048,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 398 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 401 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1446,6 +1449,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://maitian.mdldm.club" target="_blank" rel="noopener">麦田 Maitian</a> — 一期内容发六个平台，数据自动回填大屏 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://github.com/siliconjungle/shapeshift-labs-ink-studio" target="_blank" rel="noopener">Ink Studio</a> — 写 JS 就能捏出会动会碎的像素 3D <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/nickvasilescu/parallax" target="_blank" rel="noopener">Parallax</a> — 图/视频/声音一间屋，agent 自己接活 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://yogurt.so" target="_blank" rel="noopener">Yogurt</a> — 开完会纪要在本机生成 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://mroffice.ai" target="_blank" rel="noopener">MR Office</a> — 浏览器里的Office，编辑器全开源 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://quiet.md" target="_blank" rel="noopener">Quiet.md</a> — Rust原生笔记，百万字不卡 <span class="nb-cat">办公效率</span></li>
     </ul>
   </section>
 </noscript>
@@ -1455,7 +1461,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 398,
+ "numberOfItems": 401,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3844,6 +3850,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 398,
    "name": "Parallax",
    "url": "https://github.com/nickvasilescu/parallax"
+  },
+  {
+   "@type": "ListItem",
+   "position": 399,
+   "name": "Yogurt",
+   "url": "https://yogurt.so"
+  },
+  {
+   "@type": "ListItem",
+   "position": 400,
+   "name": "MR Office",
+   "url": "https://mroffice.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 401,
+   "name": "Quiet.md",
+   "url": "https://quiet.md"
   }
  ]
 }
