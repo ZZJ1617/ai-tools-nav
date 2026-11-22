@@ -807,7 +807,12 @@ const TOOLS=[
 
 ,{n:"Yogurt",why:"开完会纪要在本机生成",c:"办公效率",m:["办公"],d:"MIT 开源的本地会议纪要（2.8k★，Windows/Mac/Linux 都有安装包）：不往会议里派机器人，直接录麦克风和系统声音，在本机用 whisper.cpp 转写（99 种语言，中途换语言也跟得住），按 Zoom/Teams/Meet 的发言人分开记名，再让本地模型归纳要点、跨会议问答。装好模型后可完全离线，不用注册账号",u:"https://yogurt.so",r:3,re:"本地无bot纪要",f:1,q:"开源免费（本地跑，不限额）",g:"https://github.com/FrigadeHQ/yogurt",diff:1,zh:2,hot:2}
 ,{n:"MR Office",why:"浏览器里的Office，编辑器全开源",c:"办公效率",m:["办公"],d:"AGPL-3.0 开源的在线办公编辑器（1.4k★）：Word、Excel、PowerPoint、PDF、手写、代码六套编辑器都在这套源码里，浏览器打开就能用，可自建也可嵌进自己的产品。⚠️ 开源的是编辑器本体，读写 .docx/.xlsx/.pptx 真文件走官方托管（免费额度 localhost 每月 1000 次会话、自有域名 100 次）",u:"https://mroffice.ai",r:3,re:"开源在线办公",f:1,q:"开源免费（编辑器；托管嵌入有免费额度）",g:"https://github.com/XinaTian/MROffice",diff:2,zh:2,hot:2}
-,{n:"Quiet.md",why:"Rust原生笔记，百万字不卡",c:"办公效率",m:["办公","写作"],d:"MIT 开源的本地笔记（2.4k★，Mac/Windows/Linux 安装包）：界面由 Rust 加 GPUI 直接画，没有 Electron/WebView，百万字文档里打字、删除、滚动 P95 仍在 6ms 内。笔记就是一个普通文件夹、一篇一个文件按标题命名，能用 Git/iCloud 同步；富文本采用飞书 DocxXML 格式，和飞书文档互导不丢结构",u:"https://quiet.md",r:3,re:"原生极速笔记",f:1,q:"开源免费（本地，不限额）",g:"https://github.com/s1dashu/quiet-md",diff:1,zh:2,hot:2}];
+,{n:"Quiet.md",why:"Rust原生笔记，百万字不卡",c:"办公效率",m:["办公","写作"],d:"MIT 开源的本地笔记（2.4k★，Mac/Windows/Linux 安装包）：界面由 Rust 加 GPUI 直接画，没有 Electron/WebView，百万字文档里打字、删除、滚动 P95 仍在 6ms 内。笔记就是一个普通文件夹、一篇一个文件按标题命名，能用 Git/iCloud 同步；富文本采用飞书 DocxXML 格式，和飞书文档互导不丢结构",u:"https://quiet.md",r:3,re:"原生极速笔记",f:1,q:"开源免费（本地，不限额）",g:"https://github.com/s1dashu/quiet-md",diff:1,zh:2,hot:2},
+{n:"Linger",why:"12GB显卡跑Claude级Agent",c:"Agent框架",m:["Agent"],d:"完全跑在本机的开源个人 Agent（3.7k★，Mac/Windows/Linux 安装包 + Docker）：不做独立聊天窗，直接接管你已经登录的 Chrome、邮件、日历，卡住时你随时接手；每晚 0 点把邮件、聊天、会议整理成可检索的本地 Wiki（LoCoMo 记忆基准 95%）。自带 Model Autopilot 按显存选模型，12GB RTX 3060 可跑 125B MoE 约 45 tok/s，不按 token 付费、数据不出本机",u:"https://heylinger.com",r:5,re:"本机跑Claude级",f:1,v:1,q:"开源免费（模型本地跑，不收token费）",g:"https://github.com/simplexai-labs/linger",diff:2,zh:3,hot:3},
+{n:"格知 Gezhi Sheets",why:"选中就说，预览后才写入表格",c:"办公效率",m:["办公"],d:"MIT 开源的本机 AI 表格助手（560★，Windows + Node 22）：在表格里框选几行，一句话说要什么（提取、分类、摘要、翻译），AI 先生成新列给你逐行核对，确认才写回、可一键撤销。模型自选 GLM/Kimi/豆包/DeepSeek/Qwen 五家，数据不出本机",u:"",r:4,re:"预览后才写入",f:1,q:"开源免费",g:"https://github.com/beiwocaishijia/gezhi-sheets",diff:2,zh:1,hot:2},
+{n:"衣姿 PoseWear",why:"1320套服装图库配试穿台",c:"图像生成",m:["图像"],d:"纯静态的姿势/服装/人像参考图库（1.6k★，免注册）：三套素材都能搜、能复制中英双语提示词，动画风服装新到 1320 套。挑好服装和姿势进试穿工作台，配自己的照片和 API Key 直接出图，支持 OpenAI / Gemini / 豆包 Seedream 和任意兼容中转；密钥和生成记录只存在浏览器本地",u:"https://posewear.pages.dev",r:4,re:"图库带试穿",f:1,q:"开源免费（试穿需自备Key）",g:"https://github.com/atuizz/posewear",diff:1,zh:1,hot:2},
+{n:"ViralForge",why:"不给Key也能拆爆款结构",c:"视频生成",m:["视频"],d:"Apache-2.0 的爆款短片拆解台（510★，Skill + MCP + CLI）：贴一条视频链接或本地文件，先出一份 Viral DNA 报告拆开钩子、逐镜结构、词锚点、节拍网格和字幕风格，再复刻成可编辑工程并派生 10 个带成本的变体。切镜、BPM、节奏全在本地算，不用填任何模型 Key",u:"",r:3,re:"拆爆款量产",f:1,q:"开源免费",g:"https://github.com/fendouai/ViralForge",diff:2,zh:1,hot:2},
+{n:"MiniMax H3 Image",why:"16MP开放权重，ComfyUI官方模板",c:"图像生成",m:["图像"],d:"MiniMax 开放权重的 1600 万像素图像模型（450★）：文生图、图上改字改物都支持，权重在 ModelScope 和 Hugging Face 都能拉，ComfyUI 有官方 T2I / Edit 模板，diffusers 可直接 from_pretrained 加载。国内走 ModelScope 下载不用梯子，算力由本机显卡承担",u:"https://modelscope.cn/models/MiniMax/MiniMax-H3-Image",r:4,re:"16MP开放权重",f:1,q:"开放权重（社区许可，可本地跑）",g:"https://github.com/MiniMax-AI/MiniMax-H3-Image",diff:3,zh:2,hot:2}];
 
 // ===== 已停服工具归档 =====
 const ARCHIVED=[
@@ -1047,7 +1052,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 401 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 406 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1451,6 +1456,11 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://yogurt.so" target="_blank" rel="noopener">Yogurt</a> — 开完会纪要在本机生成 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://mroffice.ai" target="_blank" rel="noopener">MR Office</a> — 浏览器里的Office，编辑器全开源 <span class="nb-cat">办公效率</span></li>
       <li><a href="https://quiet.md" target="_blank" rel="noopener">Quiet.md</a> — Rust原生笔记，百万字不卡 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://heylinger.com" target="_blank" rel="noopener">Linger</a> — 12GB显卡跑Claude级Agent <span class="nb-cat">Agent框架</span></li>
+      <li><a href="https://github.com/beiwocaishijia/gezhi-sheets" target="_blank" rel="noopener">格知 Gezhi Sheets</a> — 选中就说，预览后才写入表格 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://posewear.pages.dev" target="_blank" rel="noopener">衣姿 PoseWear</a> — 1320套服装图库配试穿台 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/fendouai/ViralForge" target="_blank" rel="noopener">ViralForge</a> — 不给Key也能拆爆款结构 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://modelscope.cn/models/MiniMax/MiniMax-H3-Image" target="_blank" rel="noopener">MiniMax H3 Image</a> — 16MP开放权重，ComfyUI官方模板 <span class="nb-cat">图像生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1460,7 +1470,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 401,
+ "numberOfItems": 406,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3867,6 +3877,36 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 401,
    "name": "Quiet.md",
    "url": "https://quiet.md"
+  },
+  {
+   "@type": "ListItem",
+   "position": 402,
+   "name": "Linger",
+   "url": "https://heylinger.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 403,
+   "name": "格知 Gezhi Sheets",
+   "url": "https://github.com/beiwocaishijia/gezhi-sheets"
+  },
+  {
+   "@type": "ListItem",
+   "position": 404,
+   "name": "衣姿 PoseWear",
+   "url": "https://posewear.pages.dev"
+  },
+  {
+   "@type": "ListItem",
+   "position": 405,
+   "name": "ViralForge",
+   "url": "https://github.com/fendouai/ViralForge"
+  },
+  {
+   "@type": "ListItem",
+   "position": 406,
+   "name": "MiniMax H3 Image",
+   "url": "https://modelscope.cn/models/MiniMax/MiniMax-H3-Image"
   }
  ]
 }
