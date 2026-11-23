@@ -813,6 +813,11 @@ const TOOLS=[
 {n:"衣姿 PoseWear",why:"1320套服装图库配试穿台",c:"图像生成",m:["图像"],d:"纯静态的姿势/服装/人像参考图库（1.8k★，免注册）：三套素材都能搜、能复制中英双语提示词，动画风服装新到 1320 套。挑好服装和姿势进试穿工作台，配自己的照片和 API Key 直接出图，支持 OpenAI / Gemini / 豆包 Seedream 和任意兼容中转；密钥和生成记录只存在浏览器本地",u:"https://posewear.pages.dev",r:4,re:"图库带试穿",f:1,q:"开源免费（试穿需自备Key）",g:"https://github.com/atuizz/posewear",diff:1,zh:1,hot:2},
 {n:"ViralForge",why:"不给Key也能拆爆款结构",c:"视频生成",m:["视频"],d:"Apache-2.0 的爆款短片拆解台（510★，Skill + MCP + CLI）：贴一条视频链接或本地文件，先出一份 Viral DNA 报告拆开钩子、逐镜结构、词锚点、节拍网格和字幕风格，再复刻成可编辑工程并派生 10 个带成本的变体。切镜、BPM、节奏全在本地算，不用填任何模型 Key",u:"",r:3,re:"拆爆款量产",f:1,q:"开源免费",g:"https://github.com/fendouai/ViralForge",diff:2,zh:1,hot:2},
 {n:"MiniMax H3 Image",why:"16MP开放权重，ComfyUI官方模板",c:"图像生成",m:["图像"],d:"MiniMax 开放权重的 1600 万像素图像模型（450★）：文生图、图上改字改物都支持，权重在 ModelScope 和 Hugging Face 都能拉，ComfyUI 有官方 T2I / Edit 模板，diffusers 可直接 from_pretrained 加载。国内走 ModelScope 下载不用梯子，算力由本机显卡承担",u:"https://modelscope.cn/models/MiniMax/MiniMax-H3-Image",r:4,re:"16MP开放权重",f:1,q:"开放权重（社区许可，可本地跑）",g:"https://github.com/MiniMax-AI/MiniMax-H3-Image",diff:3,zh:2,hot:2}
+,
+{n:"OpenDirector",why:"本地跑，画布到时间线一条龙出MP4",c:"视频编辑",d:"开源本地 AI 视频创作工作台（Apache-2.0，419★，2026-11-06 首发 v0.1.0，有中文界面和 B 站官方教程）：浏览器里打开，跟助手聊着把素材生成出来，拖到画布上连节点、引用素材再迭代，图片能裁切调色、局部扩图、擦除、抠图，视频和音频排进时间线调起止点/速度/音量后直接渲染出 MP4，也能导出 FCPXML 给剪辑软件。项目文件只存在本机，生成走你自己配置的模型服务",m:["视频"],u:"https://thinkflowlab.github.io/OpenDirector/",r:4,re:"本地出片工作台",f:1,v:1,q:"代码免费（生图/生视频需自备模型API）",g:"https://github.com/ThinkFlowLab/OpenDirector",diff:2,zh:1,hot:2},
+{n:"Astryx",why:"Meta内部8年沉淀，150+组件MIT开源",c:"设计工具",d:"Meta 把内部用了八年、支撑 13,000+ 应用的设计系统整包开源（MIT，3.2万★）：150+ 个无障碍组件、品牌级主题、暗色模式、现成模板和一个 CLI，装上直接 import 预编译 CSS + 带类型的 React 组件，不用引入任何样式库。换主题只是改一组 CSS 变量，不 fork 不包一层；Swizzle 能把某个组件的完整源码 eject 到你项目里自己改。文档、Storybook、在线 Sandbox 都开着，人和 AI 助手照同一套参考搭界面",m:["图像"],u:"https://astryx.atmeta.com",r:4,re:"大厂设计系统开源",f:1,q:"开源免费",g:"https://github.com/meta/astryx",diff:3,zh:3,hot:3},
+{n:"animate",why:"八种插画风格，纯canvas渲染成片",c:"视频生成",d:"给 Claude Code 用的程序化动画技能（MIT，2.2k★）：一个 canvas 逐帧代码画出短片，headless 浏览器 + ffmpeg 渲成 MP4。内置剪纸、交叉排线、孔版印刷、速写本、数学讲解、像素、等轴测七种风格，第八格吃你给的参考图/视频现学一套；自带音效与配乐踩点，每一步先给你看分镜和色稿再动手，出片后还会量「剪切点有没有落在节拍上、旁白语速是否合适」",m:["视频"],u:"https://github.com/cth9191/animate",r:3,re:"代码画动画短片",f:1,q:"代码免费（需Claude Code等宿主Agent）",g:"https://github.com/cth9191/animate",diff:3,zh:3,hot:2},
+{n:"tiny-voca",why:"18MB模型，纯CPU 70倍实时出音",c:"音频生成",d:"只有 453 万参数、18MB 的英文语音合成模型（Apache-2.0，876★，2026-11-14 建仓）：F2 女声与 M2 男声两个音色，24kHz 美式英语，四线程 CPU 上约 70 倍实时，PyTorch / ONNX Runtime / 浏览器里的 ONNX Runtime Web 都能跑，网页 demo 打开就出声。代码、权重、训练配方和数据集全开，是从零训的",m:["音频"],u:"https://tiny-voca.n4ze3m.com",r:3,re:"18MB纯CPU语音",f:1,q:"开源免费",g:"https://github.com/n4ze3m/tiny-voca",diff:1,zh:3,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1055,7 +1060,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 405 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 409 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1463,6 +1468,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://posewear.pages.dev" target="_blank" rel="noopener">衣姿 PoseWear</a> — 1320套服装图库配试穿台 <span class="nb-cat">图像生成</span></li>
       <li><a href="https://github.com/fendouai/ViralForge" target="_blank" rel="noopener">ViralForge</a> — 不给Key也能拆爆款结构 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://modelscope.cn/models/MiniMax/MiniMax-H3-Image" target="_blank" rel="noopener">MiniMax H3 Image</a> — 16MP开放权重，ComfyUI官方模板 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://thinkflowlab.github.io/OpenDirector/" target="_blank" rel="noopener">OpenDirector</a> — 本地跑，画布到时间线一条龙出MP4 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://astryx.atmeta.com" target="_blank" rel="noopener">Astryx</a> — Meta内部8年沉淀，150+组件MIT开源 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://github.com/cth9191/animate" target="_blank" rel="noopener">animate</a> — 八种插画风格，纯canvas渲染成片 <span class="nb-cat">视频生成</span></li>
+      <li><a href="https://tiny-voca.n4ze3m.com" target="_blank" rel="noopener">tiny-voca</a> — 18MB模型，纯CPU 70倍实时出音 <span class="nb-cat">音频生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1472,7 +1481,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 405,
+ "numberOfItems": 409,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3903,6 +3912,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 405,
    "name": "MiniMax H3 Image",
    "url": "https://modelscope.cn/models/MiniMax/MiniMax-H3-Image"
+  },
+  {
+   "@type": "ListItem",
+   "position": 406,
+   "name": "OpenDirector",
+   "url": "https://thinkflowlab.github.io/OpenDirector/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 407,
+   "name": "Astryx",
+   "url": "https://astryx.atmeta.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 408,
+   "name": "animate",
+   "url": "https://github.com/cth9191/animate"
+  },
+  {
+   "@type": "ListItem",
+   "position": 409,
+   "name": "tiny-voca",
+   "url": "https://tiny-voca.n4ze3m.com"
   }
  ]
 }
