@@ -364,10 +364,11 @@ function toggleTheme(){
 
 // ===== 热点（结构化） =====
 const HOTSPOT={
-  date: "11月24日 08:20更新",
+  date: "11月24日 19:10更新",
   items: [
 { t: "🧠", h: "智谱 GLM-5.4：循环架构写视频与游戏", d: "智谱 11 月 23 日发布 GLM-5.4，第一个基于 Loop Transformer 的旗舰模型：把 GLM-5 基座中间的 28 层共享权重循环跑两轮，参数不变而推理更深，官方称智能水平对标 2T-3T 参数模型。为控住 750B 规模的部署成本做了三处改造——每轮独立逐 token 门控，第一轮小步写、第二轮才全量更新；混合 KV 缓存让多一轮只多一个滑动窗口而非整段上下文；稀疏注意力的索引直接复用第一轮结果。能力上从写代码外溢到「泛 Coding」：自编配乐生成 MV、在 FreeCAD 里做六轴机械臂的工程级 CAD 建模、一次写出带物理与战斗系统的完整游戏、用纯数学几何加手写 GLSL 着色器做交互式 3D。今天已向 GLM Coding Plan 全量用户开放（ZCode、Trae、WorkBuddy、Qoder 同步上线，V2/V3/团队版额度提到 1.5 倍），API 待安全评估后开放，权重称完成安全加固后负责任开源；官方也承认它容易陷入超长「马拉松式思考」循环。", params: "11月23日发布 · 750B基座28层循环两轮 · 1M上下文 · Coding Plan已开放", scene: "编码 · 视频/游戏/3D创作·CAD建模·循环架构", link: "https://z.ai/blog/glm-5.4" },
-{ t: "🧩", h: "Comfy Desktop 1.2：免节点直接出图", d: "2026 年 11 月 24 日 ComfyUI 官方发布 Comfy Desktop 1.2，把它从「装 ComfyUI 的启动器」升级成整个 Comfy 生态的入口。最大变化是新增 Apps 板块——六个开箱即用的小应用：去背景、SDR 转 HDR、商品图转广告素材、画面外扩、场景换角色、场景换商品。每个 App 只留一个输入位和一个运行按钮，底层跑的仍然是 ComfyUI 工作流，出图后可以一键展开回节点图继续改，熟练用户原有画法一点没动。App 跑在自己显卡上时，基于开源模型的部分免费，只有用到 partner 商业模型才扣额度，也可以直接跑在 Comfy Cloud。安装侧还是一键装、模型/输入/输出目录跨所有 build 共享、每次更新前自动快照可回滚，企业团队能从 Comfy Cloud 下发的同一份 build 装到每台机器上。界面换成新深色主题，Windows/macOS/Linux 均有，已装用户更新即可。", params: "11月24日更新 · 6个免节点App · 本地开源模型免费/partner模型扣额度 · 三平台", scene: "AI图像 · ComfyUI·工作流·免节点出图·本地部署", link: "https://blog.comfy.org/p/comfy-desktop-becomes-your-front" }
+{ t: "🧩", h: "Comfy Desktop 1.2：免节点直接出图", d: "2026 年 11 月 24 日 ComfyUI 官方发布 Comfy Desktop 1.2，把它从「装 ComfyUI 的启动器」升级成整个 Comfy 生态的入口。最大变化是新增 Apps 板块——六个开箱即用的小应用：去背景、SDR 转 HDR、商品图转广告素材、画面外扩、场景换角色、场景换商品。每个 App 只留一个输入位和一个运行按钮，底层跑的仍然是 ComfyUI 工作流，出图后可以一键展开回节点图继续改，熟练用户原有画法一点没动。App 跑在自己显卡上时，基于开源模型的部分免费，只有用到 partner 商业模型才扣额度，也可以直接跑在 Comfy Cloud。安装侧还是一键装、模型/输入/输出目录跨所有 build 共享、每次更新前自动快照可回滚，企业团队能从 Comfy Cloud 下发的同一份 build 装到每台机器上。界面换成新深色主题，Windows/macOS/Linux 均有，已装用户更新即可。", params: "11月24日更新 · 6个免节点App · 本地开源模型免费/partner模型扣额度 · 三平台", scene: "AI图像 · ComfyUI·工作流·免节点出图·本地部署", link: "https://blog.comfy.org/p/comfy-desktop-becomes-your-front" },
+{ t: "🖼", h: "商汤 SenseNova U1.6：出图后自己改错字", d: "商汤 11 月 24 日发布并开源 SenseNova U1.6，延续 U 系列「理解与生成统一」的 8B 模型，首次给这个系列带来原生图像自修正：同一个模型先出首稿，再对照原始提示检查画面，自己发现文字错误并生成修正版，不用二次提示、也不用换工具。文字上专攻透视文字、艺术字、手写体与非常规字形，配一个面向文字与版式的信息图美学模型，一次出图就能做图文一体的海报。内部用户评测 U1.6 Lite 美学得分比 U1.5 Lite 高约 10%，UltraTextBench 密集信息图从单次生成 86.04 升到开启自修正后的 92.28。权重已开源（GitHub OpenSenseNova/SenseNova-U1），已上线 ComfyUI 可直接在工作流里调用，也能在商汤小浣熊、Seko、Kapi 相机、SenseNova Studio 体验，API 每 5 小时 1500 次免费请求。", params: "11月24日发布并开源 · 8B理解生成统一 · 原生图像自修正 · ComfyUI已上线 · API每5小时1500次免费", scene: "AI图像 · 海报信息图 · 艺术字 · 本地部署", link: "https://www.ithome.com/1/031/465.htm" }
   ]
 };
 function renderHotspot(){
