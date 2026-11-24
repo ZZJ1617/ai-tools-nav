@@ -816,7 +816,10 @@ const TOOLS=[
 {n:"OpenDirector",why:"本地跑，画布到时间线一条龙出MP4",c:"视频编辑",d:"开源本地 AI 视频创作工作台（Apache-2.0，419★，2026-11-06 首发 v0.1.0，有中文界面和 B 站官方教程）：浏览器里打开，跟助手聊着把素材生成出来，拖到画布上连节点、引用素材再迭代，图片能裁切调色、局部扩图、擦除、抠图，视频和音频排进时间线调起止点/速度/音量后直接渲染出 MP4，也能导出 FCPXML 给剪辑软件。项目文件只存在本机，生成走你自己配置的模型服务",m:["视频"],u:"https://thinkflowlab.github.io/OpenDirector/",r:4,re:"本地出片工作台",f:1,v:1,q:"代码免费（生图/生视频需自备模型API）",g:"https://github.com/ThinkFlowLab/OpenDirector",diff:2,zh:1,hot:2},
 {n:"Astryx",why:"Meta内部8年沉淀，150+组件MIT开源",c:"设计工具",d:"Meta 把内部用了八年、支撑 13,000+ 应用的设计系统整包开源（MIT，3.2万★）：150+ 个无障碍组件、品牌级主题、暗色模式、现成模板和一个 CLI，装上直接 import 预编译 CSS + 带类型的 React 组件，不用引入任何样式库。换主题只是改一组 CSS 变量，不 fork 不包一层；Swizzle 能把某个组件的完整源码 eject 到你项目里自己改。文档、Storybook、在线 Sandbox 都开着，人和 AI 助手照同一套参考搭界面",m:["图像"],u:"https://astryx.atmeta.com",r:4,re:"大厂设计系统开源",f:1,q:"开源免费",g:"https://github.com/meta/astryx",diff:3,zh:3,hot:3},
 {n:"animate",why:"八种插画风格，纯canvas渲染成片",c:"视频生成",d:"给 Claude Code 用的程序化动画技能（MIT，2.2k★）：一个 canvas 逐帧代码画出短片，headless 浏览器 + ffmpeg 渲成 MP4。内置剪纸、交叉排线、孔版印刷、速写本、数学讲解、像素、等轴测七种风格，第八格吃你给的参考图/视频现学一套；自带音效与配乐踩点，每一步先给你看分镜和色稿再动手，出片后还会量「剪切点有没有落在节拍上、旁白语速是否合适」",m:["视频"],u:"https://github.com/cth9191/animate",r:3,re:"代码画动画短片",f:1,q:"代码免费（需Claude Code等宿主Agent）",g:"https://github.com/cth9191/animate",diff:3,zh:3,hot:2},
-{n:"tiny-voca",why:"18MB模型，纯CPU 70倍实时出音",c:"音频生成",d:"只有 453 万参数、18MB 的英文语音合成模型（Apache-2.0，876★，2026-11-14 建仓）：F2 女声与 M2 男声两个音色，24kHz 美式英语，四线程 CPU 上约 70 倍实时，PyTorch / ONNX Runtime / 浏览器里的 ONNX Runtime Web 都能跑，网页 demo 打开就出声。代码、权重、训练配方和数据集全开，是从零训的",m:["音频"],u:"https://tiny-voca.n4ze3m.com",r:3,re:"18MB纯CPU语音",f:1,q:"开源免费",g:"https://github.com/n4ze3m/tiny-voca",diff:1,zh:3,hot:2}
+{n:"tiny-voca",why:"18MB模型，纯CPU 70倍实时出音",c:"音频生成",d:"只有 453 万参数、18MB 的英文语音合成模型（Apache-2.0，876★，2026-11-14 建仓）：F2 女声与 M2 男声两个音色，24kHz 美式英语，四线程 CPU 上约 70 倍实时，PyTorch / ONNX Runtime / 浏览器里的 ONNX Runtime Web 都能跑，网页 demo 打开就出声。代码、权重、训练配方和数据集全开，是从零训的",m:["音频"],u:"https://tiny-voca.n4ze3m.com",r:3,re:"18MB纯CPU语音",f:1,q:"开源免费",g:"https://github.com/n4ze3m/tiny-voca",diff:1,zh:3,hot:2},
+{n:"GIF 工厂",why:"表情包动态海报说话就出，中文模板厚",c:"设计工具",m:["图像","视频"],d:"MIT 开源的 GIF 制作技能包（2.1k★，2026-11-05 建仓）：装进 Codex / Claude Code 后直接说需求，九类风格模板覆盖像素/插画/真人/宠物/粘土表情包、光栅变画卡、动态海报、动态签名、电影片头、动态绘本、品牌短片和知识机制短片；角色图、片名、台词字稿、配乐都能自己提供，缺的补齐，先出小样再批量。⚠️ 开源的是方法与模板，出图仍走你自己配的模型账号",u:"https://github.com/WoYun520/gif-factory",r:4,re:"中文GIF模板全",f:1,q:"代码免费（生图用自己的模型）",g:"https://github.com/WoYun520/gif-factory",diff:2,zh:1,hot:2},
+{n:"灵录 Capwise",why:"录屏到成片一个窗口做完，Mac原生",c:"视频编辑",m:["视频"],d:"AGPLv3 开源的 Mac 录屏与剪辑工作台（193★，11-05 建仓）：屏幕、摄像头、麦克风录进同一个工程，自动缩放和光标标注把重点放大，双语字幕在「内容/翻译/样式」里分别校对，配音配乐、片头封面、提词器都在同一条时间线上；AI 助手听懂一句话改完给你审、可撤销。基础录制剪辑不注册账号，AI 功能自己配模型。当前只发 macOS 13.3+ Apple Silicon 安装包",u:"https://capwise.qiaomu.ai",r:3,re:"Mac录屏一体化",f:1,q:"免费（AI 功能需自配模型）",g:"https://github.com/joeseesun/capwise",diff:1,zh:1,hot:2},
+{n:"Easy 剪映",why:"AI 出剪映草稿，字幕转场还能自己改",c:"视频编辑",m:["视频"],d:"源码公开的剪映草稿生成器（209★，自己 clone 装）：让 Agent 写一份剪辑计划，转成剪映专业版 / CapCut 里能拖能改的正常工程——多轨、切碎、变速、转场、关键帧、画中画、文字字幕、贴纸特效、BGM 淡入都在轨道上；5 分钟口播自动剪掉气口口癖，字幕本地识别不上传，按音乐节拍卡点，一张表格还能批量出 N 个系列草稿。实测只到 macOS 剪映 11.7 / CapCut 9.4，需 Mac + Python 3.10 + ffmpeg，仓库未附许可证",u:"https://github.com/YeJe-cpu/easy-jianying",r:3,re:"剪映草稿可再改",f:1,q:"代码免费",g:"https://github.com/YeJe-cpu/easy-jianying",diff:2,zh:1,hot:2}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1059,7 +1062,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 409 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 412 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1471,6 +1474,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://astryx.atmeta.com" target="_blank" rel="noopener">Astryx</a> — Meta内部8年沉淀，150+组件MIT开源 <span class="nb-cat">设计工具</span></li>
       <li><a href="https://github.com/cth9191/animate" target="_blank" rel="noopener">animate</a> — 八种插画风格，纯canvas渲染成片 <span class="nb-cat">视频生成</span></li>
       <li><a href="https://tiny-voca.n4ze3m.com" target="_blank" rel="noopener">tiny-voca</a> — 18MB模型，纯CPU 70倍实时出音 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://github.com/WoYun520/gif-factory" target="_blank" rel="noopener">GIF 工厂</a> — 表情包动态海报说话就出，中文模板厚 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://capwise.qiaomu.ai" target="_blank" rel="noopener">灵录 Capwise</a> — 录屏到成片一个窗口做完，Mac原生 <span class="nb-cat">视频编辑</span></li>
+      <li><a href="https://github.com/YeJe-cpu/easy-jianying" target="_blank" rel="noopener">Easy 剪映</a> — AI 出剪映草稿，字幕转场还能自己改 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -1480,7 +1486,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 409,
+ "numberOfItems": 412,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -3935,6 +3941,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 409,
    "name": "tiny-voca",
    "url": "https://tiny-voca.n4ze3m.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 410,
+   "name": "GIF 工厂",
+   "url": "https://github.com/WoYun520/gif-factory"
+  },
+  {
+   "@type": "ListItem",
+   "position": 411,
+   "name": "灵录 Capwise",
+   "url": "https://capwise.qiaomu.ai"
+  },
+  {
+   "@type": "ListItem",
+   "position": 412,
+   "name": "Easy 剪映",
+   "url": "https://github.com/YeJe-cpu/easy-jianying"
   }
  ]
 }
