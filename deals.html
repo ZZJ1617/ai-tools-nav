@@ -108,9 +108,10 @@ footer a{color:var(--ink2)}
 
 <script>
 /* ===== 羊毛数据（AI 羊毛官每天更新这一块；字段：n=名称 cat=分类 what=什么羊毛 how=怎么领 until=有效期 url=官方链接 src=来源 checked=核实日期） ===== */
-const DEALS=[{n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送 100 万 Token，90 天内有效；双11 会场（至 11-30）百炼新客另有叠加大额 Token 礼包",
+const DEALS=[
+{n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送 100 万 Token，90 天内有效；双11 会场（至 11-30）百炼新客另有叠加大额 Token 礼包",
    how:"注册阿里云 → 开通百炼 → 控制台里逐个开通模型，每个模型各自独立额度，额度不能跨模型合并；双11 期间先领会场 AI 礼包再开通，两份额度可叠加",
-   until:"注册后 90 天（双11 礼包 11-30 截止）",url:"https://help.aliyun.com/zh/model-studio/new-free-quota",src:"阿里云官方帮助中心 + 阿里云开发者社区双11 会场（2026-11-21 复读）",checked:"2026-11-21"},
+   until:"注册后 90 天（双11 礼包 2026-11-30 截止）",url:"https://help.aliyun.com/zh/model-studio/new-free-quota",src:"阿里云官方帮助中心 + 阿里云开发者社区双11 会场（2026-11-21 复读）",checked:"2026-11-21"},
 {n:"智谱 BigModel + 免费 Flash 家族",cat:"API额度",what:"新用户注册送 2000 万 Tokens；另有一批 Flash 模型直接免费：GLM-4.7-Flash / GLM-4.6V-Flash 文本免费，CogView-3-Flash 生图、CogVideoX-Flash 生视频也标 0 元",
    how:"手机号注册开放平台 → 控制台创建 API Key → 免费额度直接可用；Flash 系列不用额度，模型名直接调（如 glm-4.7-flash、cogview-3-flash、cogvideox-flash），生图生视频也能白跑",
    until:"额度用完为止；Flash 系列标「免费」（官方保留调整权）",url:"https://bigmodel.cn/pricing",src:"智谱官方定价页（2026-11-20 复读：Flash/CogView/CogVideoX 单价栏为「免费」）",checked:"2026-11-20"},
@@ -143,7 +144,7 @@ const DEALS=[{n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送
    how:"注册百度智能云 → 完成实名认证 → 千帆大模型平台领券；券按面额抵扣，用超了要自己充，别只盯「免费」两个字",
    until:"领取后 1 个月",url:"https://cloud.baidu.com/doc/qianfan/s/4m8l6j0v9",src:"百度智能云千帆官方文档",checked:"2026-11-06"},
 {n:"智谱 ZCode 每日额度",cat:"每日积分",what:"每天可领 3 亿 GLM-5.3-Flash Token；19:00 开领，23:00 至次日 9:00 才能用（白天用不了）",
-   how:"下载 ZCode 客户端（zcode.z.ai，Win/Mac/Linux）→ 登录后在客户端内领取当日额度 → 夜间时段使用；周末另有大额包，但三笔额度三套规则，别按截图大字误读",until:"每日重置；周末大额包另按当周公告发（上轮 5 亿已于 11-23 09:00 作废）",url:"https://zcode.z.ai",
+   how:"下载 ZCode 客户端（zcode.z.ai，Win/Mac/Linux）→ 登录后在客户端内领取当日额度 → 夜间时段使用；周末另有大额包，但三笔额度三套规则，别按截图大字误读",until:"每日重置；周末大额包另按当周公告发（上轮 5 亿已于 2026-11-23 09:00 作废）",url:"https://zcode.z.ai",
    src:"智谱官方 ZCode 客户端 + 多方实测一致（2026-11-21 复验：每日 3 亿、周末 5 亿的活动口径仍生效）",checked:"2026-11-21"},
 {n:"小米 MiMo Claw",cat:"每日积分",what:"免费用户每天约 4 小时云端体验时长，跑的是 MiMo-V2.5-Pro；打通 WPS，能做文档/表格/PPT/调研；另：mimo-v2.5-tts / tts-voiceclone / tts-voicedesign 三款语音合成模型官方标「限时免费」，缓存写入也限免",
    how:"打开 MiMo Studio 官网 → Xiaomi MiMo Claw → 登录即用，每天额度自动刷新；订阅 TokenPlan 可解锁更长时长（首促 14.9 元/月）",until:"每天刷新",url:"https://mimo.mi.com/docs/zh-CN/news/latest/mimoclaw",
@@ -194,17 +195,14 @@ const DEALS=[{n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送
 {n:"硅基流动 认证专享礼",cat:"API额度",what:"完成实名认证后领 16 元无门槛代金券，全平台通用（API 调用 / 批量推理 / 微调都能用）；走邀请链接注册，双方各再得 16 元",
    how:"硅基流动注册 → 完成实名认证 → 到「认证专享礼」页面手动领取 → 下单时自动抵扣；邀请券在好友完成认证后 1-5 分钟自动到账",until:"活动至 2026-12-31",url:"https://cloud.siliconflow.cn/",
    src:"硅基流动官方活动（多方实测一致）",checked:"2026-11-11"},
-  {n:"阿里百炼 决策模型预览版",cat:"限时活动",what:"decision-model-preview 全量开放且限时免费（不消耗 Credits），面向高频业务判断：并行完成分类、是非判断、打分，返回概率分布与置信度",
+{n:"阿里百炼 决策模型预览版",cat:"限时活动",what:"decision-model-preview 全量开放且限时免费（不消耗 Credits），面向高频业务判断：并行完成分类、是非判断、打分，返回概率分布与置信度",
    how:"百炼控制台开通 → 模型名填 decision-model-preview → 北京/新加坡两地域都免费；限速 1200 次/分、200 万 token/分，上下文最长 65536",until:"限时（官方未公布截止）",url:"https://help.aliyun.com/zh/model-studio/decision-model-api",
    src:"阿里云官方文档 + 第一财经报道",checked:"2026-11-12"},
-  {n:"蚂蚁百灵 Ling-3.2-flash",cat:"限时活动",what:"原生多模态文本模型（560B 总参 / 25B 激活、100 万上下文），官方定价页写明上线前两周 API 限时全免；之后输入 0.30 / 输出 0.90 美元每百万词元",
-   how:"注册蚂蚁百灵/百炼平台 → 绑定支付宝 → 创建令牌，base_url 填 api.ant-ling.com/v1，模型名 Ling-3.2-flash（OpenAI / Anthropic 协议都能接）；也可以直接去 chat.ant-ling.com 网页体验",until:"限时（官方未公布截止；11-22 复读首页仍挂「Open API 限时优惠中」）",url:"https://www.ant-ling.com",
-   src:"蚂蚁百灵官网首页（2026-11-22 复读仍挂「Open API 限时优惠中」，未见结束公告）+ 多家媒体报道一致",checked:"2026-11-22"},
-  {n:"腾讯云 元宝搜索",cat:"API额度",what:"腾讯把元宝 App 背后的联网搜索对外开放，每个腾讯云账号每自然月 2000 次免费调用；11-30 前在控制台活动专区填邀请码可涨到当月 6000 次",
+{n:"腾讯云 元宝搜索",cat:"API额度",what:"腾讯把元宝 App 背后的联网搜索对外开放，每个腾讯云账号每自然月 2000 次免费调用；11-30 前在控制台活动专区填邀请码可涨到当月 6000 次",
    how:"腾讯云完成实名认证 → 开通元宝搜索并创建 API Key → 控制台活动专区填邀请码；MCP 地址 api.wsa.cloud.tencent.com/Mcp（请求头带 Bearer 你的 Key），也可直接调 API 或装 SkillHub 的 Skill，三种接入共用同一份额度",
-   until:"每月刷新（11-30 前参加活动当月为 6000 次）",url:"https://cloud.tencent.com/product/wsa",
+   until:"每月刷新（2026-11-30 前参加活动当月为 6000 次）",url:"https://cloud.tencent.com/product/wsa",
    src:"腾讯云开发者社区官方公告（2026-10-20）+ 元宝搜索计费/FAQ 文档",checked:"2026-11-13"},
-  {n:"腾讯 EdgeOne Makers 内置模型",cat:"API额度",what:"免费版账号每月自动发 50 万 token 内置模型额度，可调 DeepSeek V4 Pro / V4.1 Flash、Kimi K2.6、MiniMax M3、混元 Hy3，注册不绑卡",
+{n:"腾讯 EdgeOne Makers 内置模型",cat:"API额度",what:"免费版账号每月自动发 50 万 token 内置模型额度，可调 DeepSeek V4 Pro / V4.1 Flash、Kimi K2.6、MiniMax M3、混元 Hy3，注册不绑卡",
    how:"注册 EdgeOne Makers → 控制台 Models 页创建 Models API Key → base_url 换成 Makers 网关、模型名带 @makers/ 前缀（如 @makers/deepseek-v4-pro），兼容 OpenAI / Anthropic SDK，额度同账号所有项目共享",
    until:"每月刷新（商业化后配额可能调整）",url:"https://pages.edgeone.ai/zh/document/limits-and-quotas",
    src:"EdgeOne 官方文档「限制与配额」「Models 说明」（写明 50 万 token/月）",checked:"2026-11-13"},
@@ -226,7 +224,22 @@ const DEALS=[{n:"阿里云百炼",cat:"API额度",what:"新用户每个模型送
    how:"下载 WorkBuddy（workbuddy.cn，国区/国际版都行）→ 登录后在模型里选 Hy4 flash 直接用，活动期内不扣费；要走 API 就去腾讯云 TokenHub 开通，11-30 前 5 折；模型已在 GitHub / HuggingFace / ModelScope 开源，也可以自己部署",
    until:"2026-11-30 23:59",
    url:"https://hunyuan.tencent.com/research/hy4-flash",
-   src:"腾讯混元官方 Hy4 flash 模型页（11-16 发布，11-24 亲读正文：「11 月 30 日前，用户可在 WorkBuddy 限时免费使用，腾讯云 TokenHub API 限时 5 折」）",checked:"2026-11-24"}
+   src:"腾讯混元官方 Hy4 flash 模型页（11-16 发布，11-24 亲读正文：「11 月 30 日前，用户可在 WorkBuddy 限时免费使用，腾讯云 TokenHub API 限时 5 折」）",checked:"2026-11-24"},
+  {n:"Z.AI 智谱 GLM Flash 档",cat:"长期免费",what:"GLM 系列 Flash 档（GLM-4.7-Flash / 4.5-Flash / 4.6V-Flash）输入输出全免，其余 GLM 模型收费",
+   how:"注册 Z.AI（智谱海外站；国内用 bigmodel.cn 同理）→ 建 API Key → 模型名填 glm-4.7-flash 调用；具体免费范围以官方定价页标注为准",until:"长期",url:"https://z.ai/",
+   src:"智谱 Z.AI 定价页 + 第三方模型库一致",checked:"2026-11-25"},
+  {n:"xAI Grok API 充 5 送 150",cat:"限时活动",what:"充值 5 美元并开启数据共享，每月送 150 美元 API 额度；注意早前「注册送 25 美元」活动已结束",
+   how:"注册 xAI 控制台 → 绑卡充值 5 美元 → 设置里开启数据共享（请求与响应会被用于训练）→ 每月 150 美元额度自动到账",until:"活动期内（官方未公布截止）",url:"https://console.x.ai/",
+   src:"xAI 官方活动 + 多方实测一致",checked:"2026-11-25"},
+  {n:"Google Gemini API 免费层",cat:"长期免费",what:"部分 Gemini 模型输入输出免费：2.5 Flash 约 10 次/分、250 次/日；2.5 Pro 约 5 次/分、100 次/日；上下文 100 万",
+   how:"Google AI Studio 建 API Key 直接用；⚠️ EEA/瑞士/英国用户只能用付费服务；免费层的内容会被用于改进 Google 产品",until:"长期",url:"https://ai.google.dev/",
+   src:"Google AI Studio 官方限速文档",checked:"2026-11-25"},
+  {n:"OpenAI API 新账号赠金",cat:"API额度",what:"新注册账号送 5 美元 API 额度，注册后 3 个月内有效",
+   how:"platform.openai.com 注册 → 绑定支付方式（不扣费）→ 额度自动到账；⚠️ 不能用于 Codex 相关消耗",until:"2026-11-25 起 3 个月",url:"https://platform.openai.com/",
+   src:"OpenAI 官方 + 多方汇总一致",checked:"2026-11-25"},
+  {n:"百川智能 开放平台",cat:"API额度",what:"大陆手机号注册即送 80 元体验金（约 1000 万 Tokens），有效期 3 个月",
+   how:"百川开放平台用大陆手机号注册 → 创建 API Key → Base URL 填 https://api.baichuan-ai.com/v1 调用",until:"注册后 3 个月",url:"https://platform.baichuan-ai.com/prices",
+   src:"百川官方定价页",checked:"2026-11-25"}
 
 ];
 
