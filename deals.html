@@ -115,9 +115,9 @@ const DEALS=[
 {n:"智谱 BigModel + 免费 Flash 家族",cat:"API额度",what:"新用户注册送 2000 万 Tokens；另有一批 Flash 模型直接免费：GLM-4.7-Flash / GLM-4.6V-Flash 文本免费，CogView-3-Flash 生图、CogVideoX-Flash 生视频也标 0 元",
    how:"手机号注册开放平台 → 控制台创建 API Key → 免费额度直接可用；Flash 系列不用额度，模型名直接调（如 glm-4.7-flash、cogview-3-flash、cogvideox-flash），生图生视频也能白跑",
    until:"额度用完为止；Flash 系列标「免费」（官方保留调整权）",url:"https://bigmodel.cn/pricing",src:"智谱官方定价页（2026-11-20 复读：Flash/CogView/CogVideoX 单价栏为「免费」）",checked:"2026-11-20"},
-{n:"OpenRouter 免费模型",cat:"API额度",what:"当前 14 个 :free 路由（含 baidu/ernie-5.5-flash:free、inclusionai/ling-3.2-flash:free），按量 0 元",
+{n:"OpenRouter 免费模型",cat:"API额度",what:"当前 13 个 :free 路由（含 baidu/ernie-5.5-flash-preview:free、google/gemma-4-31b-it:free、nvidia/nemotron-3-ultra-550b-a55b:free），按量 0 元",
    how:"注册 → 建 Key → 模型名带 :free 直接调；有速率限制，适合小量测试和跑 demo",
-   until:"随平台调整",url:"https://openrouter.ai/models?max_price=0",src:"OpenRouter 官方模型接口 /api/v1/models（2026-11-25 实查：prompt=completion=0 共 14 条，与 11-23 持平；含 nvidia/nemotron-3-ultra-550b-a55b:free 等）",checked:"2026-11-25"},
+   until:"随平台调整",url:"https://openrouter.ai/models?max_price=0",src:"OpenRouter 官方模型接口 /api/v1/models（2026-11-28 实查：prompt=completion=0 共 13 条，比 11-25 少 1 条；ernie 已改名为 ernie-5.5-flash-preview:free）",checked:"2026-11-28"},
 {n:"豆包工作",cat:"会员试用",what:"大降价：DeepSeek V4.1 Flash / 豆包 2.1 Lite 额度消耗倍率下调到 0.01，简单对话和低消耗任务直接免费，官方实测 88% 的日常办公任务不花钱；新用户领 30 天体验会员，每日签到 200 额度、周一翻倍，连签 30 天累计 8800（≈标准套餐一个月）",
    how:"下载豆包工作桌面端（doubao.com/work）→ 登录领 30 天体验会员 → 做事前先在模型里选 DeepSeek V4.1 Flash 或豆包 2.1 Lite（倍率最低那两个）→ 每天顺手签到领 200、周一翻倍；金融投研/PPT/数据处理这类重活才明显扣额度，简单问答基本不扣",
    until:"活动期内（倍率与签到规则随时调整，按官方公告）",url:"https://www.doubao.com/work/docs/zh-cn/articles/672868468340-personal-subscription",src:"豆包工作官方优惠计划 + 雷峰网/钛媒体/新浪科技 2026-11-23~24 报道（倍率 0.01、88% 任务触发免费、签到 200/周一翻倍/30 天 8800）",checked:"2026-11-25"},
@@ -158,10 +158,10 @@ const DEALS=[
    how:"注册硅基流动 → 控制台建 API Key → OpenAI 兼容接口只调标「免费」的模型；付费模型照常按量扣费，别混用",
    until:"长期（随平台调整）",url:"https://siliconflow.cn/pricing",
    src:"硅基流动官方价格页（免费档逐条实查）",checked:"2026-11-07"},
-{n:"七牛云 Conatus Free（1024 程序员节）",cat:"限时活动",what:"10-24 至 11-30，实名认证用户每日 1 亿 Token 免费额度，充值后最高每日 10 亿；额度用完直接报错，不扣账户余额。另有一批标「免费调用、不计费」的模型可直接白跑（如 Nemotron 3 Ultra 550B）",
+{n:"七牛云 Conatus Free（1024 程序员节）",cat:"限时活动",what:"活动已延长至 12-31：实名认证用户每日 1 亿 Token 免费额度（当日不结转），单笔充值满 100 元后升至每日 10 亿；额度用完直接报错、不扣余额",
    how:"注册七牛云 → 完成实名认证（企业认证每日额度更高）→ 控制台创建 API Key → 模型名填 qiniu/conatus-free，用 OpenAI 兼容接口直接调；另外注册即送 300 万 Token 全模型新手包（企业认证再送 1200 万），长期可用",
-   until:"2026-11-30",url:"https://www.qiniu.com/ai/free-models/conatus-2026",
-   src:"七牛云官网 AI 大模型平台（2026-11-25 复读：Conatus 活动横幅仍挂「至 11.30」，模型广场 Nemotron 3 Ultra 550B 标「免费调用，不计费」）",checked:"2026-11-25"},
+   until:"2026-12-31 23:59",url:"https://www.qiniu.com/ai/free-models/conatus-2026",
+   src:"七牛云官网 Conatus Free 活动页（2026-11-28 实读：活动时间 10-24 00:00 至 2026-12-31 23:59，已认证每日 1 亿 Token、充值满百升至 10 亿，BaseURL api.qnaigc.com/v1）",checked:"2026-11-28"},
 {n:"国家超算互联网 SCNet",cat:"限时活动",what:"11.11 年终钜惠：旗舰模型词元不限量、AI 调用不受限（至 11-30）；11-09 起新用户注册再领 1 亿词元科学计算智能体额度",
    how:"下载最新版「超算互联网」客户端 → 注册（11-09 起新用户领 1 亿额度）→ 直接调旗舰模型；另有 0.1 元秒 5000 万词元包（六选一、非全拿），赠额耗尽后继续调用可能扣现金余额",until:"2026-11-30",url:"https://news.sciencenet.cn/htmlnews/2026/11/574358.shtm",
    src:"科学网（活动官方报道，2026-11-19 复读：即日起至 11 月 30 日）+ 快科技/网易多源一致",checked:"2026-11-19"},
@@ -194,7 +194,7 @@ const DEALS=[
    how:"下载讯飞 Loomy（桌面端/云端）→ 登录领 5000 → 每天登录领 5000 → 新手任务（发第一条消息/装技能/建搭子/开远程控制）再拿积分；⚠️ 是产品内积分、不能当 API 余额；填自有 API Key 时自建模型不扣平台积分",until:"每日刷新",url:"https://www.xfyun.cn/",
    src:"讯飞 Loomy 产品规则（多方实测一致）",checked:"2026-11-11"},
 {n:"硅基流动 认证专享礼",cat:"API额度",what:"完成实名认证后领 16 元无门槛代金券，全平台通用（API 调用 / 批量推理 / 微调都能用）；走邀请链接注册，双方各再得 16 元",
-   how:"硅基流动注册 → 完成实名认证 → 到「认证专享礼」页面手动领取 → 下单时自动抵扣；邀请券在好友完成认证后 1-5 分钟自动到账",until:"活动至 2026-12-31",url:"https://cloud.siliconflow.cn/",
+   how:"硅基流动注册 → 完成实名认证 → 到「认证专享礼」页面手动领取 → 下单时自动抵扣；邀请券在好友完成认证后 1-5 分钟自动到账",until:"2026-12-31（活动截止）",url:"https://cloud.siliconflow.cn/",
    src:"硅基流动官方活动（多方实测一致）",checked:"2026-11-11"},
 {n:"阿里百炼 决策模型预览版",cat:"限时活动",what:"decision-model-preview 全量开放且限时免费（不消耗 Credits），面向高频业务判断：并行完成分类、是非判断、打分，返回概率分布与置信度",
    how:"百炼控制台开通 → 模型名填 decision-model-preview → 北京/新加坡两地域都免费；限速 1200 次/分、200 万 token/分，上下文最长 65536",until:"限时（官方未公布截止）",url:"https://help.aliyun.com/zh/model-studio/decision-model-api",
@@ -243,7 +243,11 @@ const DEALS=[
    src:"百川官方定价页",checked:"2026-11-25"},
   {n:"TRAE 国内版 免费档",cat:"长期免费",what:"字节 TRAE 国内版 ¥0 免费档：每月 500 积分，功能不阉割、2 个云端任务并发，Seed-2.1-Turbo / Seed-Code 打 5 折、DeepSeek-V4.1-Flash 闲时 5 折扣积分",
    how:"trae.cn 下载客户端 → 手机号登录 → 直接进免费档，无需绑卡；积分每月刷新，会员档另有签到多得 3000 积分",until:"长期（免费档积分与折扣规则随官方调整）",url:"https://www.trae.cn/pricing",
-   src:"TRAE 中国站官方定价页（2026-11-26 实读：Free ¥0，每月 500 积分、2 个云端任务并发）",checked:"2026-11-26"}
+   src:"TRAE 中国站官方定价页（2026-11-26 实读：Free ¥0，每月 500 积分、2 个云端任务并发）",checked:"2026-11-26"},
+{n:"Cloudflare Workers AI 免费额度",cat:"长期免费",what:"每个账号每天 10,000 Neurons 免费（约合 36 万输入 token 或 8 万输出 token），模型库里有 Llama 3.3 70B、DeepSeek V4.1 Flash（@cf/deepseek-ai/deepseek-v4.1-flash-1017）、Gemma 等，当天 00:00 UTC 重置",
+   how:"注册 Cloudflare 账号（免费计划，不用绑卡）→ 控制台 Workers & Pages → AI → 建一个 Workers AI 的 API Token → 用 REST 接口 /client/v4/accounts/{account_id}/ai/run/<模型名> 直接调，或写 Worker 绑定 AI binding；额度用完当天直接报错，不会莫名扣钱",
+   until:"长期（每账号每日 10,000 Neurons，官方保留调整权）",url:"https://developers.cloudflare.com/workers-ai/platform/pricing/",
+   src:"Cloudflare 官方 Workers AI 定价页（2026-11-28 实读：Free 与 Paid 计划均含每日 10,000 Neurons，超出部分 Paid 按 $0.011/1000 Neurons 计）",checked:"2026-11-28"}
 
 ];
 
