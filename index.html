@@ -830,7 +830,10 @@ const TOOLS=[
 {n:"vork",why:"Agent 写代码直接出 3D 镜头",c:"3D创作",m:["3D","Agent"],d:"面向AI Agent的headless 3D/VFX渲染引擎(1.7k★,2026-11-05建仓,源码可见+Voyager出品):没有编辑器要人拖,Agent自己把整个场景写成代码——几何、材质、相机、灯光传播、模拟、合成都能改,连shader都能在镜头中间现写,核心API约2500 token;Rust+Slang写成,Vulkan/Metal跑Linux/Windows/macOS,渲染完自己回看图片再改。实测192帧1080p单张L4用97秒,同采样EEVEE预估13-18分钟,百万鸟群快8-11倍。命令三步:vork init my-shot、vork skills add、vork render scene.json --out render.png,另有Python/TS版场景文件,示例含《黑神话式》黑洞透镜、实拍VFX合成、赛博汽车。⚠️研究预览期免费、非标准开源许可(仅源码可见);本机要能跑Vulkan的N卡,没卡可走vork cloud按量付费",u:"https://voyager.so/vork",r:4,re:"Agent原生的渲染引擎",f:1,q:"研究预览期免费",g:"https://github.com/voyager-so/vork",diff:3,zh:3,hot:2},
 {n:"歸藏 Game Skill",why:"装进Claude就出可玩3D游戏",c:"3D创作",m:["3D","Agent"],d:"AGPL-3.0开源的Agent Skill(511★,2026-11-11建仓,歸藏出品):跟Claude Code/Codex说一句「做一个武侠俯视角3D动作游戏」,它按走通过的流程干——先问参考、视角、氛围、范围,以及你手上有哪些素材工具和多少额度,再接即梦出设定图、Tripo转带骨骼模型,然后自己逐帧推进画面、用F3诊断面板截图核对。战斗手感写成清单:出招前摇后摇、命中顿帧、分级击退、格挡弹反、敌人轮流上、闪避可打断;特效走网格+着色器不堆粒子。打包三种:约33MB单文件HTML(零网络请求)、先出画面再加载的站点、8MB小程序离线包。附7份踩坑清单(方向键卡住、泛光过曝、打包后角色缩小一半)。演示《雾锁山门》手机电脑直接玩。⚠️要Node 18+,出图/建模/配乐额度自备",u:"https://op7418.github.io/guizang-game-skill/",r:4,re:"一句话做出可玩3D游戏",f:1,q:"开源免费(素材额度自备)",g:"https://github.com/op7418/guizang-game-skill",diff:2,zh:1,hot:2},
 {n:"RGB MoCap",why:"普通视频出FBX/VMD骨骼动画",c:"3D创作",m:["3D","视频"],d:"MIT开源的Windows桌面视频动捕(3.7k★,2026-10-26建仓):一段手机拍的普通视频扔进去,就能扒成可编辑的人体动画——ExMR/FlowHMR/GVHMR三个模型全程本地跑,自带接触修正(脚不滑地)、人形重定向、FBX/VMD导出,能实时推流给Blender和Unreal MetaHuman Live Link;多机位与相机对齐(MAMMA)、按文字点选找人(SAM 3.1)、面部追踪导ARKit系数都是选装。⚠️安装偏工程:git clone+install.cmd拉运行时,模型要在Model Manager里单独下(部分要注册),Win11智能应用控制可能拦未签名Python,MAMMA/PromptHMR还要VS C++构建工具和CUDA 12.8,显存吃紧时选Automatic会把追踪数据挪到内存;Linux只有实验性AppImage",u:"https://github.com/toyxyz/toyxyz_RGBMocap",r:4,re:"视频直出FBX动画",f:1,q:"开源免费",g:"https://github.com/toyxyz/toyxyz_RGBMocap",diff:3,zh:3,hot:3},
-{n:"Inworld Voice Isolator",why:"一条命令把口播人声提干净",c:"音频生成",m:["音频"],d:"Apache-2.0开源的48kHz人声分离模型(469★,2026-11-16建仓,Inworld出品):两个checkpoint共用一套网络——64M的离线版整段按8秒一块看全上下文,58M实时版只回看20ms可接直播和通话。pip install inworld-voice-isolation装完,voice-isolate 输入.wav 人声.wav 一条命令出两条轨(人声+被摘掉的背景),原电平保留、两条相加能还原输入;把输入减掉人声还能反拿伴奏/环境底噪,做口播、播客、素材库清洗很实用。CLI还带--output-sr 0保持原采样率、--no-background只存人声。⚠️权重首次运行自动从HF下载并校验;A100/H100/B200级卡与CPU测试过,小卡未测;它只去噪不是说话人分离也不是修复模型(修复排在v2)",u:"https://github.com/inworld-ai/voice-isolator",r:3,re:"48kHz人声分离",f:1,q:"开源免费",g:"https://github.com/inworld-ai/voice-isolator",diff:2,zh:3,hot:2}
+{n:"Inworld Voice Isolator",why:"一条命令把口播人声提干净",c:"音频生成",m:["音频"],d:"Apache-2.0开源的48kHz人声分离模型(469★,2026-11-16建仓,Inworld出品):两个checkpoint共用一套网络——64M的离线版整段按8秒一块看全上下文,58M实时版只回看20ms可接直播和通话。pip install inworld-voice-isolation装完,voice-isolate 输入.wav 人声.wav 一条命令出两条轨(人声+被摘掉的背景),原电平保留、两条相加能还原输入;把输入减掉人声还能反拿伴奏/环境底噪,做口播、播客、素材库清洗很实用。CLI还带--output-sr 0保持原采样率、--no-background只存人声。⚠️权重首次运行自动从HF下载并校验;A100/H100/B200级卡与CPU测试过,小卡未测;它只去噪不是说话人分离也不是修复模型(修复排在v2)",u:"https://github.com/inworld-ai/voice-isolator",r:3,re:"48kHz人声分离",f:1,q:"开源免费",g:"https://github.com/inworld-ai/voice-isolator",diff:2,zh:3,hot:2},
+{n:"Fuobe",c:"工作流Agent",m:["图像","视频","3D","音频"],d:"MIT 开源的本地创作工作台(263★，2026-10-16 建仓)：16 个工作室、94 个小应用、153 个开放权重模型整在一块，图像(Live edit 一句话改图)、视频(68 个模型/108 个镜头运动)、3D(图转模型)、音频(15 个工具)各开各的页；全程跑在 ComfyUI 上，用自己的 GPU，或填 fal.ai / Replicate 的 key 走云端；Day-0 就上了 MiniMax H3 Image、MOSS-Image、LTX-2.5、Wan-Move。官方演示全在一块 RTX 5090 上本地渲染。⚠️装法是 git clone + pnpm install + pnpm dev(Windows 有 start.bat)，显存吃紧别硬跑大模型",u:"https://fuobe.com",r:4,re:"全模态开源工作台",why:"开源一站出图、视频、3D、声音",f:1,q:"开源免费(自部署／自带key)",g:"https://github.com/workingprototype/fuobe",diff:3,zh:2,hot:2,v:1},
+{n:"猫影短剧 NovelVids",c:"AI短剧",m:["视频","Agent"],d:"MIT 开源的 AI 漫剧／短剧工作台(396★)：把「故事 → 角色资产 → 分镜 → AI 图片／视频 → 成片」放进一个可编辑、可追踪的项目里，改到第 10 版也能翻回第 3 版的分镜；Docker 一键起，自带容器内在线升级(先备份库再切版本，健康检查不过就回滚)；不想整站部署可以只导出剧本改编／资产设定／分镜三个 Skills 装进自己的 Agent。模型可接自有 key，也可接官方开放平台。⚠️只能本机跑，云端推理要另外备额度",u:"https://shortdramas.xiazq.com/",r:4,re:"小说到成片全程可改",why:"小说丢进去，分镜和成片都留痕",f:1,q:"开源免费(模型额度自备)",g:"https://github.com/Anning01/novelvids",diff:2,zh:1,hot:2},
+{n:"Shisei 姿勢",c:"图像生成",m:["图像"],d:"CC0 免费的人偶姿势参考库(589★)：280 个姿势 × 5 个机位(正面／3⁄4／侧面／俯视／仰视)，剪影干净的线稿，多数还配黏土、深度、法线三种贴图，直接丢给 Nano Banana、ChatGPT、ComfyUI、Midjourney 照着同一个姿势换机位出图；姿势名和分类有中英日韩四语，网页画廊能按系列筛、整套线稿 36.5 MB 可下载。含成人向姿势系列(无露点，默认打码)。⚠️它只是参考素材，不带生成功能",u:"https://shisei.indaloop.app/",r:3,re:"CC0 五机位人偶参考",why:"同一个姿势可换五个机位出图",f:1,q:"永久免费(CC0)",g:"https://github.com/wquguru/shisei",diff:1,zh:1,hot:1,v:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1073,7 +1076,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 419 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 422 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1495,6 +1498,9 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://op7418.github.io/guizang-game-skill/" target="_blank" rel="noopener">歸藏 Game Skill</a> — 装进Claude就出可玩3D游戏 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/toyxyz/toyxyz_RGBMocap" target="_blank" rel="noopener">RGB MoCap</a> — 普通视频出FBX/VMD骨骼动画 <span class="nb-cat">3D创作</span></li>
       <li><a href="https://github.com/inworld-ai/voice-isolator" target="_blank" rel="noopener">Inworld Voice Isolator</a> — 一条命令把口播人声提干净 <span class="nb-cat">音频生成</span></li>
+      <li><a href="https://fuobe.com" target="_blank" rel="noopener">Fuobe</a> — 开源一站出图、视频、3D、声音 <span class="nb-cat">工作流Agent</span></li>
+      <li><a href="https://shortdramas.xiazq.com/" target="_blank" rel="noopener">猫影短剧 NovelVids</a> — 小说丢进去，分镜和成片都留痕 <span class="nb-cat">AI短剧</span></li>
+      <li><a href="https://shisei.indaloop.app/" target="_blank" rel="noopener">Shisei 姿勢</a> — 同一个姿势可换五个机位出图 <span class="nb-cat">图像生成</span></li>
     </ul>
   </section>
 </noscript>
@@ -1504,7 +1510,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 419,
+ "numberOfItems": 422,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -4019,6 +4025,24 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 419,
    "name": "Inworld Voice Isolator",
    "url": "https://github.com/inworld-ai/voice-isolator"
+  },
+  {
+   "@type": "ListItem",
+   "position": 420,
+   "name": "Fuobe",
+   "url": "https://fuobe.com"
+  },
+  {
+   "@type": "ListItem",
+   "position": 421,
+   "name": "猫影短剧 NovelVids",
+   "url": "https://shortdramas.xiazq.com/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 422,
+   "name": "Shisei 姿勢",
+   "url": "https://shisei.indaloop.app/"
   }
  ]
 }
