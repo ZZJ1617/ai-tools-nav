@@ -834,6 +834,11 @@ const TOOLS=[
 {n:"Fuobe",c:"工作流Agent",m:["图像","视频","3D","音频"],d:"MIT 开源的本地创作工作台(263★，2026-10-16 建仓)：16 个工作室、94 个小应用、153 个开放权重模型整在一块，图像(Live edit 一句话改图)、视频(68 个模型/108 个镜头运动)、3D(图转模型)、音频(15 个工具)各开各的页；全程跑在 ComfyUI 上，用自己的 GPU，或填 fal.ai / Replicate 的 key 走云端；Day-0 就上了 MiniMax H3 Image、MOSS-Image、LTX-2.5、Wan-Move。官方演示全在一块 RTX 5090 上本地渲染。⚠️装法是 git clone + pnpm install + pnpm dev(Windows 有 start.bat)，显存吃紧别硬跑大模型",u:"https://fuobe.com",r:4,re:"全模态开源工作台",why:"开源一站出图、视频、3D、声音",f:1,q:"开源免费(自部署／自带key)",g:"https://github.com/workingprototype/fuobe",diff:3,zh:2,hot:2,v:1},
 {n:"猫影短剧 NovelVids",c:"AI短剧",m:["视频","Agent"],d:"MIT 开源的 AI 漫剧／短剧工作台(396★)：把「故事 → 角色资产 → 分镜 → AI 图片／视频 → 成片」放进一个可编辑、可追踪的项目里，改到第 10 版也能翻回第 3 版的分镜；Docker 一键起，自带容器内在线升级(先备份库再切版本，健康检查不过就回滚)；不想整站部署可以只导出剧本改编／资产设定／分镜三个 Skills 装进自己的 Agent。模型可接自有 key，也可接官方开放平台。⚠️只能本机跑，云端推理要另外备额度",u:"https://shortdramas.xiazq.com/",r:4,re:"小说到成片全程可改",why:"小说丢进去，分镜和成片都留痕",f:1,q:"开源免费(模型额度自备)",g:"https://github.com/Anning01/novelvids",diff:2,zh:1,hot:2},
 {n:"Shisei 姿勢",c:"图像生成",m:["图像"],d:"CC0 免费的人偶姿势参考库(589★)：280 个姿势 × 5 个机位(正面／3⁄4／侧面／俯视／仰视)，剪影干净的线稿，多数还配黏土、深度、法线三种贴图，直接丢给 Nano Banana、ChatGPT、ComfyUI、Midjourney 照着同一个姿势换机位出图；姿势名和分类有中英日韩四语，网页画廊能按系列筛、整套线稿 36.5 MB 可下载。含成人向姿势系列(无露点，默认打码)。⚠️它只是参考素材，不带生成功能",u:"https://shisei.indaloop.app/",r:3,re:"CC0 五机位人偶参考",why:"同一个姿势可换五个机位出图",f:1,q:"永久免费(CC0)",g:"https://github.com/wquguru/shisei",diff:1,zh:1,hot:1,v:1}
+,
+{n:"sprite-stacking",c:"3D创作",m:["3D","图像"],d:"MIT 的 Agent 技能(1.1k★)：把一张四视图像素素材(顶/侧/正/背)按体积切成几十层薄片再逐层抬起，得到一个能用鼠标转的假 3D 精灵。自带切片 CLI 和单页查看器——转台、切片扫描、爆炸视图、开车漫游、风吹、雨雪、昼夜光；能导出 16 方向雪碧图直接进 Godot/Unity。有生图模型就让 Agent 画四视图，没有就由它写 Python 自己画",u:"https://github.com/danielwh2/sprite-stacking",r:4,re:"像素四视图转3D",why:"四视图切层后精灵能转起来",f:1,q:"开源免费",g:"https://github.com/danielwh2/sprite-stacking",diff:2,zh:3,hot:2},
+{n:"Open Artifact",c:"办公效率",m:["办公","写作"],d:"Apache-2.0 的产物编辑台(725★，前身 baoyu-design)：让 Claude Code／Codex／Cursor 写出一叠纯文件——幻灯片、UI 设计稿、白板、表格、看板、文档、短片，本地起一个页面就能像真编辑器那样改标题、拖便签、留批注，再把批注发回给 Agent 接着改；最后导出 PDF／PPTX／PNG／HTML。全在本机跑，不要账号、不绑定模型厂商，中文文档齐全",u:"https://github.com/JimLiu/open-artifact",r:4,re:"产物可改可批注",why:"Agent 交的稿能在本地改再回传",f:1,q:"开源免费",g:"https://github.com/JimLiu/open-artifact",diff:2,zh:1,hot:2},
+{n:"Orcanva",c:"设计工具",m:["图像"],d:"MIT 开源的在线设计台(148★)，冲封面和缩略图这类活去的：任意尺寸画布(YouTube 缩略图／方形／Story／4K)、40 款字体、几千图标贴纸，抠图、擦掉物体、放大都在浏览器里直接做；支持多人实时协作、批注和版本历史，导出 PNG／JPG／WebP／PDF。官网免费用，也能自己部署一套",u:"https://www.orcanva.app",r:3,re:"开源Canva做封面",why:"开源 Canva，缩略图在线免费做",f:1,q:"永久免费",g:"https://github.com/TheOrcDev/orcanva",diff:1,zh:2,hot:1},
+{n:"净影 CleanFrame",c:"视频编辑",m:["视频"],d:"Apache-2.0 的视频清理工作台(213★)：框一下就能用视频修复擦掉台标水印，硬字幕也能无痕抹掉而不是打黑条；另带 31 语种翻译配音并烧回画面。docker compose 起本地服务，素材不出内网。⚠️擦除实际跑火山引擎 LAS、翻译走对象存储，自部署要自备凭证(等于要花钱)，不想折腾就用它的托管站",u:"https://erasevid.com",r:3,re:"水印硬字幕擦除",why:"硬字幕水印能无痕擦除",f:1,q:"开源免费(自部署需火山引擎凭证)",g:"https://github.com/xuliang2024/video-watermark-remover",diff:2,zh:1,hot:1}
 ];
 
 // ===== 已停服工具归档 =====
@@ -1076,7 +1081,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
 <!-- SEO:STATIC:BEGIN（由 build_seo.py 生成，请勿手改）-->
 <noscript>
   <section class="nojs" aria-label="全部工具（无脚本版）">
-    <h2>全部 AI 创作工具（共 422 个 · 无脚本版）</h2>
+    <h2>全部 AI 创作工具（共 426 个 · 无脚本版）</h2>
     <p>本页默认由 JavaScript 渲染；下面是全部工具的静态清单（含官网链接），供无脚本浏览器与搜索引擎读取。</p>
     <ul>
       <li><a href="https://klingai.com" target="_blank" rel="noopener">Kling 4.0/可灵</a> — 国内直连，30 秒 4K 长镜头直接出 <span class="nb-cat">视频生成</span></li>
@@ -1501,6 +1506,10 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
       <li><a href="https://fuobe.com" target="_blank" rel="noopener">Fuobe</a> — 开源一站出图、视频、3D、声音 <span class="nb-cat">工作流Agent</span></li>
       <li><a href="https://shortdramas.xiazq.com/" target="_blank" rel="noopener">猫影短剧 NovelVids</a> — 小说丢进去，分镜和成片都留痕 <span class="nb-cat">AI短剧</span></li>
       <li><a href="https://shisei.indaloop.app/" target="_blank" rel="noopener">Shisei 姿勢</a> — 同一个姿势可换五个机位出图 <span class="nb-cat">图像生成</span></li>
+      <li><a href="https://github.com/danielwh2/sprite-stacking" target="_blank" rel="noopener">sprite-stacking</a> — 四视图切层后精灵能转起来 <span class="nb-cat">3D创作</span></li>
+      <li><a href="https://github.com/JimLiu/open-artifact" target="_blank" rel="noopener">Open Artifact</a> — Agent 交的稿能在本地改再回传 <span class="nb-cat">办公效率</span></li>
+      <li><a href="https://www.orcanva.app" target="_blank" rel="noopener">Orcanva</a> — 开源 Canva，缩略图在线免费做 <span class="nb-cat">设计工具</span></li>
+      <li><a href="https://erasevid.com" target="_blank" rel="noopener">净影 CleanFrame</a> — 硬字幕水印能无痕擦除 <span class="nb-cat">视频编辑</span></li>
     </ul>
   </section>
 </noscript>
@@ -1510,7 +1519,7 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
  "@type": "ItemList",
  "name": "AI 创作工具导航 · 赛博上片指南",
  "description": "收录免费/开源 AI 创作工具，视频生成、图像、Agent、办公、音频、写作、3D 一站式导航，每日更新",
- "numberOfItems": 422,
+ "numberOfItems": 426,
  "itemListElement": [
   {
    "@type": "ListItem",
@@ -4043,6 +4052,30 @@ window.addEventListener('scroll',()=>{if(window.scrollY>500){backToTop.classList
    "position": 422,
    "name": "Shisei 姿勢",
    "url": "https://shisei.indaloop.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 423,
+   "name": "sprite-stacking",
+   "url": "https://github.com/danielwh2/sprite-stacking"
+  },
+  {
+   "@type": "ListItem",
+   "position": 424,
+   "name": "Open Artifact",
+   "url": "https://github.com/JimLiu/open-artifact"
+  },
+  {
+   "@type": "ListItem",
+   "position": 425,
+   "name": "Orcanva",
+   "url": "https://www.orcanva.app"
+  },
+  {
+   "@type": "ListItem",
+   "position": 426,
+   "name": "净影 CleanFrame",
+   "url": "https://erasevid.com"
   }
  ]
 }
