@@ -247,7 +247,11 @@ const DEALS=[
 {n:"Cloudflare Workers AI 免费额度",cat:"长期免费",what:"每个账号每天 10,000 Neurons 免费（约合 36 万输入 token 或 8 万输出 token），模型库里有 Llama 3.3 70B、DeepSeek V4.1 Flash（@cf/deepseek-ai/deepseek-v4.1-flash-1017）、Gemma 等，当天 00:00 UTC 重置",
    how:"注册 Cloudflare 账号（免费计划，不用绑卡）→ 控制台 Workers & Pages → AI → 建一个 Workers AI 的 API Token → 用 REST 接口 /client/v4/accounts/{account_id}/ai/run/<模型名> 直接调，或写 Worker 绑定 AI binding；额度用完当天直接报错，不会莫名扣钱",
    until:"长期（每账号每日 10,000 Neurons，官方保留调整权）",url:"https://developers.cloudflare.com/workers-ai/platform/pricing/",
-   src:"Cloudflare 官方 Workers AI 定价页（2026-11-28 实读：Free 与 Paid 计划均含每日 10,000 Neurons，超出部分 Paid 按 $0.011/1000 Neurons 计）",checked:"2026-11-28"}
+   src:"Cloudflare 官方 Workers AI 定价页（2026-11-28 实读：Free 与 Paid 计划均含每日 10,000 Neurons，超出部分 Paid 按 $0.011/1000 Neurons 计）",checked:"2026-11-28"},
+{n:"智谱 AutoClaw 每周登录送 100M Tokens",cat:"限时活动",what:"下载客户端登录即领 100M Tokens（≈1 万积分，约 1 亿 Tokens 用量），每周一轮、每账号限领一次",
+   how:"装 AutoClaw（澳龙）客户端 → 手机号接验证码登录，积分按周福利自动到账；只能在这一个客户端里用，导不出 API Key，手机端和电脑端积分不互通",
+   until:"2026-12-06 23:59（每周刷新：周一 00:00 开领，周日 23:59 清零）",url:"https://autoclaw.zhipuai.cn/",
+   src:"智谱 AutoClaw 官方博客「每周福利」公告（11/23–11/29 一轮已核实，100M Tokens=10,000 积分，周日 23:59 失效）",checked:"2026-11-29"}
 
 ];
 
